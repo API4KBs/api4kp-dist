@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BibliographicCitationTypes"
+           targetNamespace="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType/2018-02-16"
+           elementFormDefault="qualified"
+           xmlns="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType/2018-02-16"
+           xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/id"/>
+
+    <xs:complexType name="BibliographicCitationType">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="BibliographicCitationType_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#4224db58-91a6-3490-aa91-108a6463282f"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#01268750-d16d-393a-9ec8-cd25e078a48c"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#6915ccc3-0459-343c-81a9-06183a54deae"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#04a4bd16-f07d-3bb7-8d0c-8955a46b7526"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#8da9b328-e8bb-38b1-8326-fbaad3756d52"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#ae87b13b-da97-36c5-82e7-9fac2a083b1c"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#74dcb1ce-c508-34d2-b880-279f3dd19da9"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#49cd0ddf-89ab-3031-bbe0-ed12754ccd23"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#7ea108a5-9ad7-34eb-a7a6-6d623e2d3940"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5e0773b8-0b9f-3484-8f4a-75cdbe6e2dbe"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#1e45fa4c-5e81-3cba-80f0-9adddafd6abe"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#af02b6a3-785f-309c-8a6d-6e45708c065a"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#21f64da1-e579-3c82-95b9-64d159a14491"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#b4480021-d983-3634-a7e7-a67eb680a6b1"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#8ed47473-8e02-3d30-a1cf-a2b22735d93e"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#611da52d-170c-3e14-bead-b6215f083ed0"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#928735d6-f2c6-3bee-b16d-d511c8ccaf55"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#7d2a4e38-8712-38a0-b0e8-ae807052488f"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#72225dfc-0ffc-3c4e-8471-c5824c2c63c2"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#08dd8d8f-8a0e-3373-924a-2062cfd23fd6"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#a5bc847f-8f2b-3725-8869-b3e203ee35d4"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#fe37fb1f-0c9a-36f9-a6ad-a4c51396723f"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#4bcff16a-3800-30aa-b919-8ac01a75a3bd"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#b5242665-5a31-39f8-8550-caa461b61114"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#ae635f08-107a-3956-9e63-6835f24e6f6f"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#33677b82-7973-3e4c-b09d-b5189e095627"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#7cf28cc6-b6d5-38ac-9713-c614dea27f30"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#11473d85-e45b-393e-8516-b8c554f81361"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#51ebfd5d-786e-3572-abc4-989a181528f8"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#210d8463-b56c-3159-92d1-cc878da4f522"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#ce6eb625-a3d6-3fad-9860-af4f75508cbf"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#afa6d307-9859-3ea3-9ff3-c976176eb901"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#8c2ce286-eb2d-3358-9c66-a13cbb773e44"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#c2514de4-b94e-3547-98b7-0aaf0e36ed54"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#cae7021f-e4a1-379a-b2be-8947648e03ef"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#ac81e7f2-8ec8-3298-b0c8-b54e47369396"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#58825490-2adf-3aa2-b0a8-a5586268f25e"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#d05257d3-5204-3561-b5bf-a2650322d82d"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#869fe4db-8152-3275-9551-4b7d63523e35"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#ae1b2fa0-e6c7-3d8d-8a55-86bda3357d34"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#73907b85-bb06-3a97-8c41-9201e50d49fa"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#b1a6ebed-5a78-3c50-bedf-60ab7c584f89"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#263cb00b-a507-30cc-a312-452b17a8e723"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="https://www.omg.org/spec/API4KP/20200801/services"
+           xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+           xmlns:ns1="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRSerialization"
+           xmlns:ns2="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRFormat"
+           xmlns:ns3="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique"
+           xmlns:ns4="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRLanguage"
+           xmlns:ns5="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory"
+           xmlns:ns6="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetRole"
+           xmlns:ns7="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-2-LanguageCode"
+           xmlns:ns8="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon"
+           xmlns:ns9="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType"
+           xmlns:ns10="https://www.omg.org/spec/API4KP/20200801/id"
+           xmlns:ns11="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole"
+           xmlns:ns12="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory"
+           xmlns:ns13="https://www.omg.org/spec/API4KP/20200801/taxonomy/ParsingLevel"
+           xmlns:ns14="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRProfile"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           targetNamespace="https://www.omg.org/spec/API4KP/20200801/services">
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRSerialization"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRFormat"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRLanguage"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetRole"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-2-LanguageCode"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/id"
+              schemaLocation="../id/id.xsd"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/ParsingLevel"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRProfile"/>
+   <xs:element name="knowledgePlatformComponent" type="KnowledgePlatformComponent"/>
+   <xs:complexType xmi:id="_naHl4FR1EeiseY4eaZPeLw"
+                   name="KnowledgePlatformComponent"
+                   abstract="true">
+      <xs:annotation>
+         <xs:appinfo>
+            <subTypes xmlns="">
+               <subType name="KnowledgeArtifactRepository"
+                        type="tns:KnowledgeArtifactRepository"
+                        about=""/>
+               <subType name="KnowledgeAssetCatalog"
+                        type="tns:KnowledgeAssetCatalog"
+                        about=""/>
+               <subType name="Transrepresentator" type="tns:Transrepresentator" about=""/>
+               <subType name="Deserializer" type="tns:Deserializer" about=""/>
+               <subType name="Validator" type="tns:Validator" about=""/>
+               <subType name="Detector" type="tns:Detector" about=""/>
+            </subTypes>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:group ref="KnowledgePlatformComponent.content"/>
+      <xs:attributeGroup ref="KnowledgePlatformComponent.attrs"/>
+   </xs:complexType>
+   <xs:group name="KnowledgePlatformComponent.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="instanceId"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:ResourceIdentifier"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="kind"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:ResourceIdentifier"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="KnowledgePlatformComponent.attrs"/>
+   <xs:element name="knowledgeProcessingMethod" type="KnowledgeProcessingMethod"/>
+   <xs:complexType xmi:id="_rv71kFkVEeiseY4eaZPeLw"
+                   name="KnowledgeProcessingMethod"
+                   abstract="true">
+      <xs:annotation>
+         <xs:appinfo>
+            <subTypes xmlns="">
+               <subType name="TransrepresentationMethod"
+                        type="tns:TransrepresentationMethod"
+                        about=""/>
+            </subTypes>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:group ref="KnowledgeProcessingMethod.content"/>
+      <xs:attributeGroup ref="KnowledgeProcessingMethod.attrs"/>
+   </xs:complexType>
+   <xs:group name="KnowledgeProcessingMethod.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="methodId"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:ResourceIdentifier"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="KnowledgeProcessingMethod.attrs"/>
+   <xs:element name="knowledgeProcessingTask" type="KnowledgeProcessingTask"/>
+   <xs:complexType xmi:id="_YAAJcFkkEei7wf-vECnVrw"
+                   name="KnowledgeProcessingTask"
+                   abstract="true">
+      <xs:annotation>
+         <xs:appinfo>
+            <subTypes xmlns="">
+               <subType name="Transrepresentation" type="tns:Transrepresentation" about=""/>
+            </subTypes>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:group ref="KnowledgeProcessingTask.content"/>
+      <xs:attributeGroup ref="KnowledgeProcessingTask.attrs"/>
+   </xs:complexType>
+   <xs:group name="KnowledgeProcessingTask.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+                     name="suppoertedParams"
+                     type="tns:ParameterDefinitions"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="KnowledgeProcessingTask.attrs"/>
+   <xs:element name="knowledgeProcessingOperator" type="KnowledgeProcessingOperator"/>
+   <xs:complexType xmi:id="_ciUjcFk3Eei7wf-vECnVrw"
+                   name="KnowledgeProcessingOperator"
+                   abstract="true">
+      <xs:annotation>
+         <xs:appinfo>
+            <subTypes xmlns="">
+               <subType name="TransrepresentationOperator"
+                        type="tns:TransrepresentationOperator"
+                        about=""/>
+               <subType name="DeserializationOperator"
+                        type="tns:DeserializationOperator"
+                        about=""/>
+               <subType name="ValidationOperator" type="tns:ValidationOperator" about=""/>
+               <subType name="DetectionOperator" type="tns:DetectionOperator" about=""/>
+            </subTypes>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:group ref="KnowledgeProcessingOperator.content"/>
+      <xs:attributeGroup ref="KnowledgeProcessingOperator.attrs"/>
+   </xs:complexType>
+   <xs:group name="KnowledgeProcessingOperator.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="operatorId"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:ResourceIdentifier"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+                     name="acceptedParams"
+                     type="tns:ParameterDefinitions"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="KnowledgeProcessingOperator.attrs"/>
+   <xs:element name="parameterDefinitions" type="ParameterDefinitions"/>
+   <xs:complexType xmi:id="_6Ex_IFlgEei7wf-vECnVrw" name="ParameterDefinitions">
+      <xs:group ref="ParameterDefinitions.content"/>
+      <xs:attributeGroup ref="ParameterDefinitions.attrs"/>
+   </xs:complexType>
+   <xs:group name="ParameterDefinitions.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+                     name="parameterDefinition"
+                     type="tns:ParameterDefinition"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="ParameterDefinitions.attrs"/>
+   <xs:element name="syntacticRepresentation" type="SyntacticRepresentation"/>
+   <xs:complexType xmi:id="_JdsCkFoAEei7wf-vECnVrw" name="SyntacticRepresentation">
+      <xs:group ref="SyntacticRepresentation.content"/>
+      <xs:attributeGroup ref="SyntacticRepresentation.attrs"/>
+   </xs:complexType>
+   <xs:group name="SyntacticRepresentation.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRLanguage"
+                     name="language"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:KnowledgeRepresentationLanguage"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRProfile"
+                     name="profile"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:KnowledgeRepresentationLanguageProfile"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRFormat"
+                     name="format"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:SerializationFormat"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon"
+                     name="lexicon"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="tns:Lexicon"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-2-LanguageCode"
+                     name="locale"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:Language"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRSerialization"
+                     name="serialization"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:KnowledgeRepresentationLanguageSerialization"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole"
+                     name="role"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:KnowledgeRepresentationLanguageRole"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+                     name="subLanguage"
+                     type="tns:SyntacticRepresentation"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="SyntacticRepresentation.attrs">
+      <xs:attribute name="charset" type="xs:string"/>
+      <xs:attribute name="encoding" type="xs:string"/>
+      <xs:attribute name="logic" type="xs:string"/>
+      <xs:attribute name="complexity" type="xs:string"/>
+   </xs:attributeGroup>
+   <xs:element name="knowledgeCarrier" type="KnowledgeCarrier"/>
+   <xs:complexType xmi:id="_PM7KwGj9EeiLBIhuFaW6fQ" name="KnowledgeCarrier">
+      <xs:group ref="KnowledgeCarrier.content"/>
+      <xs:attributeGroup ref="KnowledgeCarrier.attrs"/>
+   </xs:complexType>
+   <xs:group name="KnowledgeCarrier.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="artifactId"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:ResourceIdentifier"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/ParsingLevel"
+                     name="level"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:ParsingLevel"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="assetId"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:ResourceIdentifier"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+                     name="representation"
+                     type="tns:SyntacticRepresentation"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element xmlns:tns="http://www.w3.org/2001/XMLSchema"
+                     name="expression"
+                     type="tns:anyType"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="KnowledgeCarrier.attrs">
+      <xs:attribute name="href" type="xs:anyURI"/>
+      <xs:attribute name="label" type="xs:string"/>
+   </xs:attributeGroup>
+   <xs:element name="job" type="Job"/>
+   <xs:complexType xmi:id="_COgPgMWiEeia9-f8qyblcg" name="Job">
+      <xs:group ref="Job.content"/>
+      <xs:attributeGroup ref="Job.attrs"/>
+   </xs:complexType>
+   <xs:group name="Job.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+                     name="status"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:JobStatus"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="Job.attrs">
+      <xs:attribute name="id" use="required" type="xs:string"/>
+      <xs:attribute name="redirectUrl" type="xs:anyURI"/>
+   </xs:attributeGroup>
+   <xs:complexType xmi:id="_c9k6sOaSEei1sYSdg2PaUQ" name="Any">
+      <xs:group ref="Any.content"/>
+      <xs:attributeGroup ref="Any.attrs"/>
+   </xs:complexType>
+   <xs:group name="Any.content">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="Any.attrs"/>
+   <xs:element name="parameterDefinition" type="ParameterDefinition"/>
+   <xs:complexType xmi:id="_kFpW4GEjEem6YbFuEO-B0Q" name="ParameterDefinition">
+      <xs:group ref="ParameterDefinition.content"/>
+      <xs:attributeGroup ref="ParameterDefinition.attrs"/>
+   </xs:complexType>
+   <xs:group name="ParameterDefinition.content">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="ParameterDefinition.attrs">
+      <xs:attribute name="name" use="required" type="xs:string"/>
+      <xs:attribute name="type" use="required" type="xs:QName"/>
+      <xs:attribute name="definition" type="xs:string"/>
+      <xs:attribute name="defaultValue" type="xs:string"/>
+      <xs:attribute name="required" use="required" type="xs:boolean"/>
+   </xs:attributeGroup>
+   <xs:element name="knowledgeBase" type="KnowledgeBase"/>
+   <xs:complexType xmi:id="_r2XcMB_IEeqGysUIN9ztMg" name="KnowledgeBase">
+      <xs:group ref="KnowledgeBase.content"/>
+      <xs:attributeGroup ref="KnowledgeBase.attrs"/>
+   </xs:complexType>
+   <xs:group name="KnowledgeBase.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="kbaseId"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:Pointer"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+                     name="manifestation"
+                     type="tns:KnowledgeCarrier"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="KnowledgeBase.attrs"/>
+   <xs:element name="compositeKnowledgeCarrier" type="CompositeKnowledgeCarrier"/>
+   <xs:complexType xmi:id="_AfteoCFREeqGysUIN9ztMg" name="CompositeKnowledgeCarrier">
+      <xs:complexContent>
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+                       base="tns:KnowledgeCarrier">
+            <xs:group ref="CompositeKnowledgeCarrier.content"/>
+            <xs:attributeGroup ref="CompositeKnowledgeCarrier.attrs"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:group name="CompositeKnowledgeCarrier.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+                     name="structType"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:CompositeStructType"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="rootId"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:ResourceIdentifier"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+                     name="component"
+                     type="tns:KnowledgeCarrier"
+                     minOccurs="1"
+                     maxOccurs="unbounded"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+                     name="struct"
+                     type="tns:KnowledgeCarrier"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="CompositeKnowledgeCarrier.attrs"/>
+   <xs:element name="error" type="Error"/>
+   <xs:complexType xmi:id="_0Qv1sG1zEeq0hPDNwgeC4w" name="Error">
+      <xs:group ref="Error.content"/>
+      <xs:attributeGroup ref="Error.attrs"/>
+   </xs:complexType>
+   <xs:group name="Error.content">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="Error.attrs">
+      <xs:attribute name="message" use="required" type="xs:string"/>
+   </xs:attributeGroup>
+   <xs:simpleType name="JobStatus">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="PENDING"/>
+         <xs:enumeration value="STARTED"/>
+         <xs:enumeration value="ONGOING"/>
+         <xs:enumeration value="COMPLETED"/>
+         <xs:enumeration value="FAILED"/>
+         <xs:enumeration value="CANCELLED"/>
+         <xs:enumeration value="ABORTED"/>
+         <xs:enumeration value="PAUSED"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="CompositeStructType">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="TREE"/>
+         <xs:enumeration value="SET"/>
+         <xs:enumeration value="GRAPH"/>
+         <xs:enumeration value="NONE"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="StructuralPartTypes"
+           targetNamespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType/20200801"
+           elementFormDefault="qualified"
+           xmlns="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType/20200801"
+           xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/id"/>
+
+    <xs:complexType name="StructuralPartType">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="StructuralPartType_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType#74e79475-6df9-3f98-b87f-59d923bb6062"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType#f772f97f-219d-308f-9db7-3a8b35482d91"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType#886edfef-7c04-3fb3-9460-8659bcd42df5"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

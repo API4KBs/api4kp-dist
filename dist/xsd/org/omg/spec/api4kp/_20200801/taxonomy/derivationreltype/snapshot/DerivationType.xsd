@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DerivationTypes"
+           targetNamespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType/SNAPSHOT"
+           elementFormDefault="qualified"
+           xmlns="https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType/SNAPSHOT"
+           xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/id"/>
+
+    <xs:complexType name="DerivationType">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="DerivationType_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType#b0586387-30d9-3107-9205-782c0dd05300"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType#4f124d54-b3cf-3dc8-9e9d-fd05b45e10d0"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType#694c9fe7-5eb5-3db6-b3d4-36a435f8a1e4"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType#ff629252-f3d9-33f3-93c4-771f449bce09"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType#e4de3836-1f60-3fb2-99d8-26f2504ade47"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="https://www.omg.org/spec/API4KP/20200801/services/repository"
+           xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+           xmlns:ns1="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique"
+           xmlns:ns2="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory"
+           xmlns:ns3="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetRole"
+           xmlns:ns4="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType"
+           xmlns:ns5="https://www.omg.org/spec/API4KP/20200801/id"
+           xmlns:ns6="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole"
+           xmlns:ns7="https://www.omg.org/spec/API4KP/20200801/services"
+           xmlns:ns8="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           targetNamespace="https://www.omg.org/spec/API4KP/20200801/services/repository">
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetRole"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/id"
+              schemaLocation="../../id/id.xsd"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/services"
+              schemaLocation="../services.xsd"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory"/>
+   <xs:element name="knowledgeArtifactRepository" type="KnowledgeArtifactRepository"/>
+   <xs:complexType xmi:id="_G3odAFRzEeiseY4eaZPeLw" name="KnowledgeArtifactRepository">
+      <xs:complexContent>
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+                       base="tns:KnowledgePlatformComponent">
+            <xs:group ref="KnowledgeArtifactRepository.content"/>
+            <xs:attributeGroup ref="KnowledgeArtifactRepository.attrs"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:group name="KnowledgeArtifactRepository.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="id"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:ResourceIdentifier"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="alias"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="tns:ResourceIdentifier"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="KnowledgeArtifactRepository.attrs">
+      <xs:attribute name="name" type="xs:string"/>
+      <xs:attribute name="size" type="xs:int"/>
+      <xs:attribute name="href" type="xs:anyURI"/>
+      <xs:attribute name="defaultRepository" type="xs:boolean"/>
+   </xs:attributeGroup>
+   <xs:element name="knowledgeAssetCatalog" type="KnowledgeAssetCatalog"/>
+   <xs:complexType xmi:id="_xFR3IFY3EeiseY4eaZPeLw" name="KnowledgeAssetCatalog">
+      <xs:complexContent>
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+                       base="tns:KnowledgePlatformComponent">
+            <xs:group ref="KnowledgeAssetCatalog.content"/>
+            <xs:attributeGroup ref="KnowledgeAssetCatalog.attrs"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:group name="KnowledgeAssetCatalog.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType"
+                     name="supportedAssetTypes"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="tns:KnowledgeAssetType"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="id"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:ResourceIdentifier"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+                     name="surrogateModels"
+                     type="tns:SyntacticRepresentation"
+                     minOccurs="1"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="KnowledgeAssetCatalog.attrs">
+      <xs:attribute name="name" type="xs:string"/>
+      <xs:attribute name="owner" type="xs:string"/>
+      <xs:attribute name="supportedAnnotations" type="xs:string"/>
+   </xs:attributeGroup>
+</xs:schema>

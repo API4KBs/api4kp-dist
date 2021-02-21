@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="https://www.omg.org/spec/API4KP/20200801/id"
+           xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+           xmlns:ns1="https://www.omg.org/spec/API4KP/20200801/datatypes"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           targetNamespace="https://www.omg.org/spec/API4KP/20200801/id">
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/datatypes"
+              schemaLocation="../datatypes/datatypes.xsd"/>
+   <xs:element name="resourceIdentifier" type="ResourceIdentifier"/>
+   <xs:complexType xmi:id="_OjBf0FIOEeqm8uiQ2nAYTw" name="ResourceIdentifier">
+      <xs:group ref="ResourceIdentifier.content"/>
+      <xs:attributeGroup ref="ResourceIdentifier.attrs"/>
+   </xs:complexType>
+   <xs:group name="ResourceIdentifier.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/datatypes"
+                     name="uuid"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:UUID"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="ResourceIdentifier.attrs">
+      <xs:attribute name="resourceId" use="required" type="xs:anyURI"/>
+      <xs:attribute name="versionId" type="xs:anyURI"/>
+      <xs:attribute name="tag" use="required" type="xs:string"/>
+      <xs:attribute name="versionTag" type="xs:string"/>
+      <xs:attribute name="name" type="xs:string"/>
+      <xs:attribute name="namespaceUri" type="xs:anyURI"/>
+      <xs:attribute name="establishedOn" type="xs:dateTime"/>
+   </xs:attributeGroup>
+   <xs:element name="conceptIdentifier" type="ConceptIdentifier"/>
+   <xs:complexType xmi:id="_Tj4VIFIPEeqm8uiQ2nAYTw" name="ConceptIdentifier">
+      <xs:complexContent>
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                       base="tns:ResourceIdentifier">
+            <xs:group ref="ConceptIdentifier.content"/>
+            <xs:attributeGroup ref="ConceptIdentifier.attrs"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:group name="ConceptIdentifier.content">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="ConceptIdentifier.attrs">
+      <xs:attribute name="referentId" type="xs:anyURI"/>
+   </xs:attributeGroup>
+   <xs:element name="pointer" type="Pointer"/>
+   <xs:complexType xmi:id="_FxUHsFIQEeqm8uiQ2nAYTw" name="Pointer">
+      <xs:complexContent>
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                       base="tns:ResourceIdentifier">
+            <xs:group ref="Pointer.content"/>
+            <xs:attributeGroup ref="Pointer.attrs"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:group name="Pointer.content">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="Pointer.attrs">
+      <xs:attribute name="description" type="xs:string"/>
+      <xs:attribute name="href" type="xs:anyURI"/>
+      <xs:attribute name="type" type="xs:anyURI"/>
+      <xs:attribute name="mimeType" type="xs:string"/>
+   </xs:attributeGroup>
+   <xs:simpleType name="VersionTagType">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="GENERIC"/>
+         <xs:enumeration value="SEQUENTIAL"/>
+         <xs:enumeration value="TIMESTAMP"/>
+         <xs:enumeration value="SEM_VER"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="IdentifierTagType">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="OID_VALUE"/>
+         <xs:enumeration value="STRING_VALUE"/>
+         <xs:enumeration value="UUID_VALUE"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>

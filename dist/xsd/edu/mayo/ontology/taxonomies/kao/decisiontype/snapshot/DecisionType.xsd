@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DecisionTypes"
+           targetNamespace="https://ontology.mayo.edu/taxonomies/KAO/DecisionType/SNAPSHOT"
+           elementFormDefault="qualified"
+           xmlns="https://ontology.mayo.edu/taxonomies/KAO/DecisionType/SNAPSHOT"
+           xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/id"/>
+
+    <xs:complexType name="DecisionType">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="DecisionType_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#20953273-18b7-3ec2-813f-1e71808e9823"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#e0dbe4d9-79b5-390c-91a9-bcc756d68b18"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#022cdc44-8bbc-3edc-b14a-fca761d24704"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#cc45cb9e-0a9e-396e-90a4-79a8a632901d"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#6fab9428-08bc-3a45-aa51-fd0a37682098"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#bd53d56d-e2c7-3ec2-ae91-5af122027498"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#a2db22af-c342-3bc8-960c-75a18a23dd22"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#cb854ec0-87c7-30b0-96ef-a73b6fac8cf8"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#21d77342-d120-324b-9ac6-11562e52c4cd"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#7c76cd04-06af-39e3-9510-432336716f7e"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#c49eb0da-074c-30cd-9ced-7ba597ac1d15"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d6186f7a-7fa0-3370-938f-47511c079480"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#28d541e1-bd08-3afc-a3f0-3780601576c6"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#7a42c227-08ed-36af-a332-b6f04cc457b3"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d03ea564-0d31-3e72-a98b-cb93aa4c5cce"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#8c1bd5ba-c9aa-3d6f-8a5c-40cbb9bbd31a"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

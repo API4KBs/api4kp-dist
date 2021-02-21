@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="https://www.omg.org/spec/API4KP/20200801/datatypes"
+           xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           targetNamespace="https://www.omg.org/spec/API4KP/20200801/datatypes">
+   <xs:complexType xmi:id="_N-y1cLIUEeipguRxRn1Vyw" name="Any" abstract="true">
+      <xs:group ref="Any.content"/>
+      <xs:attributeGroup ref="Any.attrs"/>
+   </xs:complexType>
+   <xs:group name="Any.content">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="Any.attrs"/>
+   <xs:element name="map" type="Map"/>
+   <xs:complexType xmi:id="_6Wwpd7IUEeipguRxRn1Vyw" name="Map">
+      <xs:group ref="Map.content"/>
+      <xs:attributeGroup ref="Map.attrs"/>
+   </xs:complexType>
+   <xs:group name="Map.content">
+      <xs:sequence>
+         <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="Map.attrs"/>
+   <xs:element name="bindings" type="Bindings"/>
+   <xs:complexType xmi:id="_EG0EgB2pEeqEhfrqVTPCfA" name="Bindings">
+      <xs:complexContent>
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/datatypes"
+                       base="tns:Map">
+            <xs:group ref="Bindings.content"/>
+            <xs:attributeGroup ref="Bindings.attrs"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:group name="Bindings.content">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="Bindings.attrs"/>
+   <xs:simpleType name="UUID">
+      <xs:restriction base="xs:string"/>
+   </xs:simpleType>
+</xs:schema>

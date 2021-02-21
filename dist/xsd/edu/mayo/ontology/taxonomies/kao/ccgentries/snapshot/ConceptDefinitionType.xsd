@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ConceptDefinitionTypes"
+           targetNamespace="https://ontology.mayo.edu/taxonomies/kao/ccgEntries/SNAPSHOT"
+           elementFormDefault="qualified"
+           xmlns="https://ontology.mayo.edu/taxonomies/kao/ccgEntries/SNAPSHOT"
+           xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/id"/>
+
+    <xs:complexType name="ConceptDefinitionType">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="ConceptDefinitionType_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/kao/ccgEntries#e015782e-9843-36fe-adce-6f08f61469a0"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/kao/ccgEntries#514c07f2-a339-3ceb-84f3-978a6647954c"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/kao/ccgEntries#028c5b2c-cb05-356c-b3d7-03f5e0a17f18"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/kao/ccgEntries#115b072d-2a1f-3898-acb5-19be52e8d4ba"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/kao/ccgEntries#efb551da-92c0-303d-8852-0cf8bd0a4273"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/kao/ccgEntries#2283eb4c-e6af-3d57-bf45-557d65b5215d"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/kao/ccgEntries#ac276ecb-4b00-368d-97e4-7a3fca2cc7ac"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/kao/ccgEntries#9751e8bc-5b15-3f33-8ac8-5bba6a331934"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

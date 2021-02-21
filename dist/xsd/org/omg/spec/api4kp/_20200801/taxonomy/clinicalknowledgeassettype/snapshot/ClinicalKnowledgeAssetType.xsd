@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ClinicalKnowledgeAssetTypes"
+           targetNamespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType/SNAPSHOT"
+           elementFormDefault="qualified"
+           xmlns="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType/SNAPSHOT"
+           xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/id"/>
+
+    <xs:complexType name="ClinicalKnowledgeAssetType">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="ClinicalKnowledgeAssetType_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#0ae0bb9f-d645-3b8f-b0da-f52d63a49696"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#4318b2d5-d0a5-3f4b-b8af-810857bb9984"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#622de43c-bbb3-3b12-b2f4-886208afe4a2"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#db969f6f-9623-3fd0-8e5e-58f91760e77e"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#f5562d76-db9e-381c-96c3-75ae07d73179"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#cf15d6b2-adc3-3d4b-a0bf-9ea09c887323"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#502f8fcf-b145-3c27-91f4-099fc564fe23"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#ba109fe2-e6c9-3a7f-89df-4cb7535b9a13"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#31d443b6-78cb-3e6d-8e3f-beedb6f54647"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#68dd47aa-e310-30a5-bd05-e94393e44023"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#c1405bca-8cb3-3b39-ab3b-71f5f5ac7cce"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="KnowledgeArtifactCategories"
+           targetNamespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory/2020-01-20"
+           elementFormDefault="qualified"
+           xmlns="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory/2020-01-20"
+           xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/id"/>
+
+    <xs:complexType name="KnowledgeArtifactCategory">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="KnowledgeArtifactCategory_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#a4ecfc70-5743-3499-8cf1-7bd83df499f7"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#9dffbf69-ffba-3bc3-8bc4-e01abf4b1675"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#d15b505c-ce09-306d-a9f9-18cb1f8c641c"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#9d07e0e0-8af7-396c-b45b-e0112b9ccfbe"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#cec124ac-ab17-3e92-a02b-e1b4205948ea"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#719d067b-2291-38f0-bbcf-a1da4ac4dede"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#6bdfa244-e66d-3ff3-a468-fd93cfb03e44"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#be53a054-1a6d-36f6-acb8-79fa2c584b08"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#976868e2-21df-3568-b067-0e85f61d2420"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#53117440-2784-3b1e-b0ac-ed385c1de0a5"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#c2ba7e78-5c49-350f-88da-9aacc45c2b85"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#239658e0-16e3-35d0-aae7-19d280a79fec"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

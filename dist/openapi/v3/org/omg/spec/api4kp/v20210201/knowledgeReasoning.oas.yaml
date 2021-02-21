@@ -1,0 +1,532 @@
+openapi: 3.0.1
+info:
+  title: API4KP Knowledge Reasoning API
+  description: |
+    Maturity - VERY LOW (highly subject to disruptive changes)
+
+    ### Summary
+
+    **Knowledge-Driven Reasoning (web) Service that supports the (stateless) execution of
+    Inferences, Queries, and related information processing tasks on one or more Knowledge Bases
+    (aka 'Models').**
+
+    #### Identification
+    In this context, a 'Model' is a Knowledge Base - regardless of whether it consists of a known,
+    single Knowledge Asset, or is the result of an Assembly on-the-fly.
+    Knowledge Bases have a unique identifier: in this server, deployed Knowledge Base
+    (i.e. the instantiation of a Knowledge Base in some software) and possibly even deployments are
+    tracked with different IDs.
+  contact:
+    name: Davide Sottara
+    email: sottara.davide@mayo.edu
+  license:
+    name: Apache License, Version 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: 5.0.0
+servers:
+- url: /omg.org/spec/API4KP/20200801/api/inference/v4
+tags:
+- name: Model
+  description: Endpoints that expose (metadata about) the deployed model itself
+- name: Reasoning
+  description: Endpoints that expose a model's computation capabilities as a function
+paths:
+  /models:
+    get:
+      tags:
+      - Model
+      summary: List Models
+      description: List the Models running on this server.
+      operationId: listModels
+      responses:
+        200:
+          description: List of References to available Models
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Pointer'
+            application/xml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Pointer'
+  /models/{modelId}/versions/{versionTag}:
+    get:
+      tags:
+      - Model
+      summary: Describe Model
+      description: Return descriptive metadata about a specific model
+      operationId: getModel
+      parameters:
+      - name: modelId
+        in: path
+        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
+          that is deployed and executed as a Service. This identifier SHOULD be an
+          ID of the Asset itself, not of the manifestation of the Asset within the
+          server.
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - name: versionTag
+        in: path
+        description: The Identifier os a specific version of a Model, within the series
+          identified by a modelId.
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Information about the computable knowledge that is being executed
+            as a service, including enough information to resolve the Knowledge Asset
+            of which the model is an instantiation.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KnowledgeCarrier'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/KnowledgeCarrier'
+  /models/{modelId}/versions/{versionTag}/reasoners/inferences:
+    post:
+      tags:
+      - Reasoning
+      summary: performs an inference, deriving all logical consequences of the KB
+      operationId: infer
+      parameters:
+      - name: modelId
+        in: path
+        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
+          that is deployed and executed as a Service. This identifier SHOULD be an
+          ID of the Asset itself, not of the manifestation of the Asset within the
+          server.
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - name: versionTag
+        in: path
+        description: The Identifier os a specific version of a Model, within the series
+          identified by a modelId.
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Bindings'
+        required: true
+      responses:
+        200:
+          description: The results of the computation, returned synchronously
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KnowledgeCarrier'
+      x-codegen-request-body-name: features
+  /models/{modelId}/versions/{versionTag}/reasoners/inferences/consequents:
+    post:
+      tags:
+      - Reasoning
+      summary: performs an inference, and returns the derived facts as bound variables
+      operationId: evaluate
+      parameters:
+      - name: modelId
+        in: path
+        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
+          that is deployed and executed as a Service. This identifier SHOULD be an
+          ID of the Asset itself, not of the manifestation of the Asset within the
+          server.
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - name: versionTag
+        in: path
+        description: The Identifier os a specific version of a Model, within the series
+          identified by a modelId.
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Bindings'
+        required: true
+      responses:
+        200:
+          description: The results of the computation, returned synchronously
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Bindings'
+      x-codegen-request-body-name: features
+  /models/{modelId}/versions/{versionTag}/reasoners/inferences/entailments:
+    post:
+      tags:
+      - Reasoning
+      summary: performs an inference, testing whether a set of statements is derived
+        in the process
+      operationId: entails
+      parameters:
+      - name: modelId
+        in: path
+        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
+          that is deployed and executed as a Service. This identifier SHOULD be an
+          ID of the Asset itself, not of the manifestation of the Asset within the
+          server.
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - name: versionTag
+        in: path
+        description: The Identifier os a specific version of a Model, within the series
+          identified by a modelId.
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/KnowledgeCarrier'
+        required: true
+      responses:
+        200:
+          description: The results of the computation, returned synchronously
+          content: {}
+      x-codegen-request-body-name: potentialConsequence
+  /models/{modelId}/versions/{versionTag}/reasoners/queryanswers:
+    post:
+      tags:
+      - Reasoning
+      summary: queries the KB, returning bindings to the query's variables
+      operationId: askQuery
+      parameters:
+      - name: modelId
+        in: path
+        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
+          that is deployed and executed as a Service. This identifier SHOULD be an
+          ID of the Asset itself, not of the manifestation of the Asset within the
+          server.
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - name: versionTag
+        in: path
+        description: The Identifier os a specific version of a Model, within the series
+          identified by a modelId.
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              $ref: '#/components/schemas/KnowledgeCarrier'
+        required: true
+      responses:
+        200:
+          description: The bound expression
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Bindings'
+      x-codegen-request-body-name: query
+  /models/{modelId}/versions/{versionTag}/reasoners/checks:
+    post:
+      tags:
+      - Reasoning
+      summary: determines whether the KB is internally logically consistent
+      operationId: checkConsistency
+      parameters:
+      - name: modelId
+        in: path
+        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
+          that is deployed and executed as a Service. This identifier SHOULD be an
+          ID of the Asset itself, not of the manifestation of the Asset within the
+          server.
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - name: versionTag
+        in: path
+        description: The Identifier os a specific version of a Model, within the series
+          identified by a modelId.
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: The bound expression
+          content: {}
+  /models/{modelId}/versions/{versionTag}/reasoners/sats:
+    post:
+      tags:
+      - Reasoning
+      description: determines whether the KB is satisfiable
+      operationId: checkSatisfiability
+      parameters:
+      - name: modelId
+        in: path
+        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
+          that is deployed and executed as a Service. This identifier SHOULD be an
+          ID of the Asset itself, not of the manifestation of the Asset within the
+          server.
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - name: versionTag
+        in: path
+        description: The Identifier os a specific version of a Model, within the series
+          identified by a modelId.
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: The bound expression
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Bindings'
+  /models/{modelId}/versions/{versionTag}/reasoners/classifiers/individuals/{entityId}:
+    get:
+      tags:
+      - Reasoning
+      description: lists all the classes that an individual is member of
+      operationId: listMembership
+      parameters:
+      - name: modelId
+        in: path
+        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
+          that is deployed and executed as a Service. This identifier SHOULD be an
+          ID of the Asset itself, not of the manifestation of the Asset within the
+          server.
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - name: versionTag
+        in: path
+        description: The Identifier os a specific version of a Model, within the series
+          identified by a modelId.
+        required: true
+        schema:
+          type: string
+      - name: entityId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      responses:
+        200:
+          description: The bound expression
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Pointer'
+    post:
+      tags:
+      - Reasoning
+      description: determines if an individual is member of a class
+      operationId: checkMembership
+      parameters:
+      - name: modelId
+        in: path
+        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
+          that is deployed and executed as a Service. This identifier SHOULD be an
+          ID of the Asset itself, not of the manifestation of the Asset within the
+          server.
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - name: versionTag
+        in: path
+        description: The Identifier os a specific version of a Model, within the series
+          identified by a modelId.
+        required: true
+        schema:
+          type: string
+      - name: entityId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - name: classId
+        in: query
+        required: true
+        schema:
+          type: string
+          format: uuid
+      responses:
+        200:
+          description: Success
+          content: {}
+  /models/{modelId}/versions/{versionTag}/reasoners/classifiers/classes/{entityId}:
+    get:
+      tags:
+      - Reasoning
+      description: lists all the superclasses of a given Class
+      operationId: listSubsumptions
+      parameters:
+      - name: modelId
+        in: path
+        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
+          that is deployed and executed as a Service. This identifier SHOULD be an
+          ID of the Asset itself, not of the manifestation of the Asset within the
+          server.
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - name: versionTag
+        in: path
+        description: The Identifier os a specific version of a Model, within the series
+          identified by a modelId.
+        required: true
+        schema:
+          type: string
+      - name: entityId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      responses:
+        200:
+          description: The bound expression
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Pointer'
+    post:
+      tags:
+      - Reasoning
+      description: determines if a Class is a subclass of another class
+      operationId: checkSubsumption
+      parameters:
+      - name: modelId
+        in: path
+        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
+          that is deployed and executed as a Service. This identifier SHOULD be an
+          ID of the Asset itself, not of the manifestation of the Asset within the
+          server.
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - name: versionTag
+        in: path
+        description: The Identifier os a specific version of a Model, within the series
+          identified by a modelId.
+        required: true
+        schema:
+          type: string
+      - name: entityId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - name: classId
+        in: query
+        required: true
+        schema:
+          type: string
+          format: uuid
+      responses:
+        200:
+          description: Success
+          content: {}
+components:
+  schemas:
+    Pointer:
+      type: object
+      description: Compact proxy object that carries references to another Resource.
+        This object used in operations that browse and list collections.
+    KnowledgeCarrier:
+      type: object
+      description: A Resource that describes a particular representation of a Knowledge
+        Asset.
+    Map:
+      type: object
+      description: A single table row, implemented by means of a map, where the 'column'
+        keys SHALL correspond to either the names or the concept URIs of one or more
+        Data Concepts, and the values is one array of uniform length.
+    Bindings:
+      type: object
+  parameters:
+    modelId:
+      name: modelId
+      in: path
+      description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
+        that is deployed and executed as a Service. This identifier SHOULD be an ID
+        of the Asset itself, not of the manifestation of the Asset within the server.
+      required: true
+      schema:
+        type: string
+        format: uuid
+    versionTag:
+      name: versionTag
+      in: path
+      description: The Identifier os a specific version of a Model, within the series
+        identified by a modelId.
+      required: true
+      schema:
+        type: string
+    entityId:
+      name: entityId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    classId:
+      name: classId
+      in: query
+      required: true
+      schema:
+        type: string
+        format: uuid
+    lambdaId:
+      name: lambdaId
+      in: path
+      description: TODO
+      required: true
+      schema:
+        type: string
+        format: uuid
+    xAccept:
+      name: xAccept
+      in: query
+      description: |
+        A formal MIME type used for content negotiation
+      schema:
+        type: string
+  requestBodies:
+    sourceArtifact:
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/KnowledgeCarrier'
+      required: true

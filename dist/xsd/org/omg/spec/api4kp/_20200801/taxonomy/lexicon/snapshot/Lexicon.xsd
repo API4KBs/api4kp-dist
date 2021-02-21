@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Lexica"
+           targetNamespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon/SNAPSHOT"
+           elementFormDefault="qualified"
+           xmlns="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon/SNAPSHOT"
+           xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/id"/>
+
+    <xs:complexType name="Lexicon">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="Lexicon_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#008a1dc8-6ca0-31cd-8153-3bbb1ceb3c99"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#3541d2ae-4605-394a-9a9c-768899b9ac08"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#22ff75a6-0d49-34f5-a4e6-d6ef90477656"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#a80da128-2f2c-375b-bc5f-2c92c836968b"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#dc490ca8-3d19-37b0-a8cf-b9c65d4d2135"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1da42144-e4c8-37a4-a216-c16ad35333fb"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#42d48e29-2d15-34fd-8505-0e15e00ad591"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#2af72f10-0c35-3273-9462-84f6fd1dfc08"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#d9ee1051-fec2-311c-9719-0e1b8292d687"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#aa7ac8cd-5e0a-3993-a177-746279cc00d2"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#2a345970-4fce-3637-9309-9b59e9675c87"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#5a058668-50c2-3651-be23-4659f6c92ada"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#75406125-d75a-37aa-96e1-434b5ebbb5a6"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0f8d6fb5-6fe6-3df5-9ad0-114ec5b51dbb"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1c974f09-4497-3556-94c1-4ec23f618b1d"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#5069d0f4-a935-3a1c-807b-0c18716f097c"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#62198d22-d71c-3bd7-b292-6546095b0459"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#76595934-1b01-3193-986f-db2753ef323c"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#6334ae0f-062c-3661-85cf-2dc022e0359a"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#04ed5e26-fb5b-3489-88de-7b14fcfb8c81"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#e6dec152-d6a9-31fc-8b0a-5e8cc2579cc3"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#569e800e-bc81-3d4b-9bae-e036b1057a2d"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1df77f03-55ca-32f1-a6a2-3228a8579f80"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#06e94584-b9ba-3d24-9732-706d24cb8169"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#13cd5054-b9c0-30c7-bf0e-c965b6790f32"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

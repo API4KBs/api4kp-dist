@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="https://www.omg.org/spec/API4KP/20200801/surrogate"
+           xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+           xmlns:ns1="https://www.omg.org/spec/API4KP/20200801/taxonomy/DependencyRelType"
+           xmlns:ns2="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRSerialization"
+           xmlns:ns3="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRFormat"
+           xmlns:ns4="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique"
+           xmlns:ns5="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRLanguage"
+           xmlns:ns6="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory"
+           xmlns:ns7="https://www.omg.org/spec/API4KP/20200801/taxonomy/RelatedVersionType"
+           xmlns:ns8="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetRole"
+           xmlns:ns9="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType"
+           xmlns:ns10="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-2-LanguageCode"
+           xmlns:ns11="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon"
+           xmlns:ns12="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType"
+           xmlns:ns13="https://www.omg.org/spec/API4KP/20200801/id"
+           xmlns:ns14="https://www.omg.org/spec/API4KP/20200801/taxonomy/SummaryRelType"
+           xmlns:ns15="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType"
+           xmlns:ns16="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole"
+           xmlns:ns17="https://www.omg.org/spec/API4KP/20200801/services"
+           xmlns:ns18="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory"
+           xmlns:ns19="https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType"
+           xmlns:ns20="https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus"
+           xmlns:ns21="https://www.omg.org/spec/API4KP/20200801/taxonomy/ParsingLevel"
+           xmlns:ns22="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRProfile"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           targetNamespace="https://www.omg.org/spec/API4KP/20200801/surrogate">
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/DependencyRelType"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRSerialization"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRFormat"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRLanguage"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/RelatedVersionType"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetRole"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-2-LanguageCode"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/id"
+              schemaLocation="../api4kp/id/id.xsd"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/SummaryRelType"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/services"
+              schemaLocation="../api4kp/services/services.xsd"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/ParsingLevel"/>
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/taxonomy/KRProfile"/>
+   <xs:element name="knowledgeAsset" type="KnowledgeAsset"/>
+   <xs:complexType xmi:id="_npft8BiHEeqBIaJY4gQzpg" name="KnowledgeAsset">
+      <xs:group ref="KnowledgeAsset.content"/>
+      <xs:attributeGroup ref="KnowledgeAsset.attrs"/>
+   </xs:complexType>
+   <xs:group name="KnowledgeAsset.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType"
+                     name="formalType"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="tns:KnowledgeAssetType"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory"
+                     name="formalCategory"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="tns:KnowledgeAssetCategory"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique"
+                     name="processingMethod"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="tns:KnowledgeProcessingTechnique"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetRole"
+                     name="role"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="tns:KnowledgeAssetRole"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="assetId"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:ResourceIdentifier"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="secondaryId"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="tns:ResourceIdentifier"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="memberOf"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="tns:ResourceIdentifier"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/surrogate"
+                     name="annotation"
+                     type="tns:Annotation"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/surrogate"
+                     name="carriers"
+                     type="tns:KnowledgeArtifact"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/surrogate"
+                     name="citations"
+                     type="tns:Citation"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/surrogate"
+                     name="applicableIn"
+                     type="tns:Applicability"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/surrogate"
+                     name="surrogate"
+                     type="tns:KnowledgeArtifact"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/surrogate"
+                     name="links"
+                     type="tns:Link"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/surrogate"
+                     name="lifecycle"
+                     type="tns:Publication"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="KnowledgeAsset.attrs">
+      <xs:attribute name="name" use="required" type="xs:string"/>
+      <xs:attribute name="description" type="xs:string"/>
+      <xs:attribute name="seoDescription" type="xs:string"/>
+   </xs:attributeGroup>
+   <xs:element name="knowledgeArtifact" type="KnowledgeArtifact"/>
+   <xs:complexType xmi:id="_npgVABiHEeqBIaJY4gQzpg" name="KnowledgeArtifact">
+      <xs:group ref="KnowledgeArtifact.content"/>
+      <xs:attributeGroup ref="KnowledgeArtifact.attrs"/>
+   </xs:complexType>
+   <xs:group name="KnowledgeArtifact.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-2-LanguageCode"
+                     name="localization"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="tns:Language"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="artifactId"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:ResourceIdentifier"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory"
+                     name="expressionCategory"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:KnowledgeArtifactCategory"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="secondaryId"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="tns:ResourceIdentifier"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/surrogate"
+                     name="summary"
+                     type="tns:Summary"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/surrogate"
+                     name="links"
+                     type="tns:Link"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+                     name="representation"
+                     type="tns:SyntacticRepresentation"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/surrogate"
+                     name="lifecycle"
+                     type="tns:Publication"
+                     minOccurs="0"
+                     maxOccurs="1"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="KnowledgeArtifact.attrs">
+      <xs:attribute name="alternativeTitle" type="xs:string"/>
+      <xs:attribute name="name" type="xs:string"/>
+      <xs:attribute name="description" type="xs:string"/>
+      <xs:attribute name="title" type="xs:string"/>
+      <xs:attribute name="seoDescription" type="xs:string"/>
+      <xs:attribute name="mimeType" type="xs:string"/>
+      <xs:attribute name="hash" type="xs:base64Binary"/>
+      <xs:attribute name="digitalSignature" type="xs:base64Binary"/>
+      <xs:attribute name="inlinedExpression" type="xs:string"/>
+      <xs:attribute name="locator" type="xs:anyURI"/>
+   </xs:attributeGroup>
+   <xs:element name="link" type="Link"/>
+   <xs:complexType xmi:id="_npgVTBiHEeqBIaJY4gQzpg" name="Link" abstract="true">
+      <xs:annotation>
+         <xs:appinfo>
+            <subTypes xmlns="">
+               <subType name="Component" type="tns:Component" about=""/>
+               <subType name="Derivative" type="tns:Derivative" about=""/>
+               <subType name="Dependency" type="tns:Dependency" about=""/>
+               <subType name="Variant" type="tns:Variant" about=""/>
+               <subType name="Version" type="tns:Version" about=""/>
+            </subTypes>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:group ref="Link.content"/>
+      <xs:attributeGroup ref="Link.attrs"/>
+   </xs:complexType>
+   <xs:group name="Link.content">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="Link.attrs"/>
+   <xs:element name="component" type="Component"/>
+   <xs:complexType xmi:id="_npg8HBiHEeqBIaJY4gQzpg" name="Component">
+      <xs:complexContent>
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/surrogate"
+                       base="tns:Link">
+            <xs:group ref="Component.content"/>
+            <xs:attributeGroup ref="Component.attrs"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:group name="Component.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType"
+                     name="rel"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:StructuralPartType"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="rol"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:ConceptIdentifier"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="href"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:ResourceIdentifier"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="Component.attrs"/>
+   <xs:element name="derivative" type="Derivative"/>
+   <xs:complexType xmi:id="_npg8IRiHEeqBIaJY4gQzpg" name="Derivative">
+      <xs:complexContent>
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/surrogate"
+                       base="tns:Link">
+            <xs:group ref="Derivative.content"/>
+            <xs:attributeGroup ref="Derivative.attrs"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:group name="Derivative.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType"
+                     name="rel"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:DerivationType"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="href"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:ResourceIdentifier"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="Derivative.attrs"/>
+   <xs:element name="dependency" type="Dependency"/>
+   <xs:complexType xmi:id="_npg8JhiHEeqBIaJY4gQzpg" name="Dependency">
+      <xs:complexContent>
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/surrogate"
+                       base="tns:Link">
+            <xs:group ref="Dependency.content"/>
+            <xs:attributeGroup ref="Dependency.attrs"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:group name="Dependency.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/DependencyRelType"
+                     name="rel"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:DependencyType"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="href"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:ResourceIdentifier"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="Dependency.attrs"/>
+   <xs:element name="variant" type="Variant"/>
+   <xs:complexType xmi:id="_npg8KxiHEeqBIaJY4gQzpg" name="Variant">
+      <xs:complexContent>
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/surrogate"
+                       base="tns:Link">
+            <xs:group ref="Variant.content"/>
+            <xs:attributeGroup ref="Variant.attrs"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:group name="Variant.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType"
+                     name="rel"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:VariantType"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="href"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:ResourceIdentifier"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="Variant.attrs"/>
+   <xs:element name="summary" type="Summary"/>
+   <xs:complexType xmi:id="_npg8MBiHEeqBIaJY4gQzpg" name="Summary">
+      <xs:group ref="Summary.content"/>
+      <xs:attributeGroup ref="Summary.attrs"/>
+   </xs:complexType>
+   <xs:group name="Summary.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/SummaryRelType"
+                     name="rel"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:SummarizationType"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="Summary.attrs">
+      <xs:attribute name="text" use="required" type="xs:string"/>
+   </xs:attributeGroup>
+   <xs:element name="version" type="Version"/>
+   <xs:complexType xmi:id="_npg8NxiHEeqBIaJY4gQzpg" name="Version">
+      <xs:complexContent>
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/surrogate"
+                       base="tns:Link">
+            <xs:group ref="Version.content"/>
+            <xs:attributeGroup ref="Version.attrs"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:group name="Version.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/RelatedVersionType"
+                     name="rel"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:RelatedVersionType"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="href"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:ResourceIdentifier"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="Version.attrs"/>
+   <xs:element name="citation" type="Citation"/>
+   <xs:complexType xmi:id="_npg8PRiHEeqBIaJY4gQzpg" name="Citation">
+      <xs:group ref="Citation.content"/>
+      <xs:attributeGroup ref="Citation.attrs"/>
+   </xs:complexType>
+   <xs:group name="Citation.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="rel"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:ConceptIdentifier"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="bibliographyFormat"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:ConceptIdentifier"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="Citation.attrs">
+      <xs:attribute name="bibliography" type="xs:string"/>
+   </xs:attributeGroup>
+   <xs:element name="policy" type="Policy"/>
+   <xs:complexType xmi:id="_sOjNhxiHEeqBIaJY4gQzpg" name="Policy">
+      <xs:group ref="Policy.content"/>
+      <xs:attributeGroup ref="Policy.attrs"/>
+   </xs:complexType>
+   <xs:group name="Policy.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="identifier"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:ResourceIdentifier"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="Policy.attrs"/>
+   <xs:element name="publication" type="Publication"/>
+   <xs:complexType xmi:id="_sOjNixiHEeqBIaJY4gQzpg" name="Publication">
+      <xs:group ref="Publication.content"/>
+      <xs:attributeGroup ref="Publication.attrs"/>
+   </xs:complexType>
+   <xs:group name="Publication.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus"
+                     name="publicationStatus"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:PublicationStatus"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="Publication.attrs">
+      <xs:attribute name="createdOn" type="xs:date"/>
+      <xs:attribute name="reviewCycle" type="xs:duration"/>
+      <xs:attribute name="lastReviewedOn" type="xs:dateTime"/>
+      <xs:attribute name="issuedOn" type="xs:dateTime"/>
+   </xs:attributeGroup>
+   <xs:element name="annotation" type="Annotation"/>
+   <xs:complexType xmi:id="_xO4T0BiHEeqBIaJY4gQzpg" name="Annotation">
+      <xs:group ref="Annotation.content"/>
+      <xs:attributeGroup ref="Annotation.attrs"/>
+   </xs:complexType>
+   <xs:group name="Annotation.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="rel"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="tns:ConceptIdentifier"/>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="ref"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="tns:ConceptIdentifier"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="Annotation.attrs"/>
+   <xs:element name="applicability" type="Applicability"/>
+   <xs:complexType xmi:id="_xO466hiHEeqBIaJY4gQzpg" name="Applicability">
+      <xs:group ref="Applicability.content"/>
+      <xs:attributeGroup ref="Applicability.attrs"/>
+   </xs:complexType>
+   <xs:group name="Applicability.content">
+      <xs:sequence>
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+                     name="situation"
+                     minOccurs="1"
+                     maxOccurs="unbounded"
+                     type="tns:ConceptIdentifier"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="Applicability.attrs">
+      <xs:attribute name="description" type="xs:string"/>
+   </xs:attributeGroup>
+</xs:schema>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ResponseCodes"
+           targetNamespace="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes/2011"
+           elementFormDefault="qualified"
+           xmlns="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes/2011"
+           xmlns:id="https://www.omg.org/spec/API4KP/20200801/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/id"/>
+
+    <xs:complexType name="ResponseCode">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="ResponseCode_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#8cb22bdd-0b7b-31ab-93d7-42e22eed8da2"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#cee63112-1c2e-3923-af3a-2f028ad5c89b"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#ec895663-7a99-387b-9197-eacd77acce5e"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b337e84d-e875-3b27-ada3-a12363109e80"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#11b9842e-0a27-3ff2-92c1-903e7132cd68"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#8fe0093b-b30d-3f8c-b147-4bd0764e6ac0"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#e2c0be24-560d-38c5-a599-c2a9c9d0bbd2"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f899139d-f5e1-3593-9643-1415e770c6dd"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#7eabe3a1-649f-3a2b-bff8-c02ebfd5659f"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#bbf94b34-eb32-368a-9a57-a3be5062fe7d"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#eae27d77-ca20-3b30-9e05-6e3d2dcd7d69"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#34ed066d-f378-3fac-89b9-24ec161e7639"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b2eb7349-0357-3495-bb57-a32e2841bda5"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f85454e8-279b-3180-985c-ac7d243c5eb3"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#2d6cc4b2-d139-3535-92fb-8cbb3086ae2e"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#496e05e1-aea0-39c4-a558-00e8a7b9ea28"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b9228e09-62a7-3b84-b3d5-d92f4faa000b"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#69adc1e1-07f7-37d0-b5d7-baf04342e1ca"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#3c7781a3-6bcd-3cf0-8c11-a970fbe0e2a6"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#4f4adcbf-8c6f-36dc-bc8a-3282ac2bf10a"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b5b41fac-0361-3157-9967-3ecb926af5ae"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#bbcbff5c-1f1d-3d46-825d-28119a85c6c2"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#0d0fd7c6-e093-37b8-84fa-0150b875b868"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#8e98d81f-8217-3049-b5cc-b23337bb5761"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#e8c0653f-ea13-391b-b3c4-8159f7c24f78"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#854d6fae-5ee4-3911-a77c-739ee1734486"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#a96b65a7-21e5-31e1-a3de-768ac819ffbb"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#faa9afea-49ef-3ff0-a9a8-33cccc778fd0"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#66808e32-7dc7-3d13-9ba1-8e051673d906"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#ff4d5fbb-afdf-376c-bdc0-32e3bde78de5"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#17d63b16-25c8-36c2-a647-a73e1482372b"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#274ad478-6c3a-3ca6-9fa0-97b85867d9a4"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#757b505c-fd34-364c-85ca-5b5690ee5293"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#577bcc91-4f9e-35d5-a4e4-f82f9f00e7d4"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#08740852-2c31-3eb1-b982-bc0eaf81d35f"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#18d80423-86b7-3e2c-a79f-d162df0205c8"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#38b3eff8-baf5-3627-878e-c76a704e9b52"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#42e7aaa8-8b48-337a-96a1-acd04ed91125"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#285e19f2-0bed-3d7d-a151-02b49d5c09a0"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#3644a684-f98e-38fe-a23c-713b77189a77"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#5b69b9cb-8306-3d40-b869-739ae7f0995e"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#69cb3ea3-17a3-3c4e-a143-e665fdb20b14"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f4f6dce2-f3a0-39da-9a0c-2b5b66452017"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#6ecbdd6e-c859-3284-9c13-885a37ce8d81"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#94f6d7e0-4a4d-3520-b530-0f18b984988c"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#37bc2f75-bf1b-3fe8-850a-1a41c200364c"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#816b112c-6105-33eb-9537-828a39af4818"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#9cfdf10e-8fc0-37a4-8b08-ed031e1f0ed1"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#1068c6e4-c805-3cfd-8e9e-a8072e3189e2"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#41ae36ec-b9b3-3ee6-89d0-5b90c14222fb"/>
+        <xs:enumeration value="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#0deb1c54-8143-35ca-9ad2-66f53bc82511"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
