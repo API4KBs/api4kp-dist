@@ -1,5 +1,6 @@
 package org.omg.spec.API4KP;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.file.FileVisitResult;
@@ -30,6 +31,9 @@ public class InventoryGenerator {
   static final String XMIS_DOCUMENT_NUMBER = "ad/2021-02-04";
   static final String OPENAPIS_DOCUMENT_NUMBER = "ad/2021-02-05";
   static final String OWL_DOCUMENT_NUMBER = "ad/2021-02-06";
+
+
+  static final String XSD_DOCUMENT_NUMBER = "ad/2021-02-08";
 
 
   static final String API4KP_BASE_URI = "https://www.omg.org/spec/API4KP/1.0/";
@@ -141,9 +145,23 @@ public class InventoryGenerator {
                  API4KP_SPEC_SERIES_URI + file.getFileName().toString())
     );
 
+    db.withPageBreak();
+
+    db.withFormat("c").withParagraph("Datatype Schemas").clearFormat();
+
+    Path xsdBase = basePath.resolve("xsd").resolve("API4KP").resolve("api4kp");
+    visitTreePath(
+        xsdBase,
+//        file -> isNormativeOntology(file),
+        InventoryGenerator::getXSDDependencies,
+        file -> db.withMachineFile("API4KP XML Schemas derived from the UML model files (.xsd)",
+            XSD_DOCUMENT_NUMBER,
+            file.getFileName().toString(),
+            true,
+            InventoryGenerator::getXSDDependencies,
+            API4KP_SPEC_URI + xsdBase.relativize(file).toString().replace(File.separatorChar,'/')));
 
     // IDLs
-    // Datatype XSDs
     // Enumeration XSDs
     // Datatype YAMLS
     // Enumeration SKOS
@@ -181,6 +199,24 @@ public class InventoryGenerator {
       case "vocabs.xmi" : return Arrays.asList("api4kp_uml_profiles.xmi", "api4kp.xmi");
       default:
         throw new IllegalStateException("Unrecognized UML file " + file);
+    }
+  }
+  private static List<String> getXSDDependencies(String file) {
+    switch (file) {
+      case "datatypes.xsd" :
+      case "api4kp.xsd" : return Collections.emptyList();
+
+      case "id.xsd" : return Collections.singletonList("api4kp.xsd");
+
+      case "services.xsd" : return Collections.singletonList("id.xsd");
+
+      case "inference.xsd" :
+      case "transrepresentation.xsd" :
+      case "repository.xsd" : return Collections.singletonList("services.xsd");
+
+      case "surrogate.xsd" : return Arrays.asList("id.xsd", "services.xsd");
+      default:
+        throw new IllegalStateException("Unrecognized XSD file " + file);
     }
   }
 
