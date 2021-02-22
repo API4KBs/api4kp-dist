@@ -1,0 +1,232 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://ontology.mayo.edu/ontologies/decisionmodels/"
+    xmlns:dce="http://www.opengroup.org/dce/"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns:tgt="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType">
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType/SNAPSHOT"/>
+  </owl:Ontology>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#c49eb0da-074c-30cd-9ced-7ba597ac1d15">
+    <skos:broader>
+      <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#7c76cd04-06af-39e3-9510-432336716f7e">
+        <skos:prefLabel>Binary Decision</skos:prefLabel>
+        <skos:broaderTransitive>
+          <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <skos:inScheme>
+              <skos:ConceptScheme rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#ed047630-5625-3fef-ba3f-239b7594ecdd">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+                <rdfs:label>DecisionTypes</rdfs:label>
+                <skos:prefLabel>DecisionTypes</skos:prefLabel>
+                <skos:hasTopConcept rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+              </skos:ConceptScheme>
+            </skos:inScheme>
+            <rdfs:label>DecisionType</rdfs:label>
+            <skos:prefLabel>DecisionType</skos:prefLabel>
+          </skos:Concept>
+        </skos:broaderTransitive>
+        <rdfs:comment>Choice between two complementary options</rdfs:comment>
+        <skos:broader>
+          <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#21d77342-d120-324b-9ac6-11562e52c4cd">
+            <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#ed047630-5625-3fef-ba3f-239b7594ecdd"/>
+            <skos:notation>ChoiceDecision</skos:notation>
+            <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/decisionmodels/ChoiceDecision</rdfs:isDefinedBy>
+            <rdfs:comment>Selection Decision that requires to select one and only one of the alternatives</rdfs:comment>
+            <skos:broader>
+              <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#cb854ec0-87c7-30b0-96ef-a73b6fac8cf8">
+                <rdfs:comment>Decision that implies the selection of one or more elements out of a finite, explicitly enumerated set of categorical alternatives, each one of which can be evaluated independently, as well as compared to each other.</rdfs:comment>
+                <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+                <rdfs:label>Selection Decision</rdfs:label>
+                <skos:prefLabel>Selection Decision</skos:prefLabel>
+                <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/decisionmodels/SelectionDecision</rdfs:isDefinedBy>
+                <dct:identifier>cb854ec0-87c7-30b0-96ef-a73b6fac8cf8</dct:identifier>
+                <skos:notation>SelectionDecision</skos:notation>
+                <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+                <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#ed047630-5625-3fef-ba3f-239b7594ecdd"/>
+                <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+              </owl:NamedIndividual>
+            </skos:broader>
+            <rdfs:label>Choice Decision</rdfs:label>
+            <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+            <dct:identifier>21d77342-d120-324b-9ac6-11562e52c4cd</dct:identifier>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:prefLabel>Choice Decision</skos:prefLabel>
+          </owl:NamedIndividual>
+        </skos:broader>
+        <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#ed047630-5625-3fef-ba3f-239b7594ecdd"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:notation>BinaryDecision</skos:notation>
+        <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/decisionmodels/BinaryDecision</rdfs:isDefinedBy>
+        <rdfs:label>Binary Decision</rdfs:label>
+        <dct:identifier>7c76cd04-06af-39e3-9510-432336716f7e</dct:identifier>
+      </skos:Concept>
+    </skos:broader>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#ed047630-5625-3fef-ba3f-239b7594ecdd"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <rdfs:label>Boolean Decision</rdfs:label>
+    <rdfs:comment>Binary decision where the options are 'yes' vs 'no', or 'true' vs 'false'</rdfs:comment>
+    <skos:notation>BooleanDecision</skos:notation>
+    <skos:prefLabel>Boolean Decision</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/decisionmodels/BooleanDecision</rdfs:isDefinedBy>
+    <dct:identifier>c49eb0da-074c-30cd-9ced-7ba597ac1d15</dct:identifier>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#bd53d56d-e2c7-3ec2-ae91-5af122027498">
+    <rdfs:comment>Decision that is intended to be made by two or more decision makers, i.e. such that the answer to the decision making process will result from the consensus of two or more agents</rdfs:comment>
+    <dct:identifier>bd53d56d-e2c7-3ec2-ae91-5af122027498</dct:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#ed047630-5625-3fef-ba3f-239b7594ecdd"/>
+    <skos:notation>SharedDecision</skos:notation>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/decisionmodels/SharedDecision</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <rdfs:label>Shared Decision</rdfs:label>
+    <skos:prefLabel>Shared Decision</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#e0dbe4d9-79b5-390c-91a9-bcc756d68b18">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#ed047630-5625-3fef-ba3f-239b7594ecdd"/>
+    <rdfs:label>Implicit Decision</rdfs:label>
+    <rdfs:comment>Decision that is made for the purpose of informing another decision, and as such does not need to be communicated explicitly.</rdfs:comment>
+    <skos:notation>ImplicitDecision</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:prefLabel>Implicit Decision</skos:prefLabel>
+    <dct:identifier>e0dbe4d9-79b5-390c-91a9-bcc756d68b18</dct:identifier>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/decisionmodels/ImplicitDecision</rdfs:isDefinedBy>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#28d541e1-bd08-3afc-a3f0-3780601576c6">
+    <skos:notation>ActionableDecision</skos:notation>
+    <skos:prefLabel>Actionable Decision</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <rdfs:comment>Decision about what action or intervention is next, based on the current state. The outcome of the decision is the intent to do something in the future</rdfs:comment>
+    <rdfs:label>Actionable Decision</rdfs:label>
+    <dct:identifier>28d541e1-bd08-3afc-a3f0-3780601576c6</dct:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/decisionmodels/ActionableDecision</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#ed047630-5625-3fef-ba3f-239b7594ecdd"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#a2db22af-c342-3bc8-960c-75a18a23dd22">
+    <skos:prefLabel>Defeater Decision</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <rdfs:label>Defeater Decision</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/decisionmodels/DefeaterDecision</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#ed047630-5625-3fef-ba3f-239b7594ecdd"/>
+    <dct:identifier>a2db22af-c342-3bc8-960c-75a18a23dd22</dct:identifier>
+    <skos:notation>DefeaterDecision</skos:notation>
+    <rdfs:comment>Binary (boolean) Decision such that, when occurrences are resolved to "true" in a given situation, will defeat the purpose of making other "defeated" decisions</rdfs:comment>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d03ea564-0d31-3e72-a98b-cb93aa4c5cce">
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <skos:notation>AssessmentDecision</skos:notation>
+    <dct:identifier>d03ea564-0d31-3e72-a98b-cb93aa4c5cce</dct:identifier>
+    <rdfs:label>Assessment Decision</rdfs:label>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#ed047630-5625-3fef-ba3f-239b7594ecdd"/>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/decisionmodels/AssessmentDecision</rdfs:isDefinedBy>
+    <rdfs:comment>Decision that (answers a question that) aims to gain more information about some state of affairs - past, present or future.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:prefLabel>Assessment Decision</skos:prefLabel>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#6fab9428-08bc-3a45-aa51-fd0a37682098">
+    <rdfs:label>Pivotal Decision</rdfs:label>
+    <rdfs:comment>Correlation decision which has one explicit "anchor concept", to which all other input concepts are related</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Pivotal Decision</skos:prefLabel>
+    <skos:broader>
+      <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#cc45cb9e-0a9e-396e-90a4-79a8a632901d">
+        <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+        <rdfs:label>Temporal Correlation Decision</rdfs:label>
+        <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#ed047630-5625-3fef-ba3f-239b7594ecdd"/>
+        <skos:notation>CorrelationDecision</skos:notation>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/decisionmodels/CorrelationDecision</rdfs:isDefinedBy>
+        <dct:identifier>cc45cb9e-0a9e-396e-90a4-79a8a632901d</dct:identifier>
+        <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+        <skos:prefLabel>Temporal Correlation Decision</skos:prefLabel>
+        <rdfs:comment>Decision based on the mutual temporal correlation between multiple pieces of information</rdfs:comment>
+      </owl:NamedIndividual>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <skos:notation>PivotalDecision</skos:notation>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#ed047630-5625-3fef-ba3f-239b7594ecdd"/>
+    <dct:identifier>6fab9428-08bc-3a45-aa51-fd0a37682098</dct:identifier>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/decisionmodels/PivotalDecision</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#20953273-18b7-3ec2-813f-1e71808e9823">
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <rdfs:label>Naturalistic Decision</rdfs:label>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#ed047630-5625-3fef-ba3f-239b7594ecdd"/>
+    <rdfs:comment>Decision that cannot be modeled and faithfully expressed in a computable way. As such, the decision making processes it abstracts generally require a human agent to be performed successfully</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation>NaturalisticDecision</skos:notation>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/decisionmodels/NaturalisticDecision</rdfs:isDefinedBy>
+    <skos:prefLabel>Naturalistic Decision</skos:prefLabel>
+    <dct:identifier>20953273-18b7-3ec2-813f-1e71808e9823</dct:identifier>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#7a42c227-08ed-36af-a332-b6f04cc457b3">
+    <rdfs:comment>Decision that requires to synthesizes or reduces a set of given pieces of information of the same kind into a single piece of information</rdfs:comment>
+    <skos:notation>AggregationDecision</skos:notation>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#ed047630-5625-3fef-ba3f-239b7594ecdd"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <rdfs:label>Aggregation Decision</rdfs:label>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/decisionmodels/AggregationDecision</rdfs:isDefinedBy>
+    <skos:prefLabel>Aggregation Decision</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <dct:identifier>7a42c227-08ed-36af-a332-b6f04cc457b3</dct:identifier>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#022cdc44-8bbc-3edc-b14a-fca761d24704">
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <rdfs:label>Interactive Decision</rdfs:label>
+    <rdfs:comment>Decision such that its decision making process will require the exchange of information between two or more agents, possibly following some established protocol</rdfs:comment>
+    <dct:identifier>022cdc44-8bbc-3edc-b14a-fca761d24704</dct:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#ed047630-5625-3fef-ba3f-239b7594ecdd"/>
+    <skos:notation>InteractiveDecision</skos:notation>
+    <skos:prefLabel>Interactive Decision</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/decisionmodels/InteractiveDecision</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d6186f7a-7fa0-3370-938f-47511c079480">
+    <rdfs:label>Enabler Decision</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <rdfs:comment>The opposite of a Defeater decision</rdfs:comment>
+    <skos:prefLabel>Enabler Decision</skos:prefLabel>
+    <rdfs:comment>Binary (boolean) Decision such that, when occurrences are resolved to "false" in a given situation, will defeat the purpose of making another otherwise "enabled" decision.</rdfs:comment>
+    <skos:notation>EnablerDecision</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/decisionmodels/EnablerDecision</rdfs:isDefinedBy>
+    <dct:identifier>d6186f7a-7fa0-3370-938f-47511c079480</dct:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#ed047630-5625-3fef-ba3f-239b7594ecdd"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#8c1bd5ba-c9aa-3d6f-8a5c-40cbb9bbd31a">
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <rdfs:label>Computable Decision</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#d5422ea6-4d74-3606-94ed-4b03c16e35d6"/>
+    <skos:prefLabel>Computable Decision</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KAO/DecisionType#ed047630-5625-3fef-ba3f-239b7594ecdd"/>
+    <rdfs:comment>Decision that can have a model based on computable techniques, and such that can be faithfully expressed in a machine-executable language</rdfs:comment>
+    <skos:notation>ComputableDecision</skos:notation>
+    <dct:identifier>8c1bd5ba-c9aa-3d6f-8a5c-40cbb9bbd31a</dct:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/decisionmodels/ComputableDecision</rdfs:isDefinedBy>
+  </skos:Concept>
+</rdf:RDF>

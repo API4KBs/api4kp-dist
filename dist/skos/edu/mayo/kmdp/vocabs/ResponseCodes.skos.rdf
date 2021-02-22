@@ -1,0 +1,597 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dce="http://www.opengroup.org/dce/"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns="http://www.w3.org/http-statusCodes#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns:http="http://www.w3.org/2011/http#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:tgt="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes">
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes/2011"/>
+  </owl:Ontology>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#4f4adcbf-8c6f-36dc-bc8a-3282ac2bf10a">
+    <skos:broaderTransitive>
+      <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:inScheme>
+          <skos:ConceptScheme rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdfs:label>ResponseCodes</rdfs:label>
+            <skos:prefLabel>ResponseCodes</skos:prefLabel>
+            <skos:hasTopConcept rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+          </skos:ConceptScheme>
+        </skos:inScheme>
+        <rdfs:label>ResponseCode</rdfs:label>
+        <skos:prefLabel>ResponseCode</skos:prefLabel>
+      </skos:Concept>
+    </skos:broaderTransitive>
+    <skos:notation>404</skos:notation>
+    <terms:identifier>4f4adcbf-8c6f-36dc-bc8a-3282ac2bf10a</terms:identifier>
+    <skos:prefLabel>NotFound</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdfs:label>NotFound</rdfs:label>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#NotFound</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#69cb3ea3-17a3-3c4e-a143-e665fdb20b14">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:prefLabel>PaymentRequired</skos:prefLabel>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#PaymentRequired</rdfs:isDefinedBy>
+    <rdfs:label>PaymentRequired</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <terms:identifier>69cb3ea3-17a3-3c4e-a143-e665fdb20b14</terms:identifier>
+    <skos:notation>402</skos:notation>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b2eb7349-0357-3495-bb57-a32e2841bda5">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#Reserved</rdfs:isDefinedBy>
+    <terms:identifier>b2eb7349-0357-3495-bb57-a32e2841bda5</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:prefLabel>Reserved</skos:prefLabel>
+    <skos:notation>306</skos:notation>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:label>Reserved</rdfs:label>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#6ecbdd6e-c859-3284-9c13-885a37ce8d81">
+    <skos:prefLabel>UpgradeRequired</skos:prefLabel>
+    <skos:notation>426</skos:notation>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:label>UpgradeRequired</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <terms:identifier>6ecbdd6e-c859-3284-9c13-885a37ce8d81</terms:identifier>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#UpgradeRequired</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#9cfdf10e-8fc0-37a4-8b08-ed031e1f0ed1">
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:notation>226</skos:notation>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#IMUsed</rdfs:isDefinedBy>
+    <skos:prefLabel>IMUsed</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <terms:identifier>9cfdf10e-8fc0-37a4-8b08-ed031e1f0ed1</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdfs:label>IMUsed</rdfs:label>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#285e19f2-0bed-3d7d-a151-02b49d5c09a0">
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:notation>503</skos:notation>
+    <rdfs:label>ServiceUnavailable</rdfs:label>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#ServiceUnavailable</rdfs:isDefinedBy>
+    <skos:prefLabel>ServiceUnavailable</skos:prefLabel>
+    <terms:identifier>285e19f2-0bed-3d7d-a151-02b49d5c09a0</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#a96b65a7-21e5-31e1-a3de-768ac819ffbb">
+    <skos:notation>409</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#Conflict</rdfs:isDefinedBy>
+    <rdfs:label>Conflict</rdfs:label>
+    <terms:identifier>a96b65a7-21e5-31e1-a3de-768ac819ffbb</terms:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:prefLabel>Conflict</skos:prefLabel>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#757b505c-fd34-364c-85ca-5b5690ee5293">
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:label>Created</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:notation>201</skos:notation>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#Created</rdfs:isDefinedBy>
+    <terms:identifier>757b505c-fd34-364c-85ca-5b5690ee5293</terms:identifier>
+    <skos:prefLabel>Created</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#94f6d7e0-4a4d-3520-b530-0f18b984988c">
+    <skos:prefLabel>MultipleChoices</skos:prefLabel>
+    <rdfs:label>MultipleChoices</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation>300</skos:notation>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#MultipleChoices</rdfs:isDefinedBy>
+    <terms:identifier>94f6d7e0-4a4d-3520-b530-0f18b984988c</terms:identifier>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#34ed066d-f378-3fac-89b9-24ec161e7639">
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#MovedPermanently</rdfs:isDefinedBy>
+    <skos:notation>301</skos:notation>
+    <terms:identifier>34ed066d-f378-3fac-89b9-24ec161e7639</terms:identifier>
+    <skos:prefLabel>MovedPermanently</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:label>MovedPermanently</rdfs:label>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#0deb1c54-8143-35ca-9ad2-66f53bc82511">
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#RequestEntityTooLarge</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:prefLabel>RequestEntityTooLarge</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation>413</skos:notation>
+    <terms:identifier>0deb1c54-8143-35ca-9ad2-66f53bc82511</terms:identifier>
+    <rdfs:label>RequestEntityTooLarge</rdfs:label>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#496e05e1-aea0-39c4-a558-00e8a7b9ea28">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:notation>305</skos:notation>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#UseProxy</rdfs:isDefinedBy>
+    <skos:prefLabel>UseProxy</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:label>UseProxy</rdfs:label>
+    <terms:identifier>496e05e1-aea0-39c4-a558-00e8a7b9ea28</terms:identifier>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#5b69b9cb-8306-3d40-b869-739ae7f0995e">
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#NotImplemented</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <terms:identifier>5b69b9cb-8306-3d40-b869-739ae7f0995e</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:prefLabel>NotImplemented</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>NotImplemented</rdfs:label>
+    <skos:notation>501</skos:notation>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#0d0fd7c6-e093-37b8-84fa-0150b875b868">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:notation>408</skos:notation>
+    <rdfs:label>RequestTimeout</rdfs:label>
+    <terms:identifier>0d0fd7c6-e093-37b8-84fa-0150b875b868</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#RequestTimeout</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:prefLabel>RequestTimeout</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#8e98d81f-8217-3049-b5cc-b23337bb5761">
+    <rdfs:label>TemporaryRedirect</rdfs:label>
+    <skos:prefLabel>TemporaryRedirect</skos:prefLabel>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#TemporaryRedirect</rdfs:isDefinedBy>
+    <skos:notation>307</skos:notation>
+    <terms:identifier>8e98d81f-8217-3049-b5cc-b23337bb5761</terms:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#08740852-2c31-3eb1-b982-bc0eaf81d35f">
+    <skos:notation>510</skos:notation>
+    <skos:prefLabel>NotExtended</skos:prefLabel>
+    <terms:identifier>08740852-2c31-3eb1-b982-bc0eaf81d35f</terms:identifier>
+    <rdfs:label>NotExtended</rdfs:label>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#NotExtended</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#37bc2f75-bf1b-3fe8-850a-1a41c200364c">
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#NotModified</rdfs:isDefinedBy>
+    <terms:identifier>37bc2f75-bf1b-3fe8-850a-1a41c200364c</terms:identifier>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:prefLabel>NotModified</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdfs:label>NotModified</rdfs:label>
+    <skos:notation>304</skos:notation>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#1068c6e4-c805-3cfd-8e9e-a8072e3189e2">
+    <skos:notation>410</skos:notation>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#Gone</rdfs:isDefinedBy>
+    <rdfs:label>Gone</rdfs:label>
+    <terms:identifier>1068c6e4-c805-3cfd-8e9e-a8072e3189e2</terms:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:prefLabel>Gone</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#66808e32-7dc7-3d13-9ba1-8e051673d906">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <terms:identifier>66808e32-7dc7-3d13-9ba1-8e051673d906</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:label>RequestURITooLong</rdfs:label>
+    <skos:notation>414</skos:notation>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#RequestURITooLong</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:prefLabel>RequestURITooLong</skos:prefLabel>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#274ad478-6c3a-3ca6-9fa0-97b85867d9a4">
+    <rdfs:label>NoContent</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#NoContent</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:prefLabel>NoContent</skos:prefLabel>
+    <terms:identifier>274ad478-6c3a-3ca6-9fa0-97b85867d9a4</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:notation>204</skos:notation>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#8fe0093b-b30d-3f8c-b147-4bd0764e6ac0">
+    <rdfs:label>RequestedRangeNotSatisfiable</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:notation>416</skos:notation>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#RequestedRangeNotSatisfiable</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>RequestedRangeNotSatisfiable</skos:prefLabel>
+    <terms:identifier>8fe0093b-b30d-3f8c-b147-4bd0764e6ac0</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#cee63112-1c2e-3923-af3a-2f028ad5c89b">
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#InternalServerError</rdfs:isDefinedBy>
+    <skos:prefLabel>InternalServerError</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdfs:label>InternalServerError</rdfs:label>
+    <skos:notation>500</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <terms:identifier>cee63112-1c2e-3923-af3a-2f028ad5c89b</terms:identifier>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#ff4d5fbb-afdf-376c-bdc0-32e3bde78de5">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#VariantAlsoNegotiates</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <terms:identifier>ff4d5fbb-afdf-376c-bdc0-32e3bde78de5</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation>506</skos:notation>
+    <rdfs:label>VariantAlsoNegotiates</rdfs:label>
+    <skos:prefLabel>VariantAlsoNegotiates</skos:prefLabel>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f85454e8-279b-3180-985c-ac7d243c5eb3">
+    <skos:notation>422</skos:notation>
+    <skos:prefLabel>UnprocessableEntity</skos:prefLabel>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>UnprocessableEntity</rdfs:label>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#UnprocessableEntity</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <terms:identifier>f85454e8-279b-3180-985c-ac7d243c5eb3</terms:identifier>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#18d80423-86b7-3e2c-a79f-d162df0205c8">
+    <rdfs:label>BadRequest</rdfs:label>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#BadRequest</rdfs:isDefinedBy>
+    <terms:identifier>18d80423-86b7-3e2c-a79f-d162df0205c8</terms:identifier>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:prefLabel>BadRequest</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation>400</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#17d63b16-25c8-36c2-a647-a73e1482372b">
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#LengthRequired</rdfs:isDefinedBy>
+    <skos:prefLabel>LengthRequired</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:notation>411</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <terms:identifier>17d63b16-25c8-36c2-a647-a73e1482372b</terms:identifier>
+    <rdfs:label>LengthRequired</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#7eabe3a1-649f-3a2b-bff8-c02ebfd5659f">
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#PartialContent</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:prefLabel>PartialContent</skos:prefLabel>
+    <terms:identifier>7eabe3a1-649f-3a2b-bff8-c02ebfd5659f</terms:identifier>
+    <rdfs:label>PartialContent</rdfs:label>
+    <skos:notation>206</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#8cb22bdd-0b7b-31ab-93d7-42e22eed8da2">
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:notation>406</skos:notation>
+    <rdfs:label>NotAcceptable</rdfs:label>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#NotAcceptable</rdfs:isDefinedBy>
+    <skos:prefLabel>NotAcceptable</skos:prefLabel>
+    <terms:identifier>8cb22bdd-0b7b-31ab-93d7-42e22eed8da2</terms:identifier>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b337e84d-e875-3b27-ada3-a12363109e80">
+    <skos:prefLabel>GatewayTimeout</skos:prefLabel>
+    <terms:identifier>b337e84d-e875-3b27-ada3-a12363109e80</terms:identifier>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#GatewayTimeout</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>GatewayTimeout</rdfs:label>
+    <skos:notation>504</skos:notation>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#e2c0be24-560d-38c5-a599-c2a9c9d0bbd2">
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#NonAuthoritativeInformation</rdfs:isDefinedBy>
+    <skos:notation>203</skos:notation>
+    <rdfs:label>NonAuthoritativeInformation</rdfs:label>
+    <skos:prefLabel>NonAuthoritativeInformation</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <terms:identifier>e2c0be24-560d-38c5-a599-c2a9c9d0bbd2</terms:identifier>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#e8c0653f-ea13-391b-b3c4-8159f7c24f78">
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#HTTPVersionNotSupported</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:label>HTTPVersionNotSupported</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation>505</skos:notation>
+    <skos:prefLabel>HTTPVersionNotSupported</skos:prefLabel>
+    <terms:identifier>e8c0653f-ea13-391b-b3c4-8159f7c24f78</terms:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#ec895663-7a99-387b-9197-eacd77acce5e">
+    <skos:prefLabel>Processing</skos:prefLabel>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:label>Processing</rdfs:label>
+    <skos:notation>102</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#Processing</rdfs:isDefinedBy>
+    <terms:identifier>ec895663-7a99-387b-9197-eacd77acce5e</terms:identifier>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#2d6cc4b2-d139-3535-92fb-8cbb3086ae2e">
+    <skos:notation>507</skos:notation>
+    <terms:identifier>2d6cc4b2-d139-3535-92fb-8cbb3086ae2e</terms:identifier>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#InsufficientStorage</rdfs:isDefinedBy>
+    <skos:prefLabel>InsufficientStorage</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:label>InsufficientStorage</rdfs:label>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#577bcc91-4f9e-35d5-a4e4-f82f9f00e7d4">
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#Found</rdfs:isDefinedBy>
+    <skos:prefLabel>Found</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdfs:label>Found</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation>302</skos:notation>
+    <terms:identifier>577bcc91-4f9e-35d5-a4e4-f82f9f00e7d4</terms:identifier>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#11b9842e-0a27-3ff2-92c1-903e7132cd68">
+    <skos:notation>303</skos:notation>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#SeeOther</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:label>SeeOther</rdfs:label>
+    <terms:identifier>11b9842e-0a27-3ff2-92c1-903e7132cd68</terms:identifier>
+    <skos:prefLabel>SeeOther</skos:prefLabel>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#69adc1e1-07f7-37d0-b5d7-baf04342e1ca">
+    <rdfs:label>MultiStatus</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:notation>207</skos:notation>
+    <terms:identifier>69adc1e1-07f7-37d0-b5d7-baf04342e1ca</terms:identifier>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#MultiStatus</rdfs:isDefinedBy>
+    <skos:prefLabel>MultiStatus</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#854d6fae-5ee4-3911-a77c-739ee1734486">
+    <rdfs:label>Accepted</rdfs:label>
+    <skos:prefLabel>Accepted</skos:prefLabel>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#Accepted</rdfs:isDefinedBy>
+    <skos:notation>202</skos:notation>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <terms:identifier>854d6fae-5ee4-3911-a77c-739ee1734486</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#bbcbff5c-1f1d-3d46-825d-28119a85c6c2">
+    <rdfs:label>MethodNotAllowed</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <terms:identifier>bbcbff5c-1f1d-3d46-825d-28119a85c6c2</terms:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:prefLabel>MethodNotAllowed</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:notation>405</skos:notation>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#MethodNotAllowed</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#eae27d77-ca20-3b30-9e05-6e3d2dcd7d69">
+    <rdfs:label>ResetContent</rdfs:label>
+    <skos:prefLabel>ResetContent</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#ResetContent</rdfs:isDefinedBy>
+    <terms:identifier>eae27d77-ca20-3b30-9e05-6e3d2dcd7d69</terms:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation>205</skos:notation>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#3c7781a3-6bcd-3cf0-8c11-a970fbe0e2a6">
+    <skos:prefLabel>FailedDependency</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <terms:identifier>3c7781a3-6bcd-3cf0-8c11-a970fbe0e2a6</terms:identifier>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:label>FailedDependency</rdfs:label>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#FailedDependency</rdfs:isDefinedBy>
+    <skos:notation>424</skos:notation>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#38b3eff8-baf5-3627-878e-c76a704e9b52">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:prefLabel>SwitchingProtocols</skos:prefLabel>
+    <rdfs:label>SwitchingProtocols</rdfs:label>
+    <skos:notation>101</skos:notation>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#SwitchingProtocols</rdfs:isDefinedBy>
+    <terms:identifier>38b3eff8-baf5-3627-878e-c76a704e9b52</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f4f6dce2-f3a0-39da-9a0c-2b5b66452017">
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:notation>407</skos:notation>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:prefLabel>ProxyAuthenticationRequired</skos:prefLabel>
+    <rdfs:label>ProxyAuthenticationRequired</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#ProxyAuthenticationRequired</rdfs:isDefinedBy>
+    <terms:identifier>f4f6dce2-f3a0-39da-9a0c-2b5b66452017</terms:identifier>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f899139d-f5e1-3593-9643-1415e770c6dd">
+    <rdfs:label>Continue</rdfs:label>
+    <skos:notation>100</skos:notation>
+    <terms:identifier>f899139d-f5e1-3593-9643-1415e770c6dd</terms:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#Continue</rdfs:isDefinedBy>
+    <skos:prefLabel>Continue</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#42e7aaa8-8b48-337a-96a1-acd04ed91125">
+    <rdfs:label>UnsupportedMediaType</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <terms:identifier>42e7aaa8-8b48-337a-96a1-acd04ed91125</terms:identifier>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:prefLabel>UnsupportedMediaType</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#UnsupportedMediaType</rdfs:isDefinedBy>
+    <skos:notation>415</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#3644a684-f98e-38fe-a23c-713b77189a77">
+    <skos:notation>200</skos:notation>
+    <rdfs:label>OK</rdfs:label>
+    <skos:prefLabel>OK</skos:prefLabel>
+    <terms:identifier>3644a684-f98e-38fe-a23c-713b77189a77</terms:identifier>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#OK</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b9228e09-62a7-3b84-b3d5-d92f4faa000b">
+    <skos:prefLabel>PreconditionFailed</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <terms:identifier>b9228e09-62a7-3b84-b3d5-d92f4faa000b</terms:identifier>
+    <skos:notation>412</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:label>PreconditionFailed</rdfs:label>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#PreconditionFailed</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#bbf94b34-eb32-368a-9a57-a3be5062fe7d">
+    <skos:prefLabel>Forbidden</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>Forbidden</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#Forbidden</rdfs:isDefinedBy>
+    <skos:notation>403</skos:notation>
+    <terms:identifier>bbf94b34-eb32-368a-9a57-a3be5062fe7d</terms:identifier>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#faa9afea-49ef-3ff0-a9a8-33cccc778fd0">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <terms:identifier>faa9afea-49ef-3ff0-a9a8-33cccc778fd0</terms:identifier>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#Locked</rdfs:isDefinedBy>
+    <skos:prefLabel>Locked</skos:prefLabel>
+    <skos:notation>423</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:label>Locked</rdfs:label>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#41ae36ec-b9b3-3ee6-89d0-5b90c14222fb">
+    <terms:identifier>41ae36ec-b9b3-3ee6-89d0-5b90c14222fb</terms:identifier>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#ExpectationFailed</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:notation>417</skos:notation>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:label>ExpectationFailed</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:prefLabel>ExpectationFailed</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#816b112c-6105-33eb-9537-828a39af4818">
+    <terms:identifier>816b112c-6105-33eb-9537-828a39af4818</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#Unauthorized</rdfs:isDefinedBy>
+    <skos:prefLabel>Unauthorized</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:label>Unauthorized</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <skos:notation>401</skos:notation>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b5b41fac-0361-3157-9967-3ecb926af5ae">
+    <rdfs:label>BadGateway</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2011/http-statusCodes#BadGateway</rdfs:isDefinedBy>
+    <skos:prefLabel>BadGateway</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#b748669f-101f-3c4c-8a9a-79ac22b46ce5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ws/ResponseCodes#f1d055ec-755a-314f-b1ba-9a81d911a210"/>
+    <terms:identifier>b5b41fac-0361-3157-9967-3ecb926af5ae</terms:identifier>
+    <skos:notation>502</skos:notation>
+  </skos:Concept>
+</rdf:RDF>

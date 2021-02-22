@@ -1,0 +1,83 @@
+swagger: "2.0"
+definitions:
+  KnowledgeArtifactRepository:
+    allOf:
+      - $ref: '../services.yaml#/definitions/KnowledgePlatformComponent'
+      - type: object
+        discriminator: _class
+        properties:
+          _class : string
+          id:
+            $ref: '../../id/id.yaml#/definitions/ResourceIdentifier'
+            xml:
+              namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          alias:
+            type: array
+            items:
+              $ref: '../../id/id.yaml#/definitions/ResourceIdentifier'
+            minItems: 0
+            xml:
+              namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          name:
+            type: string
+            xml:
+              attribute: true
+          size:
+            type: number
+            xml:
+              attribute: true
+          href:
+            type: string
+            xml:
+              attribute: true
+          defaultRepository:
+            type: boolean
+            xml:
+              attribute: true
+        required:
+          - _class
+          - id
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/20200801/services/repository'
+  KnowledgeAssetCatalog:
+    allOf:
+      - $ref: '../services.yaml#/definitions/KnowledgePlatformComponent'
+      - type: object
+        discriminator: _class
+        properties:
+          _class : string
+          supportedAssetTypes:
+            type: array
+            items:
+              $ref: '../../../../org/omg/spec/api4kp/_20200801/taxonomy/knowledgeassettype/KnowledgeAssetType.series.yaml#/definitions/KnowledgeAssetType'
+            minItems: 0
+            xml:
+              namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType'
+          id:
+            $ref: '../../id/id.yaml#/definitions/ResourceIdentifier'
+            xml:
+              namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          surrogateModels:
+            type: array
+            items:
+              $ref: '../services.yaml#/definitions/SyntacticRepresentation'
+            minItems: 1
+            xml:
+              namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+          name:
+            type: string
+            xml:
+              attribute: true
+          owner:
+            type: string
+            xml:
+              attribute: true
+          supportedAnnotations:
+            type: string
+            xml:
+              attribute: true
+        required:
+          - _class
+          - surrogateModels
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/20200801/services/repository'

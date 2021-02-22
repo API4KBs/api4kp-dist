@@ -1,0 +1,176 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dce="http://www.opengroup.org/dce/"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns="https://www.omg.org/spec/API4KP/api4kp-ckao/"
+    xmlns:AnnotationVocabulary1="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:DOL-terms="http://www.omg.org/spec/DOL/DOL-terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:AnnotationVocabulary="https://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:tgt="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType">
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType/SNAPSHOT"/>
+  </owl:Ontology>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#0ae0bb9f-d645-3b8f-b0da-f52d63a49696">
+    <terms:identifier>0ae0bb9f-d645-3b8f-b0da-f52d63a49696</terms:identifier>
+    <skos:notation>ClinicalEnrollmentRule</skos:notation>
+    <skos:definition>clinical rule that determines whether a patient will be administered care, as specified by a care process, pathway or protocol</skos:definition>
+    <skos:prefLabel>clinical enrollment rule</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ckao/ClinicalEnrollmentRule</rdfs:isDefinedBy>
+    <skos:broaderTransitive>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#f700d445-2ba8-361b-ba6e-951614219354">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:inScheme>
+          <skos:ConceptScheme rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#472ab418-8d62-3a72-9b4e-a7dc14530263">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdfs:label>ClinicalKnowledgeAssetTypes</rdfs:label>
+            <skos:prefLabel>ClinicalKnowledgeAssetTypes</skos:prefLabel>
+            <skos:hasTopConcept rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#f700d445-2ba8-361b-ba6e-951614219354"/>
+          </skos:ConceptScheme>
+        </skos:inScheme>
+        <rdfs:label>ClinicalKnowledgeAssetType</rdfs:label>
+        <skos:prefLabel>ClinicalKnowledgeAssetType</skos:prefLabel>
+      </skos:Concept>
+    </skos:broaderTransitive>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#f700d445-2ba8-361b-ba6e-951614219354"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>clinical enrollment rule</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#472ab418-8d62-3a72-9b4e-a7dc14530263"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#4318b2d5-d0a5-3f4b-b8af-810857bb9984">
+    <skos:prefLabel>clinical eligibility rule</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#f700d445-2ba8-361b-ba6e-951614219354"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#472ab418-8d62-3a72-9b4e-a7dc14530263"/>
+    <terms:identifier>4318b2d5-d0a5-3f4b-b8af-810857bb9984</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#f700d445-2ba8-361b-ba6e-951614219354"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:definition>clinical rule that determines whether a treatment, or study thereof, is potentially administrable to a patient (cohort), based on the patient's characteristics</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ckao/ClinicalEligibilityRule</rdfs:isDefinedBy>
+    <skos:notation>ClinicalEligibilityRule</skos:notation>
+    <rdfs:label>clinical eligibility rule</rdfs:label>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#f5562d76-db9e-381c-96c3-75ae07d73179">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#472ab418-8d62-3a72-9b4e-a7dc14530263"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#f700d445-2ba8-361b-ba6e-951614219354"/>
+    <skos:notation>InteractiveClinicalInferenceRule</skos:notation>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#db969f6f-9623-3fd0-8e5e-58f91760e77e">
+        <skos:definition>clinical rule, or set thereof, that uses a patient's (possibly summarized) case, to assess the patient's state, predict the case's course, and/or determine (contra)indicated intervention options</skos:definition>
+        <skos:broader>
+          <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#622de43c-bbb3-3b12-b2f4-886208afe4a2">
+            <skos:definition>clinical rule, or set thereof, that uses summarization, inference, guidance and contextualization logic to augment a patient's case, with respect to a disorder that the case is centered on</skos:definition>
+            <rdfs:label>case enrichment rule</rdfs:label>
+            <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ckao/CaseEnrichmentRule</rdfs:isDefinedBy>
+            <skos:notation>CaseEnrichmentRule</skos:notation>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <terms:identifier>622de43c-bbb3-3b12-b2f4-886208afe4a2</terms:identifier>
+            <skos:prefLabel>case enrichment rule</skos:prefLabel>
+            <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#f700d445-2ba8-361b-ba6e-951614219354"/>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#472ab418-8d62-3a72-9b4e-a7dc14530263"/>
+            <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#f700d445-2ba8-361b-ba6e-951614219354"/>
+          </skos:Concept>
+        </skos:broader>
+        <rdfs:label>clinical inference rule</rdfs:label>
+        <skos:prefLabel>clinical inference rule</skos:prefLabel>
+        <skos:notation>ClinicalInferenceRule</skos:notation>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#f700d445-2ba8-361b-ba6e-951614219354"/>
+        <terms:identifier>db969f6f-9623-3fd0-8e5e-58f91760e77e</terms:identifier>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ckao/ClinicalInferenceRule</rdfs:isDefinedBy>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#472ab418-8d62-3a72-9b4e-a7dc14530263"/>
+      </skos:Concept>
+    </skos:broader>
+    <terms:identifier>f5562d76-db9e-381c-96c3-75ae07d73179</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ckao/InteractiveClinicalInferenceRule</rdfs:isDefinedBy>
+    <skos:prefLabel>interactive clinical inference rule</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>interactive clinical inference rule</rdfs:label>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#cf15d6b2-adc3-3d4b-a0bf-9ea09c887323">
+    <skos:notation>ClinicalCalculationRule</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#472ab418-8d62-3a72-9b4e-a7dc14530263"/>
+    <skos:prefLabel>clinical calculation rule</skos:prefLabel>
+    <terms:identifier>cf15d6b2-adc3-3d4b-a0bf-9ea09c887323</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#f700d445-2ba8-361b-ba6e-951614219354"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ckao/ClinicalCalculationRule</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#db969f6f-9623-3fd0-8e5e-58f91760e77e"/>
+    <skos:definition>clinical inference rule that determines a single, derived, 'observed' value</skos:definition>
+    <rdfs:label>clinical calculation rule</rdfs:label>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#502f8fcf-b145-3c27-91f4-099fc564fe23">
+    <terms:identifier>502f8fcf-b145-3c27-91f4-099fc564fe23</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ckao/ClinicalContextualizationRule</rdfs:isDefinedBy>
+    <rdfs:label>clinical contextualization rule</rdfs:label>
+    <skos:definition>clinical inference rule that "projects" the patient's state around a set of (usually related) concepts, effectively creating a focused context</skos:definition>
+    <skos:notation>ClinicalContextualizationRule</skos:notation>
+    <skos:prefLabel>clinical contextualization rule</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#db969f6f-9623-3fd0-8e5e-58f91760e77e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#f700d445-2ba8-361b-ba6e-951614219354"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#472ab418-8d62-3a72-9b4e-a7dc14530263"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#31d443b6-78cb-3e6d-8e3f-beedb6f54647">
+    <skos:prefLabel>interactive clinical summarization rule</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ckao/InteractiveCaseSummarizationRule</rdfs:isDefinedBy>
+    <terms:identifier>31d443b6-78cb-3e6d-8e3f-beedb6f54647</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#472ab418-8d62-3a72-9b4e-a7dc14530263"/>
+    <skos:altLabel>questionnaire pre-population rule</skos:altLabel>
+    <rdfs:label>interactive clinical summarization rule</rdfs:label>
+    <skos:broader>
+      <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#ba109fe2-e6c9-3a7f-89df-4cb7535b9a13">
+        <skos:notation>CaseSummarizationRule</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#472ab418-8d62-3a72-9b4e-a7dc14530263"/>
+        <rdfs:label>case summarization rule</rdfs:label>
+        <terms:identifier>ba109fe2-e6c9-3a7f-89df-4cb7535b9a13</terms:identifier>
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#622de43c-bbb3-3b12-b2f4-886208afe4a2"/>
+        <skos:prefLabel>case summarization rule</skos:prefLabel>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#f700d445-2ba8-361b-ba6e-951614219354"/>
+        <skos:definition>clinical rule, or set thereof, that extracts salient 'features' from a patient case</skos:definition>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ckao/CaseSummarizationRule</rdfs:isDefinedBy>
+      </owl:NamedIndividual>
+    </skos:broader>
+    <skos:notation>InteractiveCaseSummarizationRule</skos:notation>
+    <skos:definition>clinical summarization rule that presents the summary in a way that supports interactive communication</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#f700d445-2ba8-361b-ba6e-951614219354"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#c1405bca-8cb3-3b39-ab3b-71f5f5ac7cce">
+    <skos:notation>InteractiveClinicalGuidanceRule</skos:notation>
+    <rdfs:label>interactive clinical guidance rule</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#f700d445-2ba8-361b-ba6e-951614219354"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#472ab418-8d62-3a72-9b4e-a7dc14530263"/>
+    <skos:definition>clinical guidance rule that is meant to be executed as part of a bidirectional communication protocol</skos:definition>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#68dd47aa-e310-30a5-bd05-e94393e44023">
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ckao/ClinicalGuidanceRule</rdfs:isDefinedBy>
+        <rdfs:label>clinical guidance rule</rdfs:label>
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#622de43c-bbb3-3b12-b2f4-886208afe4a2"/>
+        <skos:prefLabel>clinical guidance rule</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#f700d445-2ba8-361b-ba6e-951614219354"/>
+        <skos:notation>ClinicalGuidanceRule</skos:notation>
+        <terms:identifier>68dd47aa-e310-30a5-bd05-e94393e44023</terms:identifier>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ClinicalKnowledgeAssetType#472ab418-8d62-3a72-9b4e-a7dc14530263"/>
+        <skos:definition>clinical rule, or set thereof, that uses a patient's (possibly summarized) case, to produce a recommendation, (i.e. a proposed strategy) to address a gap between the current and desired state</skos:definition>
+      </skos:Concept>
+    </skos:broader>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ckao/InteractiveClinicalGuidanceRule</rdfs:isDefinedBy>
+    <skos:note>Guidance rules, in general, require to 'deliver' the guidance to an agent. This kind of rule also expects that the inputs/context used to derive the guidance will be acquired via an explicit interaction</skos:note>
+    <skos:prefLabel>interactive clinical guidance rule</skos:prefLabel>
+    <terms:identifier>c1405bca-8cb3-3b39-ab3b-71f5f5ac7cce</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+</rdf:RDF>

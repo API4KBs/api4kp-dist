@@ -1,0 +1,126 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dce="http://www.opengroup.org/dce/"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:AnnotationVocabulary1="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:DOL-terms="http://www.omg.org/spec/DOL/DOL-terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:AnnotationVocabulary="https://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns="https://www.omg.org/spec/API4KP/api4kp-kao/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:tgt="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique">
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique/20200801"/>
+  </owl:Ontology>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#0453f3fa-9cfd-36cf-9a5a-1a17e0b7c29d">
+    <terms:identifier>0453f3fa-9cfd-36cf-9a5a-1a17e0b7c29d</terms:identifier>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#c710da1c-bc8f-34d3-9e5b-3bb26cdf334e">
+        <skos:prefLabel>computational technique</skos:prefLabel>
+        <skos:broader>
+          <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#9c984f4d-d403-3181-b7a9-0d5402d73c04">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <skos:inScheme>
+              <skos:ConceptScheme rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#294f76a3-f64f-3f80-b269-2f73c0159e18">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+                <rdfs:label>KnowledgeProcessingTechniques</rdfs:label>
+                <skos:prefLabel>KnowledgeProcessingTechniques</skos:prefLabel>
+                <skos:hasTopConcept rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#9c984f4d-d403-3181-b7a9-0d5402d73c04"/>
+              </skos:ConceptScheme>
+            </skos:inScheme>
+            <rdfs:label>KnowledgeProcessingTechnique</rdfs:label>
+            <skos:prefLabel>KnowledgeProcessingTechnique</skos:prefLabel>
+          </skos:Concept>
+        </skos:broader>
+        <terms:identifier>c710da1c-bc8f-34d3-9e5b-3bb26cdf334e</terms:identifier>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#294f76a3-f64f-3f80-b269-2f73c0159e18"/>
+        <rdfs:label>computational technique</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#9c984f4d-d403-3181-b7a9-0d5402d73c04"/>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kao/ComputationalTechnique</rdfs:isDefinedBy>
+        <skos:definition>technique used in some knowledge processing task specification that can be faithfully expressed in some machine-computable language</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:notation>ComputationalTechnique</skos:notation>
+      </skos:Concept>
+    </skos:broader>
+    <skos:prefLabel>quantitative technique</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#294f76a3-f64f-3f80-b269-2f73c0159e18"/>
+    <rdfs:label>quantitative technique</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#9c984f4d-d403-3181-b7a9-0d5402d73c04"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kao/QuantitativeTechnique</rdfs:isDefinedBy>
+    <skos:notation>QuantitativeTechnique</skos:notation>
+    <skos:definition>computational technique that is grounded in mathematical, statistical and/or other numerical principles</skos:definition>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#122b7188-2c21-3c5f-96d8-35510fcb8af7">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#9c984f4d-d403-3181-b7a9-0d5402d73c04"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kao/NaturalLanguageProcessingTechnique</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#c710da1c-bc8f-34d3-9e5b-3bb26cdf334e"/>
+    <skos:notation>NaturalLanguageProcessingTechnique</skos:notation>
+    <rdfs:label>natural language processing technique</rdfs:label>
+    <skos:note>Natural language processing (NLP) is a subfield of linguistics, computer science, information engineering, and artificial intelligence concerned with the interactions between computers and human (natural) languages, in particular how to program computers to process and analyze large amounts of natural language data.</skos:note>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#294f76a3-f64f-3f80-b269-2f73c0159e18"/>
+    <terms:identifier>122b7188-2c21-3c5f-96d8-35510fcb8af7</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:prefLabel>natural language processing technique</skos:prefLabel>
+    <skos:definition>computational technique typically involving rule-based and/or statistical inference (machine learning) applied to expressions in natural language, including, but not limited to speech recognition, natural language understanding, and natural-language generation</skos:definition>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#d94bea97-ded3-3a3d-8d97-ce161ea91ff2">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#294f76a3-f64f-3f80-b269-2f73c0159e18"/>
+    <skos:definition>technique that involves interactions between people and computational devices, with at least one person and one device influencing or having an effect on the other</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kao/InteractiveTechnique</rdfs:isDefinedBy>
+    <rdfs:label>interactive technique</rdfs:label>
+    <terms:identifier>d94bea97-ded3-3a3d-8d97-ce161ea91ff2</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#9c984f4d-d403-3181-b7a9-0d5402d73c04"/>
+    <skos:prefLabel>interactive technique</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#9c984f4d-d403-3181-b7a9-0d5402d73c04"/>
+    <skos:notation>InteractiveTechnique</skos:notation>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#221f0704-2eb6-3767-806c-bb70fdb5fde7">
+    <skos:prefLabel>query technique</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#294f76a3-f64f-3f80-b269-2f73c0159e18"/>
+    <terms:identifier>221f0704-2eb6-3767-806c-bb70fdb5fde7</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#9c984f4d-d403-3181-b7a9-0d5402d73c04"/>
+    <skos:definition>technique that involves question answering and/or requesting another agent to perform some aspect of a task, from which some result can be obtained</skos:definition>
+    <skos:notation>QueryTechnique</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#9c984f4d-d403-3181-b7a9-0d5402d73c04"/>
+    <rdfs:label>query technique</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kao/QueryTechnique</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#b4b94452-af12-352d-832f-cdec7fd11234">
+    <terms:identifier>b4b94452-af12-352d-832f-cdec7fd11234</terms:identifier>
+    <rdfs:label>natural technique</rdfs:label>
+    <skos:definition>technique that requires involvement of a person</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kao/NaturalTechnique</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#9c984f4d-d403-3181-b7a9-0d5402d73c04"/>
+    <skos:prefLabel>natural technique</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#294f76a3-f64f-3f80-b269-2f73c0159e18"/>
+    <skos:note>A natural technique is one that requires some aspect of human-nature, or creativity, spontaneity, ingenuity, or other complex intellectual reasoning, such that a computational engine is incapable of accomplishing a similar task using this technique.</skos:note>
+    <skos:notation>NaturalTechnique</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#9c984f4d-d403-3181-b7a9-0d5402d73c04"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#8a717c26-8031-3210-99b1-a3891897b2c5">
+    <rdfs:label>qualitative technique</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kao/QualitativeTechnique</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#294f76a3-f64f-3f80-b269-2f73c0159e18"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#c710da1c-bc8f-34d3-9e5b-3bb26cdf334e"/>
+    <terms:identifier>8a717c26-8031-3210-99b1-a3891897b2c5</terms:identifier>
+    <skos:prefLabel>qualitative technique</skos:prefLabel>
+    <skos:definition>computational technique that is largely holistic, logic-based, symbolic, and/or non-statistical in nature, that uses qualitative characteristics in analyses</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation>QualitativeTechnique</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#9c984f4d-d403-3181-b7a9-0d5402d73c04"/>
+  </owl:NamedIndividual>
+</rdf:RDF>

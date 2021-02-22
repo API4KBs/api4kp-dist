@@ -1,0 +1,25 @@
+swagger: "2.0"
+definitions:
+  SummarizationType:
+    allOf:
+      - $ref: '../../../../../../../../API4KP/api4kp/id/id.yaml#/definitions/ConceptIdentifier'
+      - type: object
+        discriminator: _class
+        properties:
+          _class : string
+        required:
+          - _class
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/SummaryRelType/20200801'
+  SummarizationType_Valueset:
+    type: string
+    enum:
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/SummaryRelType#d25f089b-f469-3e97-878c-2ef2901423fe
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/SummaryRelType#5d6875d2-2ffa-3288-95ed-7247168874bb
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/SummaryRelType#d8bf9851-a25f-36b8-82a8-83be2cf64852
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/SummaryRelType#4dc8286b-7c16-354d-a658-49b538e193c6
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/SummaryRelType#bc459884-29e6-3600-9755-85ade55e3353
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/SummaryRelType#03bb3e79-bc6b-37b9-93e9-ee3aad8ee0e3
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/SummaryRelType#add56651-4928-36bd-8412-a7d8b63a8efd
+    xml:
+      namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/SummaryRelType/20200801'

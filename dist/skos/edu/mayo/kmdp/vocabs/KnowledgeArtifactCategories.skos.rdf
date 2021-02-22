@@ -1,0 +1,181 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dce="http://www.opengroup.org/dce/"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:tgt="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns="http://ontology.mayo.edu/ontologies/dcmitype#"
+    xmlns:dcam="http://purl.org/dc/dcam/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory">
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory/2020-01-20"/>
+  </owl:Ontology>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#d15b505c-ce09-306d-a9f9-18cb1f8c641c">
+    <rdfs:comment xml:lang="en">An aggregation of resources.</rdfs:comment>
+    <rdfs:isDefinedBy>http://purl.org/dc/dcmitype/Collection</rdfs:isDefinedBy>
+    <skos:notation>Collection</skos:notation>
+    <terms:identifier>d15b505c-ce09-306d-a9f9-18cb1f8c641c</terms:identifier>
+    <rdfs:label xml:lang="en">Collection</rdfs:label>
+    <skos:inScheme>
+      <skos:ConceptScheme rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#ef2886a9-1ac5-30bb-aa43-4642c3a45755">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>KnowledgeArtifactCategories</rdfs:label>
+        <skos:prefLabel>KnowledgeArtifactCategories</skos:prefLabel>
+        <skos:hasTopConcept>
+          <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#ef2886a9-1ac5-30bb-aa43-4642c3a45755"/>
+            <rdfs:label>KnowledgeArtifactCategory</rdfs:label>
+            <skos:prefLabel>KnowledgeArtifactCategory</skos:prefLabel>
+          </skos:Concept>
+        </skos:hasTopConcept>
+      </skos:ConceptScheme>
+    </skos:inScheme>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="en">Collection</skos:prefLabel>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#53117440-2784-3b1e-b0ac-ed385c1de0a5">
+    <rdfs:label xml:lang="en">Still Image</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#ef2886a9-1ac5-30bb-aa43-4642c3a45755"/>
+    <rdfs:comment xml:lang="en">A static visual representation.</rdfs:comment>
+    <terms:identifier>53117440-2784-3b1e-b0ac-ed385c1de0a5</terms:identifier>
+    <skos:broader>
+      <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#be53a054-1a6d-36f6-acb8-79fa2c584b08">
+        <skos:notation>Image</skos:notation>
+        <terms:identifier>be53a054-1a6d-36f6-acb8-79fa2c584b08</terms:identifier>
+        <rdfs:comment xml:lang="en">A visual representation other than text.</rdfs:comment>
+        <skos:prefLabel xml:lang="en">Image</skos:prefLabel>
+        <rdfs:isDefinedBy>http://purl.org/dc/dcmitype/Image</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Image</rdfs:label>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#ef2886a9-1ac5-30bb-aa43-4642c3a45755"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      </owl:NamedIndividual>
+    </skos:broader>
+    <skos:prefLabel xml:lang="en">Still Image</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+    <skos:notation>StillImage</skos:notation>
+    <rdfs:isDefinedBy>http://purl.org/dc/dcmitype/StillImage</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#cec124ac-ab17-3e92-a02b-e1b4205948ea">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+    <rdfs:isDefinedBy>http://purl.org/dc/dcmitype/InteractiveResource</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">Interactive Resource</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+    <skos:notation>InteractiveResource</skos:notation>
+    <skos:prefLabel xml:lang="en">Interactive Resource</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#ef2886a9-1ac5-30bb-aa43-4642c3a45755"/>
+    <terms:identifier>cec124ac-ab17-3e92-a02b-e1b4205948ea</terms:identifier>
+    <rdfs:comment xml:lang="en">A resource requiring interaction from the user to be understood, executed, or experienced.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#6bdfa244-e66d-3ff3-a468-fd93cfb03e44">
+    <terms:identifier>6bdfa244-e66d-3ff3-a468-fd93cfb03e44</terms:identifier>
+    <rdfs:label xml:lang="en">Physical Object</rdfs:label>
+    <skos:notation>PhysicalObject</skos:notation>
+    <skos:prefLabel xml:lang="en">Physical Object</skos:prefLabel>
+    <rdfs:isDefinedBy>http://purl.org/dc/dcmitype/PhysicalObject</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#ef2886a9-1ac5-30bb-aa43-4642c3a45755"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+    <rdfs:comment xml:lang="en">An inanimate, three-dimensional object or substance.</rdfs:comment>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#c2ba7e78-5c49-350f-88da-9aacc45c2b85">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#ef2886a9-1ac5-30bb-aa43-4642c3a45755"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+    <skos:notation>Service</skos:notation>
+    <skos:prefLabel xml:lang="en">Service</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+    <rdfs:label xml:lang="en">Service</rdfs:label>
+    <rdfs:comment xml:lang="en">A system that provides one or more functions.</rdfs:comment>
+    <terms:identifier>c2ba7e78-5c49-350f-88da-9aacc45c2b85</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>http://purl.org/dc/dcmitype/Service</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#976868e2-21df-3568-b067-0e85f61d2420">
+    <rdfs:isDefinedBy>http://purl.org/dc/dcmitype/MovingImage</rdfs:isDefinedBy>
+    <terms:identifier>976868e2-21df-3568-b067-0e85f61d2420</terms:identifier>
+    <skos:notation>MovingImage</skos:notation>
+    <skos:prefLabel xml:lang="en">Moving Image</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+    <rdfs:label xml:lang="en">Moving Image</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#ef2886a9-1ac5-30bb-aa43-4642c3a45755"/>
+    <rdfs:comment xml:lang="en">A series of visual representations imparting an impression of motion when shown in succession.</rdfs:comment>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#be53a054-1a6d-36f6-acb8-79fa2c584b08"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#9dffbf69-ffba-3bc3-8bc4-e01abf4b1675">
+    <rdfs:isDefinedBy>http://purl.org/dc/dcmitype/Text</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+    <rdfs:label xml:lang="en">Text</rdfs:label>
+    <rdfs:comment xml:lang="en">A resource consisting primarily of words for reading.</rdfs:comment>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+    <terms:identifier>9dffbf69-ffba-3bc3-8bc4-e01abf4b1675</terms:identifier>
+    <skos:notation>Text</skos:notation>
+    <skos:prefLabel xml:lang="en">Text</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#ef2886a9-1ac5-30bb-aa43-4642c3a45755"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#9d07e0e0-8af7-396c-b45b-e0112b9ccfbe">
+    <skos:prefLabel xml:lang="en">Sound</skos:prefLabel>
+    <skos:notation>Sound</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#ef2886a9-1ac5-30bb-aa43-4642c3a45755"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+    <terms:identifier>9d07e0e0-8af7-396c-b45b-e0112b9ccfbe</terms:identifier>
+    <rdfs:label xml:lang="en">Sound</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:comment xml:lang="en">A resource primarily intended to be heard.</rdfs:comment>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+    <rdfs:isDefinedBy>http://purl.org/dc/dcmitype/Sound</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#a4ecfc70-5743-3499-8cf1-7bd83df499f7">
+    <skos:prefLabel xml:lang="en">Event</skos:prefLabel>
+    <rdfs:isDefinedBy>http://purl.org/dc/dcmitype/Event</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#ef2886a9-1ac5-30bb-aa43-4642c3a45755"/>
+    <rdfs:label xml:lang="en">Event</rdfs:label>
+    <skos:notation>Event</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <terms:identifier>a4ecfc70-5743-3499-8cf1-7bd83df499f7</terms:identifier>
+    <rdfs:comment xml:lang="en">A non-persistent, time-based occurrence.</rdfs:comment>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#239658e0-16e3-35d0-aae7-19d280a79fec">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+    <rdfs:comment xml:lang="en">Data encoded in a defined structure.</rdfs:comment>
+    <skos:prefLabel xml:lang="en">Dataset</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#ef2886a9-1ac5-30bb-aa43-4642c3a45755"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+    <rdfs:isDefinedBy>http://purl.org/dc/dcmitype/Dataset</rdfs:isDefinedBy>
+    <skos:notation>Dataset</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <terms:identifier>239658e0-16e3-35d0-aae7-19d280a79fec</terms:identifier>
+    <rdfs:label xml:lang="en">Dataset</rdfs:label>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#719d067b-2291-38f0-bbcf-a1da4ac4dede">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+    <rdfs:label xml:lang="en">Software</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#f37b2ac1-5fd0-3e44-817a-3bc304c6c177"/>
+    <rdfs:comment xml:lang="en">A computer program in source or compiled form.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <terms:identifier>719d067b-2291-38f0-bbcf-a1da4ac4dede</terms:identifier>
+    <skos:prefLabel xml:lang="en">Software</skos:prefLabel>
+    <rdfs:isDefinedBy>http://purl.org/dc/dcmitype/Software</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory#ef2886a9-1ac5-30bb-aa43-4642c3a45755"/>
+    <skos:notation>Software</skos:notation>
+  </skos:Concept>
+</rdf:RDF>

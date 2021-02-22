@@ -1,0 +1,105 @@
+swagger: "2.0"
+definitions:
+  ResourceIdentifier:
+    type: object
+    discriminator: _class
+    properties:
+      _class : string
+      uuid:
+        $ref: '../datatypes/datatypes.yaml#/definitions/UUID'
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/20200801/datatypes'
+      resourceId:
+        type: string
+        xml:
+          attribute: true
+      versionId:
+        type: string
+        xml:
+          attribute: true
+      tag:
+        type: string
+        xml:
+          attribute: true
+      versionTag:
+        type: string
+        xml:
+          attribute: true
+      name:
+        type: string
+        xml:
+          attribute: true
+      namespaceUri:
+        type: string
+        xml:
+          attribute: true
+      establishedOn:
+        type: string
+        xml:
+          attribute: true
+    required:
+      - _class
+      - resourceId
+      - tag
+      - uuid
+    xml:
+      namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+  ConceptIdentifier:
+    allOf:
+      - $ref: '#/definitions/ResourceIdentifier'
+      - type: object
+        discriminator: _class
+        properties:
+          _class : string
+          referentId:
+            type: string
+            xml:
+              attribute: true
+        required:
+          - _class
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+  Pointer:
+    allOf:
+      - $ref: '#/definitions/ResourceIdentifier'
+      - type: object
+        discriminator: _class
+        properties:
+          _class : string
+          description:
+            type: string
+            xml:
+              attribute: true
+          href:
+            type: string
+            xml:
+              attribute: true
+          type:
+            type: string
+            xml:
+              attribute: true
+          mimeType:
+            type: string
+            xml:
+              attribute: true
+        required:
+          - _class
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+  VersionTagType:
+    type: string
+    enum:
+      - GENERIC
+      - SEQUENTIAL
+      - TIMESTAMP
+      - SEM_VER
+    xml:
+      namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+  IdentifierTagType:
+    type: string
+    enum:
+      - OID_VALUE
+      - STRING_VALUE
+      - UUID_VALUE
+    xml:
+      namespace: 'https://www.omg.org/spec/API4KP/20200801/id'

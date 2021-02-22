@@ -1,0 +1,56 @@
+swagger: "2.0"
+definitions:
+  KnowledgeAssetType:
+    allOf:
+      - $ref: '../../../../../../../../API4KP/api4kp/id/id.yaml#/definitions/ConceptIdentifier'
+      - type: object
+        discriminator: _class
+        properties:
+          _class : string
+        required:
+          - _class
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType/20190801'
+  KnowledgeAssetType_Valueset:
+    type: string
+    enum:
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#d9f6ec9f-4a1e-3a42-9205-58be1ec46b63
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#c3a1659d-bcfb-3ee5-8965-72394890d15f
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#888a77f5-ac07-38b6-8800-1822417df8b6
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#ab6a0cf1-bf9b-3167-ab63-7855b33c002b
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#6047674c-0d9b-3c81-89a3-6943f3a7169b
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#db61721f-b412-30cb-a8c9-571ec143e45b
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#434e06c0-e3df-3e57-9862-144f7c7857c4
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#ca24fdd2-0157-3afd-9e47-8e4301f7d1cd
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#58d7a7c1-4301-3361-90b0-f753ba6308f4
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#ec0813c7-748e-3c4f-ba9c-dd475f04f471
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#4f2167ce-cfab-34cf-b97f-e37131e2a6b1
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#7784234a-31a1-3034-a3ff-9f00bfd059df
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#3a2507a9-8d43-3bb0-892f-bda8705951fb
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#cade9984-b37f-3ca8-9443-6959296c57a3
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#f7f24acc-0954-3cc4-bc89-9760e4a3a219
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#1c381179-9148-3121-ba86-ba7323df346f
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#85a69294-58d2-3fc2-b6b6-1603601b6b6d
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#18f58ef5-b603-3013-b61b-df1f8231e354
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#5a1e9e9f-e6e8-3367-b2e8-3c0ee7e28ea3
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#310adb96-1a21-3100-90eb-c7ef4fe270e7
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#56b58fc2-b66f-3175-878e-bc3ef01cb916
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#259f3bea-58dc-383c-a2ad-9b485d6c24a6
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#aa8a1050-43d9-3127-8760-e67170853c2c
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#34de94f3-e2fe-3803-bc24-e508dfff3821
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#e12dcd92-f8de-3115-b8ca-4480cfc44d77
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#5ae45eed-8397-3431-a5f9-c963e3b5411d
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#b6d9833f-1d31-3851-918b-5e4c58da46cd
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#5c742ccc-fb77-3f33-87f5-663c2d9d251c
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#eb91048e-f75c-383f-9ffa-28b83003b13f
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#179d692e-f970-3bcf-ad92-ff37fd394ec8
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#346ce957-0279-3835-8e0a-488b82c5e509
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#d305bbe7-9fb9-3d87-a3fd-a339c8b601b6
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#ddbe6d71-1ed9-349f-a283-ce5b9f1a2e23
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#a73acd8e-1de9-37b7-80ff-41ff37493475
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#953fe157-b1df-3af4-8a6e-8e6d680d77b0
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#a145eccf-b803-3766-a23b-12accce04675
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType#6f9cfd8e-2208-38c5-82b5-c76befa20dc2
+    xml:
+      namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType/20190801'

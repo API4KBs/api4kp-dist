@@ -41,6 +41,12 @@
 
   <dependencies>
     <dependency>
+      <groupId>edu.mayo.kmdp</groupId>
+      <artifactId>swagger-idl-translator</artifactId>
+      <version>${kmdp.impl.version}</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.apache.poi</groupId>
       <artifactId>poi-ooxml</artifactId>
     </dependency>
@@ -140,7 +146,7 @@
             </configuration>
           </execution>
           <execution>
-            <id>gather-xsds</id>
+            <id>gather-core-xsds</id>
             <phase>initialize</phase>
             <goals>
               <goal>unpack</goal>
@@ -153,14 +159,90 @@
                   <version>${kmdp.impl.version}</version>
                   <type>jar</type>
                   <outputDirectory>${dist.build.dir}</outputDirectory>
-                  <includes>**/*.xsd</includes>
+                  <includes>**/API4KP/**/*.xsd</includes>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+          <execution>
+            <id>gather-core-yamls</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>edu.mayo.kmdp</groupId>
+                  <artifactId>kmdp-service-descr</artifactId>
+                  <version>${kmdp.impl.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${dist.build.dir}</outputDirectory>
+                  <includes>**/API4KP/**/*.yaml</includes>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>gather-skos</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>edu.mayo.kmdp</groupId>
+                  <artifactId>kmdp-terminology-content</artifactId>
+                  <version>${kmdp.impl.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${dist.build.dir}</outputDirectory>
+                  <includes>**/*.skos.rdf</includes>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+          <execution>
+            <id>gather-skos-xsd</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>edu.mayo.kmdp</groupId>
+                  <artifactId>kmdp-terminology-content</artifactId>
+                  <version>${kmdp.impl.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${dist.build.dir}</outputDirectory>
+                  <includes>**/org/omg/spec/api4kp/_20*/taxonomy/*/_20*/*.xsd</includes>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+          <execution>
+            <id>gather-skos-yaml</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>edu.mayo.kmdp</groupId>
+                  <artifactId>kmdp-terminology-content</artifactId>
+                  <version>${kmdp.impl.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${dist.build.dir}</outputDirectory>
+                  <includes>**/org/omg/spec/api4kp/_20*/taxonomy/*/_20*/*.yaml</includes>
                 </artifactItem>
               </artifactItems>
             </configuration>
           </execution>
         </executions>
       </plugin>
-
 
       <plugin>
         <groupId>com.github.cjnygard</groupId>
@@ -368,13 +450,27 @@
         <artifactId>exec-maven-plugin</artifactId>
         <executions>
           <execution>
+            <id>generate-idl</id>
+            <goals>
+              <goal>java</goal>
+            </goals>
+            <phase>prepare-package</phase>
+            <configuration>
+              <mainClass>org.omg.spec.api4kp.idl.SwaggerToIDL</mainClass>
+              <includeProjectDependencies>true</includeProjectDependencies>
+              <arguments>
+                <argument>${dist.dir}</argument>
+              </arguments>
+            </configuration>
+          </execution>
+          <execution>
             <id>generate-inventory</id>
             <goals>
               <goal>java</goal>
             </goals>
             <phase>prepare-package</phase>
             <configuration>
-              <mainClass>org.omg.spec.API4KP.InventoryGenerator</mainClass>
+              <mainClass>org.omg.spec.api4kp.InventoryGenerator</mainClass>
               <arguments>
                 <argument>${dist.dir}</argument>
               </arguments>

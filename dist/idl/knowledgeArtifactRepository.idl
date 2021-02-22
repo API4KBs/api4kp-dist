@@ -1,0 +1,151 @@
+module org {
+module omg {
+module spec {
+module api4kp {
+module _20200801 {
+module id {
+struct ResourceIdentifier {
+    string uuid;
+    string resourceid;
+    string versionid;
+    string tag;
+    string versiontag;
+    string name;
+    string namespaceuri;
+    string establishedon;
+};
+typedef sequence<ResourceIdentifier> ResourceIdentifierList;
+struct Pointer {
+    string description;
+    string href;
+    string type;
+    string mimetype;
+};
+typedef sequence<Pointer> PointerList;
+}; // id
+module services {
+module repository {
+struct KnowledgeArtifactRepository {
+    ::org::omg::spec::api4kp::_20200801::id::ResourceIdentifier id;
+    sequence<::org::omg::spec::api4kp::_20200801::id::ResourceIdentifier> alias;
+    string name;
+    long size;
+    string href;
+    boolean defaultrepository;
+};
+typedef sequence<KnowledgeArtifactRepository> KnowledgeArtifactRepositoryList;
+}; // repository
+}; // services
+module api {
+module repository {
+module artifact {
+module v4 {
+interface KnowledgeArtifactRepository {
+  void disableKnowledgeArtifactRepository (
+      in string repositoryid 
+  );
+  ::org::omg::spec::api4kp::_20200801::services::repository::KnowledgeArtifactRepository getKnowledgeArtifactRepository (
+      in string repositoryid 
+  );
+  ::org::omg::spec::api4kp::_20200801::services::repository::KnowledgeArtifactRepository initKnowledgeArtifactRepository (
+  );
+  void isKnowledgeArtifactRepository (
+      in string repositoryid 
+  );
+  ::org::omg::spec::api4kp::_20200801::services::repository::KnowledgeArtifactRepositoryList listKnowledgeArtifactRepositories (
+  );
+  ::org::omg::spec::api4kp::_20200801::services::repository::KnowledgeArtifactRepository setKnowledgeArtifactRepository (
+      in ::org::omg::spec::api4kp::_20200801::services::repository::KnowledgeArtifactRepository repositorydescr , 
+      in string repositoryid 
+  );
+};
+interface KnowledgeArtifactSeries {
+  void addKnowledgeArtifactVersion (
+      in string document , 
+      in string repositoryid , 
+      in string artifactid 
+  );
+  void clearKnowledgeRepository (
+      in boolean deleted , 
+      in string repositoryid 
+  );
+  void deleteKnowledgeArtifact (
+      in boolean deleted , 
+      in string repositoryid , 
+      in string artifactid 
+  );
+  void enableKnowledgeArtifact (
+      in string repositoryid , 
+      in string artifactid 
+  );
+  ::org::omg::spec::api4kp::_20200801::id::PointerList getKnowledgeArtifactSeries (
+      in boolean deleted , 
+      in long offset , 
+      in string repositoryid , 
+      in long limit , 
+      in string artifactid , 
+      in string aftertag , 
+      in string sort , 
+      in string beforetag 
+  );
+  string getLatestKnowledgeArtifact (
+      in boolean deleted , 
+      in string repositoryid , 
+      in string artifactid 
+  );
+  string initKnowledgeArtifact (
+      in string repositoryid 
+  );
+  void isKnowledgeArtifactSeries (
+      in boolean deleted , 
+      in string repositoryid , 
+      in string artifactid 
+  );
+  ::org::omg::spec::api4kp::_20200801::id::PointerList listKnowledgeArtifacts (
+      in boolean deleted , 
+      in long offset , 
+      in string repositoryid , 
+      in long limit 
+  );
+};
+interface KnowledgeArtifact {
+  void deleteKnowledgeArtifactVersion (
+      in boolean deleted , 
+      in string repositoryid , 
+      in string artifactid , 
+      in string versiontag 
+  );
+  void enableKnowledgeArtifactVersion (
+      in boolean deleted , 
+      in string repositoryid , 
+      in string artifactid , 
+      in string versiontag 
+  );
+  string getKnowledgeArtifactVersion (
+      in boolean deleted , 
+      in string repositoryid , 
+      in string artifactid , 
+      in string versiontag 
+  );
+  void isKnowledgeArtifactVersion (
+      in boolean deleted , 
+      in string repositoryid , 
+      in string artifactid , 
+      in string versiontag 
+  );
+  void setKnowledgeArtifactVersion (
+      in string document , 
+      in string repositoryid , 
+      in string artifactid , 
+      in string versiontag 
+  );
+};
+}; // v4
+}; // artifact
+}; // repository
+}; // api
+}; // _20200801
+}; // api4kp
+}; // spec
+}; // omg
+}; // org

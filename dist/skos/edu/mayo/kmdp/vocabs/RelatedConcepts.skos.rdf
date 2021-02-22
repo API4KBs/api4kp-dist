@@ -1,0 +1,193 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dce="http://www.opengroup.org/dce/"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns:tgt="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept">
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+  </owl:Ontology>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#dda6511f-9664-3466-afb9-65c0952ab4f9">
+    <skos:prefLabel xml:lang="en">has broader match</skos:prefLabel>
+    <skos:definition xml:lang="en">skos:broadMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.</skos:definition>
+    <skos:inScheme>
+      <skos:ConceptScheme rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#55e61476-8345-32c2-980a-ff7ea8354c52">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>RelatedConcepts</rdfs:label>
+        <skos:prefLabel>RelatedConcepts</skos:prefLabel>
+        <skos:hasTopConcept>
+          <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#a975e6c2-52f3-37cc-8744-267639baddcb">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#55e61476-8345-32c2-980a-ff7ea8354c52"/>
+            <rdfs:label>RelatedConcept</rdfs:label>
+            <skos:prefLabel>RelatedConcept</skos:prefLabel>
+          </skos:Concept>
+        </skos:hasTopConcept>
+      </skos:ConceptScheme>
+    </skos:inScheme>
+    <dct:identifier>dda6511f-9664-3466-afb9-65c0952ab4f9</dct:identifier>
+    <skos:broader>
+      <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#941c2fa5-c5df-3356-987a-fbee6b282390">
+        <rdfs:comment xml:lang="en">These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice.</rdfs:comment>
+        <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#a975e6c2-52f3-37cc-8744-267639baddcb"/>
+        <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#mappingRelation</rdfs:isDefinedBy>
+        <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#55e61476-8345-32c2-980a-ff7ea8354c52"/>
+        <skos:definition xml:lang="en">Relates two concepts coming, by convention, from different schemes, and that have comparable meanings</skos:definition>
+        <skos:broader>
+          <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#80a46e59-5638-317e-8bc6-d80998a70927">
+            <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#a975e6c2-52f3-37cc-8744-267639baddcb"/>
+            <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#semanticRelation</rdfs:isDefinedBy>
+            <skos:definition xml:lang="en">Links a concept to a concept related by meaning.</skos:definition>
+            <dct:identifier>80a46e59-5638-317e-8bc6-d80998a70927</dct:identifier>
+            <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#a975e6c2-52f3-37cc-8744-267639baddcb"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <rdfs:label xml:lang="en">is in semantic relation with</rdfs:label>
+            <skos:prefLabel xml:lang="en">is in semantic relation with</skos:prefLabel>
+            <skos:notation>semanticRelation</skos:notation>
+            <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#55e61476-8345-32c2-980a-ff7ea8354c52"/>
+          </owl:NamedIndividual>
+        </skos:broader>
+        <skos:notation>mappingRelation</skos:notation>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dct:identifier>941c2fa5-c5df-3356-987a-fbee6b282390</dct:identifier>
+        <skos:prefLabel xml:lang="en">is in mapping relation with</skos:prefLabel>
+        <rdfs:label xml:lang="en">is in mapping relation with</rdfs:label>
+      </owl:NamedIndividual>
+    </skos:broader>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#a975e6c2-52f3-37cc-8744-267639baddcb"/>
+    <skos:broader>
+      <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#3c649ef0-96d4-3054-8aab-0bd65ae33f5e">
+        <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#55e61476-8345-32c2-980a-ff7ea8354c52"/>
+        <dct:identifier>3c649ef0-96d4-3054-8aab-0bd65ae33f5e</dct:identifier>
+        <skos:prefLabel xml:lang="en">has broader</skos:prefLabel>
+        <skos:notation>broader</skos:notation>
+        <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#broader</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Broader concepts are typically rendered as parents in a concept hierarchy (tree).</rdfs:comment>
+        <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#a975e6c2-52f3-37cc-8744-267639baddcb"/>
+        <rdfs:label xml:lang="en">has broader</rdfs:label>
+        <skos:broader>
+          <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#986420bf-b6db-36a5-a6c6-56665bbb2207">
+            <rdfs:label xml:lang="en">has broader transitive</rdfs:label>
+            <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#80a46e59-5638-317e-8bc6-d80998a70927"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:prefLabel xml:lang="en">has broader transitive</skos:prefLabel>
+            <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#broaderTransitive</rdfs:isDefinedBy>
+            <skos:notation>broaderTransitive</skos:notation>
+            <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#55e61476-8345-32c2-980a-ff7ea8354c52"/>
+            <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#a975e6c2-52f3-37cc-8744-267639baddcb"/>
+            <dct:identifier>986420bf-b6db-36a5-a6c6-56665bbb2207</dct:identifier>
+            <skos:definition>skos:broaderTransitive is a transitive superproperty of skos:broader.</skos:definition>
+          </owl:NamedIndividual>
+        </skos:broader>
+        <skos:definition xml:lang="en">Relates a concept to a concept that is more general in meaning.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </skos:Concept>
+    </skos:broader>
+    <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#broadMatch</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">has broader match</rdfs:label>
+    <skos:notation>broadMatch</skos:notation>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#8686db88-1140-3520-ba9d-3b6d84df5621">
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#a975e6c2-52f3-37cc-8744-267639baddcb"/>
+    <skos:prefLabel xml:lang="en">has related match</skos:prefLabel>
+    <rdfs:label xml:lang="en">has related match</rdfs:label>
+    <dct:identifier>8686db88-1140-3520-ba9d-3b6d84df5621</dct:identifier>
+    <skos:notation>relatedMatch</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#941c2fa5-c5df-3356-987a-fbee6b282390"/>
+    <skos:broader>
+      <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#90ed4512-c954-3ea8-87dc-c288ffc3f367">
+        <dct:identifier>90ed4512-c954-3ea8-87dc-c288ffc3f367</dct:identifier>
+        <skos:definition xml:lang="en">Relates a concept to a concept with which there is an associative semantic relationship.</skos:definition>
+        <skos:prefLabel xml:lang="en">has related</skos:prefLabel>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#80a46e59-5638-317e-8bc6-d80998a70927"/>
+        <skos:notation>related</skos:notation>
+        <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#related</rdfs:isDefinedBy>
+        <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#55e61476-8345-32c2-980a-ff7ea8354c52"/>
+        <rdfs:comment xml:lang="en">skos:related is disjoint with skos:broaderTransitive</rdfs:comment>
+        <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#a975e6c2-52f3-37cc-8744-267639baddcb"/>
+        <rdfs:label xml:lang="en">has related</rdfs:label>
+      </owl:NamedIndividual>
+    </skos:broader>
+    <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#relatedMatch</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#55e61476-8345-32c2-980a-ff7ea8354c52"/>
+    <skos:definition xml:lang="en">skos:relatedMatch is used to state an associative mapping link between two conceptual resources in different concept schemes.</skos:definition>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#f9be4782-3836-34d5-ac91-c58ac8b478d3">
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#a975e6c2-52f3-37cc-8744-267639baddcb"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#941c2fa5-c5df-3356-987a-fbee6b282390"/>
+    <skos:definition xml:lang="en">skos:narrowMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.</skos:definition>
+    <skos:prefLabel xml:lang="en">has narrower match</skos:prefLabel>
+    <skos:broader>
+      <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#9b62ba57-3b52-38a5-967a-1aeb49fe3f89">
+        <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#a975e6c2-52f3-37cc-8744-267639baddcb"/>
+        <skos:definition xml:lang="en">Relates a concept to a concept that is more specific in meaning.</skos:definition>
+        <skos:notation>narrower</skos:notation>
+        <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#55e61476-8345-32c2-980a-ff7ea8354c52"/>
+        <dct:identifier>9b62ba57-3b52-38a5-967a-1aeb49fe3f89</dct:identifier>
+        <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#narrower</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has narrower</rdfs:label>
+        <skos:broader>
+          <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#06fe0314-4606-3e2c-a104-61fea1b54ad4">
+            <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#a975e6c2-52f3-37cc-8744-267639baddcb"/>
+            <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#80a46e59-5638-317e-8bc6-d80998a70927"/>
+            <rdfs:label xml:lang="en">has narrower transitive</rdfs:label>
+            <skos:notation>narrowerTransitive</skos:notation>
+            <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#narrowerTransitive</rdfs:isDefinedBy>
+            <skos:definition>skos:narrowerTransitive is a transitive superproperty of skos:narrower.</skos:definition>
+            <skos:prefLabel xml:lang="en">has narrower transitive</skos:prefLabel>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <dct:identifier>06fe0314-4606-3e2c-a104-61fea1b54ad4</dct:identifier>
+            <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#55e61476-8345-32c2-980a-ff7ea8354c52"/>
+          </skos:Concept>
+        </skos:broader>
+        <skos:prefLabel xml:lang="en">has narrower</skos:prefLabel>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:comment xml:lang="en">Narrower concepts are typically rendered as children in a concept hierarchy (tree).</rdfs:comment>
+      </skos:Concept>
+    </skos:broader>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#55e61476-8345-32c2-980a-ff7ea8354c52"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">has narrower match</rdfs:label>
+    <skos:notation>narrowMatch</skos:notation>
+    <dct:identifier>f9be4782-3836-34d5-ac91-c58ac8b478d3</dct:identifier>
+    <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#narrowMatch</rdfs:isDefinedBy>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#5868a2de-2a16-3dca-91fe-19d61273ee61">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#55e61476-8345-32c2-980a-ff7ea8354c52"/>
+    <rdfs:comment xml:lang="en">skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch.</rdfs:comment>
+    <skos:broader>
+      <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#47ac143d-958f-3d53-926c-f50988bd88e5">
+        <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#941c2fa5-c5df-3356-987a-fbee6b282390"/>
+        <skos:prefLabel xml:lang="en">has close match</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#a975e6c2-52f3-37cc-8744-267639baddcb"/>
+        <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#55e61476-8345-32c2-980a-ff7ea8354c52"/>
+        <dct:identifier>47ac143d-958f-3d53-926c-f50988bd88e5</dct:identifier>
+        <skos:definition xml:lang="en">skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of "compound errors" when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property.</skos:definition>
+        <rdfs:label xml:lang="en">has close match</rdfs:label>
+        <skos:notation>closeMatch</skos:notation>
+        <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#closeMatch</rdfs:isDefinedBy>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:definition xml:lang="en">skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch.</skos:definition>
+    <rdfs:label xml:lang="en">has exact match</rdfs:label>
+    <dct:identifier>5868a2de-2a16-3dca-91fe-19d61273ee61</dct:identifier>
+    <skos:prefLabel xml:lang="en">has exact match</skos:prefLabel>
+    <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#exactMatch</rdfs:isDefinedBy>
+    <skos:notation>exactMatch</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/RelatedConcept#a975e6c2-52f3-37cc-8744-267639baddcb"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+</rdf:RDF>

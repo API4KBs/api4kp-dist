@@ -1,0 +1,431 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dce="http://www.opengroup.org/dce/"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:tgt="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#"
+    xmlns="http://purl.org/spar/pro/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole">
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole/2017-09-04"/>
+  </owl:Ontology>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#58b94b8b-7c2b-3d65-86ea-d45e5603749c">
+    <rdfs:label xml:lang="en">author's agent</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/authors-agent</rdfs:isDefinedBy>
+    <skos:broaderTransitive>
+      <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:inScheme>
+          <skos:ConceptScheme rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdfs:label>PublishingRoles</rdfs:label>
+            <skos:prefLabel>PublishingRoles</skos:prefLabel>
+            <skos:hasTopConcept rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+          </skos:ConceptScheme>
+        </skos:inScheme>
+        <rdfs:label>PublishingRole</rdfs:label>
+        <skos:prefLabel>PublishingRole</skos:prefLabel>
+      </skos:Concept>
+    </skos:broaderTransitive>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <dct:identifier>58b94b8b-7c2b-3d65-86ea-d45e5603749c</dct:identifier>
+    <rdfs:comment xml:lang="en">A person who finds work for professional authors, manages their contracts, and works to advance their careers, charging their clients as fees for their services a percentage of the money made from the authors' writings.</rdfs:comment>
+    <skos:notation>authors-agent</skos:notation>
+    <skos:prefLabel xml:lang="en">author's agent</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#726f06c3-fbcc-3e37-b04c-54fe29679c1f">
+    <skos:notation>illustrator</skos:notation>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdfs:label xml:lang="en">illustrator</rdfs:label>
+    <rdfs:comment xml:lang="en">The role of an agent that illustrates a document.</rdfs:comment>
+    <dct:identifier>726f06c3-fbcc-3e37-b04c-54fe29679c1f</dct:identifier>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/illustrator</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <skos:prefLabel xml:lang="en">illustrator</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#dd7bcee1-6119-3cb8-bba7-65eb595eba87">
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <dct:identifier>dd7bcee1-6119-3cb8-bba7-65eb595eba87</dct:identifier>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/distributor</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">distributor</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <skos:prefLabel xml:lang="en">distributor</skos:prefLabel>
+    <skos:notation>distributor</skos:notation>
+    <rdfs:comment xml:lang="en">The role of a person who distributes or disseminates publications or other resources.</rdfs:comment>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#7ba917e4-e515-3c8a-9ed6-eda08a6ec572">
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <rdfs:label xml:lang="en">reviewer</rdfs:label>
+    <skos:prefLabel xml:lang="en">reviewer</skos:prefLabel>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dct:identifier>7ba917e4-e515-3c8a-9ed6-eda08a6ec572</dct:identifier>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/reviewer</rdfs:isDefinedBy>
+    <rdfs:comment xml:lang="en">The role of a person who subjects a publication to a written review and critical analysis of its content, scope and quality.</rdfs:comment>
+    <skos:notation>reviewer</skos:notation>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#9e09e4f9-6291-37f3-9bd6-188c0fc16a06">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <skos:notation>critic</skos:notation>
+    <rdfs:label xml:lang="en">critic</rdfs:label>
+    <rdfs:comment xml:lang="en">The role of an author who writes evaluations and criticisms of, for example, plays or other works of art.</rdfs:comment>
+    <dct:identifier>9e09e4f9-6291-37f3-9bd6-188c0fc16a06</dct:identifier>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/critic</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:prefLabel xml:lang="en">critic</skos:prefLabel>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#d0f970f7-3c3f-3574-873c-9ad1f18d431b">
+    <rdfs:label xml:lang="en">copy editor</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:prefLabel xml:lang="en">copy editor</skos:prefLabel>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/copy-editor</rdfs:isDefinedBy>
+    <dct:identifier>d0f970f7-3c3f-3574-873c-9ad1f18d431b</dct:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation>copy-editor</skos:notation>
+    <rdfs:comment xml:lang="en">The role of an editor who undertakes alterations to the text of a document submitted for publication to improve the formatting, style and accuracy of text, or to bring the text into the house style of the publisher (e.g. Americanization of British spelling), without intentionally altering the substance or meaning of the text.</rdfs:comment>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#d57a12d7-9460-376b-a06b-328f6c0aa1c1">
+    <rdfs:label xml:lang="en">ghost writer</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/ghost-writer</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:notation>ghost-writer</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role of a professional writer who assists an aspiring author lacking authorship skills to write a book or article for publication, for example by helping the author to create grammatically correct and lucid prose, or who writes the book on behalf of the named author, without himself/herself claiming authorship.</rdfs:comment>
+    <dct:identifier>d57a12d7-9460-376b-a06b-328f6c0aa1c1</dct:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <skos:prefLabel xml:lang="en">ghost writer</skos:prefLabel>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#35fa1bcb-6fbf-37aa-b43a-a7f253507176">
+    <rdfs:label xml:lang="en">librarian</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <rdfs:comment xml:lang="en">The role of a person who manages, undertakes and supervises the work of a library.</rdfs:comment>
+    <skos:notation>librarian</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="en">librarian</skos:prefLabel>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/librarian</rdfs:isDefinedBy>
+    <dct:identifier>35fa1bcb-6fbf-37aa-b43a-a7f253507176</dct:identifier>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#0a7e0095-39df-3ed2-a1f9-a0cbbfc77176">
+    <skos:notation>peer-reviewer</skos:notation>
+    <rdfs:comment xml:lang="en">The role of an academic peer in evaluating a manuscript submitted by an author for publication as a journal article on behalf of the journal editor, or a conference paper on behalf of the conference programme committee, and in deciding whether it is suitable for acceptance, usually subject to revisions suggested by the peer-reviewer.</rdfs:comment>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <rdfs:label xml:lang="en">peer reviewer</rdfs:label>
+    <skos:prefLabel xml:lang="en">peer reviewer</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <dct:identifier>0a7e0095-39df-3ed2-a1f9-a0cbbfc77176</dct:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/peer-reviewer</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#938bff79-8ef0-3df7-be56-75d693cea0be">
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/series-editor</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">series editor</rdfs:label>
+    <dct:identifier>938bff79-8ef0-3df7-be56-75d693cea0be</dct:identifier>
+    <skos:notation>series-editor</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role of the person who has editorial responsibility for publication series, for example a book series.</rdfs:comment>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <skos:prefLabel xml:lang="en">series editor</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#a9358f4c-e027-38d5-b5a2-a70818b2a6da">
+    <dct:identifier>a9358f4c-e027-38d5-b5a2-a70818b2a6da</dct:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdfs:comment xml:lang="en">The role of an agent involved in printing documents, either a company providing printing services or an individual engaged in the process of printing documents.</rdfs:comment>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/printer</rdfs:isDefinedBy>
+    <skos:prefLabel xml:lang="en">printer</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation>printer</skos:notation>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdfs:label xml:lang="en">printer</rdfs:label>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#5aee9dbd-2a18-3839-9050-73571bee1b1f">
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdfs:comment xml:lang="en">The role of a person who selects and prepares for publication material created and submitted by authors, having oversight of its content, format and presentation.</rdfs:comment>
+    <skos:prefLabel xml:lang="en">editor</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdfs:label xml:lang="en">editor</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dct:identifier>5aee9dbd-2a18-3839-9050-73571bee1b1f</dct:identifier>
+    <skos:notation>editor</skos:notation>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/editor</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#bc951e9d-3f1b-3ed2-806e-e1dcac0237c1">
+    <skos:prefLabel xml:lang="en">senior editor</skos:prefLabel>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/senior-editor</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <dct:identifier>bc951e9d-3f1b-3ed2-806e-e1dcac0237c1</dct:identifier>
+    <rdfs:label xml:lang="en">senior editor</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdfs:comment xml:lang="en">The role of the person who has senior responsibility for the editorial operations and policies for a particular publication, usually acting under the authority of the Editor-in-Chief.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <skos:notation>senior-editor</skos:notation>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#d88e6848-93ce-310b-83a5-02a3d9f0670f">
+    <rdfs:label xml:lang="en">copyright owner</rdfs:label>
+    <skos:prefLabel xml:lang="en">copyright owner</skos:prefLabel>
+    <rdfs:comment xml:lang="en">The role of owning the copyright to a publication, usually held by the author or by the publishing house that publishes the author's work.</rdfs:comment>
+    <skos:notation>copyright-owner</skos:notation>
+    <dct:identifier>d88e6848-93ce-310b-83a5-02a3d9f0670f</dct:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/copyright-owner</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#ec18aded-60a5-3eef-a1bd-d2df45e3bf9c">
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdfs:comment xml:lang="en">The role of an author who writes biographies.</rdfs:comment>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:prefLabel xml:lang="en">biographer</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <dct:identifier>ec18aded-60a5-3eef-a1bd-d2df45e3bf9c</dct:identifier>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/biographer</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation>biographer</skos:notation>
+    <rdfs:label xml:lang="en">biographer</rdfs:label>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#5ee4d145-0a1d-3307-950b-97782655e5e4">
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/archivist</rdfs:isDefinedBy>
+    <skos:prefLabel xml:lang="en">archivist</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <skos:notation>archivist</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <dct:identifier>5ee4d145-0a1d-3307-950b-97782655e5e4</dct:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">archivist</rdfs:label>
+    <rdfs:comment xml:lang="en">The role of a person who manages, undertakes and supervises the work of an archive.  [This term is typically used with respect to a document archive, whereas the term data curator is used with respect to a data archive.]</rdfs:comment>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#bba23486-31bb-3ef0-a2b7-3dde6b38fdc1">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <rdfs:comment xml:lang="en">The role an agent has of contribution of some material (for example an article to a magazine).</rdfs:comment>
+    <rdfs:label xml:lang="en">contributor</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/contributor</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:prefLabel xml:lang="en">contributor</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:notation>contributor</skos:notation>
+    <dct:identifier>bba23486-31bb-3ef0-a2b7-3dde6b38fdc1</dct:identifier>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#1b16fb3e-1af1-3099-a43b-d0fc3aa78c0a">
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <dct:identifier>1b16fb3e-1af1-3099-a43b-d0fc3aa78c0a</dct:identifier>
+    <skos:prefLabel xml:lang="en">managing editor</skos:prefLabel>
+    <skos:notation>managing-editor</skos:notation>
+    <rdfs:comment xml:lang="en">The role of an editor who has management responsibility for the production of particular publication, usually acting under the authority of the Executive Editor and the Editor-in-Chief.</rdfs:comment>
+    <rdfs:label xml:lang="en">managing editor</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/managing-editor</rdfs:isDefinedBy>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f1516046-e881-37b9-93d2-63ebce98835b">
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/production-editor</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">production editor</rdfs:label>
+    <skos:notation>production-editor</skos:notation>
+    <dct:identifier>f1516046-e881-37b9-93d2-63ebce98835b</dct:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:prefLabel xml:lang="en">production editor</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <rdfs:comment xml:lang="en">The role of an editor who takes responsibility for the passage of a document through the various stages of the publication workflow from the submitted manuscript to the final publication, including responsibility for scheduling and budget.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#0980d69c-c7b7-3613-94d1-29ea0c8d1757">
+    <rdfs:label xml:lang="en">proof reader</rdfs:label>
+    <skos:notation>proof-reader</skos:notation>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/proof-reader</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:comment xml:lang="en">The role of a person who reads the proofs of documents to detect any errors prior to final publication.</rdfs:comment>
+    <skos:prefLabel xml:lang="en">proof reader</skos:prefLabel>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <dct:identifier>0980d69c-c7b7-3613-94d1-29ea0c8d1757</dct:identifier>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#9c1252fa-60c8-3778-ba52-81273c8a5d0c">
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <rdfs:label xml:lang="en">blogger</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:prefLabel xml:lang="en">blogger</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/blogger</rdfs:isDefinedBy>
+    <dct:identifier>9c1252fa-60c8-3778-ba52-81273c8a5d0c</dct:identifier>
+    <rdfs:comment xml:lang="en">The role of an author who writes blog posts.</rdfs:comment>
+    <skos:notation>blogger</skos:notation>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#3862fdeb-eebd-35ff-92e8-cd57598df647">
+    <rdfs:label xml:lang="en">commissioning editor</rdfs:label>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <dct:identifier>3862fdeb-eebd-35ff-92e8-cd57598df647</dct:identifier>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:notation>commissioning-editor</skos:notation>
+    <skos:prefLabel xml:lang="en">commissioning editor</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:comment xml:lang="en">The role of an editor who actively commissions authors to write books to be published by the publishing house for which the commissioning editor works.</rdfs:comment>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/commissioning-editor</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#87f75ce3-f908-3819-a9a2-c77ffeffcc38">
+    <skos:notation>compiler</skos:notation>
+    <dct:identifier>87f75ce3-f908-3819-a9a2-c77ffeffcc38</dct:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:prefLabel xml:lang="en">compiler</skos:prefLabel>
+    <rdfs:comment xml:lang="en">The role an agent has of compiling a number of items into a compilation or collection.</rdfs:comment>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/compiler</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <rdfs:label xml:lang="en">compiler</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#32677f9a-b432-35b3-ad80-7a457adeb17c">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <rdfs:label xml:lang="en">editor-in-chief</rdfs:label>
+    <dct:identifier>32677f9a-b432-35b3-ad80-7a457adeb17c</dct:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdfs:comment xml:lang="en">The role of the person who has final responsibility for the editorial operations and policies for a particular publication.</rdfs:comment>
+    <skos:notation>editor-in-chief</skos:notation>
+    <skos:prefLabel xml:lang="en">editor-in-chief</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/editor-in-chief</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#82ad21b5-762c-36c3-ab61-1a807982ab76">
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdfs:label xml:lang="en">journalist</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role of an author who writes newspaper or magazine news reports or articles.</rdfs:comment>
+    <skos:notation>journalist</skos:notation>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <dct:identifier>82ad21b5-762c-36c3-ab61-1a807982ab76</dct:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:prefLabel xml:lang="en">journalist</skos:prefLabel>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/journalist</rdfs:isDefinedBy>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#1de9b0a3-0075-3e8c-b03e-b420c103c320">
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/reader</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <dct:identifier>1de9b0a3-0075-3e8c-b03e-b420c103c320</dct:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdfs:comment xml:lang="en">The role of a person who reads publications.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation>reader</skos:notation>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdfs:label xml:lang="en">reader</rdfs:label>
+    <skos:prefLabel xml:lang="en">reader</skos:prefLabel>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#02bd92fa-a38a-3a6c-80ea-75e59937a1ef">
+    <rdfs:label xml:lang="en">author</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/author</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <rdfs:comment xml:lang="en">The role a person has of authorship of some material (for example a document).</rdfs:comment>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="en">author</skos:prefLabel>
+    <dct:identifier>02bd92fa-a38a-3a6c-80ea-75e59937a1ef</dct:identifier>
+    <skos:notation>author</skos:notation>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f18122dd-ebc4-341b-8ed7-58b3f0817da8">
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/producer</rdfs:isDefinedBy>
+    <dct:identifier>f18122dd-ebc4-341b-8ed7-58b3f0817da8</dct:identifier>
+    <rdfs:comment xml:lang="en">The role of someone who acts as a producer.</rdfs:comment>
+    <skos:prefLabel xml:lang="en">producer</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:notation>producer</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdfs:label xml:lang="en">producer</rdfs:label>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#0584add8-5518-311b-9e63-2951b9a87531">
+    <skos:notation>executive-editor</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">executive editor</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/executive-editor</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <skos:prefLabel xml:lang="en">executive editor</skos:prefLabel>
+    <rdfs:comment xml:lang="en">The role of an editor who has executive responsibility for the production of particular publication, usually acting under the authority of the Editor-in-Chief.</rdfs:comment>
+    <dct:identifier>0584add8-5518-311b-9e63-2951b9a87531</dct:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#52aded16-5360-352a-8f58-57571d96d68f">
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/publisher</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">publisher</rdfs:label>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <dct:identifier>52aded16-5360-352a-8f58-57571d96d68f</dct:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation>publisher</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:prefLabel xml:lang="en">publisher</skos:prefLabel>
+    <rdfs:comment xml:lang="en">The role of a person or an organization that published material, or of a publisher's employee who has responsibility for such publications.</rdfs:comment>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#85f8fc76-ee68-301a-a1dc-e97d71d73b22">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/deputy-editor</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <dct:identifier>85f8fc76-ee68-301a-a1dc-e97d71d73b22</dct:identifier>
+    <rdfs:label xml:lang="en">deputy editor</rdfs:label>
+    <rdfs:comment xml:lang="en">The role of a senior editor of a publication who deputizes for the Editor-in-Chief.</rdfs:comment>
+    <skos:prefLabel xml:lang="en">deputy editor</skos:prefLabel>
+    <skos:notation>deputy-editor</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#607f2f30-99f2-3347-b327-caa70e0be4b2">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/translator</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdfs:label xml:lang="en">translator</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dct:identifier>607f2f30-99f2-3347-b327-caa70e0be4b2</dct:identifier>
+    <skos:notation>translator</skos:notation>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <skos:prefLabel xml:lang="en">translator</skos:prefLabel>
+    <rdfs:comment xml:lang="en">The role of an agent that translates a document into another language.</rdfs:comment>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#92a42ffb-3aeb-35df-bb4d-da9e004975f8">
+    <skos:notation>guest-editor</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdfs:label xml:lang="en">guest editor</rdfs:label>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#f55d1773-5459-3b9f-a454-6eb33ef6d5f8"/>
+    <dct:identifier>92a42ffb-3aeb-35df-bb4d-da9e004975f8</dct:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublishingRole#19432a97-68f7-31c4-a8e7-22074fadc87a"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/pro/guest-editor</rdfs:isDefinedBy>
+    <skos:prefLabel xml:lang="en">guest editor</skos:prefLabel>
+    <rdfs:comment xml:lang="en">The role of someone who is a guest editor, for example for a special themed issue of a journal.</rdfs:comment>
+  </skos:Concept>
+</rdf:RDF>

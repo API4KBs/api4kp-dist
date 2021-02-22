@@ -1,0 +1,341 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dce="http://www.opengroup.org/dce/"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:api4kp="https://www.omg.org/spec/API4KP/api4kp/"
+    xmlns="https://www.omg.org/spec/API4KP/api4kp-registry/"
+    xmlns:AnnotationVocabulary1="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:DOL-terms="http://www.omg.org/spec/DOL/DOL-terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:tgt="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#"
+    xmlns:AnnotationVocabulary="https://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon">
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon/SNAPSHOT"/>
+  </owl:Ontology>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#75406125-d75a-37aa-96e1-434b5ebbb5a6">
+    <rdfs:label>KRR Language Role</rdfs:label>
+    <skos:broaderTransitive>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:inScheme>
+          <skos:ConceptScheme rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdfs:label>Lexica</rdfs:label>
+            <skos:prefLabel>Lexica</skos:prefLabel>
+            <skos:hasTopConcept rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+          </skos:ConceptScheme>
+        </skos:inScheme>
+        <rdfs:label>Lexicon</rdfs:label>
+        <skos:prefLabel>Lexicon</skos:prefLabel>
+      </skos:Concept>
+    </skos:broaderTransitive>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <terms:identifier>75406125-d75a-37aa-96e1-434b5ebbb5a6</terms:identifier>
+    <skos:prefLabel>KRR Language Role</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <skos:notation>lang-rol</skos:notation>
+    <rdfs:isDefinedBy>https://ontology.mayo.edu/taxonomies/KAO/LanguageRole/20190801/</rdfs:isDefinedBy>
+    <rdfs:comment>Knowledge Representation and Reasoning Language Role</rdfs:comment>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#76595934-1b01-3193-986f-db2753ef323c">
+    <skos:prefLabel>Asset Relationships - Derivations</skos:prefLabel>
+    <rdfs:isDefinedBy>https://ontology.mayo.edu/taxonomies/KAO/Rel/DerivationRelType/20190801/</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <terms:identifier>76595934-1b01-3193-986f-db2753ef323c</terms:identifier>
+    <rdfs:label>Asset Relationships - Derivations</rdfs:label>
+    <rdfs:comment>Knowledge Asset Relationships - Derivations</rdfs:comment>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <skos:notation>deriv</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#3541d2ae-4605-394a-9a9c-768899b9ac08">
+    <rdfs:comment>Knowledge Asset Relationships - Citations</rdfs:comment>
+    <skos:prefLabel>Asset Relationships - Citations</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <terms:identifier>3541d2ae-4605-394a-9a9c-768899b9ac08</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>Asset Relationships - Citations</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdfs:isDefinedBy>https://ontology.mayo.edu/taxonomies/KAO/Rel/CitationRelType/2018-02-16</rdfs:isDefinedBy>
+    <skos:notation>cito</skos:notation>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#aa7ac8cd-5e0a-3993-a177-746279cc00d2">
+    <skos:prefLabel>Asset Relationships - Variants</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <terms:identifier>aa7ac8cd-5e0a-3993-a177-746279cc00d2</terms:identifier>
+    <rdfs:label>Asset Relationships - Variants</rdfs:label>
+    <skos:notation>variant</skos:notation>
+    <rdfs:comment>Knowledge Asset Relationships - Variants</rdfs:comment>
+    <rdfs:isDefinedBy>https://ontology.mayo.edu/taxonomies/KAO/Rel/VariantRelType/20190801/</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#a80da128-2f2c-375b-bc5f-2c92c836968b">
+    <rdfs:isDefinedBy>https://ontology.mayo.edu/taxonomies/KAO/Rel/SummaryRelType/20190801/</rdfs:isDefinedBy>
+    <skos:prefLabel>Asset Relationships - Summary</skos:prefLabel>
+    <rdfs:comment>Knowledge Asset Relationships - Summary</rdfs:comment>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <rdfs:label>Asset Relationships - Summary</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <skos:notation>summary</skos:notation>
+    <terms:identifier>a80da128-2f2c-375b-bc5f-2c92c836968b</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#e6dec152-d6a9-31fc-8b0a-5e8cc2579cc3">
+    <skos:prefLabel>Parsing Level</skos:prefLabel>
+    <skos:notation>vertical</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <rdfs:isDefinedBy>https://ontology.mayo.edu/taxonomies/API4KP/ParsingLevel/20190801/</rdfs:isDefinedBy>
+    <rdfs:comment>Language Parsing Level</rdfs:comment>
+    <terms:identifier>e6dec152-d6a9-31fc-8b0a-5e8cc2579cc3</terms:identifier>
+    <rdfs:label>Parsing Level</rdfs:label>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1da42144-e4c8-37a4-a216-c16ad35333fb">
+    <terms:identifier>1da42144-e4c8-37a4-a216-c16ad35333fb</terms:identifier>
+    <rdfs:label>LOINC</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <skos:notation>lnc</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdfs:isDefinedBy>http://loinc.org/</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdfs:comment>Logical Observation Identifiers Names and Codes</rdfs:comment>
+    <skos:prefLabel>LOINC</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#62198d22-d71c-3bd7-b292-6546095b0459">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <rdfs:label>PCV</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <skos:prefLabel>PCV</skos:prefLabel>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/taxonomies/PCV</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <terms:identifier>62198d22-d71c-3bd7-b292-6546095b0459</terms:identifier>
+    <skos:notation>pcv</skos:notation>
+    <rdfs:comment>Mayo Clinic Propositional Concept Vocabulary</rdfs:comment>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#5069d0f4-a935-3a1c-807b-0c18716f097c">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdfs:label>Knowledge Asset Type</rdfs:label>
+    <skos:prefLabel>Knowledge Asset Type</skos:prefLabel>
+    <skos:notation>asset-type</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <rdfs:comment>Knowledge Asset Type</rdfs:comment>
+    <rdfs:isDefinedBy>https://ontology.mayo.edu/taxonomies/KAO/KnowledgeAssetType/20190801/</rdfs:isDefinedBy>
+    <terms:identifier>5069d0f4-a935-3a1c-807b-0c18716f097c</terms:identifier>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#42d48e29-2d15-34fd-8505-0e15e00ad591">
+    <skos:prefLabel>KRR Lexicon</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdfs:comment>Knowledge Representation and Reasoning Lexicon</rdfs:comment>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <rdfs:isDefinedBy>https://ontology.mayo.edu/taxonomies/Lexicon/20190801/</rdfs:isDefinedBy>
+    <rdfs:label>KRR Lexicon</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation>lexicon</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <terms:identifier>42d48e29-2d15-34fd-8505-0e15e00ad591</terms:identifier>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#6334ae0f-062c-3661-85cf-2dc022e0359a">
+    <skos:prefLabel>Asset Relationships - Dependencies</skos:prefLabel>
+    <skos:notation>depend</skos:notation>
+    <terms:identifier>6334ae0f-062c-3661-85cf-2dc022e0359a</terms:identifier>
+    <rdfs:comment>Knowledge Asset Relationships - Dependencies</rdfs:comment>
+    <rdfs:label>Asset Relationships - Dependencies</rdfs:label>
+    <rdfs:isDefinedBy>https://ontology.mayo.edu/taxonomies/KAO/Rel/DependencyRelType/20190801/</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#13cd5054-b9c0-30c7-bf0e-c965b6790f32">
+    <skos:prefLabel>KRR Technique</skos:prefLabel>
+    <rdfs:comment>Knowledge Reasoning Technique</rdfs:comment>
+    <terms:identifier>13cd5054-b9c0-30c7-bf0e-c965b6790f32</terms:identifier>
+    <rdfs:isDefinedBy>https://ontology.mayo.edu/taxonomies/KAO/KnowledgeProcessingTechnique/20190801/</rdfs:isDefinedBy>
+    <rdfs:label>KRR Technique</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <skos:notation>krtech</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#2a345970-4fce-3637-9309-9b59e9675c87">
+    <rdfs:isDefinedBy>https://ontology.mayo.edu/taxonomies/KAO/KnowledgeAssetCategory/20190801/</rdfs:isDefinedBy>
+    <terms:identifier>2a345970-4fce-3637-9309-9b59e9675c87</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment>Knowledge Asset Category</rdfs:comment>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <skos:prefLabel>Knowledge Asset Category</skos:prefLabel>
+    <rdfs:label>Knowledge Asset Category</rdfs:label>
+    <skos:notation>asset-cat</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0f8d6fb5-6fe6-3df5-9ad0-114ec5b51dbb">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <skos:prefLabel>Asset Relationships - Structural</skos:prefLabel>
+    <terms:identifier>0f8d6fb5-6fe6-3df5-9ad0-114ec5b51dbb</terms:identifier>
+    <skos:notation>struct</skos:notation>
+    <rdfs:isDefinedBy>https://ontology.mayo.edu/taxonomies/KAO/Rel/StructuralRelType/20190801/</rdfs:isDefinedBy>
+    <rdfs:comment>Knowledge Asset Relationships - Structural</rdfs:comment>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>Asset Relationships - Structural</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#569e800e-bc81-3d4b-9bae-e036b1057a2d">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdfs:comment>Knowledge Representation and Reasoning Serialization Format</rdfs:comment>
+    <skos:prefLabel>KRR MetaFormat</skos:prefLabel>
+    <terms:identifier>569e800e-bc81-3d4b-9bae-e036b1057a2d</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <skos:notation>krfmt</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy>https://ontology.mayo.edu/taxonomies/KRFormat/20190801/</rdfs:isDefinedBy>
+    <rdfs:label>KRR MetaFormat</rdfs:label>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#d9ee1051-fec2-311c-9719-0e1b8292d687">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <terms:identifier>d9ee1051-fec2-311c-9719-0e1b8292d687</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy>http://www.w3.org/2001/XMLSchema-instance</rdfs:isDefinedBy>
+    <skos:prefLabel>XML Schema Instance</skos:prefLabel>
+    <rdfs:comment>XML Schema Instance</rdfs:comment>
+    <rdfs:label>XML Schema Instance</rdfs:label>
+    <skos:notation>xsi</skos:notation>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#dc490ca8-3d19-37b0-a8cf-b9c65d4d2135">
+    <terms:identifier>dc490ca8-3d19-37b0-a8cf-b9c65d4d2135</terms:identifier>
+    <rdfs:comment>Simple Knowledge Organization Scheme</rdfs:comment>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdfs:label>SKOS</rdfs:label>
+    <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#</rdfs:isDefinedBy>
+    <skos:notation>skos</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:prefLabel>SKOS</skos:prefLabel>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#2af72f10-0c35-3273-9462-84f6fd1dfc08">
+    <terms:identifier>2af72f10-0c35-3273-9462-84f6fd1dfc08</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <skos:prefLabel>Asset Relationships - Versions</skos:prefLabel>
+    <rdfs:label>Asset Relationships - Versions</rdfs:label>
+    <rdfs:isDefinedBy>https://ontology.mayo.edu/taxonomies/KAO/Rel/RelatedVersionType/20190801/</rdfs:isDefinedBy>
+    <skos:notation>version</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdfs:comment>Knowledge Asset Relationships - Versions</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1c974f09-4497-3556-94c1-4ec23f618b1d">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <skos:prefLabel>KRR Language</skos:prefLabel>
+    <rdfs:label>KRR Language</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdfs:isDefinedBy>https://ontology.mayo.edu/taxonomies/KRLanguage/20190801/</rdfs:isDefinedBy>
+    <terms:identifier>1c974f09-4497-3556-94c1-4ec23f618b1d</terms:identifier>
+    <rdfs:comment>Knowledge Representation and Reasoning Language</rdfs:comment>
+    <skos:notation>krlang</skos:notation>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#008a1dc8-6ca0-31cd-8153-3bbb1ceb3c99">
+    <rdfs:isDefinedBy>http://www.w3.org/XML/1998/namespace</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <rdfs:label>XML Namespace</rdfs:label>
+    <rdfs:comment>XML Namespace</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:prefLabel>XML Namespace</skos:prefLabel>
+    <terms:identifier>008a1dc8-6ca0-31cd-8153-3bbb1ceb3c99</terms:identifier>
+    <skos:notation>xmlns</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#06e94584-b9ba-3d24-9732-706d24cb8169">
+    <terms:identifier>06e94584-b9ba-3d24-9732-706d24cb8169</terms:identifier>
+    <rdfs:isDefinedBy>https://www.nlm.nih.gov/research/umls/rxnorm/</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <skos:prefLabel>RxNORM</skos:prefLabel>
+    <rdfs:comment>RxNorm</rdfs:comment>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdfs:label>RxNORM</rdfs:label>
+    <skos:notation>rxnorm</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#04ed5e26-fb5b-3489-88de-7b14fcfb8c81">
+    <rdfs:label>SNOMED-CT</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <terms:identifier>04ed5e26-fb5b-3489-88de-7b14fcfb8c81</terms:identifier>
+    <skos:prefLabel>SNOMED-CT</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <skos:notation>sct</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdfs:label>SNOMED</rdfs:label>
+    <rdfs:isDefinedBy>http://snomed.info/sct/900000000000207008/version/20180731</rdfs:isDefinedBy>
+    <rdfs:comment>Systematized Nomenclature of Medicine -- Clinical Terms</rdfs:comment>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#5a058668-50c2-3651-be23-4659f6c92ada">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <skos:prefLabel>Natural Language</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdfs:isDefinedBy>https://ontology.mayo.edu/taxonomies/ISO639-1-LanguageCodes/20170801/</rdfs:isDefinedBy>
+    <rdfs:label>Natural Language</rdfs:label>
+    <terms:identifier>5a058668-50c2-3651-be23-4659f6c92ada</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdfs:comment>Natural Language (ISO 639-1 Standard)</rdfs:comment>
+    <skos:notation>langs</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#22ff75a6-0d49-34f5-a4e6-d6ef90477656">
+    <rdfs:comment>Knowledge Representation and Reasoning Language Profile</rdfs:comment>
+    <rdfs:isDefinedBy>https://ontology.mayo.edu/taxonomies/KRProfile/20190801/</rdfs:isDefinedBy>
+    <skos:prefLabel>KRR Profile</skos:prefLabel>
+    <terms:identifier>22ff75a6-0d49-34f5-a4e6-d6ef90477656</terms:identifier>
+    <skos:notation>krprof</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <rdfs:label>KRR Profile</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1df77f03-55ca-32f1-a6a2-3228a8579f80">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <skos:prefLabel>KRR Serialization</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#1dd8cd8a-f5f7-36dc-bb82-c583a35bd0bc"/>
+    <rdfs:comment>Knowledge Representation and Reasoning Serialization</rdfs:comment>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon#0e011e70-b3e3-3b1b-ac2d-92ce8c6dbba1"/>
+    <rdfs:label>KRR Serialization</rdfs:label>
+    <rdfs:isDefinedBy>https://ontology.mayo.edu/taxonomies/KRSerialization/20190801/</rdfs:isDefinedBy>
+    <skos:notation>krser</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <terms:identifier>1df77f03-55ca-32f1-a6a2-3228a8579f80</terms:identifier>
+  </skos:Concept>
+</rdf:RDF>

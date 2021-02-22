@@ -1,0 +1,2100 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dce="http://www.opengroup.org/dce/"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+    xmlns:LanguageRepresentation="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:tgt="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns="https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode">
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode/20190201"/>
+  </owl:Ontology>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#90cf2eaa-63db-30b6-b96c-87dc3d4d7d75">
+    <skos:definition>Twi language</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">tw</skos:notation>
+    <terms:identifier>90cf2eaa-63db-30b6-b96c-87dc3d4d7d75</terms:identifier>
+    <rdfs:label>Twi</rdfs:label>
+    <skos:inScheme>
+      <skos:ConceptScheme rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>Languages</rdfs:label>
+        <skos:prefLabel>Languages</skos:prefLabel>
+        <skos:hasTopConcept>
+          <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+            <rdfs:label>Language</rdfs:label>
+            <skos:prefLabel>Language</skos:prefLabel>
+          </skos:Concept>
+        </skos:hasTopConcept>
+      </skos:ConceptScheme>
+    </skos:inScheme>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Twi</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Twi</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#5b69f163-a7ec-32ac-9588-80c49e555eeb">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">lg</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>5b69f163-a7ec-32ac-9588-80c49e555eeb</terms:identifier>
+    <skos:definition>Ganda language</skos:definition>
+    <skos:prefLabel>Ganda</skos:prefLabel>
+    <rdfs:label>Ganda</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Ganda</rdfs:isDefinedBy>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#9b73be92-c05e-3ace-851c-6ceba2950291">
+    <skos:prefLabel>Corsican</skos:prefLabel>
+    <skos:definition>Corsican language</skos:definition>
+    <terms:identifier>9b73be92-c05e-3ace-851c-6ceba2950291</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Corsican</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Corsican</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">co</skos:notation>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#d6790955-5c47-3737-9a8c-a949769e0ec4">
+    <terms:identifier>d6790955-5c47-3737-9a8c-a949769e0ec4</terms:identifier>
+    <skos:definition>Swati language</skos:definition>
+    <skos:prefLabel>Swati</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Swati</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Swati</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ss</skos:notation>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#9accc467-b159-37ce-958e-53209c0cde2a">
+    <terms:identifier>9accc467-b159-37ce-958e-53209c0cde2a</terms:identifier>
+    <skos:prefLabel>Slovak</skos:prefLabel>
+    <skos:definition>Slovak language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Slovak</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Slovak</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">sk</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#170d296d-4201-3e1a-b7a8-867e9b0ca3a7">
+    <skos:notation rdf:datatype="urn:Alpha2Code">af</skos:notation>
+    <rdfs:label>Afrikaans</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Afrikaans</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Afrikaans</rdfs:isDefinedBy>
+    <terms:identifier>170d296d-4201-3e1a-b7a8-867e9b0ca3a7</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Afrikaans language</skos:definition>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#63b888f9-df44-3551-a414-1c90a47585da">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:label>North Ndebele</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/NorthNdebele</rdfs:isDefinedBy>
+    <skos:definition>North Ndebele language</skos:definition>
+    <terms:identifier>63b888f9-df44-3551-a414-1c90a47585da</terms:identifier>
+    <skos:prefLabel>North Ndebele</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">nd</skos:notation>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#9dea74f0-1b9e-3ee9-abd8-67ad7b2d2d18">
+    <rdfs:label>Bosnian</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Bosnian</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:prefLabel>Bosnian</skos:prefLabel>
+    <terms:identifier>9dea74f0-1b9e-3ee9-abd8-67ad7b2d2d18</terms:identifier>
+    <skos:definition>Bosnian language</skos:definition>
+    <skos:notation rdf:datatype="urn:Alpha2Code">bs</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#8245cd7e-00de-3b2b-8e93-df68364edf46">
+    <terms:identifier>8245cd7e-00de-3b2b-8e93-df68364edf46</terms:identifier>
+    <skos:notation rdf:datatype="urn:Alpha2Code">kw</skos:notation>
+    <rdfs:label>Cornish</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Cornish</rdfs:isDefinedBy>
+    <skos:definition>Cornish language</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:prefLabel>Cornish</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#a534fa6e-0896-332e-ba62-f3002b731576">
+    <skos:prefLabel>Hiri Motu</skos:prefLabel>
+    <terms:identifier>a534fa6e-0896-332e-ba62-f3002b731576</terms:identifier>
+    <rdfs:label>Hiri Motu</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/HiriMotu</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:definition>Hiri Motu language</skos:definition>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ho</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#deba6920-e706-3540-9385-fe1fb5a379ec">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Russian</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ru</skos:notation>
+    <terms:identifier>deba6920-e706-3540-9385-fe1fb5a379ec</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Russian</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Russian</skos:prefLabel>
+    <skos:definition>Russian language</skos:definition>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#7b59a385-670f-39cd-9940-31c5b0514340">
+    <skos:definition>Kikuyu language</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>Kikuyu</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ki</skos:notation>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Kikuyu</rdfs:isDefinedBy>
+    <skos:prefLabel>Kikuyu</skos:prefLabel>
+    <terms:identifier>7b59a385-670f-39cd-9940-31c5b0514340</terms:identifier>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#ca20f547-f2f6-3dbf-ad23-b0395419dd43">
+    <skos:notation rdf:datatype="urn:Alpha2Code">uz</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Uzbek languages</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Uzbek</rdfs:isDefinedBy>
+    <terms:identifier>ca20f547-f2f6-3dbf-ad23-b0395419dd43</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Uzbek</skos:prefLabel>
+    <rdfs:label>Uzbek</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#2fc10ff9-87c2-37fc-8fd5-f440dd8263ab">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Kashmiri</rdfs:isDefinedBy>
+    <skos:prefLabel>Kashmiri</skos:prefLabel>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ks</skos:notation>
+    <terms:identifier>2fc10ff9-87c2-37fc-8fd5-f440dd8263ab</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Kashmiri language</skos:definition>
+    <rdfs:label>Kashmiri</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#5063c787-3b7d-3f9f-bbfd-89fe217bf2b5">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Samoan</rdfs:isDefinedBy>
+    <skos:definition>Samoan language</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">sm</skos:notation>
+    <terms:identifier>5063c787-3b7d-3f9f-bbfd-89fe217bf2b5</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>Samoan</rdfs:label>
+    <skos:prefLabel>Samoan</skos:prefLabel>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#c20f3bf7-2447-3405-b0a7-2acac97a108c">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Central Khmer language</skos:definition>
+    <rdfs:label>Central Khmer</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">km</skos:notation>
+    <skos:prefLabel>Central Khmer</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <terms:identifier>c20f3bf7-2447-3405-b0a7-2acac97a108c</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/CentralKhmer</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#dcc5d036-3f05-3398-93a1-7020fb43b652">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Kirghiz</rdfs:isDefinedBy>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ky</skos:notation>
+    <rdfs:label>Kirghiz</rdfs:label>
+    <skos:definition>Kirghiz language</skos:definition>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <terms:identifier>dcc5d036-3f05-3398-93a1-7020fb43b652</terms:identifier>
+    <skos:prefLabel>Kirghiz</skos:prefLabel>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#76ad0358-e45d-3408-bc0a-26bbf4c160e3">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Latvian</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Latvian language</skos:definition>
+    <skos:prefLabel>Latvian</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">lv</skos:notation>
+    <rdfs:label>Latvian</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <terms:identifier>76ad0358-e45d-3408-bc0a-26bbf4c160e3</terms:identifier>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#9d73d9e6-ed72-3e2f-8571-565df39f734b">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Aragonese</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Aragonese</rdfs:isDefinedBy>
+    <skos:definition>Aragonese language</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <terms:identifier>9d73d9e6-ed72-3e2f-8571-565df39f734b</terms:identifier>
+    <skos:notation rdf:datatype="urn:Alpha2Code">an</skos:notation>
+    <rdfs:label>Aragonese</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#634e2c69-edef-3f7a-8b28-7ffe57bffd2d">
+    <terms:identifier>634e2c69-edef-3f7a-8b28-7ffe57bffd2d</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Bashkir</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ba</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Bashkir</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:definition>Bashkir language</skos:definition>
+    <rdfs:label>Bashkir</rdfs:label>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#f8131f43-da14-3165-bf7e-cb1fd144eb6a">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Uighur language</skos:definition>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ug</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Uighur</skos:prefLabel>
+    <rdfs:label>Uighur</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Uighur</rdfs:isDefinedBy>
+    <terms:identifier>f8131f43-da14-3165-bf7e-cb1fd144eb6a</terms:identifier>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#d341106c-434c-30c0-bc14-eedca7822975">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Lingala</rdfs:label>
+    <skos:definition>Lingala language</skos:definition>
+    <terms:identifier>d341106c-434c-30c0-bc14-eedca7822975</terms:identifier>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ln</skos:notation>
+    <skos:prefLabel>Lingala</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Lingala</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#c6c1f81a-4666-3385-ba7d-85df7eaf8763">
+    <terms:identifier>c6c1f81a-4666-3385-ba7d-85df7eaf8763</terms:identifier>
+    <skos:definition>Hebrew language</skos:definition>
+    <skos:prefLabel>Hebrew</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Hebrew</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">he</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Hebrew</rdfs:label>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#04f60583-6f66-3d87-9bf3-fb2b3643d16b">
+    <rdfs:label>Lithuanian</rdfs:label>
+    <terms:identifier>04f60583-6f66-3d87-9bf3-fb2b3643d16b</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:prefLabel>Lithuanian</skos:prefLabel>
+    <skos:notation rdf:datatype="urn:Alpha2Code">lt</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Lithuanian language</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Lithuanian</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#68bf367e-228f-35ba-83cb-8831a5ee6447">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Dutch</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>68bf367e-228f-35ba-83cb-8831a5ee6447</terms:identifier>
+    <skos:prefLabel>Dutch</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Dutch language</skos:definition>
+    <rdfs:label>Dutch</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">nl</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#f32ced6a-9ba1-34c4-b3c0-47fd1d7c882e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Japanese</rdfs:isDefinedBy>
+    <skos:prefLabel>Japanese</skos:prefLabel>
+    <rdfs:label>Japanese</rdfs:label>
+    <skos:definition>Japanese language</skos:definition>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ja</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>f32ced6a-9ba1-34c4-b3c0-47fd1d7c882e</terms:identifier>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#cb5480c3-2e71-3788-92b0-8ae1e8712775">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:prefLabel>Spanish</skos:prefLabel>
+    <skos:notation rdf:datatype="urn:Alpha2Code">es</skos:notation>
+    <skos:definition>Spanish language</skos:definition>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Spanish</rdfs:isDefinedBy>
+    <rdfs:label>Spanish</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>cb5480c3-2e71-3788-92b0-8ae1e8712775</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#c98e06a0-0f05-311d-b3d6-f2cfd610cb70">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Burmese language</skos:definition>
+    <rdfs:label>Burmese</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">my</skos:notation>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Burmese</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Burmese</skos:prefLabel>
+    <terms:identifier>c98e06a0-0f05-311d-b3d6-f2cfd610cb70</terms:identifier>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#6f121192-9eb3-3a88-988a-f058eb7dbcfb">
+    <rdfs:label>Turkmen</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Turkmen</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">tk</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:definition>Turkmen language</skos:definition>
+    <skos:prefLabel>Turkmen</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <terms:identifier>6f121192-9eb3-3a88-988a-f058eb7dbcfb</terms:identifier>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#fd46bbc3-c5ec-3bc8-b6b0-71e8581ac381">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Aymara</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Aymara</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Aymara</rdfs:isDefinedBy>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ay</skos:notation>
+    <skos:definition>Aymara language</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <terms:identifier>fd46bbc3-c5ec-3bc8-b6b0-71e8581ac381</terms:identifier>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#2822b8f5-aac2-391a-be53-4140a6629eea">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Amharic</rdfs:label>
+    <skos:definition>Amharic language</skos:definition>
+    <skos:prefLabel>Amharic</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">am</skos:notation>
+    <terms:identifier>2822b8f5-aac2-391a-be53-4140a6629eea</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Amharic</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#055301c5-6abc-32dd-ba81-ea3810ad0599">
+    <skos:definition>Serbian language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Serbian</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Serbian</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>055301c5-6abc-32dd-ba81-ea3810ad0599</terms:identifier>
+    <skos:notation rdf:datatype="urn:Alpha2Code">sr</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:label>Serbian</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#ad5b3d93-8c9d-30ed-b3c8-02be17c40e4e">
+    <skos:notation rdf:datatype="urn:Alpha2Code">bi</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Bislama</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Bislama</skos:prefLabel>
+    <terms:identifier>ad5b3d93-8c9d-30ed-b3c8-02be17c40e4e</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Bislama language</skos:definition>
+    <rdfs:label>Bislama</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#7d457c80-39e1-3cb4-9169-4c384f381684">
+    <skos:definition>Panjabi language</skos:definition>
+    <skos:notation rdf:datatype="urn:Alpha2Code">pa</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Panjabi</rdfs:isDefinedBy>
+    <skos:prefLabel>Panjabi</skos:prefLabel>
+    <rdfs:label>Panjabi</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>7d457c80-39e1-3cb4-9169-4c384f381684</terms:identifier>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#57984441-6557-38df-a9c7-cc33e12dfa4c">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Oromo languages</skos:definition>
+    <terms:identifier>57984441-6557-38df-a9c7-cc33e12dfa4c</terms:identifier>
+    <skos:notation rdf:datatype="urn:Alpha2Code">om</skos:notation>
+    <skos:prefLabel>Oromo</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Oromo</rdfs:isDefinedBy>
+    <rdfs:label>Oromo</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#c1e1b1f8-bdaa-34b0-bc18-3e147887e0e1">
+    <skos:definition>Macedonian language</skos:definition>
+    <skos:notation rdf:datatype="urn:Alpha2Code">mk</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Macedonian</rdfs:isDefinedBy>
+    <terms:identifier>c1e1b1f8-bdaa-34b0-bc18-3e147887e0e1</terms:identifier>
+    <rdfs:label>Macedonian</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Macedonian</skos:prefLabel>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#8aeb3707-7d17-3e79-b6a9-4af8c2584723">
+    <skos:notation rdf:datatype="urn:Alpha2Code">ik</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>8aeb3707-7d17-3e79-b6a9-4af8c2584723</terms:identifier>
+    <skos:definition>Inupiaq language</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:label>Inupiaq</rdfs:label>
+    <skos:prefLabel>Inupiaq</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Inupiaq</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#adc0753d-3764-3ed1-97f7-b999a0ae79a0">
+    <terms:identifier>adc0753d-3764-3ed1-97f7-b999a0ae79a0</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Georgian</rdfs:isDefinedBy>
+    <skos:definition>Georgian language</skos:definition>
+    <skos:prefLabel>Georgian</skos:prefLabel>
+    <rdfs:label>Georgian</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ka</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#d05ae627-fcc8-38e7-9f1e-e341c3d5cbc2">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Kazakh</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Kazakh language</skos:definition>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Kazakh</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Kazakh</skos:prefLabel>
+    <skos:notation rdf:datatype="urn:Alpha2Code">kk</skos:notation>
+    <terms:identifier>d05ae627-fcc8-38e7-9f1e-e341c3d5cbc2</terms:identifier>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#a716b6a3-e8cf-3994-965d-64d712db61d8">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Albanian</rdfs:isDefinedBy>
+    <terms:identifier>a716b6a3-e8cf-3994-965d-64d712db61d8</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Albanian languages</skos:definition>
+    <skos:notation rdf:datatype="urn:Alpha2Code">sq</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:prefLabel>Albanian</skos:prefLabel>
+    <rdfs:label>Albanian</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#6bf09989-b4d3-3c43-9fe1-4794368f31e5">
+    <skos:notation rdf:datatype="urn:Alpha2Code">dz</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Dzongkha language</skos:definition>
+    <skos:prefLabel>Dzongkha</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Dzongkha</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>Dzongkha</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>6bf09989-b4d3-3c43-9fe1-4794368f31e5</terms:identifier>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#0b104da5-7394-3747-a4cc-7b3a42f2c1de">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Somali</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Somali</rdfs:isDefinedBy>
+    <skos:prefLabel>Somali</skos:prefLabel>
+    <skos:definition>Somali language</skos:definition>
+    <skos:notation rdf:datatype="urn:Alpha2Code">so</skos:notation>
+    <terms:identifier>0b104da5-7394-3747-a4cc-7b3a42f2c1de</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#c730389b-c8d9-3e59-8867-766babdd48b5">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">pl</skos:notation>
+    <terms:identifier>c730389b-c8d9-3e59-8867-766babdd48b5</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Polish</rdfs:isDefinedBy>
+    <rdfs:label>Polish</rdfs:label>
+    <skos:definition>Polish language</skos:definition>
+    <skos:prefLabel>Polish</skos:prefLabel>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#fc9b189b-45de-3b54-8a71-89c488b59928">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:prefLabel>Komi</skos:prefLabel>
+    <terms:identifier>fc9b189b-45de-3b54-8a71-89c488b59928</terms:identifier>
+    <skos:definition>Komi language</skos:definition>
+    <rdfs:label>Komi</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Komi</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">kv</skos:notation>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#83ff4480-cdf2-300a-a83b-f30d95774d76">
+    <terms:identifier>83ff4480-cdf2-300a-a83b-f30d95774d76</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Czech</skos:prefLabel>
+    <skos:definition>Czech language</skos:definition>
+    <skos:notation rdf:datatype="urn:Alpha2Code">cs</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>Czech</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Czech</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#a441f933-e002-3f55-8cff-38b534f98a53">
+    <terms:identifier>a441f933-e002-3f55-8cff-38b534f98a53</terms:identifier>
+    <skos:definition>Tibetan language</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:label>Tibetan</rdfs:label>
+    <skos:prefLabel>Tibetan</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Tibetan</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">bo</skos:notation>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#9f3356b2-7d0a-36cb-9f0c-eea9e80a6e72">
+    <terms:identifier>9f3356b2-7d0a-36cb-9f0c-eea9e80a6e72</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">az</skos:notation>
+    <skos:prefLabel>Azerbaijani</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Azerbaijani</rdfs:label>
+    <skos:definition>Azerbaijani language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Azerbaijani</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#da2d3f72-de14-3d2e-8030-b9bfcb75acd6">
+    <terms:identifier>da2d3f72-de14-3d2e-8030-b9bfcb75acd6</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Haitian</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ht</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Haitian; Haitian Creole language</skos:definition>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Haitian</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>Haitian</rdfs:label>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#0fa80b68-9964-3cb8-8c0c-a1ac09197c8c">
+    <terms:identifier>0fa80b68-9964-3cb8-8c0c-a1ac09197c8c</terms:identifier>
+    <skos:definition>Sardinian languages</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">sc</skos:notation>
+    <rdfs:label>Sardinian</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Sardinian</rdfs:isDefinedBy>
+    <skos:prefLabel>Sardinian</skos:prefLabel>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#28916fc3-da67-3519-8b2b-98a7f309857f">
+    <rdfs:label>Estonian</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Estonian</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:prefLabel>Estonian</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>28916fc3-da67-3519-8b2b-98a7f309857f</terms:identifier>
+    <skos:notation rdf:datatype="urn:Alpha2Code">et</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Estonian language</skos:definition>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#c555b579-aa26-3e92-9bdf-0fed7f7638ee">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Igbo</rdfs:label>
+    <skos:definition>Igbo language</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <terms:identifier>c555b579-aa26-3e92-9bdf-0fed7f7638ee</terms:identifier>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ig</skos:notation>
+    <skos:prefLabel>Igbo</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Igbo</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#529b1c6e-afff-3f34-bcda-64708f72586d">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Marathi</rdfs:isDefinedBy>
+    <skos:definition>Marathi language</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">mr</skos:notation>
+    <rdfs:label>Marathi</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>529b1c6e-afff-3f34-bcda-64708f72586d</terms:identifier>
+    <skos:prefLabel>Marathi</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#f33ec0f9-81dd-3410-a1e0-ebc9da2c4b5e">
+    <terms:identifier>f33ec0f9-81dd-3410-a1e0-ebc9da2c4b5e</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Kurdish</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Kurdish</skos:prefLabel>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ku</skos:notation>
+    <skos:definition>Kurdish language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Kurdish</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#aa1fbe57-7ecc-39ca-bb97-0d4151dfe682">
+    <skos:definition>Oriya language</skos:definition>
+    <skos:prefLabel>Oriya</skos:prefLabel>
+    <skos:notation rdf:datatype="urn:Alpha2Code">or</skos:notation>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Oriya</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>aa1fbe57-7ecc-39ca-bb97-0d4151dfe682</terms:identifier>
+    <rdfs:label>Oriya</rdfs:label>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#272ccb85-92ba-3de0-baf1-dedce0fd3ac2">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:prefLabel>Arabic</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Arabic</rdfs:isDefinedBy>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ar</skos:notation>
+    <terms:identifier>272ccb85-92ba-3de0-baf1-dedce0fd3ac2</terms:identifier>
+    <skos:definition>Arabic language</skos:definition>
+    <rdfs:label>Arabic</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#c0b9b1fd-f1a2-3bf3-8ba8-467790496b0e">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Luxembourgish</rdfs:isDefinedBy>
+    <skos:notation rdf:datatype="urn:Alpha2Code">lb</skos:notation>
+    <skos:definition>Luxembourgish language</skos:definition>
+    <rdfs:label>Luxembourgish</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>c0b9b1fd-f1a2-3bf3-8ba8-467790496b0e</terms:identifier>
+    <skos:prefLabel>Luxembourgish</skos:prefLabel>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#0ab0904e-915d-3a0a-b4a9-3d465992cb7e">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/SouthernSotho</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>0ab0904e-915d-3a0a-b4a9-3d465992cb7e</terms:identifier>
+    <skos:prefLabel>Southern Sotho</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Southern Sotho language</skos:definition>
+    <rdfs:label>Southern Sotho</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">st</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#427dff9d-d115-37bf-9702-5b6d8e839b27">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:label>Chechen</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Chechen</rdfs:isDefinedBy>
+    <skos:definition>Chechen language</skos:definition>
+    <skos:prefLabel>Chechen</skos:prefLabel>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ce</skos:notation>
+    <terms:identifier>427dff9d-d115-37bf-9702-5b6d8e839b27</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4d0c1117-e593-3084-8060-68a55ab227b9">
+    <terms:identifier>4d0c1117-e593-3084-8060-68a55ab227b9</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Maltese</rdfs:isDefinedBy>
+    <skos:definition>Maltese language</skos:definition>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Maltese</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">mt</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:prefLabel>Maltese</skos:prefLabel>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3be898f3-f28c-3fba-ad9d-525c453615b4">
+    <rdfs:label>Inuktitut</rdfs:label>
+    <skos:prefLabel>Inuktitut</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Inuktitut</rdfs:isDefinedBy>
+    <skos:definition>Inuktitut language</skos:definition>
+    <terms:identifier>3be898f3-f28c-3fba-ad9d-525c453615b4</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">iu</skos:notation>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#b142db5d-05e8-3fce-94bc-07f93bf9cb51">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Tonga-TongaIslands</rdfs:isDefinedBy>
+    <skos:definition>Tonga (Tonga Islands) language</skos:definition>
+    <skos:prefLabel>Tonga (Tonga Islands)</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">to</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>b142db5d-05e8-3fce-94bc-07f93bf9cb51</terms:identifier>
+    <rdfs:label>Tonga (Tonga Islands)</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#eaf45172-e57f-392a-91df-c88f9808c540">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:label>Afar</rdfs:label>
+    <skos:definition>Afar language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Afar</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Afar</skos:prefLabel>
+    <terms:identifier>eaf45172-e57f-392a-91df-c88f9808c540</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">aa</skos:notation>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#2956bc47-5585-3d0f-9242-091da155e530">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Ewe</rdfs:label>
+    <skos:prefLabel>Ewe</skos:prefLabel>
+    <terms:identifier>2956bc47-5585-3d0f-9242-091da155e530</terms:identifier>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ee</skos:notation>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Ewe</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Ewe language</skos:definition>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4c86bbde-578e-3648-ba0b-12aea66fc5f6">
+    <skos:notation rdf:datatype="urn:Alpha2Code">tt</skos:notation>
+    <skos:prefLabel>Tatar</skos:prefLabel>
+    <skos:definition>Tatar language</skos:definition>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Tatar</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <terms:identifier>4c86bbde-578e-3648-ba0b-12aea66fc5f6</terms:identifier>
+    <rdfs:label>Tatar</rdfs:label>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#cdfac88a-fad6-3244-b5a4-d6d3ff80e434">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">oj</skos:notation>
+    <skos:prefLabel>Ojibwa</skos:prefLabel>
+    <rdfs:label>Ojibwa</rdfs:label>
+    <terms:identifier>cdfac88a-fad6-3244-b5a4-d6d3ff80e434</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Ojibwa</rdfs:isDefinedBy>
+    <skos:definition>Ojibwa languages</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#604e9f0b-a244-342d-9f26-80c5206ea4a6">
+    <skos:prefLabel>Ossetian</skos:prefLabel>
+    <rdfs:label>Ossetian</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Ossetian</rdfs:isDefinedBy>
+    <terms:identifier>604e9f0b-a244-342d-9f26-80c5206ea4a6</terms:identifier>
+    <skos:definition>Ossetian; Ossetic language</skos:definition>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">os</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#0c1be09b-ad2a-3aa2-ba31-5b88abda8a32">
+    <skos:notation rdf:datatype="urn:Alpha2Code">hr</skos:notation>
+    <skos:prefLabel>Croatian</skos:prefLabel>
+    <skos:definition>Croatian language</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>Croatian</rdfs:label>
+    <terms:identifier>0c1be09b-ad2a-3aa2-ba31-5b88abda8a32</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Croatian</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#fcd18223-8eec-36f5-a948-dac946936147">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Kongo</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Kongo languages</skos:definition>
+    <rdfs:label>Kongo</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Kongo</rdfs:isDefinedBy>
+    <terms:identifier>fcd18223-8eec-36f5-a948-dac946936147</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">kg</skos:notation>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#d0bdb3cd-e477-382e-b66d-a05ebda50ccb">
+    <rdfs:label>Korean</rdfs:label>
+    <skos:definition>Korean language</skos:definition>
+    <skos:prefLabel>Korean</skos:prefLabel>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ko</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <terms:identifier>d0bdb3cd-e477-382e-b66d-a05ebda50ccb</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Korean</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#43ddc789-bcea-3177-a147-91f6c9a03b28">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Thai language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Thai</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <terms:identifier>43ddc789-bcea-3177-a147-91f6c9a03b28</terms:identifier>
+    <rdfs:label>Thai</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">th</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:prefLabel>Thai</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#dea54a29-be92-3874-9275-fae518b01457">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Tigrinya</rdfs:isDefinedBy>
+    <rdfs:label>Tigrinya</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Tigrinya</skos:prefLabel>
+    <skos:definition>Tigrinya language</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>dea54a29-be92-3874-9275-fae518b01457</terms:identifier>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ti</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#2f53f077-d396-32f0-b325-d5eabfc8798b">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Nepali</rdfs:isDefinedBy>
+    <skos:prefLabel>Nepali</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <terms:identifier>2f53f077-d396-32f0-b325-d5eabfc8798b</terms:identifier>
+    <skos:definition>Nepali language</skos:definition>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ne</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Nepali</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#6cd16662-5486-34fb-a621-f46c01701334">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Shona</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Shona</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">sn</skos:notation>
+    <skos:prefLabel>Shona</skos:prefLabel>
+    <terms:identifier>6cd16662-5486-34fb-a621-f46c01701334</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:definition>Shona language</skos:definition>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#88c2cd3e-cbb0-3b23-8456-ba8b33dfd266">
+    <skos:notation rdf:datatype="urn:Alpha2Code">rm</skos:notation>
+    <rdfs:label>Romansh</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Romansh</rdfs:isDefinedBy>
+    <skos:prefLabel>Romansh</skos:prefLabel>
+    <terms:identifier>88c2cd3e-cbb0-3b23-8456-ba8b33dfd266</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Romansh language</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#8032c149-d0e4-3ad3-8ef6-b60289f910cd">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Persian languages</skos:definition>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Persian</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <terms:identifier>8032c149-d0e4-3ad3-8ef6-b60289f910cd</terms:identifier>
+    <skos:prefLabel>Persian</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Persian</rdfs:isDefinedBy>
+    <skos:notation rdf:datatype="urn:Alpha2Code">fa</skos:notation>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#e78a6fc1-4ad6-3f7a-b838-6b20568ce95b">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Ukrainian</rdfs:isDefinedBy>
+    <terms:identifier>e78a6fc1-4ad6-3f7a-b838-6b20568ce95b</terms:identifier>
+    <skos:prefLabel>Ukrainian</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Ukrainian language</skos:definition>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Ukrainian</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">uk</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4be8e06d-27bc-37e1-828f-2fa9a49ca985">
+    <skos:prefLabel>Italian</skos:prefLabel>
+    <rdfs:label>Italian</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>4be8e06d-27bc-37e1-828f-2fa9a49ca985</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Italian</rdfs:isDefinedBy>
+    <skos:notation rdf:datatype="urn:Alpha2Code">it</skos:notation>
+    <skos:definition>Italian language</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#d8fd56d3-ba06-32de-8f66-25bfb1b4ca7b">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Lao language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Lao</rdfs:isDefinedBy>
+    <terms:identifier>d8fd56d3-ba06-32de-8f66-25bfb1b4ca7b</terms:identifier>
+    <skos:prefLabel>Lao</skos:prefLabel>
+    <skos:notation rdf:datatype="urn:Alpha2Code">lo</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Lao</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#35fec539-d453-36dd-92be-373a5b6f7b62">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Norwegian Nynorsk language</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">nn</skos:notation>
+    <rdfs:label>Norwegian Nynorsk</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/NorwegianNynorsk</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>35fec539-d453-36dd-92be-373a5b6f7b62</terms:identifier>
+    <skos:prefLabel>Norwegian Nynorsk</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#2be98262-9367-3eef-af84-2a2f59cfd07a">
+    <skos:notation rdf:datatype="urn:Alpha2Code">sg</skos:notation>
+    <terms:identifier>2be98262-9367-3eef-af84-2a2f59cfd07a</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:label>Sango</rdfs:label>
+    <skos:prefLabel>Sango</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Sango language</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Sango</rdfs:isDefinedBy>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#d6cffba6-0509-30b4-b2d1-6f8e3b031476">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <terms:identifier>d6cffba6-0509-30b4-b2d1-6f8e3b031476</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Tswana</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:definition>Tswana language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Tswana</rdfs:isDefinedBy>
+    <skos:notation rdf:datatype="urn:Alpha2Code">tn</skos:notation>
+    <skos:prefLabel>Tswana</skos:prefLabel>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3f43ba07-05bf-371e-a5d7-4a7a2e8b40c0">
+    <rdfs:label>Sundanese</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Sundanese</rdfs:isDefinedBy>
+    <skos:prefLabel>Sundanese</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>3f43ba07-05bf-371e-a5d7-4a7a2e8b40c0</terms:identifier>
+    <skos:definition>Sundanese languaage</skos:definition>
+    <skos:notation rdf:datatype="urn:Alpha2Code">su</skos:notation>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#a56dcb84-43c2-3f8e-94b4-7b8ff1748331">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>a56dcb84-43c2-3f8e-94b4-7b8ff1748331</terms:identifier>
+    <rdfs:label>Bengali</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">bn</skos:notation>
+    <skos:prefLabel>Bengali</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Bengali language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Bengali</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#efa7394e-caa7-3c70-b6a9-da13a77236b8">
+    <skos:definition>Romanian language</skos:definition>
+    <skos:prefLabel>Romanian</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ro</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>efa7394e-caa7-3c70-b6a9-da13a77236b8</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Romanian</rdfs:isDefinedBy>
+    <rdfs:label>Romanian</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#41171a0f-cd36-3ce9-8b5f-0f11398713b6">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Swedish</rdfs:label>
+    <terms:identifier>41171a0f-cd36-3ce9-8b5f-0f11398713b6</terms:identifier>
+    <skos:prefLabel>Swedish</skos:prefLabel>
+    <skos:definition>Swedish language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Swedish</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">sv</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#ad225f70-7802-3a11-8c22-987186dd38e8">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/French</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">fr</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>ad225f70-7802-3a11-8c22-987186dd38e8</terms:identifier>
+    <skos:definition>French language</skos:definition>
+    <rdfs:label>French</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:prefLabel>French</skos:prefLabel>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#7b86112e-c640-3fd8-b06a-b5251d1a68fe">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Hungarian</rdfs:isDefinedBy>
+    <terms:identifier>7b86112e-c640-3fd8-b06a-b5251d1a68fe</terms:identifier>
+    <skos:prefLabel>Hungarian</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">hu</skos:notation>
+    <skos:definition>Hungarian language</skos:definition>
+    <rdfs:label>Hungarian</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#839baadf-b724-306e-ac3b-12a431dd8358">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>839baadf-b724-306e-ac3b-12a431dd8358</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Zhuang languages</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>Zhuang</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">za</skos:notation>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Zhuang</rdfs:isDefinedBy>
+    <skos:prefLabel>Zhuang</skos:prefLabel>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#f8aa4393-427c-3f2f-9010-f7adc5812517">
+    <skos:definition>Urdu language</skos:definition>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <terms:identifier>f8aa4393-427c-3f2f-9010-f7adc5812517</terms:identifier>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ur</skos:notation>
+    <rdfs:label>Urdu</rdfs:label>
+    <skos:prefLabel>Urdu</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Urdu</rdfs:isDefinedBy>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#8325c477-1176-3c58-9964-da62728cde1e">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/NorwegianBokmal</rdfs:isDefinedBy>
+    <terms:identifier>8325c477-1176-3c58-9964-da62728cde1e</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Norwegian Bokmal</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">nb</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Norwegian Bokmal language</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Norwegian Bokmal</skos:prefLabel>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#bef40fcd-0150-370c-bb04-179a42e04950">
+    <skos:prefLabel>Fulah</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Fulah</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ff</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Fulah</rdfs:isDefinedBy>
+    <terms:identifier>bef40fcd-0150-370c-bb04-179a42e04950</terms:identifier>
+    <skos:definition>Fulah languages</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#64db1254-fb5a-3435-b6ce-a757f5ef920c">
+    <skos:notation rdf:datatype="urn:Alpha2Code">ab</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Abkhazian</rdfs:isDefinedBy>
+    <skos:prefLabel>Abkhazian</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <terms:identifier>64db1254-fb5a-3435-b6ce-a757f5ef920c</terms:identifier>
+    <skos:definition>Abkhazian language</skos:definition>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Abkhazian</rdfs:label>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#68a4c100-e7b1-34ab-9509-c585e7bed39c">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Occitan</rdfs:isDefinedBy>
+    <skos:prefLabel>Occitan</skos:prefLabel>
+    <skos:definition>Occitan (post 1500) language</skos:definition>
+    <terms:identifier>68a4c100-e7b1-34ab-9509-c585e7bed39c</terms:identifier>
+    <rdfs:label>Occitan</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">oc</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#78463a38-4a5a-34fa-95fa-73e2f506ecfc">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>English</skos:prefLabel>
+    <rdfs:label>English</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>78463a38-4a5a-34fa-95fa-73e2f506ecfc</terms:identifier>
+    <skos:notation rdf:datatype="urn:Alpha2Code">en</skos:notation>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/English</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:definition>English language</skos:definition>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#1dee6da6-3717-39cb-bb22-5d8b871dfa89">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:prefLabel>Chuvash</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Chuvash</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Chuvash</rdfs:isDefinedBy>
+    <skos:definition>Chuvash language</skos:definition>
+    <skos:notation rdf:datatype="urn:Alpha2Code">cv</skos:notation>
+    <terms:identifier>1dee6da6-3717-39cb-bb22-5d8b871dfa89</terms:identifier>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#504405fb-03fe-3519-a14a-6d2ce11000fa">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Navajo</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:label>Navajo</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>504405fb-03fe-3519-a14a-6d2ce11000fa</terms:identifier>
+    <skos:prefLabel>Navajo</skos:prefLabel>
+    <skos:definition>Navajo language</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">nv</skos:notation>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#041e8934-9138-38d5-9b18-9d8be3f811b7">
+    <skos:notation rdf:datatype="urn:Alpha2Code">hz</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Herero</rdfs:isDefinedBy>
+    <terms:identifier>041e8934-9138-38d5-9b18-9d8be3f811b7</terms:identifier>
+    <rdfs:label>Herero</rdfs:label>
+    <skos:definition>Herero language</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Herero</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#d6c55299-c38c-32e6-ad6a-2e41c1288010">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Marshallese language</skos:definition>
+    <skos:notation rdf:datatype="urn:Alpha2Code">mh</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <terms:identifier>d6c55299-c38c-32e6-ad6a-2e41c1288010</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Marshallese</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Marshallese</skos:prefLabel>
+    <rdfs:label>Marshallese</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#2cfce796-f470-3d56-8ae1-c3a1b3fb7e74">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <terms:identifier>2cfce796-f470-3d56-8ae1-c3a1b3fb7e74</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Irish</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Irish</rdfs:isDefinedBy>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ga</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Irish</rdfs:label>
+    <skos:definition>Irish language</skos:definition>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#ce9ff4c0-410d-35af-bc22-06ab23c8759d">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Yoruba</rdfs:isDefinedBy>
+    <skos:prefLabel>Yoruba</skos:prefLabel>
+    <skos:notation rdf:datatype="urn:Alpha2Code">yo</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Yoruba language</skos:definition>
+    <terms:identifier>ce9ff4c0-410d-35af-bc22-06ab23c8759d</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:label>Yoruba</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#899f2e4c-fae6-3e10-9ed8-2951bef7db4d">
+    <skos:notation rdf:datatype="urn:Alpha2Code">rn</skos:notation>
+    <rdfs:label>Rundi</rdfs:label>
+    <skos:definition>Rundi language</skos:definition>
+    <terms:identifier>899f2e4c-fae6-3e10-9ed8-2951bef7db4d</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Rundi</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Rundi</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#fc179207-9200-35b7-9ca8-5323ceacf5eb">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:label>Malay</rdfs:label>
+    <skos:definition>Malay macrolanguage</skos:definition>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Malay</skos:prefLabel>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ms</skos:notation>
+    <terms:identifier>fc179207-9200-35b7-9ca8-5323ceacf5eb</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Malay</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#0a6de446-0095-3398-a8a4-5ed512a7538f">
+    <terms:identifier>0a6de446-0095-3398-a8a4-5ed512a7538f</terms:identifier>
+    <rdfs:label>Belarusian</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">be</skos:notation>
+    <skos:prefLabel>Belarusian</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Belarusian</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Belarusian language</skos:definition>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#86bc3115-eb4e-3873-ac96-904a4a68e19e">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>German language</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>German</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">de</skos:notation>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/German</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>86bc3115-eb4e-3873-ac96-904a4a68e19e</terms:identifier>
+    <skos:prefLabel>German</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#832739b2-3245-3a7a-ba10-df7f9c7f6c50">
+    <skos:prefLabel>Bambara</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Bambara</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">bm</skos:notation>
+    <terms:identifier>832739b2-3245-3a7a-ba10-df7f9c7f6c50</terms:identifier>
+    <skos:definition>Bambara language</skos:definition>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>Bambara</rdfs:label>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#b1203842-21fb-361c-97bd-0793e9b5a5eb">
+    <skos:definition>South Ndebele language</skos:definition>
+    <rdfs:label>South Ndebele</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>South Ndebele</skos:prefLabel>
+    <skos:notation rdf:datatype="urn:Alpha2Code">nr</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/SouthNdebele</rdfs:isDefinedBy>
+    <terms:identifier>b1203842-21fb-361c-97bd-0793e9b5a5eb</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#bc01ab16-66e2-3f8a-aeb7-88936e012802">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ch</skos:notation>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Chamorro</rdfs:isDefinedBy>
+    <terms:identifier>bc01ab16-66e2-3f8a-aeb7-88936e012802</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:label>Chamorro</rdfs:label>
+    <skos:prefLabel>Chamorro</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:definition>Chamorro language</skos:definition>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#900a14b1-1561-3d9d-8d1c-47f1d3a3251b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Catalan</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <terms:identifier>900a14b1-1561-3d9d-8d1c-47f1d3a3251b</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Catalan</rdfs:isDefinedBy>
+    <skos:definition>Catalan language</skos:definition>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Catalan</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ca</skos:notation>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#78df616a-b31e-35ee-86c6-a519a2ce9e12">
+    <skos:definition>Venda language</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ve</skos:notation>
+    <rdfs:label>Venda</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Venda</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Venda</skos:prefLabel>
+    <terms:identifier>78df616a-b31e-35ee-86c6-a519a2ce9e12</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#bcdc0695-5171-323c-98b2-b2f832d5cbba">
+    <rdfs:label>Fijian</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Fijian</rdfs:isDefinedBy>
+    <skos:prefLabel>Fijian</skos:prefLabel>
+    <skos:definition>Fijian language</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">fj</skos:notation>
+    <terms:identifier>bcdc0695-5171-323c-98b2-b2f832d5cbba</terms:identifier>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#6b511fdc-e48a-3427-8a35-e3365e36230c">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Kannada</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">kn</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Kannada</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <terms:identifier>6b511fdc-e48a-3427-8a35-e3365e36230c</terms:identifier>
+    <skos:prefLabel>Kannada</skos:prefLabel>
+    <skos:definition>Kannada language</skos:definition>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#7d94af6d-ccea-3273-abd1-d456ba3c750a">
+    <terms:identifier>7d94af6d-ccea-3273-abd1-d456ba3c750a</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Javanese</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">jv</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Javanese language</skos:definition>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Javanese</rdfs:label>
+    <skos:prefLabel>Javanese</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3b261136-e3c3-3f35-a0a5-8611b1f344cb">
+    <terms:identifier>3b261136-e3c3-3f35-a0a5-8611b1f344cb</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Chinese</rdfs:isDefinedBy>
+    <rdfs:label>Chinese</rdfs:label>
+    <skos:prefLabel>Chinese</skos:prefLabel>
+    <skos:notation rdf:datatype="urn:Alpha2Code">zh</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Chinese languages</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#7e724a2d-ed81-3257-9771-f8fe494f71f6">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Tahitian</skos:prefLabel>
+    <rdfs:label>Tahitian</rdfs:label>
+    <skos:definition>Tahitian language</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <terms:identifier>7e724a2d-ed81-3257-9771-f8fe494f71f6</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Tahitian</rdfs:isDefinedBy>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ty</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#9c751c71-1ebc-3775-a46f-80308ef4d56e">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>9c751c71-1ebc-3775-a46f-80308ef4d56e</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Maori language</skos:definition>
+    <rdfs:label>Maori</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Maori</rdfs:isDefinedBy>
+    <skos:prefLabel>Maori</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">mi</skos:notation>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#7b80fae8-5640-316c-9b02-61bef0c27636">
+    <rdfs:label>Vietnamese</rdfs:label>
+    <terms:identifier>7b80fae8-5640-316c-9b02-61bef0c27636</terms:identifier>
+    <skos:prefLabel>Vietnamese</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">vi</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Vietnamese language</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Vietnamese</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#da550ca0-6bca-3bd3-8b7c-6ed32c864c70">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Norwegian</rdfs:isDefinedBy>
+    <rdfs:label>Norwegian</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">no</skos:notation>
+    <skos:definition>Norwegian language</skos:definition>
+    <skos:prefLabel>Norwegian</skos:prefLabel>
+    <terms:identifier>da550ca0-6bca-3bd3-8b7c-6ed32c864c70</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#7e43fb09-6b07-36de-bf46-39c03b0e1055">
+    <skos:notation rdf:datatype="urn:Alpha2Code">ii</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/SichuanYi</rdfs:isDefinedBy>
+    <skos:definition>Sichuan Yi language</skos:definition>
+    <skos:prefLabel>Sichuan Yi</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Sichuan Yi</rdfs:label>
+    <terms:identifier>7e43fb09-6b07-36de-bf46-39c03b0e1055</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#d1a59333-c7e5-3205-bed9-bda9da34b201">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <terms:identifier>d1a59333-c7e5-3205-bed9-bda9da34b201</terms:identifier>
+    <skos:prefLabel>Gujarati</skos:prefLabel>
+    <rdfs:label>Gujarati</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">gu</skos:notation>
+    <skos:definition>Gujarati language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Gujarati</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#60bb3bcc-6ff5-3542-8a38-f76f1059b2d2">
+    <skos:definition>Bulgarian language</skos:definition>
+    <terms:identifier>60bb3bcc-6ff5-3542-8a38-f76f1059b2d2</terms:identifier>
+    <skos:notation rdf:datatype="urn:Alpha2Code">bg</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Bulgarian</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Bulgarian</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Bulgarian</rdfs:isDefinedBy>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#d0c5ab6b-ebe3-38a4-9569-3e990a2947bc">
+    <skos:definition>Nauru language</skos:definition>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:prefLabel>Nauru</skos:prefLabel>
+    <terms:identifier>d0c5ab6b-ebe3-38a4-9569-3e990a2947bc</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Nauru</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Nauru</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">na</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#ee343287-6af4-38b8-8741-fdc6d3b99845">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Guarani</rdfs:isDefinedBy>
+    <skos:prefLabel>Guarani</skos:prefLabel>
+    <skos:notation rdf:datatype="urn:Alpha2Code">gn</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Guarani</rdfs:label>
+    <skos:definition>Guarani language</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <terms:identifier>ee343287-6af4-38b8-8741-fdc6d3b99845</terms:identifier>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#516a6233-25de-3756-b29f-124618baabbc">
+    <skos:prefLabel>Galician</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <terms:identifier>516a6233-25de-3756-b29f-124618baabbc</terms:identifier>
+    <skos:definition>Galician; Gallegan language</skos:definition>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Galician</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Galician</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">gl</skos:notation>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#d7ef8c5d-f269-3972-bed6-943551a4f435">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <terms:identifier>d7ef8c5d-f269-3972-bed6-943551a4f435</terms:identifier>
+    <rdfs:label>Pushto</rdfs:label>
+    <skos:definition>Pushto languages</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Pushto</rdfs:isDefinedBy>
+    <skos:prefLabel>Pushto</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ps</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#b4c02865-3fbd-3807-a824-f8a41dbe25fe">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Faroese</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:prefLabel>Faroese</skos:prefLabel>
+    <skos:notation rdf:datatype="urn:Alpha2Code">fo</skos:notation>
+    <skos:definition>Faroese language</skos:definition>
+    <rdfs:label>Faroese</rdfs:label>
+    <terms:identifier>b4c02865-3fbd-3807-a824-f8a41dbe25fe</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#410d89e3-c364-3c63-b2d7-412d2d46ef69">
+    <skos:definition>Wolof language</skos:definition>
+    <terms:identifier>410d89e3-c364-3c63-b2d7-412d2d46ef69</terms:identifier>
+    <rdfs:label>Wolof</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Wolof</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">wo</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Wolof</skos:prefLabel>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#9ae099fd-0822-37fa-af2f-85664a4f74dc">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Finnish</rdfs:label>
+    <skos:prefLabel>Finnish</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>9ae099fd-0822-37fa-af2f-85664a4f74dc</terms:identifier>
+    <skos:notation rdf:datatype="urn:Alpha2Code">fi</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:definition>Finnish language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Finnish</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#e9906021-1896-3971-8e81-ac517de52da2">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/ScottishGaelic</rdfs:isDefinedBy>
+    <skos:definition>Scottish Gaelic language</skos:definition>
+    <skos:prefLabel>Scottish Gaelic</skos:prefLabel>
+    <terms:identifier>e9906021-1896-3971-8e81-ac517de52da2</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Scottish Gaelic</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">gd</skos:notation>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#bbb0fa49-b525-3426-8f4a-d7a06adc3e07">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Welsh</rdfs:isDefinedBy>
+    <skos:notation rdf:datatype="urn:Alpha2Code">cy</skos:notation>
+    <skos:definition>Welsh language</skos:definition>
+    <rdfs:label>Welsh</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>bbb0fa49-b525-3426-8f4a-d7a06adc3e07</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:prefLabel>Welsh</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#6e9970ea-c6ca-36e3-8a8e-ac50070c49ce">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Slovenian</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Slovenian language</skos:definition>
+    <skos:notation rdf:datatype="urn:Alpha2Code">sl</skos:notation>
+    <rdfs:label>Slovenian</rdfs:label>
+    <terms:identifier>6e9970ea-c6ca-36e3-8a8e-ac50070c49ce</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Slovenian</rdfs:isDefinedBy>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#fee97312-6d42-389a-8960-82e9ca6961fa">
+    <skos:definition>Tagalog language</skos:definition>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Tagalog</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">tl</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>fee97312-6d42-389a-8960-82e9ca6961fa</terms:identifier>
+    <skos:prefLabel>Tagalog</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Tagalog</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#e9e85816-90f8-38b6-a877-29eccb168b13">
+    <skos:prefLabel>Nyanja</skos:prefLabel>
+    <skos:definition>Nyanja language</skos:definition>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ny</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Nyanja</rdfs:isDefinedBy>
+    <terms:identifier>e9e85816-90f8-38b6-a877-29eccb168b13</terms:identifier>
+    <rdfs:label>Nyanja</rdfs:label>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#7e832a22-3637-3b3a-85e0-30c551d90bab">
+    <skos:notation rdf:datatype="urn:Alpha2Code">as</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Assamese language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Assamese</rdfs:isDefinedBy>
+    <skos:prefLabel>Assamese</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Assamese</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>7e832a22-3637-3b3a-85e0-30c551d90bab</terms:identifier>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#7593d697-bfa3-3798-a23b-ecb86cbf3503">
+    <skos:prefLabel>Hausa</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Hausa</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ha</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>7593d697-bfa3-3798-a23b-ecb86cbf3503</terms:identifier>
+    <rdfs:label>Hausa</rdfs:label>
+    <skos:definition>Hausa language</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#d634f58f-d91b-30c8-a153-60fb2075bd03">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:label>Tsonga</rdfs:label>
+    <skos:definition>Tsonga language</skos:definition>
+    <skos:prefLabel>Tsonga</skos:prefLabel>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ts</skos:notation>
+    <terms:identifier>d634f58f-d91b-30c8-a153-60fb2075bd03</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Tsonga</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#f9b5a275-bc45-3b62-ad13-e4a537f62a3b">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Malayalam</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Malayalam language</skos:definition>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ml</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>Malayalam</skos:prefLabel>
+    <rdfs:label>Malayalam</rdfs:label>
+    <terms:identifier>f9b5a275-bc45-3b62-ad13-e4a537f62a3b</terms:identifier>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#8dd9c99a-29d0-3ba7-8b56-829a39b2a798">
+    <terms:identifier>8dd9c99a-29d0-3ba7-8b56-829a39b2a798</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/LubaKatanga</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Luba-Katanga language</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">lu</skos:notation>
+    <skos:prefLabel>Luba-Katanga</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Luba-Katanga</rdfs:label>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#e4875932-c8cf-3d2b-8232-34a1d35b15e0">
+    <terms:identifier>e4875932-c8cf-3d2b-8232-34a1d35b15e0</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:definition>Kinyarwanda language</skos:definition>
+    <rdfs:label>Kinyarwanda</rdfs:label>
+    <skos:prefLabel>Kinyarwanda</skos:prefLabel>
+    <skos:notation rdf:datatype="urn:Alpha2Code">rw</skos:notation>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Kinyarwanda</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#26349cdd-47fa-3dfd-b5fa-d11686dc477f">
+    <skos:definition>Modern Greek (post 1453-) language</skos:definition>
+    <terms:identifier>26349cdd-47fa-3dfd-b5fa-d11686dc477f</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">el</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:prefLabel>Modern Greek</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/ModernGreek</rdfs:isDefinedBy>
+    <rdfs:label>Modern Greek</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#7bc6f150-ce73-3db3-921c-be0b75aea027">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Danish language</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Danish</rdfs:isDefinedBy>
+    <skos:notation rdf:datatype="urn:Alpha2Code">da</skos:notation>
+    <skos:prefLabel>Danish</skos:prefLabel>
+    <rdfs:label>Danish</rdfs:label>
+    <terms:identifier>7bc6f150-ce73-3db3-921c-be0b75aea027</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4870d997-5463-3426-a831-cd535dfaa41a">
+    <terms:identifier>4870d997-5463-3426-a831-cd535dfaa41a</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ng</skos:notation>
+    <skos:definition>Ndonga language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Ndonga</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Ndonga</rdfs:label>
+    <skos:prefLabel>Ndonga</skos:prefLabel>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#dd43cea2-c41a-34cc-a536-8193e2343bf9">
+    <skos:prefLabel>Akan</skos:prefLabel>
+    <terms:identifier>dd43cea2-c41a-34cc-a536-8193e2343bf9</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Akan</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:label>Akan</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ak</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:definition>Akan language</skos:definition>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#66ab19a0-e349-3a5b-a559-8b106d98d651">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Xhosa language</skos:definition>
+    <skos:prefLabel>Xhosa</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Xhosa</rdfs:isDefinedBy>
+    <rdfs:label>Xhosa</rdfs:label>
+    <terms:identifier>66ab19a0-e349-3a5b-a559-8b106d98d651</terms:identifier>
+    <skos:notation rdf:datatype="urn:Alpha2Code">xh</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#68046733-e465-3165-a4f5-9a1918cb1408">
+    <skos:notation rdf:datatype="urn:Alpha2Code">zu</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Zulu</skos:prefLabel>
+    <skos:definition>Zulu language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Zulu</rdfs:isDefinedBy>
+    <terms:identifier>68046733-e465-3165-a4f5-9a1918cb1408</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:label>Zulu</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#b397edd3-5777-39f6-8361-19e6ced96ff6">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Armenian language</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Armenian</rdfs:isDefinedBy>
+    <terms:identifier>b397edd3-5777-39f6-8361-19e6ced96ff6</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Armenian</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">hy</skos:notation>
+    <skos:prefLabel>Armenian</skos:prefLabel>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#45c3171e-f193-374b-802f-407fba9d955b">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>45c3171e-f193-374b-802f-407fba9d955b</terms:identifier>
+    <skos:notation rdf:datatype="urn:Alpha2Code">hi</skos:notation>
+    <skos:prefLabel>Hindi</skos:prefLabel>
+    <skos:definition>Hindi language</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Hindi</rdfs:isDefinedBy>
+    <rdfs:label>Hindi</rdfs:label>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#ff36f09c-e3d9-36b3-b729-48a4f72144dd">
+    <skos:definition>Sindhi language</skos:definition>
+    <rdfs:label>Sindhi</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Sindhi</skos:prefLabel>
+    <terms:identifier>ff36f09c-e3d9-36b3-b729-48a4f72144dd</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">sd</skos:notation>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Sindhi</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#dee445b5-f256-3bcb-8ee3-ee19e4d8f1bc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Walloon</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Walloon</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">wa</skos:notation>
+    <skos:prefLabel>Walloon</skos:prefLabel>
+    <terms:identifier>dee445b5-f256-3bcb-8ee3-ee19e4d8f1bc</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Walloon language</skos:definition>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4c545ca2-5c8a-34a5-b3be-19e7a1c44a79">
+    <skos:definition>Icelandic language</skos:definition>
+    <rdfs:label>Icelandic</rdfs:label>
+    <skos:prefLabel>Icelandic</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Icelandic</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>4c545ca2-5c8a-34a5-b3be-19e7a1c44a79</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">is</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#218acefd-faa5-3741-9277-63c1cb0418f8">
+    <terms:identifier>218acefd-faa5-3741-9277-63c1cb0418f8</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Dhivehi</rdfs:isDefinedBy>
+    <skos:prefLabel>Dhivehi</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Dhivehi</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">dv</skos:notation>
+    <skos:definition>Divehi language</skos:definition>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#15b88a88-e6cf-36a4-862c-1562fdcb0c19">
+    <skos:definition>Telugu language</skos:definition>
+    <terms:identifier>15b88a88-e6cf-36a4-862c-1562fdcb0c19</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">te</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Telugu</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Telugu</rdfs:isDefinedBy>
+    <rdfs:label>Telugu</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#000f64bb-dbbb-34ac-a435-5df9f3cfad78">
+    <skos:definition>Malagasy languages</skos:definition>
+    <terms:identifier>000f64bb-dbbb-34ac-a435-5df9f3cfad78</terms:identifier>
+    <rdfs:label>Malagasy</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Malagasy</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Malagasy</rdfs:isDefinedBy>
+    <skos:notation rdf:datatype="urn:Alpha2Code">mg</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#eb2f428f-5c20-30a6-b8e1-4ac7e8dd1eca">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Breton</rdfs:isDefinedBy>
+    <skos:definition>Breton language</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <terms:identifier>eb2f428f-5c20-30a6-b8e1-4ac7e8dd1eca</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Breton</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">br</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Breton</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#2a3354e2-d50e-34bf-80ba-1fbcd253506e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:definition>Sinhala; Sinhalese language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Sinhala</rdfs:isDefinedBy>
+    <skos:prefLabel>Sinhala</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">si</skos:notation>
+    <terms:identifier>2a3354e2-d50e-34bf-80ba-1fbcd253506e</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Sinhala</rdfs:label>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#9af95fb4-ee44-3ce2-9961-e7251072625b">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Swahili</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Swahili macrolanguage</skos:definition>
+    <rdfs:label>Swahili</rdfs:label>
+    <terms:identifier>9af95fb4-ee44-3ce2-9961-e7251072625b</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Swahili</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">sw</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#c1612bbd-ebfa-3546-be8a-b814e08daff1">
+    <skos:definition>Turkish language</skos:definition>
+    <skos:prefLabel>Turkish</skos:prefLabel>
+    <rdfs:label>Turkish</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">tr</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Turkish</rdfs:isDefinedBy>
+    <terms:identifier>c1612bbd-ebfa-3546-be8a-b814e08daff1</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#ad19bb17-f84d-3802-9805-c2287995a294">
+    <skos:prefLabel>Western Frisian</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/WesternFrisian</rdfs:isDefinedBy>
+    <rdfs:label>Western Frisian</rdfs:label>
+    <terms:identifier>ad19bb17-f84d-3802-9805-c2287995a294</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">fy</skos:notation>
+    <skos:definition>Western Frisian language</skos:definition>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#ae77afce-e143-3d32-8284-349b7b29c667">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/NorthernSami</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <terms:identifier>ae77afce-e143-3d32-8284-349b7b29c667</terms:identifier>
+    <skos:prefLabel>Northern Sami</skos:prefLabel>
+    <skos:definition>Northern Sami language</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Northern Sami</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">se</skos:notation>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#5c4f0685-88ec-3e0d-8193-b59f349879fd">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Kalaallisut</skos:prefLabel>
+    <terms:identifier>5c4f0685-88ec-3e0d-8193-b59f349879fd</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Kalaallisut</rdfs:label>
+    <skos:definition>Kalaallisut language</skos:definition>
+    <skos:notation rdf:datatype="urn:Alpha2Code">kl</skos:notation>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Kalaallisut</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#86242ff2-83fc-3d1a-8d14-76aa05089995">
+    <skos:definition>Kuanyama language</skos:definition>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Kuanyama</skos:prefLabel>
+    <rdfs:label>Kuanyama</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">kj</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>86242ff2-83fc-3d1a-8d14-76aa05089995</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Kuanyama</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#cc1c9b57-607b-3439-978b-68074a5e2d80">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">id</skos:notation>
+    <skos:definition>Indonesian language</skos:definition>
+    <terms:identifier>cc1c9b57-607b-3439-978b-68074a5e2d80</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Indonesian</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Indonesian</rdfs:isDefinedBy>
+    <skos:prefLabel>Indonesian</skos:prefLabel>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#28c84f05-dbc5-31ff-a522-20ce03b16356">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">mn</skos:notation>
+    <skos:prefLabel>Mongolian</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <terms:identifier>28c84f05-dbc5-31ff-a522-20ce03b16356</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Mongolian</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:label>Mongolian</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:definition>Mongolian languages</skos:definition>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#552cfb77-7a66-320c-a896-655f2282e116">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Kanuri</rdfs:label>
+    <skos:definition>Kanuri language</skos:definition>
+    <skos:prefLabel>Kanuri</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Kanuri</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>552cfb77-7a66-320c-a896-655f2282e116</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">kr</skos:notation>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#944c84bf-afb0-31ea-bf35-7c4f23cddf53">
+    <skos:notation rdf:datatype="urn:Alpha2Code">tg</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:prefLabel>Tajik</skos:prefLabel>
+    <skos:definition>Tajik language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Tajik</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>944c84bf-afb0-31ea-bf35-7c4f23cddf53</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdfs:label>Tajik</rdfs:label>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#83d340ea-e0f7-3cb8-ba85-1fdc310c1bc6">
+    <skos:definition>Cree languages</skos:definition>
+    <rdfs:label>Cree</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">cr</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <terms:identifier>83d340ea-e0f7-3cb8-ba85-1fdc310c1bc6</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Cree</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:prefLabel>Cree</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#050dc5fb-2ced-33ee-b331-0a88820ecaa0">
+    <skos:definition>Quechua languages</skos:definition>
+    <terms:identifier>050dc5fb-2ced-33ee-b331-0a88820ecaa0</terms:identifier>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Quechua</skos:prefLabel>
+    <skos:notation rdf:datatype="urn:Alpha2Code">qu</skos:notation>
+    <rdfs:label>Quechua</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Quechua</rdfs:isDefinedBy>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#f0670813-0209-39b3-9ff8-d85744b40400">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Tamil</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:prefLabel>Tamil</skos:prefLabel>
+    <skos:definition>Tamil language</skos:definition>
+    <rdfs:label>Tamil</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">ta</skos:notation>
+    <terms:identifier>f0670813-0209-39b3-9ff8-d85744b40400</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#a8a89070-9b58-3887-9edc-68e65a938695">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>a8a89070-9b58-3887-9edc-68e65a938695</terms:identifier>
+    <skos:definition>Basque language</skos:definition>
+    <skos:prefLabel>Basque</skos:prefLabel>
+    <rdfs:label>Basque</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Basque</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">eu</skos:notation>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#0678e3d2-2a54-3393-aec7-9daed3fb13e7">
+    <skos:definition>Limburgan; Limburger; Limburgish language</skos:definition>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <terms:identifier>0678e3d2-2a54-3393-aec7-9daed3fb13e7</terms:identifier>
+    <skos:notation rdf:datatype="urn:Alpha2Code">li</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:prefLabel>Limburgan</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Limburgan</rdfs:isDefinedBy>
+    <rdfs:label>Limburgan</rdfs:label>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#77505e62-bcfa-3776-aa18-81c8cdde2d2c">
+    <skos:notation rdf:datatype="urn:Alpha2Code">av</skos:notation>
+    <skos:definition>Avaric language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Avaric</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <terms:identifier>77505e62-bcfa-3776-aa18-81c8cdde2d2c</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <rdfs:label>Avaric</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:prefLabel>Avaric</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#30e32c7c-4cf4-34e9-875e-60c14c442541">
+    <skos:prefLabel>Portuguese</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <terms:identifier>30e32c7c-4cf4-34e9-875e-60c14c442541</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <skos:definition>Portuguese language</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Portuguese</rdfs:isDefinedBy>
+    <rdfs:label>Portuguese</rdfs:label>
+    <skos:notation rdf:datatype="urn:Alpha2Code">pt</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#6d49a359-51ac-313a-a294-548e5137157f">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Yiddish</rdfs:isDefinedBy>
+    <skos:prefLabel>Yiddish</skos:prefLabel>
+    <skos:definition>Yiddish language</skos:definition>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#3a08e2e3-40ab-39fd-9263-af48193cbf8e"/>
+    <terms:identifier>6d49a359-51ac-313a-a294-548e5137157f</terms:identifier>
+    <rdfs:label>Yiddish</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-1-LanguageCode#4994a8ff-eba4-3c31-80be-b89e8d41f174"/>
+    <skos:notation rdf:datatype="urn:Alpha2Code">yi</skos:notation>
+  </owl:NamedIndividual>
+</rdf:RDF>

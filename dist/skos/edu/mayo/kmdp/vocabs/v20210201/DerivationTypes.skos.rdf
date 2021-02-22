@@ -1,0 +1,102 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dce="http://www.opengroup.org/dce/"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:AnnotationVocabulary1="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:DOL-terms="http://www.omg.org/spec/DOL/DOL-terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:AnnotationVocabulary="https://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns="https://www.omg.org/spec/API4KP/api4kp-rel/"
+    xmlns:tgt="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType">
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType/SNAPSHOT"/>
+  </owl:Ontology>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#ff629252-f3d9-33f3-93c4-771f449bce09">
+    <skos:prefLabel>is transcreation of</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isTranscreationOf</rdfs:isDefinedBy>
+    <skos:broaderTransitive>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#73eb7461-6136-3a9e-a530-caf3bfe25afe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:inScheme>
+          <skos:ConceptScheme rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#aaa70e67-8ff9-3ea7-8a6d-fc98cb919f36">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdfs:label>DerivationTypes</rdfs:label>
+            <skos:prefLabel>DerivationTypes</skos:prefLabel>
+            <skos:hasTopConcept rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#73eb7461-6136-3a9e-a530-caf3bfe25afe"/>
+          </skos:ConceptScheme>
+        </skos:inScheme>
+        <rdfs:label>DerivationType</rdfs:label>
+        <skos:prefLabel>DerivationType</skos:prefLabel>
+      </skos:Concept>
+    </skos:broaderTransitive>
+    <skos:broader>
+      <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#694c9fe7-5eb5-3db6-b3d4-36a435f8a1e4">
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isAdaptationOf</rdfs:isDefinedBy>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#aaa70e67-8ff9-3ea7-8a6d-fc98cb919f36"/>
+        <skos:notation>isAdaptationOf</skos:notation>
+        <rdfs:label>is adaptation of</rdfs:label>
+        <skos:prefLabel>is adaptation of</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#73eb7461-6136-3a9e-a530-caf3bfe25afe"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>is a derivative that shares the same subject as the original, but is modified to facilitate the internalization by a certain class of agents</skos:definition>
+        <terms:identifier>694c9fe7-5eb5-3db6-b3d4-36a435f8a1e4</terms:identifier>
+        <skos:broader>
+          <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#b0586387-30d9-3107-9205-782c0dd05300">
+            <skos:notation>isDerivedFrom</skos:notation>
+            <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp/isDerivedFrom</rdfs:isDefinedBy>
+            <skos:definition>created as the product of an activity that used another resource as an input, and such that some of the concepts used in the input resource ended up being used in this resource</skos:definition>
+            <rdfs:label>is derived from</rdfs:label>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#aaa70e67-8ff9-3ea7-8a6d-fc98cb919f36"/>
+            <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#73eb7461-6136-3a9e-a530-caf3bfe25afe"/>
+            <skos:note>a resource may be a derivative of any number of resources, all which need to contribute at least some concept.</skos:note>
+            <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#73eb7461-6136-3a9e-a530-caf3bfe25afe"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:prefLabel>is derived from</skos:prefLabel>
+            <terms:identifier>b0586387-30d9-3107-9205-782c0dd05300</terms:identifier>
+          </owl:NamedIndividual>
+        </skos:broader>
+      </owl:NamedIndividual>
+    </skos:broader>
+    <terms:identifier>ff629252-f3d9-33f3-93c4-771f449bce09</terms:identifier>
+    <skos:definition>adaptation that changes the formal semantics of some parts of the source asset</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#aaa70e67-8ff9-3ea7-8a6d-fc98cb919f36"/>
+    <rdfs:label>is transcreation of</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation>isTranscreationOf</skos:notation>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#e4de3836-1f60-3fb2-99d8-26f2504ade47">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#73eb7461-6136-3a9e-a530-caf3bfe25afe"/>
+    <rdfs:label>is revision of</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isRevisionOf</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation>isRevisionOf</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#b0586387-30d9-3107-9205-782c0dd05300"/>
+    <skos:prefLabel>is revision of</skos:prefLabel>
+    <terms:identifier>e4de3836-1f60-3fb2-99d8-26f2504ade47</terms:identifier>
+    <skos:definition>is a derivative that is focused on parts of a knowledge resource whose interpretation may no longer hold</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#aaa70e67-8ff9-3ea7-8a6d-fc98cb919f36"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#4f124d54-b3cf-3dc8-9e9d-fd05b45e10d0">
+    <skos:definition>is derived through the application of a flattening operator to a composite resource</skos:definition>
+    <rdfs:label>is flattening of</rdfs:label>
+    <skos:notation>isFlatteningOf</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#b0586387-30d9-3107-9205-782c0dd05300"/>
+    <skos:prefLabel>is flattening of</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isFlatteningOf</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#aaa70e67-8ff9-3ea7-8a6d-fc98cb919f36"/>
+    <terms:identifier>4f124d54-b3cf-3dc8-9e9d-fd05b45e10d0</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#73eb7461-6136-3a9e-a530-caf3bfe25afe"/>
+  </owl:NamedIndividual>
+</rdf:RDF>

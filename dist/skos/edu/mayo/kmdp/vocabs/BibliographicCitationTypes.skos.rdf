@@ -1,0 +1,565 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dce="http://www.opengroup.org/dce/"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:tgt="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#"
+    xmlns="http://purl.org/spar/cito#"
+    xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType">
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType/2018-02-16"/>
+  </owl:Ontology>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#ce6eb625-a3d6-3fad-9860-af4f75508cbf">
+    <dct:identifier>ce6eb625-a3d6-3fad-9860-af4f75508cbf</dct:identifier>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/agreesWith</rdfs:isDefinedBy>
+    <rdfs:comment xml:lang="en">The citing entity agrees with statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader>
+      <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793">
+        <dct:identifier>5d224440-05e2-314e-8829-859fe1ce0793</dct:identifier>
+        <skos:notation>cites</skos:notation>
+        <skos:prefLabel xml:lang="en">cites</skos:prefLabel>
+        <rdfs:isDefinedBy>http://purl.org/spar/cito/cites</rdfs:isDefinedBy>
+        <skos:broaderTransitive>
+          <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <skos:inScheme>
+              <skos:ConceptScheme rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+                <rdfs:label>BibliographicCitationTypes</rdfs:label>
+                <skos:prefLabel>BibliographicCitationTypes</skos:prefLabel>
+                <skos:hasTopConcept rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+              </skos:ConceptScheme>
+            </skos:inScheme>
+            <rdfs:label>BibliographicCitationType</rdfs:label>
+            <skos:prefLabel>BibliographicCitationType</skos:prefLabel>
+          </skos:Concept>
+        </skos:broaderTransitive>
+        <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">cites</rdfs:label>
+        <rdfs:comment xml:lang="en">The citing entity cites the cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism).</rdfs:comment>
+        <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+      </owl:NamedIndividual>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:prefLabel xml:lang="en">agrees with</skos:prefLabel>
+    <skos:notation>agreesWith</skos:notation>
+    <rdfs:label xml:lang="en">agrees with</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#33677b82-7973-3e4c-b09d-b5189e095627">
+    <dct:identifier>33677b82-7973-3e4c-b09d-b5189e095627</dct:identifier>
+    <rdfs:comment xml:lang="en">This property is defined in schema.org and has been added here to align schema.org with CiTO. The object property schema:citation expresses similar semantics to cito:cites except for the explicit definition of domain and range classes, that are schema:CreativeWork according to schema.org. For that reason, it is here defined as a subproperty of cito:cites.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <rdfs:isDefinedBy>http://schema.org/citation</rdfs:isDefinedBy>
+    <skos:prefLabel>citation</skos:prefLabel>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <skos:notation>citation</skos:notation>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdfs:label>citation</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#611da52d-170c-3e14-bead-b6215f083ed0">
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/obtainsBackgroundFrom</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">obtains background from</rdfs:label>
+    <dct:identifier>611da52d-170c-3e14-bead-b6215f083ed0</dct:identifier>
+    <rdfs:comment xml:lang="en">The citing entity obtains background information from the cited entity.</rdfs:comment>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:prefLabel xml:lang="en">obtains background from</skos:prefLabel>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <skos:notation>obtainsBackgroundFrom</skos:notation>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#210d8463-b56c-3159-92d1-cc878da4f522">
+    <dct:identifier>210d8463-b56c-3159-92d1-cc878da4f522</dct:identifier>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <rdfs:label xml:lang="en">disputes</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:prefLabel xml:lang="en">disputes</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation>disputes</skos:notation>
+    <rdfs:comment xml:lang="en">The citing entity disputes statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/disputes</rdfs:isDefinedBy>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#49cd0ddf-89ab-3031-bbe0-ed12754ccd23">
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:notation>usesConclusionsFrom</skos:notation>
+    <skos:prefLabel xml:lang="en">uses conclusions from</skos:prefLabel>
+    <dct:identifier>49cd0ddf-89ab-3031-bbe0-ed12754ccd23</dct:identifier>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/usesConclusionsFrom</rdfs:isDefinedBy>
+    <rdfs:comment xml:lang="en">The citing entity describes work that uses conclusions presented in the cited entity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label xml:lang="en">uses conclusions from</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#ae87b13b-da97-36c5-82e7-9fac2a083b1c">
+    <rdfs:comment xml:lang="en">The citing entity contains a statement of fact or a logical assertion (or a collection of such facts and/or assertions) originally present in the cited entity.   This object property is designed to be used to relate a separate abstract, summary or nanopublication to the cited entity upon which it is based.</rdfs:comment>
+    <skos:notation>containsAssertionFrom</skos:notation>
+    <skos:prefLabel xml:lang="en">contains assertion from</skos:prefLabel>
+    <rdfs:label xml:lang="en">contains assertion from</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/containsAssertionFrom</rdfs:isDefinedBy>
+    <dct:identifier>ae87b13b-da97-36c5-82e7-9fac2a083b1c</dct:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#01268750-d16d-393a-9ec8-cd25e078a48c">
+    <rdfs:comment xml:lang="en">The citing entity includes one or more quotations from the cited entity.</rdfs:comment>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <rdfs:label xml:lang="en">includes quotation from</rdfs:label>
+    <dct:identifier>01268750-d16d-393a-9ec8-cd25e078a48c</dct:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation>includesQuotationFrom</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/includesQuotationFrom</rdfs:isDefinedBy>
+    <skos:prefLabel xml:lang="en">includes quotation from</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#ac81e7f2-8ec8-3298-b0c8-b54e47369396">
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/confirms</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dct:identifier>ac81e7f2-8ec8-3298-b0c8-b54e47369396</dct:identifier>
+    <rdfs:comment xml:lang="en">The citing entity confirms facts, ideas or statements presented in the cited entity.</rdfs:comment>
+    <skos:prefLabel xml:lang="en">confirms</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdfs:label xml:lang="en">confirms</rdfs:label>
+    <skos:notation>confirms</skos:notation>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#4bcff16a-3800-30aa-b919-8ac01a75a3bd">
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:notation>citesAsSourceDocument</skos:notation>
+    <rdfs:comment xml:lang="en">The citing entity cites the cited entity as being the entity from which the citing entity is derived, or about which the citing entity contains metadata.</rdfs:comment>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <dct:identifier>4bcff16a-3800-30aa-b919-8ac01a75a3bd</dct:identifier>
+    <skos:prefLabel xml:lang="en">cites as source document</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">cites as source document</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/citesAsSourceDocument</rdfs:isDefinedBy>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#ae1b2fa0-e6c7-3d8d-8a55-86bda3357d34">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdfs:comment xml:lang="en">A property indicating that the author of the citing entity plagiarizes the cited entity, by including textual or other elements from the cited entity without formal acknowledgement of their source.  The citing entity thus contains no explicit citation of the cited entity, according to the norms of scholarly practice, but cites it implicitly.</rdfs:comment>
+    <dct:identifier>ae1b2fa0-e6c7-3d8d-8a55-86bda3357d34</dct:identifier>
+    <skos:notation>plagiarizes</skos:notation>
+    <skos:prefLabel xml:lang="en">plagiarizes</skos:prefLabel>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/plagiarizes</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label xml:lang="en">plagiarizes</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#a5bc847f-8f2b-3725-8869-b3e203ee35d4">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <dct:identifier>a5bc847f-8f2b-3725-8869-b3e203ee35d4</dct:identifier>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/speculatesOn</rdfs:isDefinedBy>
+    <skos:notation>speculatesOn</skos:notation>
+    <skos:prefLabel xml:lang="en">speculates on</skos:prefLabel>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">speculates on</rdfs:label>
+    <rdfs:comment xml:lang="en">The citing entity speculates on something within or related to the cited entity, without firm evidence.</rdfs:comment>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#51ebfd5d-786e-3572-abc4-989a181528f8">
+    <skos:notation>citesAsAuthority</skos:notation>
+    <rdfs:comment xml:lang="en">The citing entity cites the cited entity as one that provides an authoritative description or definition of the subject under discussion.</rdfs:comment>
+    <skos:prefLabel xml:lang="en">cites as authority</skos:prefLabel>
+    <rdfs:label xml:lang="en">cites as authority</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/citesAsAuthority</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <dct:identifier>51ebfd5d-786e-3572-abc4-989a181528f8</dct:identifier>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#8c2ce286-eb2d-3358-9c66-a13cbb773e44">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/derides</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <rdfs:comment xml:lang="en">The citing entity express derision for the cited entity, or for ideas or conclusions contained within it.</rdfs:comment>
+    <skos:notation>derides</skos:notation>
+    <dct:identifier>8c2ce286-eb2d-3358-9c66-a13cbb773e44</dct:identifier>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <skos:prefLabel xml:lang="en">derides</skos:prefLabel>
+    <rdfs:label xml:lang="en">derides</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#58825490-2adf-3aa2-b0a8-a5586268f25e">
+    <rdfs:comment xml:lang="en">The citing entity cites the cited entity as source of data.</rdfs:comment>
+    <skos:prefLabel xml:lang="en">cites as data source</skos:prefLabel>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/citesAsDataSource</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">cites as data source</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <dct:identifier>58825490-2adf-3aa2-b0a8-a5586268f25e</dct:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:notation>citesAsDataSource</skos:notation>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#af02b6a3-785f-309c-8a6d-6e45708c065a">
+    <dct:identifier>af02b6a3-785f-309c-8a6d-6e45708c065a</dct:identifier>
+    <rdfs:label xml:lang="en">critiques</rdfs:label>
+    <rdfs:comment xml:lang="en">The citing entity critiques statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <skos:prefLabel xml:lang="en">critiques</skos:prefLabel>
+    <skos:notation>critiques</skos:notation>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/critiques</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#fe37fb1f-0c9a-36f9-a6ad-a4c51396723f">
+    <rdfs:comment xml:lang="en">The citing entity cites the cited entity as being the container of metadata describing the citing entity.</rdfs:comment>
+    <skos:prefLabel xml:lang="en">cites as metadata document</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <skos:notation>citesAsMetadataDocument</skos:notation>
+    <rdfs:label xml:lang="en">cites as metadata document</rdfs:label>
+    <dct:identifier>fe37fb1f-0c9a-36f9-a6ad-a4c51396723f</dct:identifier>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/citesAsMetadataDocument</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#ae635f08-107a-3956-9e63-6835f24e6f6f">
+    <rdfs:comment xml:lang="en">The citing entity extends facts, ideas or understandings presented in the cited entity.</rdfs:comment>
+    <skos:notation>extends</skos:notation>
+    <skos:prefLabel xml:lang="en">extends</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <dct:identifier>ae635f08-107a-3956-9e63-6835f24e6f6f</dct:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/extends</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">extends</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#72225dfc-0ffc-3c4e-8471-c5824c2c63c2">
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <rdfs:comment xml:lang="en">The citing entity provides intellectual or factual support for statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:prefLabel xml:lang="en">supports</skos:prefLabel>
+    <dct:identifier>72225dfc-0ffc-3c4e-8471-c5824c2c63c2</dct:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation>supports</skos:notation>
+    <rdfs:label xml:lang="en">supports</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/supports</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#8da9b328-e8bb-38b1-8326-fbaad3756d52">
+    <skos:notation>citesAsRelated</skos:notation>
+    <rdfs:comment xml:lang="en">The citing entity cites the cited entity as one that is related.</rdfs:comment>
+    <rdfs:label xml:lang="en">cites as related</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <dct:identifier>8da9b328-e8bb-38b1-8326-fbaad3756d52</dct:identifier>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/citesAsRelated</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:prefLabel xml:lang="en">cites as related</skos:prefLabel>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#928735d6-f2c6-3bee-b16d-d511c8ccaf55">
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <rdfs:label xml:lang="en">credits</rdfs:label>
+    <dct:identifier>928735d6-f2c6-3bee-b16d-d511c8ccaf55</dct:identifier>
+    <skos:prefLabel xml:lang="en">credits</skos:prefLabel>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/credits</rdfs:isDefinedBy>
+    <rdfs:comment xml:lang="en">The citing entity acknowledges contributions made by the cited entity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:notation>credits</skos:notation>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#7ea108a5-9ad7-34eb-a7a6-6d623e2d3940">
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/describes</rdfs:isDefinedBy>
+    <rdfs:comment xml:lang="en">The citing entity describes the cited entity.</rdfs:comment>
+    <skos:notation>describes</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dct:identifier>7ea108a5-9ad7-34eb-a7a6-6d623e2d3940</dct:identifier>
+    <skos:prefLabel xml:lang="en">describes</skos:prefLabel>
+    <rdfs:label xml:lang="en">describes</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#263cb00b-a507-30cc-a312-452b17a8e723">
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/refutes</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <dct:identifier>263cb00b-a507-30cc-a312-452b17a8e723</dct:identifier>
+    <rdfs:comment xml:lang="en">The citing entity refutes statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <rdfs:label xml:lang="en">refutes</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation>refutes</skos:notation>
+    <skos:prefLabel xml:lang="en">refutes</skos:prefLabel>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#afa6d307-9859-3ea3-9ff3-c976176eb901">
+    <skos:prefLabel xml:lang="en">obtains support from</skos:prefLabel>
+    <rdfs:label xml:lang="en">obtains support from</rdfs:label>
+    <skos:notation>obtainsSupportFrom</skos:notation>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <rdfs:comment xml:lang="en">The citing entity obtains intellectual or factual support from the cited entity.</rdfs:comment>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/obtainsSupportFrom</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dct:identifier>afa6d307-9859-3ea3-9ff3-c976176eb901</dct:identifier>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#cae7021f-e4a1-379a-b2be-8947648e03ef">
+    <rdfs:label xml:lang="en">retracts</rdfs:label>
+    <dct:identifier>cae7021f-e4a1-379a-b2be-8947648e03ef</dct:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/retracts</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <skos:prefLabel xml:lang="en">retracts</skos:prefLabel>
+    <skos:notation>retracts</skos:notation>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdfs:comment xml:lang="en">The citing entity constitutes a formal retraction of the cited entity.</rdfs:comment>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#b1a6ebed-5a78-3c50-bedf-60ab7c584f89">
+    <rdfs:label xml:lang="en">uses data from</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/usesDataFrom</rdfs:isDefinedBy>
+    <dct:identifier>b1a6ebed-5a78-3c50-bedf-60ab7c584f89</dct:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="en">uses data from</skos:prefLabel>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <rdfs:comment xml:lang="en">The citing entity describes work that uses data presented in the cited entity.</rdfs:comment>
+    <skos:notation>usesDataFrom</skos:notation>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#869fe4db-8152-3275-9551-4b7d63523e35">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/citesAsEvidence</rdfs:isDefinedBy>
+    <dct:identifier>869fe4db-8152-3275-9551-4b7d63523e35</dct:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <rdfs:label xml:lang="en">cites as evidence</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:comment xml:lang="en">The citing entity cites the cited entity as source of factual evidence for statements it contains.</rdfs:comment>
+    <skos:prefLabel xml:lang="en">cites as evidence</skos:prefLabel>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <skos:notation>citesAsEvidence</skos:notation>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#d05257d3-5204-3561-b5bf-a2650322d82d">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:prefLabel xml:lang="en">updates</skos:prefLabel>
+    <rdfs:label xml:lang="en">updates</rdfs:label>
+    <dct:identifier>d05257d3-5204-3561-b5bf-a2650322d82d</dct:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/updates</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <skos:notation>updates</skos:notation>
+    <rdfs:comment xml:lang="en">The citing entity updates statements, ideas, hypotheses or understanding presented in the cited entity.</rdfs:comment>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#b5242665-5a31-39f8-8550-caa461b61114">
+    <rdfs:comment xml:lang="en">The citing entity discusses statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <rdfs:label xml:lang="en">discusses</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <skos:prefLabel xml:lang="en">discusses</skos:prefLabel>
+    <dct:identifier>b5242665-5a31-39f8-8550-caa461b61114</dct:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/discusses</rdfs:isDefinedBy>
+    <skos:notation>discusses</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#1e45fa4c-5e81-3cba-80f0-9adddafd6abe">
+    <skos:prefLabel xml:lang="en">disagrees with</skos:prefLabel>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <rdfs:label xml:lang="en">disagrees with</rdfs:label>
+    <dct:identifier>1e45fa4c-5e81-3cba-80f0-9adddafd6abe</dct:identifier>
+    <rdfs:comment xml:lang="en">The citing entity disagrees with statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation>disagreesWith</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/disagreesWith</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#b4480021-d983-3634-a7e7-a67eb680a6b1">
+    <rdfs:comment xml:lang="en">The citing entity cites the cited entity as an item of recommended reading.  This property can be used, for example, to describe references in a lecture reading list, where the cited references are relevant to the general topic of the lecture, but might not be individually cited within the text of the lecture.  Similarly, it could be used to describe items in a 'Suggested further reading' list at the end of a book chapter.</rdfs:comment>
+    <rdfs:label xml:lang="en">cites as recommended reading</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/citesAsRecommendedReading</rdfs:isDefinedBy>
+    <skos:prefLabel xml:lang="en">cites as recommended reading</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation>citesAsRecommendedReading</skos:notation>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <dct:identifier>b4480021-d983-3634-a7e7-a67eb680a6b1</dct:identifier>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#11473d85-e45b-393e-8516-b8c554f81361">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The citing entity cites the cited entity as providing or containing a possible solution to the issues being discussed.</rdfs:comment>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/citesAsPotentialSolution</rdfs:isDefinedBy>
+    <skos:prefLabel xml:lang="en">cites as potential solution</skos:prefLabel>
+    <rdfs:label xml:lang="en">cites as potential solution</rdfs:label>
+    <skos:notation>citesAsPotentialSolution</skos:notation>
+    <dct:identifier>11473d85-e45b-393e-8516-b8c554f81361</dct:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#c2514de4-b94e-3547-98b7-0aaf0e36ed54">
+    <dct:identifier>c2514de4-b94e-3547-98b7-0aaf0e36ed54</dct:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <skos:notation>ridicules</skos:notation>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/ridicules</rdfs:isDefinedBy>
+    <skos:prefLabel xml:lang="en">ridicules</skos:prefLabel>
+    <rdfs:comment xml:lang="en">The citing entity ridicules the cited entity or aspects of its contents.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label xml:lang="en">ridicules</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#7cf28cc6-b6d5-38ac-9713-c614dea27f30">
+    <dct:identifier>7cf28cc6-b6d5-38ac-9713-c614dea27f30</dct:identifier>
+    <skos:notation>includesExcerptFrom</skos:notation>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/includesExcerptFrom</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdfs:comment xml:lang="en">The citing entity includes one or more excerpts from the cited entity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="en">includes excerpt from</skos:prefLabel>
+    <rdfs:label xml:lang="en">includes excerpt from</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#08dd8d8f-8a0e-3373-924a-2062cfd23fd6">
+    <dct:identifier>08dd8d8f-8a0e-3373-924a-2062cfd23fd6</dct:identifier>
+    <rdfs:comment xml:lang="en">The citing entity describes work that uses a method detailed in the cited entity.</rdfs:comment>
+    <rdfs:label xml:lang="en">uses method in</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/usesMethodIn</rdfs:isDefinedBy>
+    <skos:prefLabel xml:lang="en">uses method in</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation>usesMethodIn</skos:notation>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#73907b85-bb06-3a97-8c41-9201e50d49fa">
+    <dct:identifier>73907b85-bb06-3a97-8c41-9201e50d49fa</dct:identifier>
+    <skos:notation>qualifies</skos:notation>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/qualifies</rdfs:isDefinedBy>
+    <skos:prefLabel xml:lang="en">qualifies</skos:prefLabel>
+    <rdfs:comment xml:lang="en">The citing entity qualifies or places conditions or restrictions upon statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <rdfs:label xml:lang="en">qualifies</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#4224db58-91a6-3490-aa91-108a6463282f">
+    <rdfs:comment xml:lang="en">The citing entity provides a link, in the form of an HTTP Uniform Resource Locator (URL), to the cited entity.</rdfs:comment>
+    <dct:identifier>4224db58-91a6-3490-aa91-108a6463282f</dct:identifier>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="en">links to</skos:prefLabel>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/linksTo</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:notation>linksTo</skos:notation>
+    <rdfs:label xml:lang="en">links to</rdfs:label>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#04a4bd16-f07d-3bb7-8d0c-8955a46b7526">
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/corrects</rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">corrects</rdfs:label>
+    <rdfs:comment xml:lang="en">The citing entity corrects statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <dct:identifier>04a4bd16-f07d-3bb7-8d0c-8955a46b7526</dct:identifier>
+    <skos:prefLabel xml:lang="en">corrects</skos:prefLabel>
+    <skos:notation>corrects</skos:notation>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#74dcb1ce-c508-34d2-b880-279f3dd19da9">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <rdfs:label xml:lang="en">reviews</rdfs:label>
+    <skos:prefLabel xml:lang="en">reviews</skos:prefLabel>
+    <dct:identifier>74dcb1ce-c508-34d2-b880-279f3dd19da9</dct:identifier>
+    <skos:notation>reviews</skos:notation>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/reviews</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The citing entity reviews statements, ideas or conclusions presented in the cited entity.</rdfs:comment>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#21f64da1-e579-3c82-95b9-64d159a14491">
+    <dct:identifier>21f64da1-e579-3c82-95b9-64d159a14491</dct:identifier>
+    <rdfs:comment>The citing entity documents information about the cited entity.</rdfs:comment>
+    <skos:prefLabel xml:lang="en">documents</skos:prefLabel>
+    <skos:notation>documents</skos:notation>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdfs:label xml:lang="en">documents</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/documents</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#7d2a4e38-8712-38a0-b0e8-ae807052488f">
+    <rdfs:comment xml:lang="en">The citing entity replies to statements, ideas or criticisms presented in the cited entity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:notation>repliesTo</skos:notation>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <dct:identifier>7d2a4e38-8712-38a0-b0e8-ae807052488f</dct:identifier>
+    <skos:prefLabel xml:lang="en">replies to</skos:prefLabel>
+    <rdfs:label xml:lang="en">replies to</rdfs:label>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/repliesTo</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5e0773b8-0b9f-3484-8f4a-75cdbe6e2dbe">
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/parodies</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <rdfs:label xml:lang="en">parodies</rdfs:label>
+    <skos:prefLabel xml:lang="en">parodies</skos:prefLabel>
+    <dct:identifier>5e0773b8-0b9f-3484-8f4a-75cdbe6e2dbe</dct:identifier>
+    <rdfs:comment xml:lang="en">The citing entity imitates the characteristic style or content of the cited entity for comic effect, usually without explicit citation.</rdfs:comment>
+    <skos:notation>parodies</skos:notation>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#6915ccc3-0459-343c-81a9-06183a54deae">
+    <dct:identifier>6915ccc3-0459-343c-81a9-06183a54deae</dct:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <rdfs:comment xml:lang="en">The citing entity is used to create or compile the cited entity.</rdfs:comment>
+    <skos:notation>compiles</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <skos:prefLabel xml:lang="en">compiles</skos:prefLabel>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/compiles</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <rdfs:label xml:lang="en">compiles</rdfs:label>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#8ed47473-8e02-3d30-a1cf-a2b22735d93e">
+    <rdfs:comment xml:lang="en">The citing entity cites the cited entity as a source of information on the subject under discussion.</rdfs:comment>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#5d224440-05e2-314e-8829-859fe1ce0793"/>
+    <rdfs:isDefinedBy>http://purl.org/spar/cito/citesForInformation</rdfs:isDefinedBy>
+    <dct:identifier>8ed47473-8e02-3d30-a1cf-a2b22735d93e</dct:identifier>
+    <rdfs:label xml:lang="en">cites for information</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#9ed75cea-5930-3fad-be58-9ed607d8915b"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/CitationRelType#64c8a1a5-a5c5-3b17-b8ca-a46bfc4de45c"/>
+    <skos:notation>citesForInformation</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:prefLabel xml:lang="en">cites for information</skos:prefLabel>
+  </skos:Concept>
+</rdf:RDF>

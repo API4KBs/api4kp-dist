@@ -1,0 +1,24 @@
+swagger: "2.0"
+definitions:
+  KnowledgeAssetCategory:
+    allOf:
+      - $ref: '../../../../../../../../API4KP/api4kp/id/id.yaml#/definitions/ConceptIdentifier'
+      - type: object
+        discriminator: _class
+        properties:
+          _class : string
+        required:
+          - _class
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory/20190801'
+  KnowledgeAssetCategory_Valueset:
+    type: string
+    enum:
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory#64719ac1-415f-3747-843c-e1e8949071ff
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory#f9e2a69d-0f6e-3a2b-94c4-beaf6fdadaea
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory#7db1af1f-1703-356f-bddc-8cb0a81a442c
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory#d4b0e868-60c8-387d-a139-e3c35427bfb6
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory#3f55a496-5ff3-3989-bf0a-15a61da8b09c
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory#2d705e5a-22d4-3368-98a6-e5ea7d52fd05
+    xml:
+      namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory/20190801'

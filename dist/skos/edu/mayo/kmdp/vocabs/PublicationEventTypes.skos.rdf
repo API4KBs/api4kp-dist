@@ -1,0 +1,132 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dce="http://www.opengroup.org/dce/"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:AnnotationVocabulary1="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns="https://www.omg.org/spec/API4KP/api4kp-kmdo/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:DOL-terms="http://www.omg.org/spec/DOL/DOL-terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:AnnotationVocabulary="https://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:tgt="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType">
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType/SNAPSHOT"/>
+  </owl:Ontology>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#a2b106f1-a145-3cff-b717-68f97f95ad12">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kmdo/KnowledgePublicationActivity</rdfs:isDefinedBy>
+    <skos:inScheme>
+      <skos:ConceptScheme rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#ff21c956-1179-34d3-a41d-300e78f4d926">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>PublicationEventTypes</rdfs:label>
+        <skos:prefLabel>PublicationEventTypes</skos:prefLabel>
+        <skos:hasTopConcept>
+          <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#4e0d5a2d-aa42-37e9-9820-81e2f79827e1">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#ff21c956-1179-34d3-a41d-300e78f4d926"/>
+            <rdfs:label>PublicationEventType</rdfs:label>
+            <skos:prefLabel>PublicationEventType</skos:prefLabel>
+          </skos:Concept>
+        </skos:hasTopConcept>
+      </skos:ConceptScheme>
+    </skos:inScheme>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#4e0d5a2d-aa42-37e9-9820-81e2f79827e1"/>
+    <skos:altLabel>knowledge release activity</skos:altLabel>
+    <skos:prefLabel>publication</skos:prefLabel>
+    <skos:notation>KnowledgePublicationActivity</skos:notation>
+    <rdfs:label>publication</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#4e0d5a2d-aa42-37e9-9820-81e2f79827e1"/>
+    <rdfs:label>knowledge publication activity</rdfs:label>
+    <terms:identifier>a2b106f1-a145-3cff-b717-68f97f95ad12</terms:identifier>
+    <skos:definition>activity by which an endorsed knowledge resource is released to the public, to be used, making it possible for agents to acquire it</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#afdb4687-26c7-3e75-846c-5520cf6cec4f">
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#4e0d5a2d-aa42-37e9-9820-81e2f79827e1"/>
+    <rdfs:label>knowledge creation activity</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kmdo/KnowledgeCreationActivity</rdfs:isDefinedBy>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#4e0d5a2d-aa42-37e9-9820-81e2f79827e1"/>
+    <skos:prefLabel>creation</skos:prefLabel>
+    <rdfs:comment>An expert's act of creating a new Work of Knowledge</rdfs:comment>
+    <terms:identifier>afdb4687-26c7-3e75-846c-5520cf6cec4f</terms:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#ff21c956-1179-34d3-a41d-300e78f4d926"/>
+    <rdfs:label>creation</rdfs:label>
+    <skos:notation>KnowledgeCreationActivity</skos:notation>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#2a0c61c4-79cf-3d6a-9e15-8bd2bdfe99b4">
+    <skos:notation>KnowledgeEditingActivity</skos:notation>
+    <rdfs:comment>The act of formatting and typesetting a Knowledge Expression to fit a designated carrier</rdfs:comment>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#4e0d5a2d-aa42-37e9-9820-81e2f79827e1"/>
+    <skos:prefLabel>editing</skos:prefLabel>
+    <rdfs:label>knowledge editing activity</rdfs:label>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#ff21c956-1179-34d3-a41d-300e78f4d926"/>
+    <rdfs:label>editing</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#4e0d5a2d-aa42-37e9-9820-81e2f79827e1"/>
+    <terms:identifier>2a0c61c4-79cf-3d6a-9e15-8bd2bdfe99b4</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kmdo/KnowledgeEditingActivity</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#4c1fe7d6-a9d2-3b51-b5de-c3816387646d">
+    <skos:notation>KnowledgeApprovalActivity</skos:notation>
+    <skos:prefLabel>approval</skos:prefLabel>
+    <rdfs:label>approval</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#4e0d5a2d-aa42-37e9-9820-81e2f79827e1"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#ff21c956-1179-34d3-a41d-300e78f4d926"/>
+    <terms:identifier>4c1fe7d6-a9d2-3b51-b5de-c3816387646d</terms:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#4e0d5a2d-aa42-37e9-9820-81e2f79827e1"/>
+    <rdfs:label>knowledge approval activity</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kmdo/KnowledgeApprovalActivity</rdfs:isDefinedBy>
+    <rdfs:comment>The act by which an designated party (a knowledge approval body) transfers their authority to a knowledge asset</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#25f1b7b7-0e3a-3f4d-934d-f6e7b9f79560">
+    <skos:notation>KnowledgeRevisionActivity</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>revision</rdfs:label>
+    <skos:broader>
+      <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#22051a5f-b02d-3fde-9c13-8c6ec13c7b57">
+        <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#4e0d5a2d-aa42-37e9-9820-81e2f79827e1"/>
+        <rdfs:label>knowledge review activity</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <terms:identifier>22051a5f-b02d-3fde-9c13-8c6ec13c7b57</terms:identifier>
+        <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#ff21c956-1179-34d3-a41d-300e78f4d926"/>
+        <skos:prefLabel>review</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kmdo/KnowledgeReviewActivity</rdfs:isDefinedBy>
+        <rdfs:comment>An expert's comparison of a knowledge asset with their subject matter expertise, to determine whether the work is still accurate, faithful and up to date</rdfs:comment>
+        <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#4e0d5a2d-aa42-37e9-9820-81e2f79827e1"/>
+        <skos:notation>KnowledgeReviewActivity</skos:notation>
+        <rdfs:label>review</rdfs:label>
+      </skos:Concept>
+    </skos:broader>
+    <rdfs:comment>A knowledge review that results in a new version of a knowledge asset</rdfs:comment>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#4e0d5a2d-aa42-37e9-9820-81e2f79827e1"/>
+    <rdfs:label>knowledge revision activity</rdfs:label>
+    <terms:identifier>25f1b7b7-0e3a-3f4d-934d-f6e7b9f79560</terms:identifier>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kmdo/KnowledgeRevisionActivity</rdfs:isDefinedBy>
+    <skos:prefLabel>revision</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#ff21c956-1179-34d3-a41d-300e78f4d926"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#d03896b3-d1e1-3ca3-bdea-d9321ccac658">
+    <skos:notation>KnowledgeAuthoringActivity</skos:notation>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#4e0d5a2d-aa42-37e9-9820-81e2f79827e1"/>
+    <skos:prefLabel>authoring</skos:prefLabel>
+    <terms:identifier>d03896b3-d1e1-3ca3-bdea-d9321ccac658</terms:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#ff21c956-1179-34d3-a41d-300e78f4d926"/>
+    <rdfs:comment>The act of expressing a Work of Knowledge in some language</rdfs:comment>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kmdo/KnowledgeAuthoringActivity</rdfs:isDefinedBy>
+    <rdfs:label>authoring</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>knowledge authoring activity</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/KMDO/PublicationEventType#4e0d5a2d-aa42-37e9-9820-81e2f79827e1"/>
+  </skos:Concept>
+</rdf:RDF>

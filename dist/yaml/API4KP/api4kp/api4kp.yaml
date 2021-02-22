@@ -1,0 +1,16 @@
+swagger: "2.0"
+definitions:
+  API4KPManifest:
+    type: object
+    discriminator: _class
+    properties:
+      _class : string
+      version:
+        type: string
+        xml:
+          attribute: true
+    required:
+      - _class
+      - version
+    xml:
+      namespace: 'https://www.omg.org/spec/API4KP/20200801'

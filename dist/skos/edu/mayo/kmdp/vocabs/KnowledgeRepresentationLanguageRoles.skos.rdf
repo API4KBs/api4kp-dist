@@ -1,0 +1,128 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dce="http://www.opengroup.org/dce/"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:AnnotationVocabulary1="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:tgt="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:DOL-terms="http://www.omg.org/spec/DOL/DOL-terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns="https://www.omg.org/spec/API4KP/api4kp-lang/"
+    xmlns:AnnotationVocabulary="https://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole">
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole/SNAPSHOT"/>
+  </owl:Ontology>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#f4e0854a-4c95-333d-85da-c32eb5d67840">
+    <rdfs:label>ontology language</rdfs:label>
+    <skos:definition>formal language dedicated to the expression of ontologies and assertional knowledge bases</skos:definition>
+    <skos:prefLabel>ontology language</skos:prefLabel>
+    <skos:notation>OntologyLanguage</skos:notation>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-lang/OntologyLanguage</rdfs:isDefinedBy>
+    <skos:inScheme>
+      <skos:ConceptScheme rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#35da57ad-231a-3f93-827a-1526a920fa0f">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>KnowledgeRepresentationLanguageRoles</rdfs:label>
+        <skos:prefLabel>KnowledgeRepresentationLanguageRoles</skos:prefLabel>
+        <skos:hasTopConcept>
+          <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#c604843e-f05c-3600-8225-69fd885f8d59">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#35da57ad-231a-3f93-827a-1526a920fa0f"/>
+            <rdfs:label>KnowledgeRepresentationLanguageRole</rdfs:label>
+            <skos:prefLabel>KnowledgeRepresentationLanguageRole</skos:prefLabel>
+          </skos:Concept>
+        </skos:hasTopConcept>
+      </skos:ConceptScheme>
+    </skos:inScheme>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#c604843e-f05c-3600-8225-69fd885f8d59"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#c604843e-f05c-3600-8225-69fd885f8d59"/>
+    <terms:identifier>f4e0854a-4c95-333d-85da-c32eb5d67840</terms:identifier>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#a5ab6baf-81bc-320a-baa8-4e55185f5978">
+    <rdfs:label>expression language</rdfs:label>
+    <skos:note>several machine executable languages either have or embed a sub-language that is an expression language</skos:note>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#c604843e-f05c-3600-8225-69fd885f8d59"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#c604843e-f05c-3600-8225-69fd885f8d59"/>
+    <skos:definition>formal language designed to express functions</skos:definition>
+    <skos:notation>ExpressionLanguage</skos:notation>
+    <terms:identifier>a5ab6baf-81bc-320a-baa8-4e55185f5978</terms:identifier>
+    <skos:prefLabel>expression language</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#35da57ad-231a-3f93-827a-1526a920fa0f"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-lang/ExpressionLanguage</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#58f764f9-c702-3219-a0ee-4b8d50824343">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#35da57ad-231a-3f93-827a-1526a920fa0f"/>
+    <terms:identifier>58f764f9-c702-3219-a0ee-4b8d50824343</terms:identifier>
+    <skos:notation>SchemaLanguage</skos:notation>
+    <skos:definition>formal language used in the specification of (formal) grammars, schemas and metamodels</skos:definition>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#c604843e-f05c-3600-8225-69fd885f8d59"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#c604843e-f05c-3600-8225-69fd885f8d59"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-lang/SchemaLanguage</rdfs:isDefinedBy>
+    <skos:prefLabel>schema language</skos:prefLabel>
+    <rdfs:label>schema language</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#8ece3a31-c40e-393d-8a62-c54c06a495ae">
+    <terms:identifier>8ece3a31-c40e-393d-8a62-c54c06a495ae</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#35da57ad-231a-3f93-827a-1526a920fa0f"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#c604843e-f05c-3600-8225-69fd885f8d59"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-lang/RuleLanguage</rdfs:isDefinedBy>
+    <skos:definition>formal language dedicated to the expression of rules, norms and policies</skos:definition>
+    <rdfs:label>rule language</rdfs:label>
+    <skos:note>rule languages can be further categorized depending on the nature of the rules they can express (e.g. production, vs inference, vs deontic, etc...)</skos:note>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>rule language</skos:prefLabel>
+    <skos:notation>RuleLanguage</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#c604843e-f05c-3600-8225-69fd885f8d59"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#533ad380-6948-3b06-8f25-15a682c70645">
+    <terms:identifier>533ad380-6948-3b06-8f25-15a682c70645</terms:identifier>
+    <skos:definition>OMS language specifically dedicated to queries</skos:definition>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#c604843e-f05c-3600-8225-69fd885f8d59"/>
+    <rdfs:isDefinedBy>http://www.omg.org/spec/DOL/DOL-terms/QueryLanguage</rdfs:isDefinedBy>
+    <skos:prefLabel>query language</skos:prefLabel>
+    <rdfs:label>query language</rdfs:label>
+    <skos:example xml:lang="en"> SPARQL, Prolog </skos:example>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation>QueryLanguage</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#c604843e-f05c-3600-8225-69fd885f8d59"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#35da57ad-231a-3f93-827a-1526a920fa0f"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#5ff2b06f-9495-3901-ba4f-2937a23896fe">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-lang/AnnotationLanguage</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#35da57ad-231a-3f93-827a-1526a920fa0f"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel>annotation language</skos:prefLabel>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#c604843e-f05c-3600-8225-69fd885f8d59"/>
+    <skos:notation>AnnotationLanguage</skos:notation>
+    <terms:identifier>5ff2b06f-9495-3901-ba4f-2937a23896fe</terms:identifier>
+    <rdfs:label>annotation language</rdfs:label>
+    <skos:definition>formal language dedicated to the expression of annotation</skos:definition>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#c604843e-f05c-3600-8225-69fd885f8d59"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#1a478583-2dcb-3a58-9429-6c8e372813eb">
+    <skos:prefLabel>programming language</skos:prefLabel>
+    <skos:definition>formal, executable language used in the specification of information processing tasks</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-lang/ProgrammingLanguage</rdfs:isDefinedBy>
+    <skos:note>programming languages are usually imperative</skos:note>
+    <rdfs:label>programming language</rdfs:label>
+    <skos:note>from a knowledge representation perspective, programming languages are designed to express algorithms</skos:note>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#c604843e-f05c-3600-8225-69fd885f8d59"/>
+    <skos:notation>ProgrammingLanguage</skos:notation>
+    <terms:identifier>1a478583-2dcb-3a58-9429-6c8e372813eb</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#35da57ad-231a-3f93-827a-1526a920fa0f"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole#c604843e-f05c-3600-8225-69fd885f8d59"/>
+  </skos:Concept>
+</rdf:RDF>

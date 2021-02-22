@@ -1,0 +1,138 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dce="http://www.opengroup.org/dce/"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:AnnotationVocabulary1="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:DOL-terms="http://www.omg.org/spec/DOL/DOL-terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:AnnotationVocabulary="https://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns="https://www.omg.org/spec/API4KP/api4kp-rel/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:tgt="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType">
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType/20200801"/>
+  </owl:Ontology>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#dddf1ba8-237c-3b8b-a468-8be2aa4183a6">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isTranscodificationOf</rdfs:isDefinedBy>
+    <skos:broaderTransitive>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#81c11872-2a08-3894-91a6-7d0eb23653d3">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:inScheme>
+          <skos:ConceptScheme rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#b4493f1f-b680-3c78-93d9-73a55d44a91f">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdfs:label>VariantTypes</rdfs:label>
+            <skos:prefLabel>VariantTypes</skos:prefLabel>
+            <skos:hasTopConcept rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#81c11872-2a08-3894-91a6-7d0eb23653d3"/>
+          </skos:ConceptScheme>
+        </skos:inScheme>
+        <rdfs:label>VariantType</rdfs:label>
+        <skos:prefLabel>VariantType</skos:prefLabel>
+      </skos:Concept>
+    </skos:broaderTransitive>
+    <skos:notation>isTranscodificationOf</skos:notation>
+    <terms:identifier>dddf1ba8-237c-3b8b-a468-8be2aa4183a6</terms:identifier>
+    <skos:prefLabel>is transcodification of</skos:prefLabel>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#df2771c8-3ea5-3d11-b038-1ecd8dc32307">
+        <rdfs:label>is variant of</rdfs:label>
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#81c11872-2a08-3894-91a6-7d0eb23653d3"/>
+        <skos:prefLabel>is variant of</skos:prefLabel>
+        <skos:notation>isVariantOf</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#b4493f1f-b680-3c78-93d9-73a55d44a91f"/>
+        <terms:identifier>df2771c8-3ea5-3d11-b038-1ecd8dc32307</terms:identifier>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#81c11872-2a08-3894-91a6-7d0eb23653d3"/>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp/isVariantOf</rdfs:isDefinedBy>
+        <skos:definition>expresses or carries the same knowledge asset as, but differs in at least one of language, serialization, lexicon, alphabet, encoding, or internal arrangement thereof</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:definition>expresses the same knowledge asset using the same language, serialization, sentence structure, alphabet, but different encodings</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#b4493f1f-b680-3c78-93d9-73a55d44a91f"/>
+    <rdfs:label>is transcodification of</rdfs:label>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#c49bfa1d-da4a-30d2-a7f4-a8f12407b488">
+    <rdfs:label>is translation of</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#b4493f1f-b680-3c78-93d9-73a55d44a91f"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#81c11872-2a08-3894-91a6-7d0eb23653d3"/>
+    <skos:definition>expresses the same knowledge asset using a different language</skos:definition>
+    <skos:notation>isTranslationOf</skos:notation>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#df2771c8-3ea5-3d11-b038-1ecd8dc32307"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isTranslationOf</rdfs:isDefinedBy>
+    <skos:prefLabel>is translation of</skos:prefLabel>
+    <terms:identifier>c49bfa1d-da4a-30d2-a7f4-a8f12407b488</terms:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#33047a9b-d523-3fcb-903b-03887564ff29">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#b4493f1f-b680-3c78-93d9-73a55d44a91f"/>
+    <skos:prefLabel>is paraphrase of</skos:prefLabel>
+    <terms:identifier>33047a9b-d523-3fcb-903b-03887564ff29</terms:identifier>
+    <skos:definition>expresses the same knowledge asset using the same language (and/or serialization) but different terms and/or sentence structure</skos:definition>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#df2771c8-3ea5-3d11-b038-1ecd8dc32307"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#81c11872-2a08-3894-91a6-7d0eb23653d3"/>
+    <skos:notation>isParaphraseOf</skos:notation>
+    <rdfs:label>is paraphrase of</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isParaphraseOf</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:note>The abstract semantic graphs that are obtained from the parsing of the expressions are isomorphic.</skos:note>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#7d7fd00c-5321-3f5d-8ee0-26474a9c3d3b">
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#81c11872-2a08-3894-91a6-7d0eb23653d3"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isTransliterationOf</rdfs:isDefinedBy>
+    <skos:prefLabel>is transliteration of</skos:prefLabel>
+    <skos:definition>expresses the same knowledge using the same language, serialization, sentence structure, but a different alphabet</skos:definition>
+    <terms:identifier>7d7fd00c-5321-3f5d-8ee0-26474a9c3d3b</terms:identifier>
+    <rdfs:label>is transliteration of</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#df2771c8-3ea5-3d11-b038-1ecd8dc32307"/>
+    <skos:notation>isTransliterationOf</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#b4493f1f-b680-3c78-93d9-73a55d44a91f"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#b9e919da-b07d-3fcf-a0b8-8193c8061d86">
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isRearrangementOf</rdfs:isDefinedBy>
+    <rdfs:label>is rearrangement of</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#b4493f1f-b680-3c78-93d9-73a55d44a91f"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:definition>is derived by means of an operation that preserves the structural components, but alters the structure</skos:definition>
+    <skos:notation>isRearrangementOf</skos:notation>
+    <skos:prefLabel>is rearrangement of</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#81c11872-2a08-3894-91a6-7d0eb23653d3"/>
+    <terms:identifier>b9e919da-b07d-3fcf-a0b8-8193c8061d86</terms:identifier>
+    <skos:broader>
+      <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#6dd217bb-9ded-3c49-b312-9ada4a20ed9e">
+        <rdfs:label>is isomorphic variant of</rdfs:label>
+        <terms:identifier>6dd217bb-9ded-3c49-b312-9ada4a20ed9e</terms:identifier>
+        <skos:definition>has the same components, but a different configuration</skos:definition>
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#df2771c8-3ea5-3d11-b038-1ecd8dc32307"/>
+        <skos:notation>isIsomorphicVariantOf</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#b4493f1f-b680-3c78-93d9-73a55d44a91f"/>
+        <skos:prefLabel>is isomorphic variant of</skos:prefLabel>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#81c11872-2a08-3894-91a6-7d0eb23653d3"/>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isIsomorphicVariantOf</rdfs:isDefinedBy>
+      </owl:NamedIndividual>
+    </skos:broader>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#8dceb3e4-5451-34f6-8015-87b971e2492c">
+    <rdfs:label>is transcription of</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#df2771c8-3ea5-3d11-b038-1ecd8dc32307"/>
+    <skos:definition>expresses the same knowledge asset using the same language, but a different serialization</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#b4493f1f-b680-3c78-93d9-73a55d44a91f"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#81c11872-2a08-3894-91a6-7d0eb23653d3"/>
+    <terms:identifier>8dceb3e4-5451-34f6-8015-87b971e2492c</terms:identifier>
+    <skos:notation>isTranscriptionOf</skos:notation>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isTranscriptionOf</rdfs:isDefinedBy>
+    <skos:prefLabel>is transcription of</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+</rdf:RDF>

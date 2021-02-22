@@ -1,0 +1,309 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dce="http://www.opengroup.org/dce/"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:tgt="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns="http://ontology.mayo.edu/ontologies/clinicalinquiryontology/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives">
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives/SNAPSHOT"/>
+  </owl:Ontology>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#b37137d5-84fb-4a6c-b74d-42315e87da34">
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/b37137d5-84fb-4a6c-b74d-42315e87da34</rdfs:isDefinedBy>
+    <dct:identifier>b37137d5-84fb-4a6c-b74d-42315e87da34</dct:identifier>
+    <skos:notation>subject</skos:notation>
+    <rdfs:comment>Answer Category - Subject of the Situation (in Aristotilian categories - the "substance")
+
+The person or thing that is being considered in a situation</rdfs:comment>
+    <skos:broaderTransitive>
+      <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:inScheme>
+          <skos:ConceptScheme rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdfs:label>ClinicalInterrogatives</rdfs:label>
+            <skos:prefLabel>ClinicalInterrogatives</skos:prefLabel>
+            <skos:hasTopConcept rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+          </skos:ConceptScheme>
+        </skos:inScheme>
+        <rdfs:label>ClinicalInterrogative</rdfs:label>
+        <skos:prefLabel>ClinicalInterrogative</skos:prefLabel>
+      </skos:Concept>
+    </skos:broaderTransitive>
+    <skos:prefLabel>Subject of</skos:prefLabel>
+    <rdfs:label>Subject of</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#c1f20847-2c3f-41f8-9b09-21926cf57833">
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/c1f20847-2c3f-41f8-9b09-21926cf57833</rdfs:isDefinedBy>
+    <skos:prefLabel>Stage of</skos:prefLabel>
+    <skos:notation>stage</skos:notation>
+    <dct:identifier>c1f20847-2c3f-41f8-9b09-21926cf57833</dct:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment>Position in an order or sequence</rdfs:comment>
+    <skos:broader>
+      <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a7116e67-9a4f-4b12-ad6b-52d5fd41ff85">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment>Answer Category - State
+
+The condition of a thing. Note: "state of"  refers to the characteristics that can change over time, as opposed to  "kind" which refers to characteristics that are immutable, such as person's race or birthsex.</rdfs:comment>
+        <skos:prefLabel>State of</skos:prefLabel>
+        <dct:identifier>a7116e67-9a4f-4b12-ad6b-52d5fd41ff85</dct:identifier>
+        <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/a7116e67-9a4f-4b12-ad6b-52d5fd41ff85</rdfs:isDefinedBy>
+        <rdfs:label>State of</rdfs:label>
+        <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+        <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+        <skos:notation>state</skos:notation>
+        <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+      </owl:NamedIndividual>
+    </skos:broader>
+    <rdfs:label>Stage of</rdfs:label>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#ab3410c3-9881-44f8-a534-045f59bb559b">
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/ab3410c3-9881-44f8-a534-045f59bb559b</rdfs:isDefinedBy>
+    <dct:identifier>ab3410c3-9881-44f8-a534-045f59bb559b</dct:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation>max</skos:notation>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+    <skos:prefLabel>Max</skos:prefLabel>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <rdfs:label>Max</rdfs:label>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#9fc8033d-2132-4db0-a073-214fb5fab9e1">
+    <rdfs:comment>Property that expresses membership in some category</rdfs:comment>
+    <skos:prefLabel>Classification of</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+    <dct:identifier>9fc8033d-2132-4db0-a073-214fb5fab9e1</dct:identifier>
+    <rdfs:label>Classification of</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a7116e67-9a4f-4b12-ad6b-52d5fd41ff85"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:notation>class</skos:notation>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/9fc8033d-2132-4db0-a073-214fb5fab9e1</rdfs:isDefinedBy>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f2575ae0-cbf6-4c28-b617-61c4ab180958">
+    <dct:identifier>f2575ae0-cbf6-4c28-b617-61c4ab180958</dct:identifier>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/f2575ae0-cbf6-4c28-b617-61c4ab180958</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+    <skos:notation>avg</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Average</rdfs:label>
+    <skos:prefLabel>Average</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#08b96723-7070-4de4-8d2d-c4572a56fc2e">
+    <rdfs:label>Severity of</rdfs:label>
+    <skos:prefLabel>Severity of</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+    <rdfs:comment>The degree to which a thing is severe</rdfs:comment>
+    <skos:notation>severity</skos:notation>
+    <dct:identifier>08b96723-7070-4de4-8d2d-c4572a56fc2e</dct:identifier>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a7116e67-9a4f-4b12-ad6b-52d5fd41ff85"/>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/08b96723-7070-4de4-8d2d-c4572a56fc2e</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#bdf1a57e-680b-4ab0-bb53-9bccadfdaecf">
+    <skos:notation>percentile</skos:notation>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+    <dct:identifier>bdf1a57e-680b-4ab0-bb53-9bccadfdaecf</dct:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/bdf1a57e-680b-4ab0-bb53-9bccadfdaecf</rdfs:isDefinedBy>
+    <rdfs:comment>statistical measure that indicates the percent of observations which fall above or below a value.</rdfs:comment>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a7116e67-9a4f-4b12-ad6b-52d5fd41ff85"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:prefLabel>Percentile</skos:prefLabel>
+    <rdfs:label>Percentile</rdfs:label>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#9610ede8-7321-43d4-9b49-db787f1bd16f">
+    <skos:prefLabel>Time Of</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+    <rdfs:comment>Answer Category - Time
+The point in time at which a situation occured</rdfs:comment>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <rdfs:label>Time Of</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <dct:identifier>9610ede8-7321-43d4-9b49-db787f1bd16f</dct:identifier>
+    <skos:notation>time</skos:notation>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/9610ede8-7321-43d4-9b49-db787f1bd16f</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#ce7fbe26-2214-408f-8172-72a4936ea212">
+    <dct:identifier>ce7fbe26-2214-408f-8172-72a4936ea212</dct:identifier>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/ce7fbe26-2214-408f-8172-72a4936ea212</rdfs:isDefinedBy>
+    <rdfs:comment>The existance or truth of a situation
+Answer Category - true, false, or unknown</rdfs:comment>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>Is</rdfs:label>
+    <skos:notation>is</skos:notation>
+    <skos:prefLabel>Is</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#5215d172-2932-46c9-9344-3ee113cd741c">
+    <rdfs:label>Min</rdfs:label>
+    <skos:prefLabel>Min</skos:prefLabel>
+    <skos:notation>min</skos:notation>
+    <dct:identifier>5215d172-2932-46c9-9344-3ee113cd741c</dct:identifier>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/5215d172-2932-46c9-9344-3ee113cd741c</rdfs:isDefinedBy>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#dce89470-92eb-42cc-ac4c-32d7ce567cac">
+    <skos:notation>value</skos:notation>
+    <rdfs:comment>dimension-less quantity</rdfs:comment>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <skos:prefLabel>Value of</skos:prefLabel>
+    <dct:identifier>dce89470-92eb-42cc-ac4c-32d7ce567cac</dct:identifier>
+    <rdfs:label>Value of</rdfs:label>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+    <skos:broader>
+      <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d">
+        <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+        <skos:prefLabel>Quantity Of</skos:prefLabel>
+        <skos:notation>quantity</skos:notation>
+        <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+        <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+        <dct:identifier>17a65ac7-d110-41e6-9f8a-13b801ee473d</dct:identifier>
+        <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/17a65ac7-d110-41e6-9f8a-13b801ee473d</rdfs:isDefinedBy>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment>Answer category: Quantity
+A property which can be measured and which reflects the count or magnitude of a thing.</rdfs:comment>
+        <rdfs:label>Quantity Of</rdfs:label>
+      </owl:NamedIndividual>
+    </skos:broader>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/dce89470-92eb-42cc-ac4c-32d7ce567cac</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#34b122c8-126c-4929-bea4-9a81eff8e8b6">
+    <skos:notation>careSite</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>Site of care</rdfs:label>
+    <skos:broader>
+      <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#174be198-2e19-4b5c-bd95-d60285d1730d">
+        <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+        <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/174be198-2e19-4b5c-bd95-d60285d1730d</rdfs:isDefinedBy>
+        <rdfs:comment>Answer Category - Place
+
+The place of the clinical situation - may refer to the care environment (e.g. ambulance, intensive care unit,) or body site (e.g. lower limb)</rdfs:comment>
+        <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+        <dct:identifier>174be198-2e19-4b5c-bd95-d60285d1730d</dct:identifier>
+        <skos:notation>location</skos:notation>
+        <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:prefLabel>Location Of</skos:prefLabel>
+        <rdfs:label>Location Of</rdfs:label>
+      </skos:Concept>
+    </skos:broader>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+    <dct:identifier>34b122c8-126c-4929-bea4-9a81eff8e8b6</dct:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <skos:prefLabel>Site of care</skos:prefLabel>
+    <rdfs:comment>The care environment in which a clinical situation takes place. This may be a care environment, such as ICU or Emergency</rdfs:comment>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/34b122c8-126c-4929-bea4-9a81eff8e8b6</rdfs:isDefinedBy>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#add005e9-a3da-4ed0-bc1d-a8fdcae507ef">
+    <skos:notation>kind</skos:notation>
+    <rdfs:label>Kind Of</rdfs:label>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/add005e9-a3da-4ed0-bc1d-a8fdcae507ef</rdfs:isDefinedBy>
+    <dct:identifier>add005e9-a3da-4ed0-bc1d-a8fdcae507ef</dct:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <skos:prefLabel>Kind Of</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+    <rdfs:comment>Answer Category: Quality
+The nature of a thing.
+Note: "kind" refers to characteristics that are immutable, such as person's race or birthsex, as opposed to "state of" which refers to the characteristics that can change over time.</rdfs:comment>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#2a5d7e88-9a20-447d-89f2-17b2f99fcf85">
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/2a5d7e88-9a20-447d-89f2-17b2f99fcf85</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+    <rdfs:comment>The body site that is the focus of a procedure or disease process, for example lower limb in peripheral arterial disease, or coronary artery for arterial bypass graft.</rdfs:comment>
+    <skos:notation>bodySite</skos:notation>
+    <skos:prefLabel>Body Site Of</skos:prefLabel>
+    <dct:identifier>2a5d7e88-9a20-447d-89f2-17b2f99fcf85</dct:identifier>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#174be198-2e19-4b5c-bd95-d60285d1730d"/>
+    <rdfs:label>Body Site Of</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#3fc6952d-67bb-47af-9dd1-0155b8e27718">
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <skos:prefLabel>Grade of</skos:prefLabel>
+    <dct:identifier>3fc6952d-67bb-47af-9dd1-0155b8e27718</dct:identifier>
+    <rdfs:label>Grade of</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a7116e67-9a4f-4b12-ad6b-52d5fd41ff85"/>
+    <skos:notation>grade</skos:notation>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/3fc6952d-67bb-47af-9dd1-0155b8e27718</rdfs:isDefinedBy>
+    <rdfs:comment>A property that expresses a degree or rank, as in the extent of a fracture or the degree of abnormality of cancer cells</rdfs:comment>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#1aab14b9-5efc-45b0-981a-df344f9171f0">
+    <dct:identifier>1aab14b9-5efc-45b0-981a-df344f9171f0</dct:identifier>
+    <skos:notation>first</skos:notation>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <skos:prefLabel>First</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/1aab14b9-5efc-45b0-981a-df344f9171f0</rdfs:isDefinedBy>
+    <rdfs:label>First</rdfs:label>
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#51cfc43e-ec5d-4f9c-9dda-2f3f31ad7943">
+    <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <dct:identifier>51cfc43e-ec5d-4f9c-9dda-2f3f31ad7943</dct:identifier>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/51cfc43e-ec5d-4f9c-9dda-2f3f31ad7943</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <skos:prefLabel>Last</skos:prefLabel>
+    <skos:notation>last</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>Last</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f5888bdc-5ad0-464d-94dc-a7b3f61b4196">
+    <rdfs:label>Total Daily Dose of</rdfs:label>
+    <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+    <rdfs:comment>The total dose of a therapeutic agent over 24 hours</rdfs:comment>
+    <skos:prefLabel>Total Daily Dose of</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+    <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/f5888bdc-5ad0-464d-94dc-a7b3f61b4196</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:broader>
+      <owl:NamedIndividual rdf:about="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a776d3ee-b97d-45d3-b416-bd9ca40e68d9">
+        <rdfs:isDefinedBy>http://ontology.mayo.edu/ontologies/clinicalinquiryontology/a776d3ee-b97d-45d3-b416-bd9ca40e68d9</rdfs:isDefinedBy>
+        <skos:inScheme rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#f273e7ca-6a08-30e0-8f9f-577c5651174b"/>
+        <rdfs:label>Dose of</rdfs:label>
+        <skos:notation>dose</skos:notation>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment>The quantity a therapeutic agent</rdfs:comment>
+        <skos:broader rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#17a65ac7-d110-41e6-9f8a-13b801ee473d"/>
+        <skos:broaderTransitive rdf:resource="https://ontology.mayo.edu/taxonomies/ClinicalInterrogatives#a478de78-3f04-3bc7-aa95-dfb549e99204"/>
+        <skos:prefLabel>Dose of</skos:prefLabel>
+        <dct:identifier>a776d3ee-b97d-45d3-b416-bd9ca40e68d9</dct:identifier>
+      </owl:NamedIndividual>
+    </skos:broader>
+    <dct:identifier>f5888bdc-5ad0-464d-94dc-a7b3f61b4196</dct:identifier>
+    <skos:notation>tdd</skos:notation>
+  </owl:NamedIndividual>
+</rdf:RDF>

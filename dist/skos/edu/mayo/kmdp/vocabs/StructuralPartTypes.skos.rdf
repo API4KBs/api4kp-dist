@@ -1,0 +1,77 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dce="http://www.opengroup.org/dce/"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:tgt="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType#"
+    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:AnnotationVocabulary1="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:DOL-terms="http://www.omg.org/spec/DOL/DOL-terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:AnnotationVocabulary="https://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns="https://www.omg.org/spec/API4KP/api4kp-rel/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType">
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType/SNAPSHOT"/>
+  </owl:Ontology>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType#f772f97f-219d-308f-9db7-3a8b35482d91">
+    <skos:notation>hasStructuralComponent</skos:notation>
+    <skos:prefLabel>has structural component</skos:prefLabel>
+    <skos:definition>has proper part that is a functional component (i.e. plays a role with respect to the other parts of the same composite it is part of)</skos:definition>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp/hasStructuralComponent</rdfs:isDefinedBy>
+    <skos:broaderTransitive>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType#f79d12db-5cfe-3243-b17c-f1caacd4436c">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:inScheme>
+          <skos:ConceptScheme rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType#49cc7903-13ac-39c7-aaf6-0e2f6495fafe">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdfs:label>StructuralPartTypes</rdfs:label>
+            <skos:prefLabel>StructuralPartTypes</skos:prefLabel>
+            <skos:hasTopConcept rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType#f79d12db-5cfe-3243-b17c-f1caacd4436c"/>
+          </skos:ConceptScheme>
+        </skos:inScheme>
+        <rdfs:label>StructuralPartType</rdfs:label>
+        <skos:prefLabel>StructuralPartType</skos:prefLabel>
+      </skos:Concept>
+    </skos:broaderTransitive>
+    <rdfs:label>has structural component</rdfs:label>
+    <skos:broader>
+      <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType#74e79475-6df9-3f98-b87f-59d923bb6062">
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType#f79d12db-5cfe-3243-b17c-f1caacd4436c"/>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType#49cc7903-13ac-39c7-aaf6-0e2f6495fafe"/>
+        <skos:notation>hasProperPart</skos:notation>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType#f79d12db-5cfe-3243-b17c-f1caacd4436c"/>
+        <skos:prefLabel>has proper part</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp/hasProperPart</rdfs:isDefinedBy>
+        <terms:identifier>74e79475-6df9-3f98-b87f-59d923bb6062</terms:identifier>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>has part that is identifiable and distinct from the whole</skos:definition>
+        <rdfs:label>has proper part</rdfs:label>
+      </owl:NamedIndividual>
+    </skos:broader>
+    <terms:identifier>f772f97f-219d-308f-9db7-3a8b35482d91</terms:identifier>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType#49cc7903-13ac-39c7-aaf6-0e2f6495fafe"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType#f79d12db-5cfe-3243-b17c-f1caacd4436c"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType#886edfef-7c04-3fb3-9460-8659bcd42df5">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType#74e79475-6df9-3f98-b87f-59d923bb6062"/>
+    <skos:notation>hasStructuringComponent</skos:notation>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp/hasStructuringComponent</rdfs:isDefinedBy>
+    <skos:prefLabel>has structuring component</skos:prefLabel>
+    <rdfs:label>has structuring component</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType#f79d12db-5cfe-3243-b17c-f1caacd4436c"/>
+    <skos:definition>has structural component whose role is to define roles and relationships between the other components</skos:definition>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType#49cc7903-13ac-39c7-aaf6-0e2f6495fafe"/>
+    <terms:identifier>886edfef-7c04-3fb3-9460-8659bcd42df5</terms:identifier>
+  </skos:Concept>
+</rdf:RDF>
