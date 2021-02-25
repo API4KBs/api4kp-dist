@@ -1,0 +1,21 @@
+module org {
+module omg {
+module spec {
+module api4kp {
+module 20210101 {
+module datatypes {
+   struct Bindings {
+       string entries;
+   };
+   typedef sequence<Bindings> BindingsList;
+   struct Map {
+       string value;
+   };
+   typedef sequence<Map> MapList;
+
+}; // datatypes
+}; // 20210201
+}; // api4kp
+}; // spec
+}; // omg
+}; // org

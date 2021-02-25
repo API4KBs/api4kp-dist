@@ -109,7 +109,7 @@ public class SwaggerToIDL {
   }
 
   private Path getTargetPath(String title) {
-    return tgtPath.resolve("idl").resolve(NameUtils.camelCase(title) + ".idl");
+    return tgtPath.resolve("idl-gen").resolve(NameUtils.camelCase(title) + ".idl");
   }
 
 }

@@ -1,0 +1,121 @@
+#include "id.idl"
+#include "services.idl"
+
+module org {
+module omg {
+module spec {
+module api4kp {
+module 20210201 {
+
+
+module api {
+module repository {
+module artifact {
+   interface KnowledgeArtifactRepository {
+     void disableKnowledgeArtifactRepository (
+         in string repositoryid 
+     );
+     services::repository::KnowledgeArtifactRepository getKnowledgeArtifactRepository (
+         in string repositoryid 
+     );
+     services::repository::KnowledgeArtifactRepository initKnowledgeArtifactRepository (
+     );
+     void isKnowledgeArtifactRepository (
+         in string repositoryid 
+     );
+     services::repository::KnowledgeArtifactRepositoryList listKnowledgeArtifactRepositories (
+     );
+     services::repository::KnowledgeArtifactRepository setKnowledgeArtifactRepository (
+         in services::repository::KnowledgeArtifactRepository repositorydescr , 
+         in string repositoryid 
+     );
+   };
+   interface KnowledgeArtifactSeries {
+     void addKnowledgeArtifactVersion (
+         in string document , 
+         in string repositoryid , 
+         in string artifactid 
+     );
+     void clearKnowledgeRepository (
+         in boolean deleted , 
+         in string repositoryid 
+     );
+     void deleteKnowledgeArtifact (
+         in boolean deleted , 
+         in string repositoryid , 
+         in string artifactid 
+     );
+     void enableKnowledgeArtifact (
+         in string repositoryid , 
+         in string artifactid 
+     );
+     id::PointerList getKnowledgeArtifactSeries (
+         in boolean deleted , 
+         in long offset , 
+         in string repositoryid , 
+         in long limit , 
+         in string artifactid , 
+         in string aftertag , 
+         in string sort , 
+         in string beforetag 
+     );
+     string getLatestKnowledgeArtifact (
+         in boolean deleted , 
+         in string repositoryid , 
+         in string artifactid 
+     );
+     string initKnowledgeArtifact (
+         in string repositoryid 
+     );
+     void isKnowledgeArtifactSeries (
+         in boolean deleted , 
+         in string repositoryid , 
+         in string artifactid 
+     );
+     id::PointerList listKnowledgeArtifacts (
+         in boolean deleted , 
+         in long offset , 
+         in string repositoryid , 
+         in long limit 
+     );
+   };
+   interface KnowledgeArtifact {
+     void deleteKnowledgeArtifactVersion (
+         in boolean deleted , 
+         in string repositoryid , 
+         in string artifactid , 
+         in string versiontag 
+     );
+     void enableKnowledgeArtifactVersion (
+         in boolean deleted , 
+         in string repositoryid , 
+         in string artifactid , 
+         in string versiontag 
+     );
+     string getKnowledgeArtifactVersion (
+         in boolean deleted , 
+         in string repositoryid , 
+         in string artifactid , 
+         in string versiontag 
+     );
+     void isKnowledgeArtifactVersion (
+         in boolean deleted , 
+         in string repositoryid , 
+         in string artifactid , 
+         in string versiontag 
+     );
+     void setKnowledgeArtifactVersion (
+         in string document , 
+         in string repositoryid , 
+         in string artifactid , 
+         in string versiontag 
+     );
+   };
+}; // artifact
+}; // repository
+}; // api
+}; // 20210201
+}; // api4kp
+}; // spec
+}; // omg
+}; // org

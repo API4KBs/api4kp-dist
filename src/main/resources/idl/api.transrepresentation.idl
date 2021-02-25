@@ -1,0 +1,146 @@
+#include "id.idl"
+#include "services.idl"
+
+
+module org {
+module omg {
+module spec {
+module api4kp {
+module 20210201 {
+module api {
+module transrepresentation {
+   interface Discovery {
+     services::transrepresentation::Deserializer getDeserializationComponent (
+         in string componentid 
+     );
+     services::transrepresentation::Detector getDetectComponent (
+         in string componentid 
+     );
+     services::transrepresentation::Transrepresentator getTxComponent (
+         in string componentid 
+     );
+     services::transrepresentation::Validator getValidationComponent (
+         in string componentid 
+     );
+     services::transrepresentation::DeserializerList listDeserializationComponents (
+         in string into , 
+         in string methodtag , 
+         in string from 
+     );
+     services::transrepresentation::DetectorList listDetectComponents (
+         in string into , 
+         in string methodtag 
+     );
+     services::transrepresentation::TransrepresentatorList listTxComponents (
+         in string into , 
+         in string methodtag , 
+         in string from 
+     );
+     services::transrepresentation::ValidatorList listValidationComponents (
+         in string methodtag , 
+         in string from 
+     );
+   };
+   interface Transxion {
+     services::KnowledgeCarrier applyNamedTransrepresent (
+         in string xaccept , 
+         in string xparams , 
+         in string operatorid , 
+         in services::KnowledgeCarrier sourceartifact 
+     );
+     services::KnowledgeCarrier applyTransrepresent (
+         in string xaccept , 
+         in string xparams , 
+         in services::KnowledgeCarrier sourceartifact 
+     );
+     services::transrepresentation::TransrepresentationOperator getTxionOperator (
+         in string operatorid 
+     );
+     services::transrepresentation::TransrepresentationOperatorList listTxionOperators (
+         in string into , 
+         in string from 
+     );
+   };
+   interface Detect {
+     services::KnowledgeCarrier applyDetect (
+         in string xparams , 
+         in services::KnowledgeCarrier sourceartifact 
+     );
+     services::KnowledgeCarrier applyNamedDetect (
+         in string xparams , 
+         in string operatorid , 
+         in services::KnowledgeCarrier sourceartifact 
+     );
+     services::transrepresentation::DetectionOperator getDetectionOperator (
+         in string operatorid 
+     );
+     services::transrepresentation::DetectionOperatorList listDetectionOperators (
+         in string into 
+     );
+   };
+   interface Validate {
+     void applyNamedValidate (
+         in string xparams , 
+         in string operatorid , 
+         in services::KnowledgeCarrier sourceartifact 
+     );
+     void applyValidate (
+         in string xparams , 
+         in services::KnowledgeCarrier sourceartifact 
+     );
+     services::transrepresentation::ValidationOperator getValidationOperator (
+         in string operatorid 
+     );
+     services::transrepresentation::ValidationOperatorList listValidationOperators (
+         in string from 
+     );
+   };
+   interface Deserialize {
+     services::KnowledgeCarrier applyLift (
+         in string xaccept , 
+         in id::ParsingLevel leveltag , 
+         in string xparams , 
+         in services::KnowledgeCarrier sourceartifact 
+     );
+     services::KnowledgeCarrier applyLower (
+         in string xaccept , 
+         in id::ParsingLevel leveltag , 
+         in string xparams , 
+         in services::KnowledgeCarrier sourceartifact 
+     );
+     services::KnowledgeCarrier applyNamedLift (
+         in string xaccept , 
+         in id::ParsingLevel leveltag , 
+         in string xparams , 
+         in string operatorid , 
+         in services::KnowledgeCarrier sourceartifact 
+     );
+     services::KnowledgeCarrier applyNamedLower (
+         in string xaccept , 
+         in id::ParsingLevel leveltag , 
+         in string xparams , 
+         in string operatorid , 
+         in services::KnowledgeCarrier sourceartifact 
+     );
+     services::transrepresentation::DeserializationOperator getLiftOperator (
+         in string operatorid 
+     );
+     services::transrepresentation::DeserializationOperator getLowerOperator (
+         in string operatorid 
+     );
+     services::transrepresentation::DeserializationOperatorList listLiftOperators (
+         in string into , 
+         in string from 
+     );
+     services::transrepresentation::DeserializationOperatorList listLowerOperators (
+         in string into , 
+         in string from 
+     );
+   };
+}; // transrepresentation
+}; // api
+}; // 20210201
+}; // api4kp
+}; // spec
+}; // omg
+}; // org

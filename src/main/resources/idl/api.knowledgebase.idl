@@ -1,0 +1,259 @@
+#include "id.idl"
+#include "datatypes.idl"
+#include "services.idl"
+#include "surrogate.idl"
+
+
+module org {
+module omg {
+module spec {
+module api4kp {
+module 20210201 {
+
+module api {
+module knowledgebase {
+   interface Compositional {
+     services::KnowledgeCarrier assembleCompositeArtifact (
+         in services::KnowledgeCarrier _struct , 
+         in string xparams 
+     );
+     services::KnowledgeCarrier constructCompositeAsset (
+         in string xparams , 
+         in services::KnowledgeCarrier structdefinition 
+     );
+     services::KnowledgeCarrier deconstructCompositeAsset (
+         in services::KnowledgeCarrier artifact , 
+         in string xparams 
+     );
+     services::KnowledgeCarrierList disassembleCompositeArtifact (
+         in services::KnowledgeCarrier artifact , 
+         in string xparams 
+     );
+     services::KnowledgeCarrier flattenArtifact (
+         in services::KnowledgeCarrier artifact , 
+         in string xparams , 
+         in string rootassetid 
+     );
+   };
+   interface Knowledgebase {
+     id::Pointer bind (
+         in string kbaseid , 
+         in datatypes::Bindings bindings , 
+         in string xparams , 
+         in string versiontag 
+     );
+     void deleteKnowledgeBase (
+         in string kbaseid , 
+         in string xparams 
+     );
+     id::Pointer extract (
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag , 
+         in string rootassetid 
+     );
+     id::Pointer flatten (
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag 
+     );
+     services::KnowledgeBase getKnowledgeBase (
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag 
+     );
+     id::PointerList getKnowledgeBaseComponents (
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag 
+     );
+     services::KnowledgeCarrier getKnowledgeBaseManifestation (
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag 
+     );
+     id::PointerList getKnowledgeBaseSeries (
+         in string kbaseid , 
+         in string xparams 
+     );
+     services::KnowledgeCarrier getKnowledgeBaseStructure (
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag 
+     );
+     void hasKnowledgeBase (
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag 
+     );
+     id::Pointer initKnowledgeBase (
+         in services::KnowledgeCarrier initialcomponent , 
+         in string xparams 
+     );
+     id::Pointer introspect (
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag 
+     );
+     id::Pointer namedBind (
+         in string kbaseid , 
+         in datatypes::Bindings bindings , 
+         in string xparams , 
+         in string versiontag , 
+         in string operatorid 
+     );
+     id::Pointer namedExtract (
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag , 
+         in string rootassetid , 
+         in string operatorid 
+     );
+     id::Pointer namedFlatten (
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag , 
+         in string operatorid 
+     );
+     id::Pointer namedIntrospect (
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag , 
+         in string operatorid 
+     );
+     id::Pointer namedSelect (
+         in string kbaseid , 
+         in services::KnowledgeCarrier selectdefinition , 
+         in string xparams , 
+         in string versiontag , 
+         in string operatorid 
+     );
+     id::Pointer namedTransform (
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag , 
+         in string operatorid 
+     );
+     id::Pointer namedWeave (
+         in string kbaseid , 
+         in services::KnowledgeCarrier aspects , 
+         in string xparams , 
+         in string versiontag , 
+         in string operatorid 
+     );
+     services::KnowledgeBase nextKnowledgeBaseVersion (
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag 
+     );
+     id::Pointer populateKnowledgeBase (
+         in services::KnowledgeCarrier artifact , 
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag 
+     );
+     id::Pointer select (
+         in string kbaseid , 
+         in services::KnowledgeCarrier selectdefinition , 
+         in string xparams , 
+         in string versiontag 
+     );
+     id::Pointer setKnowledgeBaseStructure (
+         in services::KnowledgeCarrier _struct , 
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag 
+     );
+     id::Pointer transform (
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag 
+     );
+     id::Pointer weave (
+         in string kbaseid , 
+         in services::KnowledgeCarrier aspects , 
+         in string xparams , 
+         in string versiontag 
+     );
+   };
+   interface Transcreate {
+     services::KnowledgeCarrier applyNamedBind (
+         in string kbaseid , 
+         in datatypes::Bindings bindings , 
+         in string xparams , 
+         in string versiontag , 
+         in string operatorid 
+     );
+     services::KnowledgeCarrier applyNamedBindDirect (
+         in services::KnowledgeCarrier artifact , 
+         in string operatorid 
+     );
+     services::KnowledgeCarrier applyNamedExtract (
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag , 
+         in string rootassetid , 
+         in string operatorid 
+     );
+     services::KnowledgeCarrier applyNamedExtractDirect (
+         in services::KnowledgeCarrier artifact , 
+         in string xparams , 
+         in string rootassetid , 
+         in string operatorid 
+     );
+     services::KnowledgeCarrier applyNamedIntrospect (
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag , 
+         in string operatorid 
+     );
+     services::KnowledgeCarrier applyNamedIntrospectDirect (
+         in services::KnowledgeCarrier artifact , 
+         in string xparams , 
+         in string operatorid 
+     );
+     services::KnowledgeCarrier applyNamedSelect (
+         in string kbaseid , 
+         in string xparams , 
+         in services::KnowledgeCarrier definition , 
+         in string versiontag , 
+         in string operatorid 
+     );
+     services::KnowledgeCarrier applyNamedSelectDirect (
+         in services::KnowledgeCarrier artifact , 
+         in string xparams , 
+         in services::KnowledgeCarrier definition , 
+         in string operatorid 
+     );
+     services::KnowledgeCarrier applyNamedTransform (
+         in string kbaseid , 
+         in string xparams , 
+         in string versiontag , 
+         in string operatorid 
+     );
+     services::KnowledgeCarrier applyNamedTransformDirect (
+         in services::KnowledgeCarrier artifact , 
+         in string xparams , 
+         in string operatorid 
+     );
+     services::KnowledgeCarrier applyNamedWeave (
+         in string kbaseid , 
+         in services::KnowledgeCarrier aspects , 
+         in string xparams , 
+         in string versiontag , 
+         in string operatorid 
+     );
+     services::KnowledgeCarrier applyNamedWeaveDirect (
+         in services::KnowledgeCarrier artifact , 
+         in services::KnowledgeCarrier aspects , 
+         in string xparams , 
+         in string operatorid 
+     );
+   };
+}; // knowledgebase
+}; // api
+}; // 20210201
+}; // api4kp
+}; // spec
+}; // omg
+}; // org

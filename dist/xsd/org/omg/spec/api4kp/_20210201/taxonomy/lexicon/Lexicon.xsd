@@ -16,13 +16,13 @@
 
     <xs:simpleType name="Lexicon_Valueset">
       <xs:restriction base="xs:string">
-        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/Lexicon#"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/Lexicon#namespace"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/Lexicon#core"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/Lexicon#XMLSchema-instance"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/Lexicon#PCV"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/Lexicon#2018-02-16"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/Lexicon#20180731"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/Lexicon#"/>
       </xs:restriction>
     </xs:simpleType>
 </xs:schema>

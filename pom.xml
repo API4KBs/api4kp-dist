@@ -995,6 +995,21 @@
               </resources>
             </configuration>
           </execution>
+          <execution>
+            <id>idl-files</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${dist.dir}/idl</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${project.build.outputDirectory}/idl</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
         </executions>
       </plugin>
 
