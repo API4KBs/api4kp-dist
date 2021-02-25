@@ -780,17 +780,35 @@ margin-bottom: 20px;
             <h2 id="welcome-to-apidoc">API and SDK Documentation</h2>
               <div class="app-desc">Version: 5.0.0</div>
             <hr>
-            <div><p>Maturity - VERY LOW (highly subject to disruptive changes)</p>
-<h3>Summary</h3>
-<p><strong>Knowledge-Driven Reasoning (web) Service that supports the (stateless) execution of
-Inferences, Queries, and related information processing tasks on one or more Knowledge Bases
-(aka 'Models').</strong></p>
-<h4>Identification</h4>
-<p>In this context, a 'Model' is a Knowledge Base - regardless of whether it consists of a known,
-single Knowledge Asset, or is the result of an Assembly on-the-fly.
-Knowledge Bases have a unique identifier: in this server, deployed Knowledge Base
-(i.e. the instantiation of a Knowledge Base in some software) and possibly even deployments are
-tracked with different IDs.</p>
+            <div><p>APIs that expose the information processing capabilities of Knowledge Platform Components,
+usually known as engines or reasoners, which are able to apply &quot;knowledge&quot; to &quot;data&quot;,
+in order to derive new information.</p>
+<p>Knowledge Reasoning APIs are likely to provide an abstraction layer for the proprietary
+API of existing engines, but could also be used to expose engine-less microservices designed
+to work with individual, named knowledge bases.</p>
+<p>The APIs pivot on the notion of Knowledge Base <em>in motion</em>, and consider reasoners
+as operators applied to the KBs.
+In this context, Knowledge Bases prepared for Reasoning are also called Knowledge Models,
+or &quot;Models&quot; for short, providing a connection to modern AI implementations.</p>
+<p>The boundary between 'instance data' and 'universal knowledge' is fuzzy, and is abstracted
+once the substrate Knowledge Base is bound to the reasoner. Knowledge Graphs are a primary example.
+Some reasoning operations allow Clients to provide bindings for input variables.</p>
+<p>** Implementation patterns **
+The binding between the Knowledge Base and the Reasoning service can be implemented in different ways.
+Patterns include, but are not limited to,
+(i) Knowledge Bases deployed within an engine backing the server; (ii) be implemented by the server directly,
+through manual software development or trans-compilation process; (iii) references that can be
+resolved by the server; (iv) support proxy/broker/adapter patterns where the server delegates
+the execution to another service</p>
+<p>** Service Boundaries **
+Reasoning APIs integrate with KnowledgeBase construction APIs to gather the knowledge,
+and prepare it in a form that can be processed by the engine.
+Reasoning APIs may produce Knowledge Base (components), and KnowledgeBase Construction APIs
+can be used to construct augmented, inferred Knowledge Bases, which can be further processed using
+the Reasoning APIs</p>
+<p><strong>Maturity</strong>
+As of this version, this API is considered experimental.
+Stateful, Incremental and/or Asynchronous reasoning APIs are not supported in this version</p>
 </div>
           </div>
         </div>
@@ -806,7 +824,11 @@ tracked with different IDs.</p>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
                         <p></p>
-                        <p class="marked">Return descriptive metadata about a specific model</p>
+                        <p class="marked">Return descriptive metadata about a Model.
+This operation may return a Surrogate, including a canonical API4KP
+Surrogate associated to the Knowledge Base, but could also return
+a runtime-oriented Surrogate that describes the Knowledge Base as an executable artifact.
+</p>
                         <p></p>
                         <br />
                         <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/models/{modelId}/versions/{versionTag}</span></code></pre>
@@ -829,7 +851,7 @@ tracked with different IDs.</p>
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Model-getModel-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v4/models/{modelId}/versions/{versionTag}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v5/models/{modelId}/versions/{versionTag}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Model-getModel-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -845,7 +867,9 @@ public class ModelApiExample {
     public static void main(String[] args) {
         
         ModelApi apiInstance = new ModelApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
         try {
             KnowledgeCarrier result = apiInstance.getModel(modelId, versionTag);
@@ -865,7 +889,9 @@ public class ModelApiExample {
 
     public static void main(String[] args) {
         ModelApi apiInstance = new ModelApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
         try {
             KnowledgeCarrier result = apiInstance.getModel(modelId, versionTag);
@@ -882,7 +908,9 @@ public class ModelApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-Model-getModel-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 String *versionTag = versionTag_example; // The Identifier os a specific version of a Model, within the series identified by a modelId.
 
 ModelApi *apiInstance = [[ModelApi alloc] init];
@@ -906,7 +934,9 @@ ModelApi *apiInstance = [[ModelApi alloc] init];
 
 var api = new Api4KpKnowledgeReasoningApi.ModelApi()
 
-var modelId = ; // {UUID} The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+var modelId = ; // {UUID} The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 
 var versionTag = versionTag_example; // {String} The Identifier os a specific version of a Model, within the series identified by a modelId.
 
@@ -940,7 +970,9 @@ namespace Example
         {
             
             var apiInstance = new ModelApi();
-            var modelId = new UUID(); // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+            var modelId = new UUID(); // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
             var versionTag = versionTag_example;  // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 
             try
@@ -964,7 +996,9 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\ModelApi();
-$modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+$modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 $versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 
 try {
@@ -982,7 +1016,9 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::ModelApi;
 
 my $api_instance = WWW::SwaggerClient::ModelApi->new();
-my $modelId = ; # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+my $modelId = ; # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 my $versionTag = versionTag_example; # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 
 eval { 
@@ -1003,7 +1039,9 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ModelApi()
-modelId =  # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+modelId =  # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 versionTag = versionTag_example # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 
 try: 
@@ -1038,7 +1076,9 @@ except ApiException as e:
                     </span>
 
                     <div class="inner description">
-                        The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                        The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
                     </div>
             </div>
                 <div class="inner required">
@@ -1079,7 +1119,8 @@ except ApiException as e:
 
 
                           <h2>Responses</h2>
-                            <h3> Status: 200 - Information about the computable knowledge that is being executed as a service, including enough information to resolve the Knowledge Asset of which the model is an instantiation. </h3>
+                            <h3> Status: 200 - A runtime surrogate
+ </h3>
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
@@ -1094,7 +1135,7 @@ except ApiException as e:
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
-  "description" : "Information about the computable knowledge that is being executed as a service, including enough information to resolve the Knowledge Asset of which the model is an instantiation.",
+  "description" : "A runtime surrogate\n",
   "schema" : {
     "$ref" : "#/definitions/KnowledgeCarrier"
   }
@@ -1134,7 +1175,8 @@ except ApiException as e:
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
                         <p></p>
-                        <p class="marked">List the Models running on this server.</p>
+                        <p class="marked">Lists the Knowledge Bases that are available to this server for reasoning.
+</p>
                         <p></p>
                         <br />
                         <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/models</span></code></pre>
@@ -1157,7 +1199,7 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Model-listModels-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v4/models"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v5/models"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Model-listModels-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -1331,7 +1373,8 @@ except ApiException as e:
 
 
                           <h2>Responses</h2>
-                            <h3> Status: 200 - List of References to available Models </h3>
+                            <h3> Status: 200 - A List of pointers to the available Models
+ </h3>
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
@@ -1346,7 +1389,7 @@ except ApiException as e:
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
-  "description" : "List of References to available Models",
+  "description" : "A List of pointers to the available Models\n",
   "schema" : {
     "type" : "array",
     "items" : {
@@ -1392,7 +1435,10 @@ except ApiException as e:
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
                         <p></p>
-                        <p class="marked"></p>
+                        <p class="marked">applies the client&#39;s provided Query to the target Knowledge Base.
+If the query specifies any output variable, this operation will
+return the inferred bindings for those variables.
+</p>
                         <p></p>
                         <br />
                         <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/models/{modelId}/versions/{versionTag}/reasoners/queryanswers</span></code></pre>
@@ -1415,7 +1461,7 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Reasoning-askQuery-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v4/models/{modelId}/versions/{versionTag}/reasoners/queryanswers"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v5/models/{modelId}/versions/{versionTag}/reasoners/queryanswers"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Reasoning-askQuery-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -1431,11 +1477,15 @@ public class ReasoningApiExample {
     public static void main(String[] args) {
         
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
         KnowledgeCarrier query = ; // KnowledgeCarrier | 
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            array[Bindings] result = apiInstance.askQuery(modelId, versionTag, query);
+            array[Bindings] result = apiInstance.askQuery(modelId, versionTag, query, xParams);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#askQuery");
@@ -1452,11 +1502,15 @@ public class ReasoningApiExample {
 
     public static void main(String[] args) {
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
         KnowledgeCarrier query = ; // KnowledgeCarrier | 
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            array[Bindings] result = apiInstance.askQuery(modelId, versionTag, query);
+            array[Bindings] result = apiInstance.askQuery(modelId, versionTag, query, xParams);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#askQuery");
@@ -1470,9 +1524,13 @@ public class ReasoningApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-Reasoning-askQuery-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 String *versionTag = versionTag_example; // The Identifier os a specific version of a Model, within the series identified by a modelId.
 KnowledgeCarrier *query = ; // 
+String *xParams = xParams_example; // Additional, operation-specific parameter
+ (optional)
 
 ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
@@ -1480,6 +1538,7 @@ ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 [apiInstance askQueryWith:modelId
     versionTag:versionTag
     query:query
+    xParams:xParams
               completionHandler: ^(array[Bindings] output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -1496,12 +1555,18 @@ ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
 var api = new Api4KpKnowledgeReasoningApi.ReasoningApi()
 
-var modelId = ; // {UUID} The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+var modelId = ; // {UUID} The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 
 var versionTag = versionTag_example; // {String} The Identifier os a specific version of a Model, within the series identified by a modelId.
 
 var query = ; // {KnowledgeCarrier} 
 
+var opts = { 
+  'xParams': xParams_example // {String} Additional, operation-specific parameter
+
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1510,7 +1575,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.askQuery(modelId, versionTag, query, callback);
+api.askQuery(modelId, versionTag, query, opts, callback);
 </code></pre>
                             </div>
 
@@ -1532,14 +1597,18 @@ namespace Example
         {
             
             var apiInstance = new ReasoningApi();
-            var modelId = new UUID(); // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+            var modelId = new UUID(); // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
             var versionTag = versionTag_example;  // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
             var query = new KnowledgeCarrier(); // KnowledgeCarrier | 
+            var xParams = xParams_example;  // String | Additional, operation-specific parameter
+ (optional) 
 
             try
             {
                 // queries the KB, returning bindings to the query's variables
-                array[Bindings] result = apiInstance.askQuery(modelId, versionTag, query);
+                array[Bindings] result = apiInstance.askQuery(modelId, versionTag, query, xParams);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1557,12 +1626,16 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\ReasoningApi();
-$modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+$modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 $versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 $query = ; // KnowledgeCarrier | 
+$xParams = xParams_example; // String | Additional, operation-specific parameter
+
 
 try {
-    $result = $api_instance->askQuery($modelId, $versionTag, $query);
+    $result = $api_instance->askQuery($modelId, $versionTag, $query, $xParams);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReasoningApi->askQuery: ', $e->getMessage(), PHP_EOL;
@@ -1576,12 +1649,16 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::ReasoningApi;
 
 my $api_instance = WWW::SwaggerClient::ReasoningApi->new();
-my $modelId = ; # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+my $modelId = ; # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 my $versionTag = versionTag_example; # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 my $query = WWW::SwaggerClient::Object::KnowledgeCarrier->new(); # KnowledgeCarrier | 
+my $xParams = xParams_example; # String | Additional, operation-specific parameter
+
 
 eval { 
-    my $result = $api_instance->askQuery(modelId => $modelId, versionTag => $versionTag, query => $query);
+    my $result = $api_instance->askQuery(modelId => $modelId, versionTag => $versionTag, query => $query, xParams => $xParams);
     print Dumper($result);
 };
 if ($@) {
@@ -1598,13 +1675,17 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ReasoningApi()
-modelId =  # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+modelId =  # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 versionTag = versionTag_example # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 query =  # KnowledgeCarrier | 
+xParams = xParams_example # String | Additional, operation-specific parameter
+ (optional)
 
 try: 
     # queries the KB, returning bindings to the query's variables
-    api_response = api_instance.ask_query(modelId, versionTag, query)
+    api_response = api_instance.ask_query(modelId, versionTag, query, xParams=xParams)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ReasoningApi->askQuery: %s\n" % e)</code></pre>
@@ -1634,7 +1715,9 @@ except ApiException as e:
                     </span>
 
                     <div class="inner description">
-                        The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                        The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
                     </div>
             </div>
                 <div class="inner required">
@@ -1670,6 +1753,34 @@ except ApiException as e:
 
                             </table>
 
+                            <div class="methodsubtabletitle">Header parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                  <tr><td style="width:150px;">X-params</td>
+<td>
+
+
+    <div id="d2e199_askQuery_xParams">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        Additional, operation-specific parameter
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                            </table>
 
                             <div class="methodsubtabletitle">Body parameters</div>
                             <table id="methodsubtable">
@@ -1716,7 +1827,8 @@ $(document).ready(function() {
 
 
                           <h2>Responses</h2>
-                            <h3> Status: 200 - The bound expression </h3>
+                            <h3> Status: 200 - The bindings of the query variables
+ </h3>
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
@@ -1731,7 +1843,7 @@ $(document).ready(function() {
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
-  "description" : "The bound expression",
+  "description" : "The bindings of the query variables\n",
   "schema" : {
     "type" : "array",
     "items" : {
@@ -1774,7 +1886,9 @@ $(document).ready(function() {
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
                         <p></p>
-                        <p class="marked"></p>
+                        <p class="marked">Determines the consistency of a Knowledge Base, usually by determining
+whether &#39;false&#39; is a logical consequence of the KB
+</p>
                         <p></p>
                         <br />
                         <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/models/{modelId}/versions/{versionTag}/reasoners/checks</span></code></pre>
@@ -1797,7 +1911,7 @@ $(document).ready(function() {
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Reasoning-checkConsistency-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v4/models/{modelId}/versions/{versionTag}/reasoners/checks"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v5/models/{modelId}/versions/{versionTag}/reasoners/checks"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Reasoning-checkConsistency-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -1813,10 +1927,15 @@ public class ReasoningApiExample {
     public static void main(String[] args) {
         
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            apiInstance.checkConsistency(modelId, versionTag);
+            'Boolean' result = apiInstance.checkConsistency(modelId, versionTag, xParams);
+            System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#checkConsistency");
             e.printStackTrace();
@@ -1832,10 +1951,15 @@ public class ReasoningApiExample {
 
     public static void main(String[] args) {
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            apiInstance.checkConsistency(modelId, versionTag);
+            'Boolean' result = apiInstance.checkConsistency(modelId, versionTag, xParams);
+            System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#checkConsistency");
             e.printStackTrace();
@@ -1848,15 +1972,23 @@ public class ReasoningApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-Reasoning-checkConsistency-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 String *versionTag = versionTag_example; // The Identifier os a specific version of a Model, within the series identified by a modelId.
+String *xParams = xParams_example; // Additional, operation-specific parameter
+ (optional)
 
 ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
 // determines whether the KB is internally logically consistent
 [apiInstance checkConsistencyWith:modelId
     versionTag:versionTag
-              completionHandler: ^(NSError* error) {
+    xParams:xParams
+              completionHandler: ^('Boolean' output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
                             if (error) {
                                 NSLog(@"Error: %@", error);
                             }
@@ -1869,19 +2001,25 @@ ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
 var api = new Api4KpKnowledgeReasoningApi.ReasoningApi()
 
-var modelId = ; // {UUID} The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+var modelId = ; // {UUID} The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 
 var versionTag = versionTag_example; // {String} The Identifier os a specific version of a Model, within the series identified by a modelId.
 
+var opts = { 
+  'xParams': xParams_example // {String} Additional, operation-specific parameter
+
+};
 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.checkConsistency(modelId, versionTag, , callback);
+api.checkConsistency(modelId, versionTag, , opts, callback);
 </code></pre>
                             </div>
 
@@ -1903,13 +2041,18 @@ namespace Example
         {
             
             var apiInstance = new ReasoningApi();
-            var modelId = new UUID(); // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+            var modelId = new UUID(); // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
             var versionTag = versionTag_example;  // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
+            var xParams = xParams_example;  // String | Additional, operation-specific parameter
+ (optional) 
 
             try
             {
                 // determines whether the KB is internally logically consistent
-                apiInstance.checkConsistency(modelId, versionTag);
+                'Boolean' result = apiInstance.checkConsistency(modelId, versionTag, xParams);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -1926,11 +2069,16 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\ReasoningApi();
-$modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+$modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 $versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
+$xParams = xParams_example; // String | Additional, operation-specific parameter
+
 
 try {
-    $api_instance->checkConsistency($modelId, $versionTag);
+    $result = $api_instance->checkConsistency($modelId, $versionTag, $xParams);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReasoningApi->checkConsistency: ', $e->getMessage(), PHP_EOL;
 }
@@ -1943,11 +2091,16 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::ReasoningApi;
 
 my $api_instance = WWW::SwaggerClient::ReasoningApi->new();
-my $modelId = ; # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+my $modelId = ; # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 my $versionTag = versionTag_example; # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
+my $xParams = xParams_example; # String | Additional, operation-specific parameter
+
 
 eval { 
-    $api_instance->checkConsistency(modelId => $modelId, versionTag => $versionTag);
+    my $result = $api_instance->checkConsistency(modelId => $modelId, versionTag => $versionTag, xParams => $xParams);
+    print Dumper($result);
 };
 if ($@) {
     warn "Exception when calling ReasoningApi->checkConsistency: $@\n";
@@ -1963,12 +2116,17 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ReasoningApi()
-modelId =  # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+modelId =  # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 versionTag = versionTag_example # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
+xParams = xParams_example # String | Additional, operation-specific parameter
+ (optional)
 
 try: 
     # determines whether the KB is internally logically consistent
-    api_instance.check_consistency(modelId, versionTag)
+    api_response = api_instance.check_consistency(modelId, versionTag, xParams=xParams)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ReasoningApi->checkConsistency: %s\n" % e)</code></pre>
                             </div>
@@ -1997,7 +2155,9 @@ except ApiException as e:
                     </span>
 
                     <div class="inner description">
-                        The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                        The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
                     </div>
             </div>
                 <div class="inner required">
@@ -2033,17 +2193,81 @@ except ApiException as e:
 
                             </table>
 
+                            <div class="methodsubtabletitle">Header parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                  <tr><td style="width:150px;">X-params</td>
+<td>
+
+
+    <div id="d2e199_checkConsistency_xParams">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        Additional, operation-specific parameter
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                            </table>
 
 
 
 
                           <h2>Responses</h2>
-                            <h3> Status: 200 - The bound expression </h3>
+                            <h3> Status: 200 - Whether or not the target KB is logically consistent
+ </h3>
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-checkConsistency-200-schema">Schema</a>
+                                </li>
+
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-checkConsistency-200-schema">
+                                  <div id='responses-checkConsistency-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "Whether or not the target KB is logically consistent\n",
+  "schema" : {
+    "type" : "boolean"
+  }
+};
+                                        var schema = schemaWrapper.schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.definitions = defs;
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-checkConsistency-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-checkConsistency-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-checkConsistency-200-schema-data' type='hidden' value=''></input>
+                                </div>
                             </div>
 
                         </article>
@@ -2053,12 +2277,14 @@ except ApiException as e:
                       <article id="api-Reasoning-checkMembership-0" data-group="User" data-name="checkMembership" data-version="0">
                         <div class="pull-left">
                           <h1>checkMembership</h1>
-                          <p></p>
+                          <p>determines if an individual is member of a class</p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
                         <p></p>
-                        <p class="marked">determines if an individual is member of a class</p>
+                        <p class="marked">Given the id of an individual, some optional features that describe that individual,
+and the id of a specific class, determines whether the individual is a member of that class
+</p>
                         <p></p>
                         <br />
                         <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/models/{modelId}/versions/{versionTag}/reasoners/classifiers/individuals/{entityId}</span></code></pre>
@@ -2081,7 +2307,7 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Reasoning-checkMembership-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v4/models/{modelId}/versions/{versionTag}/reasoners/classifiers/individuals/{entityId}?classId="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v5/models/{modelId}/versions/{versionTag}/reasoners/classifiers/individuals/{entityId}?classId="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Reasoning-checkMembership-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -2097,12 +2323,17 @@ public class ReasoningApiExample {
     public static void main(String[] args) {
         
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
         UUID entityId = ; // UUID | 
         UUID classId = ; // UUID | 
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            apiInstance.checkMembership(modelId, versionTag, entityId, classId);
+            'Boolean' result = apiInstance.checkMembership(modelId, versionTag, entityId, classId, xParams);
+            System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#checkMembership");
             e.printStackTrace();
@@ -2118,12 +2349,17 @@ public class ReasoningApiExample {
 
     public static void main(String[] args) {
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
         UUID entityId = ; // UUID | 
         UUID classId = ; // UUID | 
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            apiInstance.checkMembership(modelId, versionTag, entityId, classId);
+            'Boolean' result = apiInstance.checkMembership(modelId, versionTag, entityId, classId, xParams);
+            System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#checkMembership");
             e.printStackTrace();
@@ -2136,18 +2372,27 @@ public class ReasoningApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-Reasoning-checkMembership-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 String *versionTag = versionTag_example; // The Identifier os a specific version of a Model, within the series identified by a modelId.
 UUID *entityId = ; // 
 UUID *classId = ; // 
+String *xParams = xParams_example; // Additional, operation-specific parameter
+ (optional)
 
 ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
+// determines if an individual is member of a class
 [apiInstance checkMembershipWith:modelId
     versionTag:versionTag
     entityId:entityId
     classId:classId
-              completionHandler: ^(NSError* error) {
+    xParams:xParams
+              completionHandler: ^('Boolean' output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
                             if (error) {
                                 NSLog(@"Error: %@", error);
                             }
@@ -2160,7 +2405,9 @@ ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
 var api = new Api4KpKnowledgeReasoningApi.ReasoningApi()
 
-var modelId = ; // {UUID} The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+var modelId = ; // {UUID} The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 
 var versionTag = versionTag_example; // {String} The Identifier os a specific version of a Model, within the series identified by a modelId.
 
@@ -2168,15 +2415,19 @@ var entityId = ; // {UUID}
 
 var classId = ; // {UUID} 
 
+var opts = { 
+  'xParams': xParams_example // {String} Additional, operation-specific parameter
+
+};
 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.checkMembership(modelId, versionTag, entityId, classId, callback);
+api.checkMembership(modelId, versionTag, entityId, classId, opts, callback);
 </code></pre>
                             </div>
 
@@ -2198,14 +2449,20 @@ namespace Example
         {
             
             var apiInstance = new ReasoningApi();
-            var modelId = new UUID(); // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+            var modelId = new UUID(); // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
             var versionTag = versionTag_example;  // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
             var entityId = new UUID(); // UUID | 
             var classId = new UUID(); // UUID | 
+            var xParams = xParams_example;  // String | Additional, operation-specific parameter
+ (optional) 
 
             try
             {
-                apiInstance.checkMembership(modelId, versionTag, entityId, classId);
+                // determines if an individual is member of a class
+                'Boolean' result = apiInstance.checkMembership(modelId, versionTag, entityId, classId, xParams);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -2222,13 +2479,18 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\ReasoningApi();
-$modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+$modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 $versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 $entityId = ; // UUID | 
 $classId = ; // UUID | 
+$xParams = xParams_example; // String | Additional, operation-specific parameter
+
 
 try {
-    $api_instance->checkMembership($modelId, $versionTag, $entityId, $classId);
+    $result = $api_instance->checkMembership($modelId, $versionTag, $entityId, $classId, $xParams);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReasoningApi->checkMembership: ', $e->getMessage(), PHP_EOL;
 }
@@ -2241,13 +2503,18 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::ReasoningApi;
 
 my $api_instance = WWW::SwaggerClient::ReasoningApi->new();
-my $modelId = ; # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+my $modelId = ; # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 my $versionTag = versionTag_example; # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 my $entityId = ; # UUID | 
 my $classId = ; # UUID | 
+my $xParams = xParams_example; # String | Additional, operation-specific parameter
+
 
 eval { 
-    $api_instance->checkMembership(modelId => $modelId, versionTag => $versionTag, entityId => $entityId, classId => $classId);
+    my $result = $api_instance->checkMembership(modelId => $modelId, versionTag => $versionTag, entityId => $entityId, classId => $classId, xParams => $xParams);
+    print Dumper($result);
 };
 if ($@) {
     warn "Exception when calling ReasoningApi->checkMembership: $@\n";
@@ -2263,13 +2530,19 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ReasoningApi()
-modelId =  # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+modelId =  # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 versionTag = versionTag_example # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 entityId =  # UUID | 
 classId =  # UUID | 
+xParams = xParams_example # String | Additional, operation-specific parameter
+ (optional)
 
 try: 
-    api_instance.check_membership(modelId, versionTag, entityId, classId)
+    # determines if an individual is member of a class
+    api_response = api_instance.check_membership(modelId, versionTag, entityId, classId, xParams=xParams)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ReasoningApi->checkMembership: %s\n" % e)</code></pre>
                             </div>
@@ -2298,7 +2571,9 @@ except ApiException as e:
                     </span>
 
                     <div class="inner description">
-                        The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                        The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
                     </div>
             </div>
                 <div class="inner required">
@@ -2357,6 +2632,34 @@ except ApiException as e:
 
                             </table>
 
+                            <div class="methodsubtabletitle">Header parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                  <tr><td style="width:150px;">X-params</td>
+<td>
+
+
+    <div id="d2e199_checkMembership_xParams">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        Additional, operation-specific parameter
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                            </table>
 
 
 
@@ -2392,12 +2695,48 @@ except ApiException as e:
                             </table>
 
                           <h2>Responses</h2>
-                            <h3> Status: 200 - Success </h3>
+                            <h3> Status: 200 - Whether or not the given individual is a member of the given class
+ </h3>
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-checkMembership-200-schema">Schema</a>
+                                </li>
+
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-checkMembership-200-schema">
+                                  <div id='responses-checkMembership-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "Whether or not the given individual is a member of the given class\n",
+  "schema" : {
+    "type" : "boolean"
+  }
+};
+                                        var schema = schemaWrapper.schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.definitions = defs;
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-checkMembership-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-checkMembership-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-checkMembership-200-schema-data' type='hidden' value=''></input>
+                                </div>
                             </div>
 
                         </article>
@@ -2407,12 +2746,15 @@ except ApiException as e:
                       <article id="api-Reasoning-checkSatisfiability-0" data-group="User" data-name="checkSatisfiability" data-version="0">
                         <div class="pull-left">
                           <h1>checkSatisfiability</h1>
-                          <p></p>
+                          <p>determines whether the KB is satisfiable</p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
                         <p></p>
-                        <p class="marked">determines whether the KB is satisfiable</p>
+                        <p class="marked">Determines whether the Knowledge Base is satisfiable, i.e. whether the KB is not inconsistent
+and, if the KB has open variables, there is at least one binding of those variables
+that would result in a KB that is still consistent.
+</p>
                         <p></p>
                         <br />
                         <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/models/{modelId}/versions/{versionTag}/reasoners/sats</span></code></pre>
@@ -2435,7 +2777,7 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Reasoning-checkSatisfiability-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v4/models/{modelId}/versions/{versionTag}/reasoners/sats"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v5/models/{modelId}/versions/{versionTag}/reasoners/sats"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Reasoning-checkSatisfiability-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -2451,10 +2793,14 @@ public class ReasoningApiExample {
     public static void main(String[] args) {
         
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            array[Bindings] result = apiInstance.checkSatisfiability(modelId, versionTag);
+            array[Bindings] result = apiInstance.checkSatisfiability(modelId, versionTag, xParams);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#checkSatisfiability");
@@ -2471,10 +2817,14 @@ public class ReasoningApiExample {
 
     public static void main(String[] args) {
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            array[Bindings] result = apiInstance.checkSatisfiability(modelId, versionTag);
+            array[Bindings] result = apiInstance.checkSatisfiability(modelId, versionTag, xParams);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#checkSatisfiability");
@@ -2488,13 +2838,19 @@ public class ReasoningApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-Reasoning-checkSatisfiability-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 String *versionTag = versionTag_example; // The Identifier os a specific version of a Model, within the series identified by a modelId.
+String *xParams = xParams_example; // Additional, operation-specific parameter
+ (optional)
 
 ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
+// determines whether the KB is satisfiable
 [apiInstance checkSatisfiabilityWith:modelId
     versionTag:versionTag
+    xParams:xParams
               completionHandler: ^(array[Bindings] output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -2511,10 +2867,16 @@ ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
 var api = new Api4KpKnowledgeReasoningApi.ReasoningApi()
 
-var modelId = ; // {UUID} The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+var modelId = ; // {UUID} The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 
 var versionTag = versionTag_example; // {String} The Identifier os a specific version of a Model, within the series identified by a modelId.
 
+var opts = { 
+  'xParams': xParams_example // {String} Additional, operation-specific parameter
+
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -2523,7 +2885,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.checkSatisfiability(modelId, versionTag, , callback);
+api.checkSatisfiability(modelId, versionTag, , opts, callback);
 </code></pre>
                             </div>
 
@@ -2545,12 +2907,17 @@ namespace Example
         {
             
             var apiInstance = new ReasoningApi();
-            var modelId = new UUID(); // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+            var modelId = new UUID(); // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
             var versionTag = versionTag_example;  // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
+            var xParams = xParams_example;  // String | Additional, operation-specific parameter
+ (optional) 
 
             try
             {
-                array[Bindings] result = apiInstance.checkSatisfiability(modelId, versionTag);
+                // determines whether the KB is satisfiable
+                array[Bindings] result = apiInstance.checkSatisfiability(modelId, versionTag, xParams);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2568,11 +2935,15 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\ReasoningApi();
-$modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+$modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 $versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
+$xParams = xParams_example; // String | Additional, operation-specific parameter
+
 
 try {
-    $result = $api_instance->checkSatisfiability($modelId, $versionTag);
+    $result = $api_instance->checkSatisfiability($modelId, $versionTag, $xParams);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReasoningApi->checkSatisfiability: ', $e->getMessage(), PHP_EOL;
@@ -2586,11 +2957,15 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::ReasoningApi;
 
 my $api_instance = WWW::SwaggerClient::ReasoningApi->new();
-my $modelId = ; # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+my $modelId = ; # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 my $versionTag = versionTag_example; # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
+my $xParams = xParams_example; # String | Additional, operation-specific parameter
+
 
 eval { 
-    my $result = $api_instance->checkSatisfiability(modelId => $modelId, versionTag => $versionTag);
+    my $result = $api_instance->checkSatisfiability(modelId => $modelId, versionTag => $versionTag, xParams => $xParams);
     print Dumper($result);
 };
 if ($@) {
@@ -2607,11 +2982,16 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ReasoningApi()
-modelId =  # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+modelId =  # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 versionTag = versionTag_example # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
+xParams = xParams_example # String | Additional, operation-specific parameter
+ (optional)
 
 try: 
-    api_response = api_instance.check_satisfiability(modelId, versionTag)
+    # determines whether the KB is satisfiable
+    api_response = api_instance.check_satisfiability(modelId, versionTag, xParams=xParams)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ReasoningApi->checkSatisfiability: %s\n" % e)</code></pre>
@@ -2641,7 +3021,9 @@ except ApiException as e:
                     </span>
 
                     <div class="inner description">
-                        The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                        The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
                     </div>
             </div>
                 <div class="inner required">
@@ -2677,12 +3059,44 @@ except ApiException as e:
 
                             </table>
 
+                            <div class="methodsubtabletitle">Header parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                  <tr><td style="width:150px;">X-params</td>
+<td>
+
+
+    <div id="d2e199_checkSatisfiability_xParams">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        Additional, operation-specific parameter
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                            </table>
 
 
 
 
                           <h2>Responses</h2>
-                            <h3> Status: 200 - The bound expression </h3>
+                            <h3> Status: 200 - A list of at least one Binding if the KB is satisfiable, or an empty list if the KB is not.
+Notice that an empty list of Bindings denotes an unsatisfiable KB, while a list with
+Bindings that are empty would denote a trivially satisfiable KB - a KB that is consistent
+and has no free variables.
+ </h3>
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
@@ -2697,7 +3111,7 @@ except ApiException as e:
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
-  "description" : "The bound expression",
+  "description" : "A list of at least one Binding if the KB is satisfiable, or an empty list if the KB is not.\nNotice that an empty list of Bindings denotes an unsatisfiable KB, while a list with\nBindings that are empty would denote a trivially satisfiable KB - a KB that is consistent\nand has no free variables.\n",
   "schema" : {
     "type" : "array",
     "items" : {
@@ -2735,12 +3149,13 @@ except ApiException as e:
                       <article id="api-Reasoning-checkSubsumption-0" data-group="User" data-name="checkSubsumption" data-version="0">
                         <div class="pull-left">
                           <h1>checkSubsumption</h1>
-                          <p></p>
+                          <p>determines if a Class is a subclass of another class</p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
                         <p></p>
-                        <p class="marked">determines if a Class is a subclass of another class</p>
+                        <p class="marked">Given the identifiers of two classes, returns true if and only if the former is a subclass of the latter.
+</p>
                         <p></p>
                         <br />
                         <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/models/{modelId}/versions/{versionTag}/reasoners/classifiers/classes/{entityId}</span></code></pre>
@@ -2763,7 +3178,7 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Reasoning-checkSubsumption-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v4/models/{modelId}/versions/{versionTag}/reasoners/classifiers/classes/{entityId}?classId="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v5/models/{modelId}/versions/{versionTag}/reasoners/classifiers/classes/{entityId}?classId="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Reasoning-checkSubsumption-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -2779,12 +3194,17 @@ public class ReasoningApiExample {
     public static void main(String[] args) {
         
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
         UUID entityId = ; // UUID | 
         UUID classId = ; // UUID | 
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            apiInstance.checkSubsumption(modelId, versionTag, entityId, classId);
+            'Boolean' result = apiInstance.checkSubsumption(modelId, versionTag, entityId, classId, xParams);
+            System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#checkSubsumption");
             e.printStackTrace();
@@ -2800,12 +3220,17 @@ public class ReasoningApiExample {
 
     public static void main(String[] args) {
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
         UUID entityId = ; // UUID | 
         UUID classId = ; // UUID | 
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            apiInstance.checkSubsumption(modelId, versionTag, entityId, classId);
+            'Boolean' result = apiInstance.checkSubsumption(modelId, versionTag, entityId, classId, xParams);
+            System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#checkSubsumption");
             e.printStackTrace();
@@ -2818,18 +3243,27 @@ public class ReasoningApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-Reasoning-checkSubsumption-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 String *versionTag = versionTag_example; // The Identifier os a specific version of a Model, within the series identified by a modelId.
 UUID *entityId = ; // 
 UUID *classId = ; // 
+String *xParams = xParams_example; // Additional, operation-specific parameter
+ (optional)
 
 ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
+// determines if a Class is a subclass of another class
 [apiInstance checkSubsumptionWith:modelId
     versionTag:versionTag
     entityId:entityId
     classId:classId
-              completionHandler: ^(NSError* error) {
+    xParams:xParams
+              completionHandler: ^('Boolean' output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
                             if (error) {
                                 NSLog(@"Error: %@", error);
                             }
@@ -2842,7 +3276,9 @@ ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
 var api = new Api4KpKnowledgeReasoningApi.ReasoningApi()
 
-var modelId = ; // {UUID} The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+var modelId = ; // {UUID} The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 
 var versionTag = versionTag_example; // {String} The Identifier os a specific version of a Model, within the series identified by a modelId.
 
@@ -2850,15 +3286,19 @@ var entityId = ; // {UUID}
 
 var classId = ; // {UUID} 
 
+var opts = { 
+  'xParams': xParams_example // {String} Additional, operation-specific parameter
+
+};
 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.checkSubsumption(modelId, versionTag, entityId, classId, callback);
+api.checkSubsumption(modelId, versionTag, entityId, classId, opts, callback);
 </code></pre>
                             </div>
 
@@ -2880,14 +3320,20 @@ namespace Example
         {
             
             var apiInstance = new ReasoningApi();
-            var modelId = new UUID(); // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+            var modelId = new UUID(); // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
             var versionTag = versionTag_example;  // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
             var entityId = new UUID(); // UUID | 
             var classId = new UUID(); // UUID | 
+            var xParams = xParams_example;  // String | Additional, operation-specific parameter
+ (optional) 
 
             try
             {
-                apiInstance.checkSubsumption(modelId, versionTag, entityId, classId);
+                // determines if a Class is a subclass of another class
+                'Boolean' result = apiInstance.checkSubsumption(modelId, versionTag, entityId, classId, xParams);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -2904,13 +3350,18 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\ReasoningApi();
-$modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+$modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 $versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 $entityId = ; // UUID | 
 $classId = ; // UUID | 
+$xParams = xParams_example; // String | Additional, operation-specific parameter
+
 
 try {
-    $api_instance->checkSubsumption($modelId, $versionTag, $entityId, $classId);
+    $result = $api_instance->checkSubsumption($modelId, $versionTag, $entityId, $classId, $xParams);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReasoningApi->checkSubsumption: ', $e->getMessage(), PHP_EOL;
 }
@@ -2923,13 +3374,18 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::ReasoningApi;
 
 my $api_instance = WWW::SwaggerClient::ReasoningApi->new();
-my $modelId = ; # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+my $modelId = ; # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 my $versionTag = versionTag_example; # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 my $entityId = ; # UUID | 
 my $classId = ; # UUID | 
+my $xParams = xParams_example; # String | Additional, operation-specific parameter
+
 
 eval { 
-    $api_instance->checkSubsumption(modelId => $modelId, versionTag => $versionTag, entityId => $entityId, classId => $classId);
+    my $result = $api_instance->checkSubsumption(modelId => $modelId, versionTag => $versionTag, entityId => $entityId, classId => $classId, xParams => $xParams);
+    print Dumper($result);
 };
 if ($@) {
     warn "Exception when calling ReasoningApi->checkSubsumption: $@\n";
@@ -2945,13 +3401,19 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ReasoningApi()
-modelId =  # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+modelId =  # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 versionTag = versionTag_example # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 entityId =  # UUID | 
 classId =  # UUID | 
+xParams = xParams_example # String | Additional, operation-specific parameter
+ (optional)
 
 try: 
-    api_instance.check_subsumption(modelId, versionTag, entityId, classId)
+    # determines if a Class is a subclass of another class
+    api_response = api_instance.check_subsumption(modelId, versionTag, entityId, classId, xParams=xParams)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ReasoningApi->checkSubsumption: %s\n" % e)</code></pre>
                             </div>
@@ -2980,7 +3442,9 @@ except ApiException as e:
                     </span>
 
                     <div class="inner description">
-                        The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                        The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
                     </div>
             </div>
                 <div class="inner required">
@@ -3039,6 +3503,34 @@ except ApiException as e:
 
                             </table>
 
+                            <div class="methodsubtabletitle">Header parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                  <tr><td style="width:150px;">X-params</td>
+<td>
+
+
+    <div id="d2e199_checkSubsumption_xParams">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        Additional, operation-specific parameter
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                            </table>
 
 
 
@@ -3074,12 +3566,48 @@ except ApiException as e:
                             </table>
 
                           <h2>Responses</h2>
-                            <h3> Status: 200 - Success </h3>
+                            <h3> Status: 200 - Whether or not the given class (entity) is a subclass of the reference class
+ </h3>
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-checkSubsumption-200-schema">Schema</a>
+                                </li>
+
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-checkSubsumption-200-schema">
+                                  <div id='responses-checkSubsumption-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "Whether or not the given class (entity) is a subclass of the reference class\n",
+  "schema" : {
+    "type" : "boolean"
+  }
+};
+                                        var schema = schemaWrapper.schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.definitions = defs;
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-checkSubsumption-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-checkSubsumption-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-checkSubsumption-200-schema-data' type='hidden' value=''></input>
+                                </div>
                             </div>
 
                         </article>
@@ -3089,12 +3617,15 @@ except ApiException as e:
                       <article id="api-Reasoning-entails-0" data-group="User" data-name="entails" data-version="0">
                         <div class="pull-left">
                           <h1>entails</h1>
-                          <p>performs an inference, testing whether a set of statements is derived in the process</p>
+                          <p>tests whether a set of statements is a logical consequence of a KB</p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
                         <p></p>
-                        <p class="marked"></p>
+                        <p class="marked">performs an inference using the given Knowledge Base as a substrate, then
+verifies whether the client&#39;s provided Knowledge Base Component is a subset
+of the substrate Knowledge Base, and/or its logical consequences.
+</p>
                         <p></p>
                         <br />
                         <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/models/{modelId}/versions/{versionTag}/reasoners/inferences/entailments</span></code></pre>
@@ -3117,7 +3648,7 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Reasoning-entails-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v4/models/{modelId}/versions/{versionTag}/reasoners/inferences/entailments"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v5/models/{modelId}/versions/{versionTag}/reasoners/inferences/entailments"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Reasoning-entails-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -3133,11 +3664,16 @@ public class ReasoningApiExample {
     public static void main(String[] args) {
         
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
         KnowledgeCarrier potentialConsequence = ; // KnowledgeCarrier | 
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            apiInstance.entails(modelId, versionTag, potentialConsequence);
+            'Boolean' result = apiInstance.entails(modelId, versionTag, potentialConsequence, xParams);
+            System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#entails");
             e.printStackTrace();
@@ -3153,11 +3689,16 @@ public class ReasoningApiExample {
 
     public static void main(String[] args) {
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
         KnowledgeCarrier potentialConsequence = ; // KnowledgeCarrier | 
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            apiInstance.entails(modelId, versionTag, potentialConsequence);
+            'Boolean' result = apiInstance.entails(modelId, versionTag, potentialConsequence, xParams);
+            System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#entails");
             e.printStackTrace();
@@ -3170,17 +3711,25 @@ public class ReasoningApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-Reasoning-entails-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 String *versionTag = versionTag_example; // The Identifier os a specific version of a Model, within the series identified by a modelId.
 KnowledgeCarrier *potentialConsequence = ; // 
+String *xParams = xParams_example; // Additional, operation-specific parameter
+ (optional)
 
 ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
-// performs an inference, testing whether a set of statements is derived in the process
+// tests whether a set of statements is a logical consequence of a KB
 [apiInstance entailsWith:modelId
     versionTag:versionTag
     potentialConsequence:potentialConsequence
-              completionHandler: ^(NSError* error) {
+    xParams:xParams
+              completionHandler: ^('Boolean' output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
                             if (error) {
                                 NSLog(@"Error: %@", error);
                             }
@@ -3193,21 +3742,27 @@ ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
 var api = new Api4KpKnowledgeReasoningApi.ReasoningApi()
 
-var modelId = ; // {UUID} The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+var modelId = ; // {UUID} The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 
 var versionTag = versionTag_example; // {String} The Identifier os a specific version of a Model, within the series identified by a modelId.
 
 var potentialConsequence = ; // {KnowledgeCarrier} 
 
+var opts = { 
+  'xParams': xParams_example // {String} Additional, operation-specific parameter
+
+};
 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.entails(modelId, versionTag, potentialConsequence, callback);
+api.entails(modelId, versionTag, potentialConsequence, opts, callback);
 </code></pre>
                             </div>
 
@@ -3229,14 +3784,19 @@ namespace Example
         {
             
             var apiInstance = new ReasoningApi();
-            var modelId = new UUID(); // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+            var modelId = new UUID(); // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
             var versionTag = versionTag_example;  // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
             var potentialConsequence = new KnowledgeCarrier(); // KnowledgeCarrier | 
+            var xParams = xParams_example;  // String | Additional, operation-specific parameter
+ (optional) 
 
             try
             {
-                // performs an inference, testing whether a set of statements is derived in the process
-                apiInstance.entails(modelId, versionTag, potentialConsequence);
+                // tests whether a set of statements is a logical consequence of a KB
+                'Boolean' result = apiInstance.entails(modelId, versionTag, potentialConsequence, xParams);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -3253,12 +3813,17 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\ReasoningApi();
-$modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+$modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 $versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 $potentialConsequence = ; // KnowledgeCarrier | 
+$xParams = xParams_example; // String | Additional, operation-specific parameter
+
 
 try {
-    $api_instance->entails($modelId, $versionTag, $potentialConsequence);
+    $result = $api_instance->entails($modelId, $versionTag, $potentialConsequence, $xParams);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReasoningApi->entails: ', $e->getMessage(), PHP_EOL;
 }
@@ -3271,12 +3836,17 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::ReasoningApi;
 
 my $api_instance = WWW::SwaggerClient::ReasoningApi->new();
-my $modelId = ; # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+my $modelId = ; # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 my $versionTag = versionTag_example; # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 my $potentialConsequence = WWW::SwaggerClient::Object::KnowledgeCarrier->new(); # KnowledgeCarrier | 
+my $xParams = xParams_example; # String | Additional, operation-specific parameter
+
 
 eval { 
-    $api_instance->entails(modelId => $modelId, versionTag => $versionTag, potentialConsequence => $potentialConsequence);
+    my $result = $api_instance->entails(modelId => $modelId, versionTag => $versionTag, potentialConsequence => $potentialConsequence, xParams => $xParams);
+    print Dumper($result);
 };
 if ($@) {
     warn "Exception when calling ReasoningApi->entails: $@\n";
@@ -3292,13 +3862,18 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ReasoningApi()
-modelId =  # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+modelId =  # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 versionTag = versionTag_example # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 potentialConsequence =  # KnowledgeCarrier | 
+xParams = xParams_example # String | Additional, operation-specific parameter
+ (optional)
 
 try: 
-    # performs an inference, testing whether a set of statements is derived in the process
-    api_instance.entails(modelId, versionTag, potentialConsequence)
+    # tests whether a set of statements is a logical consequence of a KB
+    api_response = api_instance.entails(modelId, versionTag, potentialConsequence, xParams=xParams)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ReasoningApi->entails: %s\n" % e)</code></pre>
                             </div>
@@ -3327,7 +3902,9 @@ except ApiException as e:
                     </span>
 
                     <div class="inner description">
-                        The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                        The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
                     </div>
             </div>
                 <div class="inner required">
@@ -3363,6 +3940,34 @@ except ApiException as e:
 
                             </table>
 
+                            <div class="methodsubtabletitle">Header parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                  <tr><td style="width:150px;">X-params</td>
+<td>
+
+
+    <div id="d2e199_entails_xParams">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        Additional, operation-specific parameter
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                            </table>
 
                             <div class="methodsubtabletitle">Body parameters</div>
                             <table id="methodsubtable">
@@ -3409,12 +4014,48 @@ $(document).ready(function() {
 
 
                           <h2>Responses</h2>
-                            <h3> Status: 200 - The results of the computation, returned synchronously </h3>
+                            <h3> Status: 200 - Whether or not the target KB entails the client provided one
+ </h3>
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-entails-200-schema">Schema</a>
+                                </li>
+
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-entails-200-schema">
+                                  <div id='responses-entails-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "Whether or not the target KB entails the client provided one\n",
+  "schema" : {
+    "type" : "boolean"
+  }
+};
+                                        var schema = schemaWrapper.schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.definitions = defs;
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-entails-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-entails-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-entails-200-schema-data' type='hidden' value=''></input>
+                                </div>
                             </div>
 
                         </article>
@@ -3424,12 +4065,16 @@ $(document).ready(function() {
                       <article id="api-Reasoning-evaluate-0" data-group="User" data-name="evaluate" data-version="0">
                         <div class="pull-left">
                           <h1>evaluate</h1>
-                          <p>performs an inference, and returns the derived facts as bound variables</p>
+                          <p>Derives inferred features, based on input bindings</p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
                         <p></p>
-                        <p class="marked"></p>
+                        <p class="marked">Evaluates a &#39;model&#39; against some user provided &#39;inputs&#39;.
+Binds the client-provided inputs to the proper Knowledge Base variables,
+performs an inference (see: infer), and returns the values associated
+to some output variables.
+</p>
                         <p></p>
                         <br />
                         <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/models/{modelId}/versions/{versionTag}/reasoners/inferences/consequents</span></code></pre>
@@ -3452,7 +4097,7 @@ $(document).ready(function() {
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Reasoning-evaluate-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v4/models/{modelId}/versions/{versionTag}/reasoners/inferences/consequents"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v5/models/{modelId}/versions/{versionTag}/reasoners/inferences/consequents"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Reasoning-evaluate-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -3468,11 +4113,15 @@ public class ReasoningApiExample {
     public static void main(String[] args) {
         
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
         Bindings features = ; // Bindings | 
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            Bindings result = apiInstance.evaluate(modelId, versionTag, features);
+            Bindings result = apiInstance.evaluate(modelId, versionTag, features, xParams);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#evaluate");
@@ -3489,11 +4138,15 @@ public class ReasoningApiExample {
 
     public static void main(String[] args) {
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
         Bindings features = ; // Bindings | 
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            Bindings result = apiInstance.evaluate(modelId, versionTag, features);
+            Bindings result = apiInstance.evaluate(modelId, versionTag, features, xParams);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#evaluate");
@@ -3507,16 +4160,21 @@ public class ReasoningApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-Reasoning-evaluate-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 String *versionTag = versionTag_example; // The Identifier os a specific version of a Model, within the series identified by a modelId.
-Bindings *features = ; // 
+Bindings *features = ; //  (optional)
+String *xParams = xParams_example; // Additional, operation-specific parameter
+ (optional)
 
 ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
-// performs an inference, and returns the derived facts as bound variables
+// Derives inferred features, based on input bindings
 [apiInstance evaluateWith:modelId
     versionTag:versionTag
     features:features
+    xParams:xParams
               completionHandler: ^(Bindings output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -3533,12 +4191,17 @@ ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
 var api = new Api4KpKnowledgeReasoningApi.ReasoningApi()
 
-var modelId = ; // {UUID} The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+var modelId = ; // {UUID} The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 
 var versionTag = versionTag_example; // {String} The Identifier os a specific version of a Model, within the series identified by a modelId.
 
-var features = ; // {Bindings} 
+var opts = { 
+  'features': , // {Bindings} 
+  'xParams': xParams_example // {String} Additional, operation-specific parameter
 
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -3547,7 +4210,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.evaluate(modelId, versionTag, features, callback);
+api.evaluate(modelId, versionTag, , opts, callback);
 </code></pre>
                             </div>
 
@@ -3569,14 +4232,18 @@ namespace Example
         {
             
             var apiInstance = new ReasoningApi();
-            var modelId = new UUID(); // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+            var modelId = new UUID(); // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
             var versionTag = versionTag_example;  // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
-            var features = new Bindings(); // Bindings | 
+            var features = new Bindings(); // Bindings |  (optional) 
+            var xParams = xParams_example;  // String | Additional, operation-specific parameter
+ (optional) 
 
             try
             {
-                // performs an inference, and returns the derived facts as bound variables
-                Bindings result = apiInstance.evaluate(modelId, versionTag, features);
+                // Derives inferred features, based on input bindings
+                Bindings result = apiInstance.evaluate(modelId, versionTag, features, xParams);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3594,12 +4261,16 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\ReasoningApi();
-$modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+$modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 $versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 $features = ; // Bindings | 
+$xParams = xParams_example; // String | Additional, operation-specific parameter
+
 
 try {
-    $result = $api_instance->evaluate($modelId, $versionTag, $features);
+    $result = $api_instance->evaluate($modelId, $versionTag, $features, $xParams);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReasoningApi->evaluate: ', $e->getMessage(), PHP_EOL;
@@ -3613,12 +4284,16 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::ReasoningApi;
 
 my $api_instance = WWW::SwaggerClient::ReasoningApi->new();
-my $modelId = ; # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+my $modelId = ; # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 my $versionTag = versionTag_example; # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 my $features = WWW::SwaggerClient::Object::Bindings->new(); # Bindings | 
+my $xParams = xParams_example; # String | Additional, operation-specific parameter
+
 
 eval { 
-    my $result = $api_instance->evaluate(modelId => $modelId, versionTag => $versionTag, features => $features);
+    my $result = $api_instance->evaluate(modelId => $modelId, versionTag => $versionTag, features => $features, xParams => $xParams);
     print Dumper($result);
 };
 if ($@) {
@@ -3635,13 +4310,17 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ReasoningApi()
-modelId =  # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+modelId =  # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 versionTag = versionTag_example # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
-features =  # Bindings | 
+features =  # Bindings |  (optional)
+xParams = xParams_example # String | Additional, operation-specific parameter
+ (optional)
 
 try: 
-    # performs an inference, and returns the derived facts as bound variables
-    api_response = api_instance.evaluate(modelId, versionTag, features)
+    # Derives inferred features, based on input bindings
+    api_response = api_instance.evaluate(modelId, versionTag, features=features, xParams=xParams)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ReasoningApi->evaluate: %s\n" % e)</code></pre>
@@ -3671,7 +4350,9 @@ except ApiException as e:
                     </span>
 
                     <div class="inner description">
-                        The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                        The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
                     </div>
             </div>
                 <div class="inner required">
@@ -3707,6 +4388,34 @@ except ApiException as e:
 
                             </table>
 
+                            <div class="methodsubtabletitle">Header parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                  <tr><td style="width:150px;">X-params</td>
+<td>
+
+
+    <div id="d2e199_evaluate_xParams">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        Additional, operation-specific parameter
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                            </table>
 
                             <div class="methodsubtabletitle">Body parameters</div>
                             <table id="methodsubtable">
@@ -3714,7 +4423,7 @@ except ApiException as e:
                                 <th width="150px">Name</th>
                                 <th>Description</th>
                               </tr>
-                                <tr><td style="width:150px;">features <span style="color:red;">*</span></td>
+                                <tr><td style="width:150px;">features </td>
 <td>
 
 
@@ -3723,7 +4432,7 @@ $(document).ready(function() {
   var schemaWrapper = {
   "in" : "body",
   "name" : "features",
-  "required" : true,
+  "required" : false,
   "schema" : {
     "$ref" : "#/definitions/Bindings"
   }
@@ -3753,7 +4462,8 @@ $(document).ready(function() {
 
 
                           <h2>Responses</h2>
-                            <h3> Status: 200 - The results of the computation, returned synchronously </h3>
+                            <h3> Status: 200 - The inferred values for the KB&#39;s output variables
+ </h3>
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
@@ -3768,7 +4478,7 @@ $(document).ready(function() {
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
-  "description" : "The results of the computation, returned synchronously",
+  "description" : "The inferred values for the KB's output variables\n",
   "schema" : {
     "$ref" : "#/definitions/Bindings"
   }
@@ -3803,12 +4513,15 @@ $(document).ready(function() {
                       <article id="api-Reasoning-infer-0" data-group="User" data-name="infer" data-version="0">
                         <div class="pull-left">
                           <h1>infer</h1>
-                          <p>performs an inference, deriving all logical consequences of the KB</p>
+                          <p>Derives all logical consequences of a given KB</p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
                         <p></p>
-                        <p class="marked"></p>
+                        <p class="marked">Derives the necessary, inferred consequences of a given (asserted) Knowledge Base,
+by means of logical derivation.
+The client may optionally provide some input Bindings
+</p>
                         <p></p>
                         <br />
                         <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/models/{modelId}/versions/{versionTag}/reasoners/inferences</span></code></pre>
@@ -3831,7 +4544,7 @@ $(document).ready(function() {
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Reasoning-infer-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v4/models/{modelId}/versions/{versionTag}/reasoners/inferences"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v5/models/{modelId}/versions/{versionTag}/reasoners/inferences"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Reasoning-infer-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -3847,11 +4560,15 @@ public class ReasoningApiExample {
     public static void main(String[] args) {
         
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
         Bindings features = ; // Bindings | 
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            KnowledgeCarrier result = apiInstance.infer(modelId, versionTag, features);
+            KnowledgeCarrier result = apiInstance.infer(modelId, versionTag, features, xParams);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#infer");
@@ -3868,11 +4585,15 @@ public class ReasoningApiExample {
 
     public static void main(String[] args) {
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
         Bindings features = ; // Bindings | 
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            KnowledgeCarrier result = apiInstance.infer(modelId, versionTag, features);
+            KnowledgeCarrier result = apiInstance.infer(modelId, versionTag, features, xParams);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#infer");
@@ -3886,16 +4607,21 @@ public class ReasoningApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-Reasoning-infer-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 String *versionTag = versionTag_example; // The Identifier os a specific version of a Model, within the series identified by a modelId.
-Bindings *features = ; // 
+Bindings *features = ; //  (optional)
+String *xParams = xParams_example; // Additional, operation-specific parameter
+ (optional)
 
 ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
-// performs an inference, deriving all logical consequences of the KB
+// Derives all logical consequences of a given KB
 [apiInstance inferWith:modelId
     versionTag:versionTag
     features:features
+    xParams:xParams
               completionHandler: ^(KnowledgeCarrier output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -3912,12 +4638,17 @@ ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
 var api = new Api4KpKnowledgeReasoningApi.ReasoningApi()
 
-var modelId = ; // {UUID} The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+var modelId = ; // {UUID} The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 
 var versionTag = versionTag_example; // {String} The Identifier os a specific version of a Model, within the series identified by a modelId.
 
-var features = ; // {Bindings} 
+var opts = { 
+  'features': , // {Bindings} 
+  'xParams': xParams_example // {String} Additional, operation-specific parameter
 
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -3926,7 +4657,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.infer(modelId, versionTag, features, callback);
+api.infer(modelId, versionTag, , opts, callback);
 </code></pre>
                             </div>
 
@@ -3948,14 +4679,18 @@ namespace Example
         {
             
             var apiInstance = new ReasoningApi();
-            var modelId = new UUID(); // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+            var modelId = new UUID(); // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
             var versionTag = versionTag_example;  // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
-            var features = new Bindings(); // Bindings | 
+            var features = new Bindings(); // Bindings |  (optional) 
+            var xParams = xParams_example;  // String | Additional, operation-specific parameter
+ (optional) 
 
             try
             {
-                // performs an inference, deriving all logical consequences of the KB
-                KnowledgeCarrier result = apiInstance.infer(modelId, versionTag, features);
+                // Derives all logical consequences of a given KB
+                KnowledgeCarrier result = apiInstance.infer(modelId, versionTag, features, xParams);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3973,12 +4708,16 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\ReasoningApi();
-$modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+$modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 $versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 $features = ; // Bindings | 
+$xParams = xParams_example; // String | Additional, operation-specific parameter
+
 
 try {
-    $result = $api_instance->infer($modelId, $versionTag, $features);
+    $result = $api_instance->infer($modelId, $versionTag, $features, $xParams);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReasoningApi->infer: ', $e->getMessage(), PHP_EOL;
@@ -3992,12 +4731,16 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::ReasoningApi;
 
 my $api_instance = WWW::SwaggerClient::ReasoningApi->new();
-my $modelId = ; # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+my $modelId = ; # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 my $versionTag = versionTag_example; # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 my $features = WWW::SwaggerClient::Object::Bindings->new(); # Bindings | 
+my $xParams = xParams_example; # String | Additional, operation-specific parameter
+
 
 eval { 
-    my $result = $api_instance->infer(modelId => $modelId, versionTag => $versionTag, features => $features);
+    my $result = $api_instance->infer(modelId => $modelId, versionTag => $versionTag, features => $features, xParams => $xParams);
     print Dumper($result);
 };
 if ($@) {
@@ -4014,13 +4757,17 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ReasoningApi()
-modelId =  # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+modelId =  # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 versionTag = versionTag_example # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
-features =  # Bindings | 
+features =  # Bindings |  (optional)
+xParams = xParams_example # String | Additional, operation-specific parameter
+ (optional)
 
 try: 
-    # performs an inference, deriving all logical consequences of the KB
-    api_response = api_instance.infer(modelId, versionTag, features)
+    # Derives all logical consequences of a given KB
+    api_response = api_instance.infer(modelId, versionTag, features=features, xParams=xParams)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ReasoningApi->infer: %s\n" % e)</code></pre>
@@ -4050,7 +4797,9 @@ except ApiException as e:
                     </span>
 
                     <div class="inner description">
-                        The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                        The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
                     </div>
             </div>
                 <div class="inner required">
@@ -4086,6 +4835,34 @@ except ApiException as e:
 
                             </table>
 
+                            <div class="methodsubtabletitle">Header parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                  <tr><td style="width:150px;">X-params</td>
+<td>
+
+
+    <div id="d2e199_infer_xParams">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        Additional, operation-specific parameter
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                            </table>
 
                             <div class="methodsubtabletitle">Body parameters</div>
                             <table id="methodsubtable">
@@ -4093,7 +4870,7 @@ except ApiException as e:
                                 <th width="150px">Name</th>
                                 <th>Description</th>
                               </tr>
-                                <tr><td style="width:150px;">features <span style="color:red;">*</span></td>
+                                <tr><td style="width:150px;">features </td>
 <td>
 
 
@@ -4102,7 +4879,7 @@ $(document).ready(function() {
   var schemaWrapper = {
   "in" : "body",
   "name" : "features",
-  "required" : true,
+  "required" : false,
   "schema" : {
     "$ref" : "#/definitions/Bindings"
   }
@@ -4132,7 +4909,8 @@ $(document).ready(function() {
 
 
                           <h2>Responses</h2>
-                            <h3> Status: 200 - The results of the computation, returned synchronously </h3>
+                            <h3> Status: 200 - The inferred axioms
+ </h3>
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
@@ -4147,7 +4925,7 @@ $(document).ready(function() {
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
-  "description" : "The results of the computation, returned synchronously",
+  "description" : "The inferred axioms\n",
   "schema" : {
     "$ref" : "#/definitions/KnowledgeCarrier"
   }
@@ -4182,12 +4960,17 @@ $(document).ready(function() {
                       <article id="api-Reasoning-listMembership-0" data-group="User" data-name="listMembership" data-version="0">
                         <div class="pull-left">
                           <h1>listMembership</h1>
-                          <p></p>
+                          <p>lists all the classes that an individual is member of</p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
                         <p></p>
-                        <p class="marked">lists all the classes that an individual is member of</p>
+                        <p class="marked">Given the id of an individual, and optional features that describe that individual,
+returns all the classes that the individual is a member of, or all the types
+that the individual is an instance of.
+
+This operation supports both qualitative and quantitative classifications.
+</p>
                         <p></p>
                         <br />
                         <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/models/{modelId}/versions/{versionTag}/reasoners/classifiers/individuals/{entityId}</span></code></pre>
@@ -4210,7 +4993,7 @@ $(document).ready(function() {
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Reasoning-listMembership-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v4/models/{modelId}/versions/{versionTag}/reasoners/classifiers/individuals/{entityId}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v5/models/{modelId}/versions/{versionTag}/reasoners/classifiers/individuals/{entityId}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Reasoning-listMembership-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -4226,11 +5009,16 @@ public class ReasoningApiExample {
     public static void main(String[] args) {
         
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
         UUID entityId = ; // UUID | 
+        Bindings features = ; // Bindings | 
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            array[Pointer] result = apiInstance.listMembership(modelId, versionTag, entityId);
+            array[Pointer] result = apiInstance.listMembership(modelId, versionTag, entityId, features, xParams);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#listMembership");
@@ -4247,11 +5035,16 @@ public class ReasoningApiExample {
 
     public static void main(String[] args) {
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
         UUID entityId = ; // UUID | 
+        Bindings features = ; // Bindings | 
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            array[Pointer] result = apiInstance.listMembership(modelId, versionTag, entityId);
+            array[Pointer] result = apiInstance.listMembership(modelId, versionTag, entityId, features, xParams);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#listMembership");
@@ -4265,15 +5058,23 @@ public class ReasoningApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-Reasoning-listMembership-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 String *versionTag = versionTag_example; // The Identifier os a specific version of a Model, within the series identified by a modelId.
 UUID *entityId = ; // 
+Bindings *features = ; //  (optional)
+String *xParams = xParams_example; // Additional, operation-specific parameter
+ (optional)
 
 ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
+// lists all the classes that an individual is member of
 [apiInstance listMembershipWith:modelId
     versionTag:versionTag
     entityId:entityId
+    features:features
+    xParams:xParams
               completionHandler: ^(array[Pointer] output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -4290,12 +5091,19 @@ ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
 var api = new Api4KpKnowledgeReasoningApi.ReasoningApi()
 
-var modelId = ; // {UUID} The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+var modelId = ; // {UUID} The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 
 var versionTag = versionTag_example; // {String} The Identifier os a specific version of a Model, within the series identified by a modelId.
 
 var entityId = ; // {UUID} 
 
+var opts = { 
+  'features': , // {Bindings} 
+  'xParams': xParams_example // {String} Additional, operation-specific parameter
+
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -4304,7 +5112,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listMembership(modelId, versionTag, entityId, , callback);
+api.listMembership(modelId, versionTag, entityId, , opts, callback);
 </code></pre>
                             </div>
 
@@ -4326,13 +5134,19 @@ namespace Example
         {
             
             var apiInstance = new ReasoningApi();
-            var modelId = new UUID(); // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+            var modelId = new UUID(); // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
             var versionTag = versionTag_example;  // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
             var entityId = new UUID(); // UUID | 
+            var features = new Bindings(); // Bindings |  (optional) 
+            var xParams = xParams_example;  // String | Additional, operation-specific parameter
+ (optional) 
 
             try
             {
-                array[Pointer] result = apiInstance.listMembership(modelId, versionTag, entityId);
+                // lists all the classes that an individual is member of
+                array[Pointer] result = apiInstance.listMembership(modelId, versionTag, entityId, features, xParams);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4350,12 +5164,17 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\ReasoningApi();
-$modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+$modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 $versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 $entityId = ; // UUID | 
+$features = ; // Bindings | 
+$xParams = xParams_example; // String | Additional, operation-specific parameter
+
 
 try {
-    $result = $api_instance->listMembership($modelId, $versionTag, $entityId);
+    $result = $api_instance->listMembership($modelId, $versionTag, $entityId, $features, $xParams);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReasoningApi->listMembership: ', $e->getMessage(), PHP_EOL;
@@ -4369,12 +5188,17 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::ReasoningApi;
 
 my $api_instance = WWW::SwaggerClient::ReasoningApi->new();
-my $modelId = ; # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+my $modelId = ; # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 my $versionTag = versionTag_example; # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 my $entityId = ; # UUID | 
+my $features = WWW::SwaggerClient::Object::Bindings->new(); # Bindings | 
+my $xParams = xParams_example; # String | Additional, operation-specific parameter
+
 
 eval { 
-    my $result = $api_instance->listMembership(modelId => $modelId, versionTag => $versionTag, entityId => $entityId);
+    my $result = $api_instance->listMembership(modelId => $modelId, versionTag => $versionTag, entityId => $entityId, features => $features, xParams => $xParams);
     print Dumper($result);
 };
 if ($@) {
@@ -4391,12 +5215,18 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ReasoningApi()
-modelId =  # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+modelId =  # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 versionTag = versionTag_example # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 entityId =  # UUID | 
+features =  # Bindings |  (optional)
+xParams = xParams_example # String | Additional, operation-specific parameter
+ (optional)
 
 try: 
-    api_response = api_instance.list_membership(modelId, versionTag, entityId)
+    # lists all the classes that an individual is member of
+    api_response = api_instance.list_membership(modelId, versionTag, entityId, features=features, xParams=xParams)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ReasoningApi->listMembership: %s\n" % e)</code></pre>
@@ -4426,7 +5256,9 @@ except ApiException as e:
                     </span>
 
                     <div class="inner description">
-                        The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                        The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
                     </div>
             </div>
                 <div class="inner required">
@@ -4485,12 +5317,84 @@ except ApiException as e:
 
                             </table>
 
+                            <div class="methodsubtabletitle">Header parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                  <tr><td style="width:150px;">X-params</td>
+<td>
 
+
+    <div id="d2e199_listMembership_xParams">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        Additional, operation-specific parameter
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                            </table>
+
+                            <div class="methodsubtabletitle">Body parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                <tr><td style="width:150px;">features </td>
+<td>
+
+
+<script>
+$(document).ready(function() {
+  var schemaWrapper = {
+  "in" : "body",
+  "name" : "features",
+  "required" : false,
+  "schema" : {
+    "$ref" : "#/definitions/Bindings"
+  },
+  "x-codegen-hasMoreRequired" : true,
+  "x-codegen-hasMoreOptional" : true
+};
+  var schema = schemaWrapper.schema;
+  if (schema.$ref != null) {
+    schema = defsParser.$refs.get(schema.$ref);
+  } else {
+    schemaWrapper.definitions = Object.assign({}, defs);
+    $RefParser.dereference(schemaWrapper).catch(function(err) {
+      console.log(err);
+    });
+  }
+
+  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
+  var result = $('#d2e199_listMembership_features');
+  result.empty();
+  result.append(view.render());
+});
+</script>
+<div id="d2e199_listMembership_features"></div>
+</td>
+</tr>
+
+                            </table>
 
 
 
                           <h2>Responses</h2>
-                            <h3> Status: 200 - The bound expression </h3>
+                            <h3> Status: 200 - References to the class(es) that the individual is a member of
+ </h3>
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
@@ -4505,7 +5409,7 @@ except ApiException as e:
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
-  "description" : "The bound expression",
+  "description" : "References to the class(es) that the individual is a member of\n",
   "schema" : {
     "type" : "array",
     "items" : {
@@ -4543,12 +5447,13 @@ except ApiException as e:
                       <article id="api-Reasoning-listSubsumptions-0" data-group="User" data-name="listSubsumptions" data-version="0">
                         <div class="pull-left">
                           <h1>listSubsumptions</h1>
-                          <p></p>
+                          <p>lists all the superclasses of a given Class</p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
                         <p></p>
-                        <p class="marked">lists all the superclasses of a given Class</p>
+                        <p class="marked">Given the identifier of a class, returns all the classes that the given class is a subclass of.
+</p>
                         <p></p>
                         <br />
                         <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/models/{modelId}/versions/{versionTag}/reasoners/classifiers/classes/{entityId}</span></code></pre>
@@ -4571,7 +5476,7 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Reasoning-listSubsumptions-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v4/models/{modelId}/versions/{versionTag}/reasoners/classifiers/classes/{entityId}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/inference/v5/models/{modelId}/versions/{versionTag}/reasoners/classifiers/classes/{entityId}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Reasoning-listSubsumptions-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -4587,11 +5492,15 @@ public class ReasoningApiExample {
     public static void main(String[] args) {
         
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
         UUID entityId = ; // UUID | 
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            array[Pointer] result = apiInstance.listSubsumptions(modelId, versionTag, entityId);
+            array[Pointer] result = apiInstance.listSubsumptions(modelId, versionTag, entityId, xParams);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#listSubsumptions");
@@ -4608,11 +5517,15 @@ public class ReasoningApiExample {
 
     public static void main(String[] args) {
         ReasoningApi apiInstance = new ReasoningApi();
-        UUID modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+        UUID modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
         String versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
         UUID entityId = ; // UUID | 
+        String xParams = xParams_example; // String | Additional, operation-specific parameter
+
         try {
-            array[Pointer] result = apiInstance.listSubsumptions(modelId, versionTag, entityId);
+            array[Pointer] result = apiInstance.listSubsumptions(modelId, versionTag, entityId, xParams);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReasoningApi#listSubsumptions");
@@ -4626,15 +5539,21 @@ public class ReasoningApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-Reasoning-listSubsumptions-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                              <pre class="prettyprint"><code class="language-cpp">UUID *modelId = ; // The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 String *versionTag = versionTag_example; // The Identifier os a specific version of a Model, within the series identified by a modelId.
 UUID *entityId = ; // 
+String *xParams = xParams_example; // Additional, operation-specific parameter
+ (optional)
 
 ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
+// lists all the superclasses of a given Class
 [apiInstance listSubsumptionsWith:modelId
     versionTag:versionTag
     entityId:entityId
+    xParams:xParams
               completionHandler: ^(array[Pointer] output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -4651,12 +5570,18 @@ ReasoningApi *apiInstance = [[ReasoningApi alloc] init];
 
 var api = new Api4KpKnowledgeReasoningApi.ReasoningApi()
 
-var modelId = ; // {UUID} The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+var modelId = ; // {UUID} The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 
 var versionTag = versionTag_example; // {String} The Identifier os a specific version of a Model, within the series identified by a modelId.
 
 var entityId = ; // {UUID} 
 
+var opts = { 
+  'xParams': xParams_example // {String} Additional, operation-specific parameter
+
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -4665,7 +5590,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listSubsumptions(modelId, versionTag, entityId, , callback);
+api.listSubsumptions(modelId, versionTag, entityId, , opts, callback);
 </code></pre>
                             </div>
 
@@ -4687,13 +5612,18 @@ namespace Example
         {
             
             var apiInstance = new ReasoningApi();
-            var modelId = new UUID(); // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+            var modelId = new UUID(); // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
             var versionTag = versionTag_example;  // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
             var entityId = new UUID(); // UUID | 
+            var xParams = xParams_example;  // String | Additional, operation-specific parameter
+ (optional) 
 
             try
             {
-                array[Pointer] result = apiInstance.listSubsumptions(modelId, versionTag, entityId);
+                // lists all the superclasses of a given Class
+                array[Pointer] result = apiInstance.listSubsumptions(modelId, versionTag, entityId, xParams);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4711,12 +5641,16 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\Api\ReasoningApi();
-$modelId = ; // UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+$modelId = ; // UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 $versionTag = versionTag_example; // String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 $entityId = ; // UUID | 
+$xParams = xParams_example; // String | Additional, operation-specific parameter
+
 
 try {
-    $result = $api_instance->listSubsumptions($modelId, $versionTag, $entityId);
+    $result = $api_instance->listSubsumptions($modelId, $versionTag, $entityId, $xParams);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReasoningApi->listSubsumptions: ', $e->getMessage(), PHP_EOL;
@@ -4730,12 +5664,16 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::ReasoningApi;
 
 my $api_instance = WWW::SwaggerClient::ReasoningApi->new();
-my $modelId = ; # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+my $modelId = ; # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 my $versionTag = versionTag_example; # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 my $entityId = ; # UUID | 
+my $xParams = xParams_example; # String | Additional, operation-specific parameter
+
 
 eval { 
-    my $result = $api_instance->listSubsumptions(modelId => $modelId, versionTag => $versionTag, entityId => $entityId);
+    my $result = $api_instance->listSubsumptions(modelId => $modelId, versionTag => $versionTag, entityId => $entityId, xParams => $xParams);
     print Dumper($result);
 };
 if ($@) {
@@ -4752,12 +5690,17 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ReasoningApi()
-modelId =  # UUID | The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+modelId =  # UUID | The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
 versionTag = versionTag_example # String | The Identifier os a specific version of a Model, within the series identified by a modelId.
 entityId =  # UUID | 
+xParams = xParams_example # String | Additional, operation-specific parameter
+ (optional)
 
 try: 
-    api_response = api_instance.list_subsumptions(modelId, versionTag, entityId)
+    # lists all the superclasses of a given Class
+    api_response = api_instance.list_subsumptions(modelId, versionTag, entityId, xParams=xParams)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ReasoningApi->listSubsumptions: %s\n" % e)</code></pre>
@@ -4787,7 +5730,9 @@ except ApiException as e:
                     </span>
 
                     <div class="inner description">
-                        The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment) that is deployed and executed as a Service. This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+                        The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
+
                     </div>
             </div>
                 <div class="inner required">
@@ -4846,12 +5791,41 @@ except ApiException as e:
 
                             </table>
 
+                            <div class="methodsubtabletitle">Header parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                  <tr><td style="width:150px;">X-params</td>
+<td>
+
+
+    <div id="d2e199_listSubsumptions_xParams">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        Additional, operation-specific parameter
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                            </table>
 
 
 
 
                           <h2>Responses</h2>
-                            <h3> Status: 200 - The bound expression </h3>
+                            <h3> Status: 200 - References to the superclasses of the given class
+ </h3>
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
@@ -4866,7 +5840,7 @@ except ApiException as e:
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
-  "description" : "The bound expression",
+  "description" : "References to the superclasses of the given class\n",
   "schema" : {
     "type" : "array",
     "items" : {

@@ -14,41 +14,41 @@ definitions:
   PublicationStatus_Valueset:
     type: string
     enum:
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#bddb54bc-7106-3dbb-8b39-489f0cd6b6b2
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#f17ee323-c7c0-3a08-81ab-44617f028abb
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#796d67d5-eeb8-3222-92db-9c2e23256297
       - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#3dd247ca-998d-3d9a-94e8-bc3e316248e9
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#aa944e6c-b76d-3e69-8b74-a741859e38f6
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#0d111f56-9649-35f5-a2aa-aaf9d2980787
       - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#616ccd07-b3ff-349e-b402-70692697b62a
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#ca50cfcc-f8d5-361c-87ef-2cdc895170ae
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#f91b2829-bf86-33e3-9809-4e1dedb6f947
       - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#35de502b-0c10-3a63-809d-a8d1ece87598
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#8f888fed-f6bd-3ff7-893c-6d76bb8dc21c
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#a518622c-abb0-3bea-b6f0-04f71987763f
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#d222cba9-1124-361b-a1a9-0cbd75a3f56c
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#3ebd43fb-0ca8-3e5d-8aae-6b6f19703a39
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#0311978d-38d4-3b1b-90cd-75c1088a0173
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#066a4b28-b5bb-390c-8e29-8fa35cb5c2a2
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#add4f225-f44b-37ef-9936-68331f74c94e
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#1f7b6951-ed4d-3a88-9b4f-ff0a98a3d96e
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#4dc665b2-4b5b-3771-b44b-470be242c55e
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#e8d02d99-8570-3cca-9cfd-d700245d5c74
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#d270ed17-1cea-3cff-ad11-0e317201e9a8
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#f7205f1f-3197-39b5-a0aa-e55597635d5e
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#9e28825f-032e-340a-bbf6-1e093e7d7ac7
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#028dce7f-598c-380b-a369-7045a8316ce2
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#1cf38cc8-84a4-35fd-a0d3-930f78fdb4e5
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#8e22d83e-4a93-327c-9a54-f09f37324521
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#d47cb8a8-dac9-3f6a-a880-cc1667879f2d
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#3bb94c8f-b943-3244-8e9c-3ab2efd8eb64
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#bddb54bc-7106-3dbb-8b39-489f0cd6b6b2
       - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#e316b88e-a0e9-3bd6-a6ab-c1d274bf5062
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#6370a2f1-10a1-3e01-a0b4-b568cab64ddd
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#410d9893-9d41-36ad-b562-b97046d2a3eb
       - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#d962ffb9-d6c6-350b-953a-1d8feb738837
       - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#10620571-dcb5-3fdc-83d7-b0113ff25bda
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#d47cb8a8-dac9-3f6a-a880-cc1667879f2d
       - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#806552d7-efc7-3e39-bf2e-b271c9df5d37
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#a1d8d8ff-25fc-33cf-8d9f-219c0883f9a5
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#0d111f56-9649-35f5-a2aa-aaf9d2980787
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#410d9893-9d41-36ad-b562-b97046d2a3eb
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#9e28825f-032e-340a-bbf6-1e093e7d7ac7
       - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#a2675ee1-c42f-3033-9cc2-2b88d9bcfdec
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#3bb94c8f-b943-3244-8e9c-3ab2efd8eb64
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#e8d02d99-8570-3cca-9cfd-d700245d5c74
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#028dce7f-598c-380b-a369-7045a8316ce2
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#1cf38cc8-84a4-35fd-a0d3-930f78fdb4e5
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#1f7b6951-ed4d-3a88-9b4f-ff0a98a3d96e
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#4dc665b2-4b5b-3771-b44b-470be242c55e
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#d222cba9-1124-361b-a1a9-0cbd75a3f56c
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#0311978d-38d4-3b1b-90cd-75c1088a0173
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#066a4b28-b5bb-390c-8e29-8fa35cb5c2a2
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#a1d8d8ff-25fc-33cf-8d9f-219c0883f9a5
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#a518622c-abb0-3bea-b6f0-04f71987763f
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#8f888fed-f6bd-3ff7-893c-6d76bb8dc21c
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#3ebd43fb-0ca8-3e5d-8aae-6b6f19703a39
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#6370a2f1-10a1-3e01-a0b4-b568cab64ddd
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#ca50cfcc-f8d5-361c-87ef-2cdc895170ae
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#d270ed17-1cea-3cff-ad11-0e317201e9a8
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#f7205f1f-3197-39b5-a0aa-e55597635d5e
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#8e22d83e-4a93-327c-9a54-f09f37324521
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#796d67d5-eeb8-3222-92db-9c2e23256297
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#f91b2829-bf86-33e3-9809-4e1dedb6f947
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#add4f225-f44b-37ef-9936-68331f74c94e
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#aa944e6c-b76d-3e69-8b74-a741859e38f6
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus#f17ee323-c7c0-3a08-81ab-44617f028abb
     xml:
       namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus/2014-02-01'

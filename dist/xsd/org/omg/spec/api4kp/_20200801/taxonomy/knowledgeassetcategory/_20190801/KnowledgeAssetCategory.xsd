@@ -16,12 +16,12 @@
 
     <xs:simpleType name="KnowledgeAssetCategory_Valueset">
       <xs:restriction base="xs:string">
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory#7db1af1f-1703-356f-bddc-8cb0a81a442c"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory#3f55a496-5ff3-3989-bf0a-15a61da8b09c"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory#d4b0e868-60c8-387d-a139-e3c35427bfb6"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory#2d705e5a-22d4-3368-98a6-e5ea7d52fd05"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory#64719ac1-415f-3747-843c-e1e8949071ff"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory#f9e2a69d-0f6e-3a2b-94c4-beaf6fdadaea"/>
-        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory#7db1af1f-1703-356f-bddc-8cb0a81a442c"/>
-        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory#d4b0e868-60c8-387d-a139-e3c35427bfb6"/>
-        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory#3f55a496-5ff3-3989-bf0a-15a61da8b09c"/>
-        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory#2d705e5a-22d4-3368-98a6-e5ea7d52fd05"/>
       </xs:restriction>
     </xs:simpleType>
 </xs:schema>

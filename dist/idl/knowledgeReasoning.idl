@@ -93,7 +93,7 @@ typedef sequence<KnowledgeCarrier> KnowledgeCarrierList;
 }; // services
 module api {
 module inference {
-module v4 {
+module v5 {
 interface Model {
   ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier getModel (
       in string modelid , 
@@ -106,55 +106,66 @@ interface Reasoning {
   ::org::omg::spec::api4kp::_20200801::datatypes::BindingsList askQuery (
       in string modelid , 
       in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier query , 
+      in string xparams , 
       in string versiontag 
   );
-  void checkConsistency (
+  boolean checkConsistency (
       in string modelid , 
+      in string xparams , 
       in string versiontag 
   );
-  void checkMembership (
+  boolean checkMembership (
       in string classid , 
       in string modelid , 
+      in string xparams , 
       in string entityid , 
       in string versiontag 
   );
   ::org::omg::spec::api4kp::_20200801::datatypes::BindingsList checkSatisfiability (
       in string modelid , 
+      in string xparams , 
       in string versiontag 
   );
-  void checkSubsumption (
+  boolean checkSubsumption (
       in string classid , 
       in string modelid , 
+      in string xparams , 
       in string entityid , 
       in string versiontag 
   );
-  void entails (
+  boolean entails (
       in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier potentialconsequence , 
       in string modelid , 
+      in string xparams , 
       in string versiontag 
   );
   ::org::omg::spec::api4kp::_20200801::datatypes::Bindings evaluate (
       in ::org::omg::spec::api4kp::_20200801::datatypes::Bindings features , 
       in string modelid , 
+      in string xparams , 
       in string versiontag 
   );
   ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier infer (
       in ::org::omg::spec::api4kp::_20200801::datatypes::Bindings features , 
       in string modelid , 
+      in string xparams , 
       in string versiontag 
   );
   ::org::omg::spec::api4kp::_20200801::id::PointerList listMembership (
+      in ::org::omg::spec::api4kp::_20200801::datatypes::Bindings features , 
       in string modelid , 
+      in string xparams , 
       in string entityid , 
       in string versiontag 
   );
   ::org::omg::spec::api4kp::_20200801::id::PointerList listSubsumptions (
       in string modelid , 
+      in string xparams , 
       in string entityid , 
       in string versiontag 
   );
 };
-}; // v4
+}; // v5
 }; // inference
 }; // api
 }; // _20200801

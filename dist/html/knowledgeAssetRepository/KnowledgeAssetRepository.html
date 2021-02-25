@@ -854,8 +854,7 @@ margin-bottom: 20px;
             <h2 id="welcome-to-apidoc">API and SDK Documentation</h2>
               <div class="app-desc">Version: 5.0.0</div>
             <hr>
-            <div><p>Maturity - HIGH (possibly subject to extensions)</p>
-<p>APIs for a Semantic Knowledge Asset Repository.</p>
+            <div><p>APIs for a Semantic Knowledge Asset Repository.</p>
 <p><strong>Knowledge Assets</strong>
 Knowledge Assets are immutable, versioned works of knowledge (aka 'Piece of Knowledge', or 'Piece of Content'), which are expressible in any form that is fit for consumption by a designated audience.
 Assets managed through a Knowledge Asset Catalog &amp; Repository are usually, though not necessarily, <em>Enterprise</em> Knowledge Assets, i.e. Assets whose content is endorsed by some Subject Matter Expert (party), and whose identification and life cycle is managed by an Authority.</p>
@@ -896,6 +895,8 @@ A Knowledge Asset Repository SHOULD delegate to a Language Service the ability t
 A Knowledge Asset Repository SHOULD leverage a Knowledge Base Construction Service to manipulate artifacts, especially for the purpose of constructing, deconstructing, flattening and generating metadata.
 A Knowledge Asset Repository MIGHT also interact with a Reasoning Service, which SHOULD treat the Knowledge Asset Graph as a Knowledge Base, performing inferences and answering queries.
 A Knowledge Asset Repository SHALL NOT, instead, leverage a Reasoning Service to reason <em>with</em> the Artifacts' content for any other reason that the extraction/validation of the Asset metadata. This choice is motivated by the different SLA constraints (e.g. security, traffic/load) involved when knowledge is 'in motion' rather than 'at rest'.</p>
+<p><strong>Maturity</strong>
+As of this version, this API is considered stable</p>
 </div>
           </div>
         </div>
@@ -939,7 +940,7 @@ Support for more general forms of Surrogates, and negotiation thereof, is provid
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetCatalog-getKnowledgeAsset-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetCatalog-getKnowledgeAsset-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -1366,7 +1367,7 @@ Dynamic information, such as the number of stored Assets, can be obtained queryi
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetCatalog-getKnowledgeAssetCatalog-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetCatalog-getKnowledgeAssetCatalog-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -1637,7 +1638,7 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetCatalog-getKnowledgeAssetVersion-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetCatalog-getKnowledgeAssetVersion-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -2061,7 +2062,7 @@ The native representation of the Graph (e.g. RDF) is server specific, but can be
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetCatalog-getKnowledgeGraph-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/graph"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/graph"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetCatalog-getKnowledgeGraph-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -2380,7 +2381,7 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetCatalog-initKnowledgeAsset-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetCatalog-initKnowledgeAsset-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -2701,7 +2702,7 @@ For each Asset version, returns a pointer to the LATEST Canonical Surrogate for 
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetCatalog-listKnowledgeAssetVersions-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions?offset=&limit=&beforeTag=&afterTag=&sort="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions?offset=&limit=&beforeTag=&afterTag=&sort="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetCatalog-listKnowledgeAssetVersions-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -3270,7 +3271,7 @@ Pagination parameters are optionally supported.
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetCatalog-listKnowledgeAssets-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets?assetTypeTag=&assetAnnotationTag=&assetAnnotationConcept=&offset=&limit="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets?assetTypeTag=&assetAnnotationTag=&assetAnnotationConcept=&offset=&limit="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetCatalog-listKnowledgeAssets-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -3774,7 +3775,7 @@ ignoring all previous elements.
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetCatalog-queryKnowledgeAssetGraph-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/graph"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/graph"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetCatalog-queryKnowledgeAssetGraph-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -4137,7 +4138,7 @@ If an Asset version with the given ID does not exist, it will be created in the 
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetCatalog-setKnowledgeAssetVersion-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X PUT "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X PUT "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetCatalog-setKnowledgeAssetVersion-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -4554,7 +4555,7 @@ Anonymous Composite Assets are treated like other Assets. The components, and re
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-addCanonicalKnowledgeAssetSurrogate-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/surrogate"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/surrogate"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-addCanonicalKnowledgeAssetSurrogate-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -4979,7 +4980,7 @@ The server COULD validate the new Carrier against the client-provided representa
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-addKnowledgeAssetCarrier-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/carriers"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/carriers"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-addKnowledgeAssetCarrier-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -5436,7 +5437,7 @@ Surrogate for the given Asset, incrementing the version of the Surrogate.
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-addKnowledgeAssetSurrogate-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/surrogates"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/surrogates"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-addKnowledgeAssetSurrogate-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -5886,7 +5887,7 @@ Artifact, and used to construct an Anonymous Composite Knowledge Artifact
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-getAnonymousCompositeKnowledgeAssetCarrier-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/composite/carrier"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/composite/carrier"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-getAnonymousCompositeKnowledgeAssetCarrier-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -6320,7 +6321,7 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-getAnonymousCompositeKnowledgeAssetStructure-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/composite/struct"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/composite/struct"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-getAnonymousCompositeKnowledgeAssetStructure-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -6753,7 +6754,7 @@ an Anonymous Composite Knowledge Asset Surrogate
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-getAnonymousCompositeKnowledgeAssetSurrogate-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/composite/surrogate"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/composite/surrogate"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-getAnonymousCompositeKnowledgeAssetSurrogate-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -7192,7 +7193,7 @@ The server SHOULD honor Content Negotiation in the choice of artifacts, and resp
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-getCompositeKnowledgeAssetCarrier-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/composite/carrier?flat="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/composite/carrier?flat="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-getCompositeKnowledgeAssetCarrier-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -7731,7 +7732,7 @@ If invoked on an atomic Knowledge Asset, returns a singleton Graph with one node
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-getCompositeKnowledgeAssetStructure-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/composite/struct"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/composite/struct"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-getCompositeKnowledgeAssetStructure-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -8170,7 +8171,7 @@ is defined for the retrieved Surrogates.
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-getCompositeKnowledgeAssetSurrogate-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/composite/surrogate?flat="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/composite/surrogate?flat="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-getCompositeKnowledgeAssetSurrogate-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -8709,7 +8710,7 @@ For the given Knowledge Asset:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-getKnowledgeAssetCanonicalCarrier-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/carrier"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/carrier"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-getKnowledgeAssetCanonicalCarrier-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -9189,7 +9190,7 @@ For the given Knowledge Asset:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-getKnowledgeAssetCanonicalCarrierContent-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/carrier/content"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/carrier/content"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-getKnowledgeAssetCanonicalCarrierContent-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -9667,7 +9668,7 @@ If content negotiation is not used, the Surrogate in response Knowledge Carrier 
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-getKnowledgeAssetCanonicalSurrogate-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/surrogate"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/surrogate"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-getKnowledgeAssetCanonicalSurrogate-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -10116,7 +10117,7 @@ KnowledgeCarrier to be returned.
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-getKnowledgeAssetCarrier-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/carriers/{artifactId}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/carriers/{artifactId}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-getKnowledgeAssetCarrier-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -10587,7 +10588,7 @@ KnowledgeCarrier to be returned.
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-getKnowledgeAssetCarrierVersion-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/carriers/{artifactId}/versions/{artifactVersionTag}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/carriers/{artifactId}/versions/{artifactVersionTag}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-getKnowledgeAssetCarrierVersion-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -11097,7 +11098,7 @@ This method must return the same data as getKnowledgeAssetCarrierVersionContent,
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-getKnowledgeAssetCarrierVersionContent-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/carriers/{artifactId}/versions/{artifactVersionTag}/content"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/carriers/{artifactId}/versions/{artifactVersionTag}/content"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-getKnowledgeAssetCarrierVersionContent-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -11625,7 +11626,7 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-getKnowledgeAssetSurrogateVersion-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/surrogates/{surrogateId}/versions/{surrogateVersionTag}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/surrogates/{surrogateId}/versions/{surrogateVersionTag}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-getKnowledgeAssetSurrogateVersion-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -12205,7 +12206,7 @@ For a given version of a Knowledge Asset,
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-getKnowledgeAssetVersionCanonicalCarrier-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/carrier"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/carrier"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-getKnowledgeAssetVersionCanonicalCarrier-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -12726,7 +12727,7 @@ For a given version of a Knowledge Asset,
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-getKnowledgeAssetVersionCanonicalCarrierContent-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/carrier/content"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/carrier/content"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-getKnowledgeAssetVersionCanonicalCarrierContent-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -13246,7 +13247,7 @@ If content negotiation is not used, the Surrogate in response Knowledge Carrier 
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-getKnowledgeAssetVersionCanonicalSurrogate-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/surrogate"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/surrogate"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-getKnowledgeAssetVersionCanonicalSurrogate-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -13733,7 +13734,7 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-listKnowledgeAssetCarrierVersions-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/carriers/{artifactId}/versions"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/carriers/{artifactId}/versions"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-listKnowledgeAssetCarrierVersions-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -14168,7 +14169,7 @@ The list should be transparent with respect to Artifacts physically stored, link
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-listKnowledgeAssetCarriers-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/carriers?offset=&limit=&beforeTag=&afterTag=&sort="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/carriers?offset=&limit=&beforeTag=&afterTag=&sort="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-listKnowledgeAssetCarriers-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -14781,7 +14782,7 @@ Assumes the underlying versioning scheme has at least a partial ordering defined
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-listKnowledgeAssetSurrogateVersions-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/surrogates/{surrogateId}/versions?offset=&limit=&beforeTag=&afterTag=&sort="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/surrogates/{surrogateId}/versions?offset=&limit=&beforeTag=&afterTag=&sort="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-listKnowledgeAssetSurrogateVersions-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -15441,7 +15442,7 @@ The response MUST include the Canonical Knowledge Asset Surrogate, as returned b
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-listKnowledgeAssetSurrogates-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/surrogates?offset=&limit=&beforeTag=&afterTag=&sort="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/surrogates?offset=&limit=&beforeTag=&afterTag=&sort="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-listKnowledgeAssetSurrogates-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -16058,7 +16059,7 @@ If (and only if) the Surrogate is updated in the process, its version MUST be in
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-KnowledgeAssetRepository-setKnowledgeAssetCarrierVersion-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X PUT "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v4/cat/assets/{assetId}/versions/{versionTag}/carriers/{artifactId}/versions/{artifactVersionTag}/content"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X PUT "https://localhost/omg.org/spec/API4KP/20200801/api/repository/asset/v5/cat/assets/{assetId}/versions/{versionTag}/carriers/{artifactId}/versions/{artifactVersionTag}/content"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-KnowledgeAssetRepository-setKnowledgeAssetCarrierVersion-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;

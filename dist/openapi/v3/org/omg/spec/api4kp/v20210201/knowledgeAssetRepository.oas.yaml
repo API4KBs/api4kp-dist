@@ -2,8 +2,6 @@ openapi: 3.0.1
 info:
   title: API4KP Knowledge Asset Repository API
   description: |
-    Maturity - HIGH (possibly subject to extensions)
-
     APIs for a Semantic Knowledge Asset Repository.
 
     **Knowledge Assets**
@@ -56,6 +54,9 @@ info:
     A Knowledge Asset Repository SHOULD leverage a Knowledge Base Construction Service to manipulate artifacts, especially for the purpose of constructing, deconstructing, flattening and generating metadata.
     A Knowledge Asset Repository MIGHT also interact with a Reasoning Service, which SHOULD treat the Knowledge Asset Graph as a Knowledge Base, performing inferences and answering queries.
     A Knowledge Asset Repository SHALL NOT, instead, leverage a Reasoning Service to reason _with_ the Artifacts' content for any other reason that the extraction/validation of the Asset metadata. This choice is motivated by the different SLA constraints (e.g. security, traffic/load) involved when knowledge is 'in motion' rather than 'at rest'.
+
+    **Maturity**
+    As of this version, this API is considered stable
   contact:
     name: Davide Sottara
     email: sottara.davide@mayo.edu
@@ -64,7 +65,7 @@ info:
     url: https://www.apache.org/licenses/LICENSE-2.0.html
   version: 5.0.0
 servers:
-- url: /omg.org/spec/API4KP/20200801/api/repository/asset/v4
+- url: /omg.org/spec/API4KP/20200801/api/repository/asset/v5
 tags:
 - name: Knowledge Asset Catalog
   description: |

@@ -10,21 +10,32 @@ info:
     name: Apache License, Version 2.0 
     url: https://www.apache.org/licenses/LICENSE-2.0.html  
   description: |
-    Maturity - STABLE
-
     API that expose the functional capabilities of a Knowledge Artifact Repository Service (KAR), as defined in the OMG API4KP specification. 
     
-    Knowledge Artifact Repositories allow to store and retrieve (copies of) Digital Knowledge Artifacts (KA). KARs treat KAs as black-box binary objects, so there is no limitation nor expectation on the nature of the content, or the requirements to consume it. However, identity and versioning must be supported. 
+    Knowledge Artifact Repositories allow to store and retrieve (copies of) Digital Knowledge Artifacts (KA).
+    KARs treat KAs as black-box binary objects, so there is no limitation nor expectation on the nature of the content, or the requirements to consume it.
+    However, identity and versioning must be supported.
     
-    Identifiers must be universal, unique and opaque, so they MUST be UUID v4 compliant. Version tags can follow different patterns (semantic versioning, incremental numbering, date/time stamps, etc...).  
+    Identifiers must be universal, unique and opaque, so they MUST be UUID v4 compliant.
+    Version tags can follow different patterns (semantic versioning, calendar versioning, incremental numbering, date/time stamps, etc...).
     
-    Special considerations involve the _deletion_ of an Artifact. For traceability and safety purposes, KARs SHOULD NOT allow Artifacts to be deleted in an unrecoverable way. Deletion itself is defined as making an Artifact no longer accessible to a client (i.e. status 404). A server SHOULD allow a deletion operation to be undone, e.g. using mechanisms conceptually similar to 'trash bins', and SHOULD at a minimum keep track of the IDs of Artifacts that were at some point managed in each Repository.
-    For this reason, a two phase deletion is recommended. Deleted Artifacts transition into a 'deleted' status in which they cannot be discovered nor retrieved, unless a dedicated flag is set. Once in a deleted state, Artifacts MAY be deleted permanently.  
+    Special considerations involve the _deletion_ of an Artifact. For traceability and safety purposes,
+    KARs SHOULD NOT allow Artifacts to be deleted in an unrecoverable way. Deletion itself is defined as making an Artifact no longer accessible to a client (i.e. status 404).
+    A server SHOULD allow a deletion operation to be undone, e.g. using mechanisms conceptually similar to 'trash bins',
+    and SHOULD at a minimum keep track of the IDs of Artifacts that were at some point managed in each Repository.
+    For this reason, a two phase deletion is recommended. Deleted Artifacts transition into a 'deleted' status
+    in which they cannot be discovered nor retrieved, unless a dedicated flag is set. Once in a deleted state, Artifacts MAY be deleted permanently.
     
-    The API also supports the (logical) federation of Repositories. A server instance MAY expose different repositories to a client, who should expect each repository to be independent. Whether these repositories map to actual physical repositories (e.g. different DBs), folder-like structures or logic tags/collections is left to the implementation. <br> The same artifact (as defined by having the same ID) COULD be stored in more than one repository, but all copies MUST be identical to each other 
+    The API also supports the (logical) federation of Repositories. A server instance MAY expose different repositories to a client,
+    who should expect each repository to be independent. Whether these repositories map to actual physical repositories (e.g. different DBs),
+    folder-like structures or logic tags/collections is left to the implementation.
+    The same artifact (as defined by having the same ID) COULD be stored in more than one repository, but all copies MUST be identical to each other
     
     With adequate rights, and if supported by the implementation, repositories can be _enabled_ or _disabled_. 
     Enabled (resp. disabled) repositories are (resp. not) available to a client, regardless of whether the (de)allocation of actual resources is involved at the implementation level.
+
+    **Maturity**
+    As of this version, this API is considered stable
 tags:
   - name: Knowledge Artifact
     description: |
@@ -60,7 +71,9 @@ paths:
       description: |
         Retrieves a browsable list of known Knowledge Artifact Repositories, federated under this manager.
         
-        A KAR MUST always have at least one repository, which COULD be accessed under a 'DEFAULT' well known ID, in addition to the specific ID that the repository should have. This default repository MUST be enabled at startup. As a consequence, this operation SHOULD alway return at least one resource.
+        A KAR MUST always have at least one repository, which COULD be accessed under a 'DEFAULT'
+        well known ID, in addition to the specific ID that the repository should have.
+        This default repository MUST be enabled at startup. As a consequence, this operation SHOULD alway return at least one resource.
       operationId: listKnowledgeArtifactRepositories
       produces:
         - application/json
@@ -139,7 +152,9 @@ paths:
       - Knowledge Artifact Repository
       summary: Configure a Knowledge Artifact Repository 
       description: |
-        Ensure a Knowledge Artifact Repository with the given identifier is enabled and accessible. If not, will attempt to create one. The identifier must be acceptable to the server. If optional descriptive information is provided, it will be used to initialize or update the state of the Repository. 
+        Ensure a Knowledge Artifact Repository with the given identifier is enabled and accessible.
+        If not, will attempt to create one. The identifier must be acceptable to the server.
+        If optional descriptive information is provided, it will be used to initialize or update the state of the Repository.
         
         Clients may not be authorized, and servers may not support this operation.
       operationId: setKnowledgeArtifactRepository
@@ -398,7 +413,9 @@ paths:
       - Knowledge Artifact Series
       summary: Removes a Knowledge Artifact from the Repository
       description: |
-        Individual Knowledge Artifacts are considered removed from a Repository, if and only if any attempt to resolve that Artifact identifier within the given Knowledge Repository will not succeeed. Removing an Artifact that is not (any longer) in a Repository will result in a trivial success. 
+        Individual Knowledge Artifacts are considered removed from a Repository, if and only if any
+        attempt to resolve that Artifact identifier within the given Knowledge Repository will not succeeed.
+        Removing an Artifact that is not (any longer) in a Repository will result in a trivial success.
         
         This operation is functionally equivalent to invoking deleteKnowledgeArtifactSeries(repositoryId,artifactId,deleted),
         to clear the series, AND then removing the Artifact from the Repository.  
@@ -503,9 +520,11 @@ paths:
       - Knowledge Artifact Series
       summary: List versions of a Knowledge Artifact. 
       description: |
-        Provides access to an Artifact's historical series, i.e. the list of immutable versions of the Artifact maintained in the given Knowledge Artifact Repository. Optionally, allows to sort the series, filter by version range and supports pagination.
+        Provides access to an Artifact's historical series, i.e. the list of immutable versions of
+        the Artifact maintained in the given Knowledge Artifact Repository. Optionally, allows to sort the series, filter by version range and supports pagination.
         
-        The list may be empty, either because an Artifact series has been initialized without adding any particular version (see POST), or because all versions have been deleted, without deleting the artifact itself.
+        The list may be empty, either because an Artifact series has been initialized without adding
+        any particular version (see POST), or because all versions have been deleted, without deleting the artifact itself.
       operationId: getKnowledgeArtifactSeries
       produces:
       - application/json
@@ -553,7 +572,9 @@ paths:
       - Knowledge Artifact Series
       summary: Add a (new version) of a Knowledge Artifact. 
       description: |
-        Adds a new version of a given Artifact to the Artifact's series, making this version the LATEST. The client is required to provide the content, but the server is expected to provide the version tagging, according to the version scheme that is implemented internally. When successful, the server will return the URL where that version can be accessed." 
+        Adds a new version of a given Artifact to the Artifact's series, making this version the LATEST.
+        The client is required to provide the content, but the server is expected to provide the version tagging,
+        according to the version scheme that is implemented internally. When successful, the server will return the URL where that version can be accessed."
       operationId: addKnowledgeArtifactVersion
       parameters:
         - $ref: '#/parameters/repositoryId'
@@ -640,7 +661,8 @@ paths:
       - Knowledge Artifact
       summary: Remove a specific version of a Knowledge Artifact
       description: |
-        Ensures that a specific version of a given Knowledge Artifact is not resolvable anymore within the Knowledge Artifact version series. If the version cannot be found, the operations succeeds trivially.
+        Ensures that a specific version of a given Knowledge Artifact is not resolvable anymore
+        within the Knowledge Artifact version series. If the version cannot be found, the operations succeeds trivially.
         
         If the deleted flag is set, this operation MAY delete a version permanently.
       operationId: deleteKnowledgeArtifactVersion
@@ -671,7 +693,9 @@ paths:
       summary: Ensure a specific version of a Knowledge Artifact is available
       description: |
         Ensures that a specific version of a given Knowledge Artifact can be retrieved. 
-        Notice that the user is not required to provide the actual artifact payload. For this reason, the oepration will succeed if and only if the version is either already available, or in a soft deletion status. This operation may restore an unavailable version. 
+        Notice that the user is not required to provide the actual artifact payload.
+        For this reason, the oepration will succeed if and only if the version is either already available, or in a soft deletion status.
+        This operation may restore an unavailable version.
       operationId: enableKnowledgeArtifactVersion
       parameters:
         - $ref: '#/parameters/repositoryId'
@@ -699,7 +723,8 @@ paths:
       - Knowledge Artifact
       summary: Sets a Version of a specific Knowledge Artifact
       description: |
-        Ensures that a Knowledge Artifact is available in the given Repository, and that an attempt to resolve a version with the given tag will succeed, returning a copy of the provided payload. 
+        Ensures that a Knowledge Artifact is available in the given Repository, and that an attempt
+        to resolve a version with the given tag will succeed, returning a copy of the provided payload.
         
         Creates an Artifact series if not present, and overwrites the stored copy for the given version if already present.
         This operation can reverse a deletion.
@@ -777,7 +802,10 @@ parameters:
     description: |
       The id of a Knowledge Artifact Repository, in the context of the server that provides operations on the Repository. 
       
-      In general, the ID is qualified and scoped by a scheme owned by the server. When the server guarantees to federate repositories from a single known namespace, and repository IDs are required to be scoped by that namespace, either the fully qualified name or the local part should be accepted as a valid repositoryId; otherwise, only the fully qualified ID will be acceptable."
+      In general, the ID is qualified and scoped by a scheme owned by the server.
+      When the server guarantees to federate repositories from a single known namespace, and repository IDs
+      are required to be scoped by that namespace, either the fully qualified name or the local part should be accepted
+      as a valid repositoryId; otherwise, only the fully qualified ID will be acceptable."
   
   repositoryDescr:
     in: body
@@ -864,6 +892,6 @@ definitions:
   KnowledgeArtifactRepository:
     type: object
 
-basePath: /omg.org/spec/API4KP/20200801/api/repository/artifact/v4
+basePath: /omg.org/spec/API4KP/20200801/api/repository/artifact/v5
 schemes:
  - https

@@ -16,13 +16,13 @@
 
     <xs:simpleType name="KnowledgeProcessingTechnique_Valueset">
       <xs:restriction base="xs:string">
-        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#221f0704-2eb6-3767-806c-bb70fdb5fde7"/>
-        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#d94bea97-ded3-3a3d-8d97-ce161ea91ff2"/>
-        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#b4b94452-af12-352d-832f-cdec7fd11234"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#c710da1c-bc8f-34d3-9e5b-3bb26cdf334e"/>
-        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#8a717c26-8031-3210-99b1-a3891897b2c5"/>
-        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#0453f3fa-9cfd-36cf-9a5a-1a17e0b7c29d"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#122b7188-2c21-3c5f-96d8-35510fcb8af7"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#0453f3fa-9cfd-36cf-9a5a-1a17e0b7c29d"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#8a717c26-8031-3210-99b1-a3891897b2c5"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#221f0704-2eb6-3767-806c-bb70fdb5fde7"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#b4b94452-af12-352d-832f-cdec7fd11234"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique#d94bea97-ded3-3a3d-8d97-ce161ea91ff2"/>
       </xs:restriction>
     </xs:simpleType>
 </xs:schema>

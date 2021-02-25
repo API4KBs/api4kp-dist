@@ -39,7 +39,7 @@ typedef sequence<KnowledgeArtifactRepository> KnowledgeArtifactRepositoryList;
 module api {
 module repository {
 module artifact {
-module v4 {
+module v5 {
 interface KnowledgeArtifactRepository {
   void disableKnowledgeArtifactRepository (
       in string repositoryid 
@@ -140,7 +140,7 @@ interface KnowledgeArtifact {
       in string versiontag 
   );
 };
-}; // v4
+}; // v5
 }; // artifact
 }; // repository
 }; // api

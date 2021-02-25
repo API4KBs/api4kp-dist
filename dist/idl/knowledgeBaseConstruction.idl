@@ -94,22 +94,27 @@ typedef sequence<KnowledgeBase> KnowledgeBaseList;
 }; // services
 module api {
 module knowledgebase {
-module v4 {
+module v5 {
 interface Compositional {
   ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier assembleCompositeArtifact (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier _struct 
+      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier _struct , 
+      in string xparams 
   );
   ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier constructCompositeAsset (
+      in string xparams , 
       in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier structdefinition 
   );
   ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier deconstructCompositeAsset (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier artifact 
+      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier artifact , 
+      in string xparams 
   );
   ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrierList disassembleCompositeArtifact (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier artifact 
+      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier artifact , 
+      in string xparams 
   );
   ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier flattenArtifact (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier kbasecomponent , 
+      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier artifact , 
+      in string xparams , 
       in string rootassetid 
   );
 };
@@ -121,7 +126,8 @@ interface Knowledgebase {
       in string versiontag 
   );
   void deleteKnowledgeBase (
-      in string kbaseid 
+      in string kbaseid , 
+      in string xparams 
   );
   ::org::omg::spec::api4kp::_20200801::id::Pointer extract (
       in string kbaseid , 
@@ -136,29 +142,36 @@ interface Knowledgebase {
   );
   ::org::omg::spec::api4kp::_20200801::services::KnowledgeBase getKnowledgeBase (
       in string kbaseid , 
+      in string xparams , 
       in string versiontag 
   );
   ::org::omg::spec::api4kp::_20200801::id::PointerList getKnowledgeBaseComponents (
       in string kbaseid , 
+      in string xparams , 
       in string versiontag 
   );
   ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier getKnowledgeBaseManifestation (
       in string kbaseid , 
+      in string xparams , 
       in string versiontag 
   );
   ::org::omg::spec::api4kp::_20200801::id::PointerList getKnowledgeBaseSeries (
-      in string kbaseid 
+      in string kbaseid , 
+      in string xparams 
   );
   ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier getKnowledgeBaseStructure (
       in string kbaseid , 
+      in string xparams , 
       in string versiontag 
   );
   void hasKnowledgeBase (
       in string kbaseid , 
+      in string xparams , 
       in string versiontag 
   );
   ::org::omg::spec::api4kp::_20200801::id::Pointer initKnowledgeBase (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier initialcomponent 
+      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier initialcomponent , 
+      in string xparams 
   );
   ::org::omg::spec::api4kp::_20200801::id::Pointer introspect (
       in string kbaseid , 
@@ -213,11 +226,13 @@ interface Knowledgebase {
   );
   ::org::omg::spec::api4kp::_20200801::services::KnowledgeBase nextKnowledgeBaseVersion (
       in string kbaseid , 
+      in string xparams , 
       in string versiontag 
   );
   ::org::omg::spec::api4kp::_20200801::id::Pointer populateKnowledgeBase (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier kbasecomponent , 
+      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier artifact , 
       in string kbaseid , 
+      in string xparams , 
       in string versiontag 
   );
   ::org::omg::spec::api4kp::_20200801::id::Pointer select (
@@ -229,6 +244,7 @@ interface Knowledgebase {
   ::org::omg::spec::api4kp::_20200801::id::Pointer setKnowledgeBaseStructure (
       in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier _struct , 
       in string kbaseid , 
+      in string xparams , 
       in string versiontag 
   );
   ::org::omg::spec::api4kp::_20200801::id::Pointer transform (
@@ -317,7 +333,7 @@ interface Transcreate {
       in string operatorid 
   );
 };
-}; // v4
+}; // v5
 }; // knowledgebase
 }; // api
 }; // _20200801

@@ -855,8 +855,7 @@ margin-bottom: 20px;
             <h2 id="welcome-to-apidoc">API and SDK Documentation</h2>
               <div class="app-desc">Version: 5.0.0</div>
             <hr>
-            <div><p>Maturity - MEDIUM (subject to extensions)</p>
-<p>This API defines &quot;syntactic&quot; manipulations of Knowledge Artifacts, based on the stratified representational aspects
+            <div><p>This API defines &quot;syntactic&quot; manipulations of Knowledge Artifacts, based on the stratified representational aspects
 of the Artifacts themselves (Language, profile, syntax/serialization, meta-format, encoding).</p>
 <p>Supports both 'vertical' operations (parsing/serialization), which preserve the Asset and the Langauge,
 and 'horizontal' operations (transrepresentations) which preserve the aspects up to a certain level,
@@ -874,6 +873,8 @@ and return a wrapped KnowledgeCarrier, effectively behaving as functors in the f
 Patterns on the input will select operators that can process more equal or more general representations;
 patterns on the output will select operators that can produce equal or more specific representations than the pattern itself.
 Where necessary (e.g. as query/filter parameters), Syntactic Representations are encoded using formal MIME types.</p>
+<p><strong>Maturity</strong>
+As of this version, this API is considered stable, but subject to extensions</p>
 </div>
           </div>
         </div>
@@ -920,7 +921,7 @@ If the input artifact is at a higher level, the operation will fail
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Deserialize-applyLift-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/deser/lifter"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/deser/lifter"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Deserialize-applyLift-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -1388,7 +1389,7 @@ If the input artifact is at a lower level, the operation will fail
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Deserialize-applyLower-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/deser/lowerer"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/deser/lowerer"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Deserialize-applyLower-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -1858,7 +1859,7 @@ If the input artifact is at a higher level, the operation will fail
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Deserialize-applyNamedLift-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/deser/lifters/{operatorId}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/deser/lifters/{operatorId}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Deserialize-applyNamedLift-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -2389,7 +2390,7 @@ If the input artifact is at a lower level, the operation will fail
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Deserialize-applyNamedLower-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/deser/lowerers/{operatorId}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/deser/lowerers/{operatorId}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Deserialize-applyNamedLower-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -2915,7 +2916,7 @@ including the kind of operation it provides, the representations
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Deserialize-getLiftOperator-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/deser/lifters/{operatorId}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/deser/lifters/{operatorId}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Deserialize-getLiftOperator-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -3231,7 +3232,7 @@ including the kind of operation it provides, the representations
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Deserialize-getLowerOperator-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/deser/lowerers/{operatorId}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/deser/lowerers/{operatorId}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Deserialize-getLowerOperator-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -3545,7 +3546,7 @@ offered by a Component.
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Deserialize-listLiftOperators-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/deser/lifters?from=&into="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/deser/lifters?from=&into="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Deserialize-listLiftOperators-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -3904,7 +3905,7 @@ components and operators that can produce specific representations
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Deserialize-listLowerOperators-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/deser/lowerers?from=&into="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/deser/lowerers?from=&into="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Deserialize-listLowerOperators-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -4268,7 +4269,7 @@ representation information that is already present on the input Carrier.
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Detect-applyDetect-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/detect/detector"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/detect/detector"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Detect-applyDetect-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -4639,7 +4640,7 @@ the input Artifact, enriched with the detected representation information
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Detect-applyNamedDetect-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/detect/detectors/{operatorId}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/detect/detectors/{operatorId}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Detect-applyNamedDetect-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -5071,7 +5072,7 @@ including the kind of operation it provides, the representations
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Detect-getDetectionOperator-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/detect/detectors/{operatorId}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/detect/detectors/{operatorId}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Detect-getDetectionOperator-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -5385,7 +5386,7 @@ offered by a Component.
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Detect-listDetectionOperators-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/detect/detectors?into="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/detect/detectors?into="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Detect-listDetectionOperators-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -5702,7 +5703,7 @@ this component is an instance of.
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Discovery-getDeserializationComponent-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/deser/components/{componentId}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/deser/components/{componentId}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Discovery-getDeserializationComponent-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -6009,7 +6010,7 @@ this component is an instance of.
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Discovery-getDetectComponent-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/detect/components/{componentId}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/detect/components/{componentId}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Discovery-getDetectComponent-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -6316,7 +6317,7 @@ this component is an instance of.
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Discovery-getTxComponent-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/tranx/components/{componentId}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/tranx/components/{componentId}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Discovery-getTxComponent-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -6623,7 +6624,7 @@ this component is an instance of.
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Discovery-getValidationComponent-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/valid/components/{componentId}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/valid/components/{componentId}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Discovery-getValidationComponent-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -6928,7 +6929,7 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Discovery-listDeserializationComponents-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/deser/components?from=&into=&methodTag="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/deser/components?from=&into=&methodTag="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Discovery-listDeserializationComponents-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -7325,7 +7326,7 @@ components and operators that can produce specific representations
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Discovery-listDetectComponents-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/detect/components?into=&methodTag="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/detect/components?into=&methodTag="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Discovery-listDetectComponents-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -7675,7 +7676,7 @@ components and operators that can produce specific representations
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Discovery-listTxComponents-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/tranx/components?from=&into=&methodTag="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/tranx/components?from=&into=&methodTag="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Discovery-listTxComponents-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -8072,7 +8073,7 @@ components and operators that can produce specific representations
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Discovery-listValidationComponents-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/valid/components?from=&methodTag="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/valid/components?from=&methodTag="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Discovery-listValidationComponents-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -8425,7 +8426,7 @@ components and operators that can consume specific representations
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Transxion-applyNamedTransrepresent-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/tranx/transxors/{operatorId}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/tranx/transxors/{operatorId}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Transxion-applyNamedTransrepresent-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -8903,7 +8904,7 @@ selecting an Operator that supports the carrier&#39;s representation
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Transxion-applyTransrepresent-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/tranx/transxor"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/tranx/transxor"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Transxion-applyTransrepresent-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -9320,7 +9321,7 @@ including the kind of operation it provides, the representations
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Transxion-getTxionOperator-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/tranx/transxors/{operatorId}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/tranx/transxors/{operatorId}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Transxion-getTxionOperator-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -9634,7 +9635,7 @@ offered by a Component.
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Transxion-listTxionOperators-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/tranx/transxors?from=&into="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/tranx/transxors?from=&into="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Transxion-listTxionOperators-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -9996,7 +9997,7 @@ components and operators that can produce specific representations
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Validate-applyNamedValidate-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/valid/validators/{operatorId}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/valid/validators/{operatorId}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Validate-applyNamedValidate-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -10384,7 +10385,7 @@ of a given language, profile, lexicon and/or serialization&quot;
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Validate-applyValidate-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/valid/validator"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/valid/validator"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Validate-applyValidate-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -10712,7 +10713,7 @@ including the kind of operation it provides, the representations
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Validate-getValidationOperator-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/valid/validators/{operatorId}"</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/valid/validators/{operatorId}"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Validate-getValidationOperator-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -11026,7 +11027,7 @@ offered by a Component.
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Validate-listValidationOperators-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v4/valid/validators?from="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://localhost/omg.org/spec/API4KP/20200801/api/transrepresentation/v5/valid/validators?from="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-Validate-listValidationOperators-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;

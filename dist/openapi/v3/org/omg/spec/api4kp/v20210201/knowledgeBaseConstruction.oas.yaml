@@ -3,17 +3,50 @@ info:
   title: API4KP Knowledge Base Construction API
   description: |2
 
-    The Knowledge Base (KB) Construction APIs allow to compose one or more Knowledge Assets into
+    The KnowledgeBae APIs enable the transition between Knowledge _at rest_, i.e. Knowledge in the form
+    of Artifacts stored in a repository and not yet assembled into a Knowledge Base, and Knowledge
+    _in motion_, i.e. Knowledge Bases deployed/paired with a runtime engine/reasoner/execution platform
+    that is able to perform computations using that Knowledge.
+
+    The Knowledge Base Construction and Composition APIs allow to compose one or more Knowledge Assets into
     Knowledge Bases that are suitable for processing/reasoning.
     The process, which is driven by metadata (surrogates), involves the retrieval, normalization,
     and structuring of Knowledge Artifacts that manifest the components of the Knowledge Base itself.
 
-    As such, implementations of this API are likely to depend on the API4KP Knowledge Trans*ion APIs and, more loosely, on the API4KP Knowledge Asset Repository API.
-    This API, in turn, is designed to be a dependency of the API4PK Reasoning/Inference APIs.
-
-    The API is inspired by the State monad. Knowledge Bases are incubated within the server from their initialization, through their construction, until their finalization and retrieval.
+    ** Knowledge Base State **
+    The Knowledge Base Management API is inspired by the State monad. Knowledge Bases are incubated
+    within the server from their initialization, through their construction, until their deployment.
     As operations are applied to manipulate the KB, new versions are constructed ensuring reproducibility and traceabiilty.
     Implementations, however, are not required nor guaranteed to be transactional.
+
+    ** Composition vs Transcreation (Mutation) Operators **
+    Composition Operators allw to construct, incrementally, a Knowledge Base starting from known
+    named (carriers of) Knowledge Assets.
+    Transcreation operators allow to mutate Knowledge Artifacts, usually to create transient
+    ephemeral versions which are used to prepare the KnowledgeBase for deployment, but would
+    not otherwise be treated as Assets.
+    Nevertheless, many Transcreation operations could be useful independently.
+    For this reason, Transcreation operators are exposed in two different modalities:
+
+    (i) a detached mode, where the operator is addressed independently and
+    (i.a) the client is either responsible for providing the KnowledgeBase as an input, or
+    (i.b) the operator is responsible for resolving the IDs provided by the client to a known KnowledgeBase,
+    usually by means of delegation to a KnowledgeBase API implementation
+    (ii) a connected mode, where an operator is attached to, and exposed in the context of a (client-managed)
+    Knowledge Base. That is, the operator is bound to KnowledgeBase(s) at construction time, and is
+    then invoked through the KnowledgeBase
+
+    ** Service Boundaries **
+    Implementations of KnowledgeBase API are likely to depend on the API4KP Knowledge Trans*ion APIs,
+    to provide the necessary lifting/lowering capabilities involved in the processing of Components
+    and Structures thereof.
+    Implementations of Knowledge Base providers may depend on Knowledge Asset Repository implementations
+    for attached operators to resolve Assets required during the processing.
+    Implementations of this API are usually paired with API4KP Reasoning APIs, to provide a runtime
+    for the constructed KnowledgeBases
+
+    ** Maturity **
+    As of this version, this API is considered experimental
   contact:
     name: Davide Sottara
     email: sottara.davide@mayo.edu
@@ -22,17 +55,17 @@ info:
     url: https://www.apache.org/licenses/LICENSE-2.0.html
   version: 5.0.0
 servers:
-- url: /omg.org/spec/API4KP/20200801/api/knowledgebase/v4
+- url: /omg.org/spec/API4KP/20200801/api/knowledgebase/v5
 tags:
 - name: Compositional
   description: |
     APIs for the manipulation of Composite Assets and Artifacts, including Knowledge Bases
 - name: KnowledgeBase
   description: |
-    Construct KnowledgeBases
+    APIs for the Management of KnowledgeBase State
 - name: Transcreate
   description: |
-    TODO - should this be Language? or KB?
+    APIs that generate KnowledgeBase components via semantic manipulation
 paths:
   /constructors:
     post:
@@ -55,6 +88,13 @@ paths:
         Artifact, which in turn could be fed to an Introspector to infer an overall Surrogate
         for the composite itself
       operationId: constructCompositeAsset
+      parameters:
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       requestBody:
         content:
           '*/*':
@@ -76,10 +116,22 @@ paths:
     post:
       tags:
       - Compositional
-      summary: Constructs a Composite Knowledge Artifact
+      summary: Assembles a Composite Knowledge Artifact
       description: |
-        TODO
+        Interprets a Structure, i.e. the Manifestation of a Structuring Knowledge Asset,
+        as the blueprint of a Composite Artifact, as the manifestation of a Composite Knowledge Asset.
+        The Structure must specify the identity, version, should specify the relationships,
+        and could specify the types and roles of the component Assets.
+        This information will be used to retrieve the proper manifestation (Surrogates and/or Carriers)
+        of the components, which will be combined and returned as a CompositeKnowledgeCarrier
       operationId: assembleCompositeArtifact
+      parameters:
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       requestBody:
         content:
           '*/*':
@@ -89,7 +141,7 @@ paths:
       responses:
         200:
           description: |
-            TODO
+            A (Composite) KnowledgeCarrier that wraps the Artifacts and/or Surrogates referenced by the input Struct
           content:
             '*/*':
               schema:
@@ -102,8 +154,20 @@ paths:
       summary: Deconstructs a Knowledge Artifact into a Composite Knowledge Asset
         (structure)
       description: |
-        TODO
+        Analyzes a Complex, possibly Composite Knowledge Artifact, identifies its components,
+        and returns a Structure that describes those components, and possibly describes their
+        types and mutual relationships.
+        This operation is not expected to actually return the individual components
+        (see disassembleCompositeArtifact). In particular, this operation may be applicable
+        even when the actual disassembly is not feasible in practice.
       operationId: deconstructCompositeAsset
+      parameters:
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       requestBody:
         content:
           '*/*':
@@ -125,8 +189,20 @@ paths:
       - Compositional
       summary: Deconstructs a (Composite) Knowledge Artifact into its component Artifacts
       description: |
-        TODO
+        Consumes a Composite Knowledge Carrier that wraps a flat Knowledge Artifact
+        and a Structure, and follows the Structure blueprint to disassemble the Composite
+        into its distinct Components, which are returned separately.
+
+        The two operations assembleCompositeArtifact and disassembleCompositeArtifact
+        should be mutually inverse for a given artifact.
       operationId: disassembleCompositeArtifact
+      parameters:
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       requestBody:
         content:
           '*/*':
@@ -136,7 +212,8 @@ paths:
       responses:
         200:
           description: |
-            A struct that defines a Composite Knowledge Asset
+            A collection of wrapped, individual Knowledge Artifacts, which are the Components of the
+            input Composite
           content:
             '*/*':
               schema:
@@ -150,7 +227,14 @@ paths:
       - Compositional
       summary: Flattens a (Composite) Knowledge Artifact
       description: |
-        TODO
+        Constructs a single, flat KnowledgeArtifact from one or more source Artifacts.
+        When applied to an Atomic Artifact, returns that Artifact.
+        Composite Artifacts are flattened, using the semantics of the representation language.
+
+        The flattening may require to super-impose a topology different than the one supported
+        by a Composite. The strategy is left to the implementation, but the client is allowed
+        to provide a hint in the form of the identifier of a 'root' component, which could be used
+        to extract a tree from a graph, or to linearize a collection
       operationId: flattenArtifact
       parameters:
       - name: rootAssetid
@@ -159,6 +243,12 @@ paths:
         schema:
           type: string
           format: uuid
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       requestBody:
         content:
           '*/*':
@@ -168,12 +258,12 @@ paths:
       responses:
         200:
           description: |
-            TODO
+            An atomic, flat Knowledge Artifact
           content:
             '*/*':
               schema:
                 $ref: '#/components/schemas/KnowledgeCarrier'
-      x-codegen-request-body-name: kbaseComponent
+      x-codegen-request-body-name: artifact
   /knowledgebases:
     post:
       tags:
@@ -186,6 +276,13 @@ paths:
         Optionally, a client can provide an initial component. If so,
         populateKnowledgeBase will be invoked using that component.
       operationId: initKnowledgeBase
+      parameters:
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       requestBody:
         content:
           '*/*':
@@ -217,6 +314,12 @@ paths:
         schema:
           type: string
           format: uuid
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       responses:
         200:
           description: The knowledgebase
@@ -243,6 +346,12 @@ paths:
         schema:
           type: string
           format: uuid
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       responses:
         200:
           description: Success
@@ -255,7 +364,6 @@ paths:
       description: |
         Returns the state of a KnowledgeBase, manifested as a (possibly composite)
         Knowledge Artifact.
-        #TODO - Should the client be able to negotiate the language/format?
       operationId: getKnowledgeBase
       parameters:
       - name: kbaseId
@@ -273,6 +381,12 @@ paths:
           \ identifier is universal, the Tag represents the local part of that identifier,\
           \ under the scope of the identifier that denotes the Entity (series)."
         required: true
+        schema:
+          type: string
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
         schema:
           type: string
       responses:
@@ -310,6 +424,12 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       requestBody:
         content:
           '*/*':
@@ -323,7 +443,7 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/Pointer'
-      x-codegen-request-body-name: kbaseComponent
+      x-codegen-request-body-name: artifact
     head:
       tags:
       - KnowledgeBase
@@ -347,6 +467,12 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       responses:
         200:
           description: The knowledgebase
@@ -360,7 +486,8 @@ paths:
       - KnowledgeBase
       summary: Increments the version of a Knowledge Base
       description: |
-        Clones a Knowledge Base, setting its version to the next, according to a versioning strategy determined by the server
+        Clones a Knowledge Base, setting its version to the next,
+        according to a versioning strategy determined by the server
       operationId: nextKnowledgeBaseVersion
       parameters:
       - name: kbaseId
@@ -372,6 +499,12 @@ paths:
           format: uuid
       - name: versionTag
         in: query
+        schema:
+          type: string
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
         schema:
           type: string
       responses:
@@ -387,8 +520,9 @@ paths:
       - KnowledgeBase
       summary: Gets the Structure of a Knowledge Base
       description: |
-        Given a Knowledge Base (or a root asset that is interpreted as the 'seed' of a KB),
-        returns a graph that describes the internal relationships
+        Given the id of a Knowledge Base,
+        returns a Structure that describes the internal relationships of the KB's components.
+        The Structure itself is a Knowledge Artifact, expressed in a suitable language
       operationId: getKnowledgeBaseStructure
       parameters:
       - name: kbaseId
@@ -408,6 +542,12 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       responses:
         200:
           description: |
@@ -421,7 +561,11 @@ paths:
       - KnowledgeBase
       summary: Sets the Structure of a Knowledge Base
       description: |
-        Imposes a Structure onto a KnowledgeBase
+        Imposes a Structure onto a KnowledgeBase.
+        Any existing Structure, if present, will be replaced.
+        The new Structure should be consistent with the KnowledgeBase: the Structure should
+        reference Components that are or are not prohibited from becoming part of the KnowledgeBase.
+        Likewise, the relationships imposed by the should be acceptable and consistent.
       operationId: setKnowledgeBaseStructure
       parameters:
       - name: kbaseId
@@ -441,6 +585,12 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       requestBody:
         content:
           '*/*':
@@ -450,17 +600,30 @@ paths:
       responses:
         200:
           description: |
-            A KnowledgeCarrier carrying the relationship graph
+            A Pointer to the updated KnowledgeBase. The Pointer must resolve to a KB
+            that manifests in the form of a CompositeKnowledgeCarrier whose Structuring Component
+            is the Structure provided as an input to this operation.
           content:
             '*/*':
               schema:
                 $ref: '#/components/schemas/Pointer'
+        406:
+          description: |
+            The Structure is expressed in a language/form that cannot be interpreted.
+          content: {}
+        409:
+          description: |
+            The Structure is incompatible/inconsistent with the KnowledgeBase Components.
+          content: {}
       x-codegen-request-body-name: struct
   /knowledgebases/{kbaseId}/versions/{versionTag}/struct/components:
     get:
       tags:
       - KnowledgeBase
       summary: Gets the Components of a Knowledge Base
+      description: |
+        Returns a list of Pointers to the individual Components of a Knowledge Base,
+        providing direct access
       operationId: getKnowledgeBaseComponents
       parameters:
       - name: kbaseId
@@ -478,6 +641,12 @@ paths:
           \ identifier is universal, the Tag represents the local part of that identifier,\
           \ under the scope of the identifier that denotes the Entity (series)."
         required: true
+        schema:
+          type: string
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
         schema:
           type: string
       responses:
@@ -517,6 +686,12 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       responses:
         200:
           description: |
@@ -530,6 +705,10 @@ paths:
       tags:
       - KnowledgeBase
       summary: Bind values to a formula with open variables
+      description: |
+        Returns a new version of a KnowledgeBase, which results from the assignment
+        of the client-provided values to the corresponding variable fragments in the Artifacts
+        that are included in the target KnowledgeBase
       operationId: bind
       parameters:
       - name: kbaseId
@@ -563,7 +742,8 @@ paths:
         required: true
       responses:
         200:
-          description: The bound expression
+          description: |
+            (A pointer to) the resulting KnowledgeBase
           content:
             '*/*':
               schema:
@@ -574,6 +754,8 @@ paths:
       tags:
       - KnowledgeBase
       summary: Bind values to a formula with open variables
+      description: |
+        Requests that a bind operation is performed using a specific operator
       operationId: namedBind
       parameters:
       - name: kbaseId
@@ -616,7 +798,8 @@ paths:
         required: true
       responses:
         200:
-          description: The bound expression
+          description: |
+            (A pointer to) the resulting KnowledgeBase
           content:
             '*/*':
               schema:
@@ -627,6 +810,9 @@ paths:
       tags:
       - KnowledgeBase
       summary: Weave (fragments of) an artifact into a KB
+      description: |
+        Applies a Weaving operator, such that fragments of a given 'aspects' Artifact
+        are extracted and bound to a target Knowledge Base.
       operationId: weave
       parameters:
       - name: kbaseId
@@ -661,7 +847,7 @@ paths:
       responses:
         200:
           description: |
-            The new Knowledge Base resulting from the weaving
+            (A pointer to) the resulting KnowledgeBase
           content:
             '*/*':
               schema:
@@ -672,6 +858,8 @@ paths:
       tags:
       - KnowledgeBase
       summary: Weave (fragments of) an artifact into a KB
+      description: |
+        Requests that a weave operation is performed using a specific operator
       operationId: namedWeave
       parameters:
       - name: kbaseId
@@ -715,7 +903,7 @@ paths:
       responses:
         200:
           description: |
-            The new Knowledge Base resulting from the weaving
+            A pointer to the resulting KnowledgeBase
           content:
             '*/*':
               schema:
@@ -726,6 +914,8 @@ paths:
       tags:
       - KnowledgeBase
       summary: Projects a KnowledgeBase into a proper subset
+      description: |
+        Requests that a select operation is performed using a specific operator
       operationId: namedSelect
       parameters:
       - name: kbaseId
@@ -768,7 +958,8 @@ paths:
         required: true
       responses:
         200:
-          description: The bound expression
+          description: |
+            (A pointer to) the resulting KnowledgeBase
           content:
             '*/*':
               schema:
@@ -779,6 +970,11 @@ paths:
       tags:
       - KnowledgeBase
       summary: Projects a KnowledgeBase into a proper subset, using a specific operator
+      description: |
+        Applies a selection operator, which produces a new Knowledge Base
+        applying a 'selection' query to an existing KB.
+        More specifically, a selection query is a query that extracts existing fragments
+        without interpretation nor inference.
       operationId: select
       parameters:
       - name: kbaseId
@@ -813,7 +1009,7 @@ paths:
       responses:
         200:
           description: |
-            The new Knowledge Base resulting from the weaving
+            (A pointer to) the resulting KnowledgeBase
           content:
             '*/*':
               schema:
@@ -824,6 +1020,9 @@ paths:
       tags:
       - KnowledgeBase
       summary: Reshapes a KB to a given subset
+      description: |
+        Applies an extraction operator, which identifies specific concepts in a KnowledgeBase
+        and extracts a focused representation of those concepts
       operationId: namedExtract
       parameters:
       - name: kbaseId
@@ -866,7 +1065,8 @@ paths:
           type: string
       responses:
         200:
-          description: The reshaped KB
+          description: |
+            (A pointer to) the resulting KnowledgeBase
           content:
             '*/*':
               schema:
@@ -876,6 +1076,9 @@ paths:
       tags:
       - KnowledgeBase
       summary: Reshapes a KB to a given subset
+      description: |
+        Reshapes a KnowledgeBase, deriving a different Structure from the
+        existing Structure and/or Components
       operationId: extract
       parameters:
       - name: kbaseId
@@ -909,7 +1112,8 @@ paths:
           type: string
       responses:
         200:
-          description: The reshaped KB
+          description: |
+            (A pointer to) the resulting KnowledgeBase
           content:
             '*/*':
               schema:
@@ -919,6 +1123,8 @@ paths:
       tags:
       - KnowledgeBase
       summary: Flattens a Knowledge Base using a component as a root
+      description: |
+        Requests that a flatten operation is performed using a specific operator
       operationId: namedFlatten
       parameters:
       - name: kbaseId
@@ -993,7 +1199,7 @@ paths:
       responses:
         200:
           description: |
-            The flat KnowledgeBase
+            (A pointer to) the resulting KnowledgeBase
           content:
             '*/*':
               schema:
@@ -1003,6 +1209,8 @@ paths:
       tags:
       - KnowledgeBase
       summary: Derives a metadata surrogate for (the root of) a given knowledgebase
+      description: |
+        Requests that a introspect operation is performed using a specific operator
       operationId: namedIntrospect
       parameters:
       - name: kbaseId
@@ -1050,6 +1258,10 @@ paths:
       tags:
       - KnowledgeBase
       summary: Derives a metadata surrogate for (the root of) a given knowledgebase
+      description: |
+        Applies introspection operator, which derives a Knowledge Asset Surrogate,
+        usually from an Artifact that carries that Asset, and/or related Artifacts,
+        and/or other Artifacts that provide context
       operationId: introspect
       parameters:
       - name: kbaseId
@@ -1078,7 +1290,7 @@ paths:
       responses:
         200:
           description: |
-            The Surrogate Component
+            (A pointer to) the resulting KnowledgeBase, which contains the inferred Surrogate
           content:
             '*/*':
               schema:
@@ -1087,8 +1299,9 @@ paths:
     post:
       tags:
       - KnowledgeBase
-      summary: Transforms the content of a KnowledgeBase (syntactically and/or semantically),
-        possibly creating a new Asset
+      summary: Transforms the content of a KnowledgeBase (syntactically and/or semantically)
+      description: |
+        Requests that a transcreation operation is performed using a specific operator
       operationId: namedTransform
       parameters:
       - name: kbaseId
@@ -1126,7 +1339,7 @@ paths:
       responses:
         200:
           description: |
-            The product of the transformation
+            (A pointer to) the resulting KnowledgeBase
           content:
             '*/*':
               schema:
@@ -1135,8 +1348,10 @@ paths:
     post:
       tags:
       - KnowledgeBase
-      summary: Transforms the content of a KnowledgeBase (syntactically and/or semantically),
-        possibly creating a new Asset
+      summary: Transforms the content of a KnowledgeBase (syntactically and/or semantically)
+      description: |
+        Applies a transcreation operator, which produces a new derivative Artifact, that
+        is the Carrier of a new, derivative Asset.
       operationId: transform
       parameters:
       - name: kbaseId
@@ -1165,7 +1380,7 @@ paths:
       responses:
         200:
           description: |
-            The Surrogate Component
+            (A pointer to) the resulting KnowledgeBase
           content:
             '*/*':
               schema:
@@ -1175,6 +1390,8 @@ paths:
       tags:
       - Transcreate
       summary: Bind values to a formula with open variables
+      description: |
+        Applies a (detached) binding operator
       operationId: applyNamedBind
       parameters:
       - name: kbaseId
@@ -1210,7 +1427,7 @@ paths:
         required: true
       responses:
         200:
-          description: The bound expression
+          description: The Artifact carrying the bound expression
           content:
             '*/*':
               schema:
@@ -1221,6 +1438,8 @@ paths:
       tags:
       - Transcreate
       summary: Bind values to a formula with open variables
+      description: |
+        Applies a specific (detached) binding operator
       operationId: applyNamedBindDirect
       parameters:
       - name: operatorId
@@ -1240,7 +1459,8 @@ paths:
         required: true
       responses:
         200:
-          description: The bound expression
+          description: |
+            The Artifact carrying the bound expression
           content:
             '*/*':
               schema:
@@ -1251,6 +1471,8 @@ paths:
       tags:
       - Transcreate
       summary: Weave (fragments of) and artifact into a KB
+      description: |
+        Applies a (detached) weaving operator
       operationId: applyNamedWeave
       parameters:
       - name: kbaseId
@@ -1287,7 +1509,7 @@ paths:
       responses:
         200:
           description: |
-            The new Knowledge Base resulting from the weaving
+            The Artifact carrying the woven expression
           content:
             '*/*':
               schema:
@@ -1298,6 +1520,8 @@ paths:
       tags:
       - Transcreate
       summary: Weave (fragments of) and artifact into a KB
+      description: |
+        Applies a specific (detached) weaving operator
       operationId: applyNamedWeaveDirect
       parameters:
       - name: operatorId
@@ -1324,7 +1548,7 @@ paths:
       responses:
         200:
           description: |
-            The new Knowledge Base resulting from the weaving
+            The Artifact carrying the woven expression
           content:
             '*/*':
               schema:
@@ -1335,6 +1559,8 @@ paths:
       tags:
       - Transcreate
       summary: Projects a KnowledgeBase into a proper subset of content
+      description: |
+        Applies a (detached) selection operator
       operationId: applyNamedSelect
       parameters:
       - name: kbaseId
@@ -1371,7 +1597,7 @@ paths:
       responses:
         200:
           description: |
-            The new Knowledge Base resulting from the selection
+            The Artifact carrying the expression resulting from the selection
           content:
             '*/*':
               schema:
@@ -1382,6 +1608,8 @@ paths:
       tags:
       - Transcreate
       summary: Projects a KnowledgeBase into a proper subset of content
+      description: |
+        Applies a specific, (detached) selection operator
       operationId: applyNamedSelectDirect
       parameters:
       - name: operatorId
@@ -1408,7 +1636,7 @@ paths:
       responses:
         200:
           description: |
-            The new Knowledge Base resulting from the selection
+            The Artifact carrying the expression resulting from the selection
           content:
             '*/*':
               schema:
@@ -1419,6 +1647,8 @@ paths:
       tags:
       - Transcreate
       summary: Projects a KnowledgeBase into a proper subset of components
+      description: |
+        Applies a (detached) extraction operator
       operationId: applyNamedExtract
       parameters:
       - name: kbaseId
@@ -1455,7 +1685,7 @@ paths:
       responses:
         200:
           description: |
-            The new Knowledge Base resulting from the selection
+            The Artifact carrying the expression resulting from the extraction
           content:
             '*/*':
               schema:
@@ -1465,6 +1695,8 @@ paths:
       tags:
       - Transcreate
       summary: Projects a KnowledgeBase into a proper subset of components
+      description: |
+        Applies a specific, (detached) extraction operator
       operationId: applyNamedExtractDirect
       parameters:
       - name: operatorId
@@ -1497,7 +1729,7 @@ paths:
       responses:
         200:
           description: |
-            The new Knowledge Base resulting from the selection
+            The Artifact carrying the expression resulting from the extraction
           content:
             '*/*':
               schema:
@@ -1509,9 +1741,7 @@ paths:
       - Transcreate
       summary: Extract a Knowledge Asset Surrogate from a given Knowledge Artifact
       description: |
-        The operation abstracts the actual strategy, which can be initialized to be
-        specific to an Artifact, or a class thereof, but is supposed to be stateless
-        and idempotent.
+        Applies a (detached) introspection operator
       operationId: applyNamedIntrospect
       parameters:
       - name: kbaseId
@@ -1541,7 +1771,8 @@ paths:
           type: string
       responses:
         200:
-          description: The Surrogate that results from the application of the operator
+          description: |
+            The resulting Surrogate
           content:
             '*/*':
               schema:
@@ -1552,9 +1783,7 @@ paths:
       - Transcreate
       summary: Extract a Knowledge Asset Surrogate from a given Knowledge Artifact
       description: |
-        The operation abstracts the actual strategy, which can be initialized to be
-        specific to an Artifact, or a class thereof, but is supposed to be stateless
-        and idempotent.
+        Applies a specific, (detached) introspection operator
       operationId: applyNamedIntrospectDirect
       parameters:
       - name: operatorId
@@ -1580,7 +1809,8 @@ paths:
         required: true
       responses:
         200:
-          description: The Surrogate that results from the application of the operator
+          description: |
+            The resulting Surrogate
           content:
             '*/*':
               schema:
@@ -1590,8 +1820,9 @@ paths:
     post:
       tags:
       - Transcreate
-      summary: Transforms the content of a KnowledgeBase (syntactically and/or semantically),
-        possibly creating a new Asset
+      summary: Transforms the content of a KnowledgeBase (syntactically and/or semantically)
+      description: |
+        Applies a (detached) transcreation operator
       operationId: applyNamedTransform
       parameters:
       - name: kbaseId
@@ -1621,7 +1852,8 @@ paths:
           type: string
       responses:
         200:
-          description: A Carrier of the result from the application of the operator
+          description: |
+            The resulting Artifact
           content:
             '*/*':
               schema:
@@ -1630,8 +1862,9 @@ paths:
     post:
       tags:
       - Transcreate
-      summary: Transforms the content of a KnowledgeBase (syntactically and/or semantically),
-        possibly creating a new Asset
+      summary: Transforms the content of a KnowledgeBase (syntactically and/or semantically)
+      description: |
+        Applies a specific, (detached) transcreation operator
       operationId: applyNamedTransformDirect
       parameters:
       - name: operatorId
@@ -1657,7 +1890,7 @@ paths:
         required: true
       responses:
         200:
-          description: A Carrier of the result from the application of the operator
+          description: The resulting Artifact
           content:
             '*/*':
               schema:
@@ -1738,12 +1971,6 @@ components:
         type: string
   requestBodies:
     artifact:
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/KnowledgeCarrier'
-      required: true
-    kbaseComponent:
       content:
         '*/*':
           schema:

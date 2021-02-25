@@ -1,21 +1,43 @@
 openapi: 3.0.1
 info:
   title: API4KP Knowledge Reasoning API
-  description: |
-    Maturity - VERY LOW (highly subject to disruptive changes)
+  description: |2
 
-    ### Summary
+    APIs that expose the information processing capabilities of Knowledge Platform Components,
+    usually known as engines or reasoners, which are able to apply "knowledge" to "data",
+    in order to derive new information.
 
-    **Knowledge-Driven Reasoning (web) Service that supports the (stateless) execution of
-    Inferences, Queries, and related information processing tasks on one or more Knowledge Bases
-    (aka 'Models').**
+    Knowledge Reasoning APIs are likely to provide an abstraction layer for the proprietary
+    API of existing engines, but could also be used to expose engine-less microservices designed
+    to work with individual, named knowledge bases.
 
-    #### Identification
-    In this context, a 'Model' is a Knowledge Base - regardless of whether it consists of a known,
-    single Knowledge Asset, or is the result of an Assembly on-the-fly.
-    Knowledge Bases have a unique identifier: in this server, deployed Knowledge Base
-    (i.e. the instantiation of a Knowledge Base in some software) and possibly even deployments are
-    tracked with different IDs.
+    The APIs pivot on the notion of Knowledge Base _in motion_, and consider reasoners
+    as operators applied to the KBs.
+    In this context, Knowledge Bases prepared for Reasoning are also called Knowledge Models,
+    or "Models" for short, providing a connection to modern AI implementations.
+
+    The boundary between 'instance data' and 'universal knowledge' is fuzzy, and is abstracted
+    once the substrate Knowledge Base is bound to the reasoner. Knowledge Graphs are a primary example.
+    Some reasoning operations allow Clients to provide bindings for input variables.
+
+    ** Implementation patterns **
+    The binding between the Knowledge Base and the Reasoning service can be implemented in different ways.
+    Patterns include, but are not limited to,
+    (i) Knowledge Bases deployed within an engine backing the server; (ii) be implemented by the server directly,
+    through manual software development or trans-compilation process; (iii) references that can be
+    resolved by the server; (iv) support proxy/broker/adapter patterns where the server delegates
+    the execution to another service
+
+    ** Service Boundaries **
+    Reasoning APIs integrate with KnowledgeBase construction APIs to gather the knowledge,
+    and prepare it in a form that can be processed by the engine.
+    Reasoning APIs may produce Knowledge Base (components), and KnowledgeBase Construction APIs
+    can be used to construct augmented, inferred Knowledge Bases, which can be further processed using
+    the Reasoning APIs
+
+    **Maturity**
+    As of this version, this API is considered experimental.
+    Stateful, Incremental and/or Asynchronous reasoning APIs are not supported in this version
   contact:
     name: Davide Sottara
     email: sottara.davide@mayo.edu
@@ -24,23 +46,24 @@ info:
     url: https://www.apache.org/licenses/LICENSE-2.0.html
   version: 5.0.0
 servers:
-- url: /omg.org/spec/API4KP/20200801/api/inference/v4
+- url: /omg.org/spec/API4KP/20200801/api/inference/v5
 tags:
-- name: Model
-  description: Endpoints that expose (metadata about) the deployed model itself
 - name: Reasoning
-  description: Endpoints that expose a model's computation capabilities as a function
+  description: |
+    Endpoints that expose Reasoning capabilities as synchronous, stateless services
 paths:
   /models:
     get:
       tags:
       - Model
       summary: List Models
-      description: List the Models running on this server.
+      description: |
+        Lists the Knowledge Bases that are available to this server for reasoning.
       operationId: listModels
       responses:
         200:
-          description: List of References to available Models
+          description: |
+            A List of pointers to the available Models
           content:
             application/json:
               schema:
@@ -57,15 +80,18 @@ paths:
       tags:
       - Model
       summary: Describe Model
-      description: Return descriptive metadata about a specific model
+      description: |
+        Return descriptive metadata about a Model.
+        This operation may return a Surrogate, including a canonical API4KP
+        Surrogate associated to the Knowledge Base, but could also return
+        a runtime-oriented Surrogate that describes the Knowledge Base as an executable artifact.
       operationId: getModel
       parameters:
       - name: modelId
         in: path
-        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
-          that is deployed and executed as a Service. This identifier SHOULD be an
-          ID of the Asset itself, not of the manifestation of the Asset within the
-          server.
+        description: |
+          The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+          This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
         required: true
         schema:
           type: string
@@ -79,9 +105,8 @@ paths:
           type: string
       responses:
         200:
-          description: Information about the computable knowledge that is being executed
-            as a service, including enough information to resolve the Knowledge Asset
-            of which the model is an instantiation.
+          description: |
+            A runtime surrogate
           content:
             application/json:
               schema:
@@ -93,15 +118,18 @@ paths:
     post:
       tags:
       - Reasoning
-      summary: performs an inference, deriving all logical consequences of the KB
+      summary: Derives all logical consequences of a given KB
+      description: |
+        Derives the necessary, inferred consequences of a given (asserted) Knowledge Base,
+        by means of logical derivation.
+        The client may optionally provide some input Bindings
       operationId: infer
       parameters:
       - name: modelId
         in: path
-        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
-          that is deployed and executed as a Service. This identifier SHOULD be an
-          ID of the Asset itself, not of the manifestation of the Asset within the
-          server.
+        description: |
+          The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+          This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
         required: true
         schema:
           type: string
@@ -113,15 +141,22 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       requestBody:
         content:
           application/json:
             schema:
               $ref: '#/components/schemas/Bindings'
-        required: true
+        required: false
       responses:
         200:
-          description: The results of the computation, returned synchronously
+          description: |
+            The inferred axioms
           content:
             application/json:
               schema:
@@ -131,15 +166,19 @@ paths:
     post:
       tags:
       - Reasoning
-      summary: performs an inference, and returns the derived facts as bound variables
+      summary: Derives inferred features, based on input bindings
+      description: |
+        Evaluates a 'model' against some user provided 'inputs'.
+        Binds the client-provided inputs to the proper Knowledge Base variables,
+        performs an inference (see: infer), and returns the values associated
+        to some output variables.
       operationId: evaluate
       parameters:
       - name: modelId
         in: path
-        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
-          that is deployed and executed as a Service. This identifier SHOULD be an
-          ID of the Asset itself, not of the manifestation of the Asset within the
-          server.
+        description: |
+          The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+          This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
         required: true
         schema:
           type: string
@@ -151,15 +190,22 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       requestBody:
         content:
           application/json:
             schema:
               $ref: '#/components/schemas/Bindings'
-        required: true
+        required: false
       responses:
         200:
-          description: The results of the computation, returned synchronously
+          description: |
+            The inferred values for the KB's output variables
           content:
             application/json:
               schema:
@@ -169,16 +215,18 @@ paths:
     post:
       tags:
       - Reasoning
-      summary: performs an inference, testing whether a set of statements is derived
-        in the process
+      summary: tests whether a set of statements is a logical consequence of a KB
+      description: |
+        performs an inference using the given Knowledge Base as a substrate, then
+        verifies whether the client's provided Knowledge Base Component is a subset
+        of the substrate Knowledge Base, and/or its logical consequences.
       operationId: entails
       parameters:
       - name: modelId
         in: path
-        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
-          that is deployed and executed as a Service. This identifier SHOULD be an
-          ID of the Asset itself, not of the manifestation of the Asset within the
-          server.
+        description: |
+          The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+          This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
         required: true
         schema:
           type: string
@@ -188,6 +236,12 @@ paths:
         description: The Identifier os a specific version of a Model, within the series
           identified by a modelId.
         required: true
+        schema:
+          type: string
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
         schema:
           type: string
       requestBody:
@@ -198,22 +252,29 @@ paths:
         required: true
       responses:
         200:
-          description: The results of the computation, returned synchronously
-          content: {}
+          description: |
+            Whether or not the target KB entails the client provided one
+          content:
+            application/json:
+              schema:
+                type: boolean
       x-codegen-request-body-name: potentialConsequence
   /models/{modelId}/versions/{versionTag}/reasoners/queryanswers:
     post:
       tags:
       - Reasoning
       summary: queries the KB, returning bindings to the query's variables
+      description: |
+        applies the client's provided Query to the target Knowledge Base.
+        If the query specifies any output variable, this operation will
+        return the inferred bindings for those variables.
       operationId: askQuery
       parameters:
       - name: modelId
         in: path
-        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
-          that is deployed and executed as a Service. This identifier SHOULD be an
-          ID of the Asset itself, not of the manifestation of the Asset within the
-          server.
+        description: |
+          The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+          This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
         required: true
         schema:
           type: string
@@ -223,6 +284,12 @@ paths:
         description: The Identifier os a specific version of a Model, within the series
           identified by a modelId.
         required: true
+        schema:
+          type: string
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
         schema:
           type: string
       requestBody:
@@ -233,7 +300,8 @@ paths:
         required: true
       responses:
         200:
-          description: The bound expression
+          description: |
+            The bindings of the query variables
           content:
             '*/*':
               schema:
@@ -246,14 +314,16 @@ paths:
       tags:
       - Reasoning
       summary: determines whether the KB is internally logically consistent
+      description: |
+        Determines the consistency of a Knowledge Base, usually by determining
+        whether 'false' is a logical consequence of the KB
       operationId: checkConsistency
       parameters:
       - name: modelId
         in: path
-        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
-          that is deployed and executed as a Service. This identifier SHOULD be an
-          ID of the Asset itself, not of the manifestation of the Asset within the
-          server.
+        description: |
+          The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+          This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
         required: true
         schema:
           type: string
@@ -265,23 +335,36 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       responses:
         200:
-          description: The bound expression
-          content: {}
+          description: |
+            Whether or not the target KB is logically consistent
+          content:
+            '*/*':
+              schema:
+                type: boolean
   /models/{modelId}/versions/{versionTag}/reasoners/sats:
     post:
       tags:
       - Reasoning
-      description: determines whether the KB is satisfiable
+      summary: determines whether the KB is satisfiable
+      description: |
+        Determines whether the Knowledge Base is satisfiable, i.e. whether the KB is not inconsistent
+        and, if the KB has open variables, there is at least one binding of those variables
+        that would result in a KB that is still consistent.
       operationId: checkSatisfiability
       parameters:
       - name: modelId
         in: path
-        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
-          that is deployed and executed as a Service. This identifier SHOULD be an
-          ID of the Asset itself, not of the manifestation of the Asset within the
-          server.
+        description: |
+          The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+          This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
         required: true
         schema:
           type: string
@@ -293,9 +376,19 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       responses:
         200:
-          description: The bound expression
+          description: |
+            A list of at least one Binding if the KB is satisfiable, or an empty list if the KB is not.
+            Notice that an empty list of Bindings denotes an unsatisfiable KB, while a list with
+            Bindings that are empty would denote a trivially satisfiable KB - a KB that is consistent
+            and has no free variables.
           content:
             '*/*':
               schema:
@@ -306,15 +399,20 @@ paths:
     get:
       tags:
       - Reasoning
-      description: lists all the classes that an individual is member of
+      summary: lists all the classes that an individual is member of
+      description: |
+        Given the id of an individual, and optional features that describe that individual,
+        returns all the classes that the individual is a member of, or all the types
+        that the individual is an instance of.
+
+        This operation supports both qualitative and quantitative classifications.
       operationId: listMembership
       parameters:
       - name: modelId
         in: path
-        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
-          that is deployed and executed as a Service. This identifier SHOULD be an
-          ID of the Asset itself, not of the manifestation of the Asset within the
-          server.
+        description: |
+          The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+          This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
         required: true
         schema:
           type: string
@@ -332,27 +430,43 @@ paths:
         schema:
           type: string
           format: uuid
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              $ref: '#/components/schemas/Bindings'
+        required: false
       responses:
         200:
-          description: The bound expression
+          description: |
+            References to the class(es) that the individual is a member of
           content:
             '*/*':
               schema:
                 type: array
                 items:
                   $ref: '#/components/schemas/Pointer'
+      x-codegen-request-body-name: features
     post:
       tags:
       - Reasoning
-      description: determines if an individual is member of a class
+      summary: determines if an individual is member of a class
+      description: |
+        Given the id of an individual, some optional features that describe that individual,
+        and the id of a specific class, determines whether the individual is a member of that class
       operationId: checkMembership
       parameters:
       - name: modelId
         in: path
-        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
-          that is deployed and executed as a Service. This identifier SHOULD be an
-          ID of the Asset itself, not of the manifestation of the Asset within the
-          server.
+        description: |
+          The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+          This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
         required: true
         schema:
           type: string
@@ -376,23 +490,34 @@ paths:
         schema:
           type: string
           format: uuid
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       responses:
         200:
-          description: Success
-          content: {}
+          description: |
+            Whether or not the given individual is a member of the given class
+          content:
+            '*/*':
+              schema:
+                type: boolean
   /models/{modelId}/versions/{versionTag}/reasoners/classifiers/classes/{entityId}:
     get:
       tags:
       - Reasoning
-      description: lists all the superclasses of a given Class
+      summary: lists all the superclasses of a given Class
+      description: |
+        Given the identifier of a class, returns all the classes that the given class is a subclass of.
       operationId: listSubsumptions
       parameters:
       - name: modelId
         in: path
-        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
-          that is deployed and executed as a Service. This identifier SHOULD be an
-          ID of the Asset itself, not of the manifestation of the Asset within the
-          server.
+        description: |
+          The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+          This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
         required: true
         schema:
           type: string
@@ -410,9 +535,16 @@ paths:
         schema:
           type: string
           format: uuid
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       responses:
         200:
-          description: The bound expression
+          description: |
+            References to the superclasses of the given class
           content:
             '*/*':
               schema:
@@ -422,15 +554,16 @@ paths:
     post:
       tags:
       - Reasoning
-      description: determines if a Class is a subclass of another class
+      summary: determines if a Class is a subclass of another class
+      description: |
+        Given the identifiers of two classes, returns true if and only if the former is a subclass of the latter.
       operationId: checkSubsumption
       parameters:
       - name: modelId
         in: path
-        description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
-          that is deployed and executed as a Service. This identifier SHOULD be an
-          ID of the Asset itself, not of the manifestation of the Asset within the
-          server.
+        description: |
+          The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+          This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
         required: true
         schema:
           type: string
@@ -454,10 +587,20 @@ paths:
         schema:
           type: string
           format: uuid
+      - name: X-params
+        in: header
+        description: |
+          Additional, operation-specific parameter
+        schema:
+          type: string
       responses:
         200:
-          description: Success
-          content: {}
+          description: |
+            Whether or not the given class (entity) is a subclass of the reference class
+          content:
+            '*/*':
+              schema:
+                type: boolean
 components:
   schemas:
     Pointer:
@@ -479,9 +622,9 @@ components:
     modelId:
       name: modelId
       in: path
-      description: The Identifier of a known Inferential Knowledge Asset (aka kao#Assessment)
-        that is deployed and executed as a Service. This identifier SHOULD be an ID
-        of the Asset itself, not of the manifestation of the Asset within the server.
+      description: |
+        The Identifier of a known Knowledge Base that is deployed and executed as a Service.
+        This identifier SHOULD be an ID of the Asset itself, not of the manifestation of the Asset within the server.
       required: true
       schema:
         type: string
@@ -523,7 +666,20 @@ components:
         A formal MIME type used for content negotiation
       schema:
         type: string
+    params:
+      name: X-params
+      in: header
+      description: |
+        Additional, operation-specific parameter
+      schema:
+        type: string
   requestBodies:
+    features:
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/Bindings'
+      required: false
     sourceArtifact:
       content:
         '*/*':

@@ -15,9 +15,9 @@ definitions:
     type: string
     enum:
       - https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType#b0586387-30d9-3107-9205-782c0dd05300
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType#e4de3836-1f60-3fb2-99d8-26f2504ade47
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType#4f124d54-b3cf-3dc8-9e9d-fd05b45e10d0
       - https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType#694c9fe7-5eb5-3db6-b3d4-36a435f8a1e4
       - https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType#ff629252-f3d9-33f3-93c4-771f449bce09
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType#4f124d54-b3cf-3dc8-9e9d-fd05b45e10d0
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType#e4de3836-1f60-3fb2-99d8-26f2504ade47
     xml:
       namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType/20200801'

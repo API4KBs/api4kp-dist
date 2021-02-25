@@ -124,7 +124,7 @@ typedef sequence<Validator> ValidatorList;
 }; // services
 module api {
 module transrepresentation {
-module v4 {
+module v5 {
 interface Discovery {
   ::org::omg::spec::api4kp::_20200801::services::transrepresentation::Deserializer getDeserializationComponent (
       in string componentid 
@@ -253,7 +253,7 @@ interface Deserialize {
       in string from 
   );
 };
-}; // v4
+}; // v5
 }; // transrepresentation
 }; // api
 }; // _20200801

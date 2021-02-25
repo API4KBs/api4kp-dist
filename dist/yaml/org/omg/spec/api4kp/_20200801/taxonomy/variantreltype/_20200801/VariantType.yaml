@@ -15,12 +15,12 @@ definitions:
     type: string
     enum:
       - https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#df2771c8-3ea5-3d11-b038-1ecd8dc32307
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#6dd217bb-9ded-3c49-b312-9ada4a20ed9e
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#dddf1ba8-237c-3b8b-a468-8be2aa4183a6
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#7d7fd00c-5321-3f5d-8ee0-26474a9c3d3b
-      - https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#b9e919da-b07d-3fcf-a0b8-8193c8061d86
       - https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#33047a9b-d523-3fcb-903b-03887564ff29
       - https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#8dceb3e4-5451-34f6-8015-87b971e2492c
       - https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#c49bfa1d-da4a-30d2-a7f4-a8f12407b488
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#dddf1ba8-237c-3b8b-a468-8be2aa4183a6
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#6dd217bb-9ded-3c49-b312-9ada4a20ed9e
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#b9e919da-b07d-3fcf-a0b8-8193c8061d86
+      - https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType#7d7fd00c-5321-3f5d-8ee0-26474a9c3d3b
     xml:
       namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType/20200801'

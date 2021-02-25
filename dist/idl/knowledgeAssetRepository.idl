@@ -217,7 +217,7 @@ typedef sequence<KnowledgeAsset> KnowledgeAssetList;
 module api {
 module repository {
 module asset {
-module v4 {
+module v5 {
 interface KnowledgeAssetCatalog {
   ::org::omg::spec::api4kp::_20200801::surrogate::KnowledgeAsset getKnowledgeAsset (
       in string xaccept , 
@@ -402,7 +402,7 @@ interface KnowledgeAssetRepository {
       in string versiontag 
   );
 };
-}; // v4
+}; // v5
 }; // asset
 }; // repository
 }; // api
