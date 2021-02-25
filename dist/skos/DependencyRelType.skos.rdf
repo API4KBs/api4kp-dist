@@ -1,0 +1,123 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:tgt="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#"
+    xmlns:AnnotationVocabulary1="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:DOL-terms="http://www.omg.org/spec/DOL/DOL-terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:AnnotationVocabulary="https://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns="https://www.omg.org/spec/API4KP/api4kp-rel/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType">
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://www.omg.org/spec/API4KP/20210201/taxonomy/DependencyRelType"/>
+  </owl:Ontology>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#conformsWith">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>conforms with</rdfs:label>
+    <skos:prefLabel>conforms with</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/conformsWith</rdfs:isDefinedBy>
+    <skos:notation>62b631e7-30de-3ff0-a0d3-f3ab5c82bfcb</skos:notation>
+    <skos:inScheme>
+      <skos:ConceptScheme rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyTypes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>DependencyTypes</rdfs:label>
+        <skos:prefLabel>DependencyTypes</skos:prefLabel>
+        <skos:hasTopConcept>
+          <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyType">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyTypes"/>
+            <rdfs:label>DependencyType</rdfs:label>
+            <skos:prefLabel>DependencyType</skos:prefLabel>
+          </skos:Concept>
+        </skos:hasTopConcept>
+      </skos:ConceptScheme>
+    </skos:inScheme>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#isComplementedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>is complemented by</rdfs:label>
+        <skos:prefLabel>is complemented by</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isComplementedBy</rdfs:isDefinedBy>
+        <skos:notation>023d4965-64bb-31d7-843c-f3558cf92a55</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyTypes"/>
+        <skos:broader>
+          <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#dependsOn">
+            <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyType"/>
+            <rdfs:label xml:lang="en">depends on</rdfs:label>
+            <skos:prefLabel xml:lang="en">depends on</skos:prefLabel>
+            <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp/dependsOn</rdfs:isDefinedBy>
+            <skos:notation>fdc5cdcb-de66-3674-8607-2a8ae01b6c38</skos:notation>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyTypes"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyType"/>
+          </skos:Concept>
+        </skos:broader>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyType"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyType"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#effectuates">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>effectuates</rdfs:label>
+    <skos:prefLabel>effectuates</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/effectuates</rdfs:isDefinedBy>
+    <skos:notation>e60f5902-0ebb-3405-a421-58be4de5b108</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyTypes"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#isComplementedBy"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyType"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#includesByReference">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>includes by reference</rdfs:label>
+    <skos:prefLabel>includes by reference</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/includesByReference</rdfs:isDefinedBy>
+    <skos:notation>06f91083-ec07-3158-a2f1-9bc25817105e</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyTypes"/>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#imports">
+        <skos:broader>
+          <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#isSupplementedBy">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <rdfs:label>is supplemented by</rdfs:label>
+            <skos:prefLabel>is supplemented by</skos:prefLabel>
+            <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isSupplementedBy</rdfs:isDefinedBy>
+            <skos:notation>425ce0d3-a165-3625-b627-d94667cc8009</skos:notation>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyTypes"/>
+            <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#dependsOn"/>
+            <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyType"/>
+          </owl:NamedIndividual>
+        </skos:broader>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyType"/>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/imports</rdfs:isDefinedBy>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyTypes"/>
+        <skos:notation>a6878bf5-d858-3676-83a1-ef2871d36f47</skos:notation>
+        <skos:broader>
+          <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#references">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <rdfs:label>references</rdfs:label>
+            <skos:prefLabel>references</skos:prefLabel>
+            <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/references</rdfs:isDefinedBy>
+            <skos:notation>44a2dc91-e1e2-3b65-bfd7-ff6c63eca555</skos:notation>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyTypes"/>
+            <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#dependsOn"/>
+            <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyType"/>
+          </owl:NamedIndividual>
+        </skos:broader>
+        <rdfs:label>imports</rdfs:label>
+        <skos:prefLabel>imports</skos:prefLabel>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#DependencyType"/>
+  </owl:NamedIndividual>
+</rdf:RDF>

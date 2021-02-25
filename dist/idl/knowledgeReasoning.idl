@@ -2,7 +2,7 @@ module org {
 module omg {
 module spec {
 module api4kp {
-module _20200801 {
+module _20210201 {
 module id {
 struct KnowledgeRepresentationLanguageSerialization {
     string referentid;
@@ -55,6 +55,34 @@ struct KnowledgeRepresentationLanguage {
 };
 typedef sequence<KnowledgeRepresentationLanguage> KnowledgeRepresentationLanguageList;
 }; // id
+module services {
+struct SyntacticRepresentation {
+    ::org::omg::spec::api4kp::_20210201::id::KnowledgeRepresentationLanguage language;
+    ::org::omg::spec::api4kp::_20210201::id::KnowledgeRepresentationLanguageProfile profile;
+    ::org::omg::spec::api4kp::_20210201::id::SerializationFormat format;
+    sequence<::org::omg::spec::api4kp::_20210201::id::Lexicon> lexicon;
+    ::org::omg::spec::api4kp::_20210201::id::Language locale;
+    ::org::omg::spec::api4kp::_20210201::id::KnowledgeRepresentationLanguageSerialization serialization;
+    ::org::omg::spec::api4kp::_20210201::id::KnowledgeRepresentationLanguageRole role;
+    sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> sublanguage;
+    string charset;
+    string encoding;
+    string logic;
+    string complexity;
+};
+typedef sequence<SyntacticRepresentation> SyntacticRepresentationList;
+struct KnowledgeCarrier {
+    ::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier artifactid;
+    ::org::omg::spec::api4kp::_20210201::id::ParsingLevel level;
+    ::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier assetid;
+    ::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation representation;
+    string href;
+    string label;
+};
+typedef sequence<KnowledgeCarrier> KnowledgeCarrierList;
+}; // services
+}; // _20210201
+module _20200801 {
 module datatypes {
 struct Bindings {
     string entries;
@@ -65,47 +93,21 @@ struct Map {
 };
 typedef sequence<Map> MapList;
 }; // datatypes
-module services {
-struct SyntacticRepresentation {
-    ::org::omg::spec::api4kp::_20200801::id::KnowledgeRepresentationLanguage language;
-    ::org::omg::spec::api4kp::_20200801::id::KnowledgeRepresentationLanguageProfile profile;
-    ::org::omg::spec::api4kp::_20200801::id::SerializationFormat format;
-    sequence<::org::omg::spec::api4kp::_20200801::id::Lexicon> lexicon;
-    ::org::omg::spec::api4kp::_20200801::id::Language locale;
-    ::org::omg::spec::api4kp::_20200801::id::KnowledgeRepresentationLanguageSerialization serialization;
-    ::org::omg::spec::api4kp::_20200801::id::KnowledgeRepresentationLanguageRole role;
-    sequence<::org::omg::spec::api4kp::_20200801::services::SyntacticRepresentation> sublanguage;
-    string charset;
-    string encoding;
-    string logic;
-    string complexity;
-};
-typedef sequence<SyntacticRepresentation> SyntacticRepresentationList;
-struct KnowledgeCarrier {
-    ::org::omg::spec::api4kp::_20200801::id::ResourceIdentifier artifactid;
-    ::org::omg::spec::api4kp::_20200801::id::ParsingLevel level;
-    ::org::omg::spec::api4kp::_20200801::id::ResourceIdentifier assetid;
-    ::org::omg::spec::api4kp::_20200801::services::SyntacticRepresentation representation;
-    string href;
-    string label;
-};
-typedef sequence<KnowledgeCarrier> KnowledgeCarrierList;
-}; // services
 module api {
 module inference {
 module v5 {
 interface Model {
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier getModel (
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier getModel (
       in string modelid , 
       in string versiontag 
   );
-  ::org::omg::spec::api4kp::_20200801::id::PointerList listModels (
+  ::org::omg::spec::api4kp::_20210201::id::PointerList listModels (
   );
 };
 interface Reasoning {
   ::org::omg::spec::api4kp::_20200801::datatypes::BindingsList askQuery (
       in string modelid , 
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier query , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier query , 
       in string xparams , 
       in string versiontag 
   );
@@ -134,7 +136,7 @@ interface Reasoning {
       in string versiontag 
   );
   boolean entails (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier potentialconsequence , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier potentialconsequence , 
       in string modelid , 
       in string xparams , 
       in string versiontag 
@@ -145,20 +147,20 @@ interface Reasoning {
       in string xparams , 
       in string versiontag 
   );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier infer (
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier infer (
       in ::org::omg::spec::api4kp::_20200801::datatypes::Bindings features , 
       in string modelid , 
       in string xparams , 
       in string versiontag 
   );
-  ::org::omg::spec::api4kp::_20200801::id::PointerList listMembership (
+  ::org::omg::spec::api4kp::_20210201::id::PointerList listMembership (
       in ::org::omg::spec::api4kp::_20200801::datatypes::Bindings features , 
       in string modelid , 
       in string xparams , 
       in string entityid , 
       in string versiontag 
   );
-  ::org::omg::spec::api4kp::_20200801::id::PointerList listSubsumptions (
+  ::org::omg::spec::api4kp::_20210201::id::PointerList listSubsumptions (
       in string modelid , 
       in string xparams , 
       in string entityid , 

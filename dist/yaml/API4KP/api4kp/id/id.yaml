@@ -8,7 +8,7 @@ definitions:
       uuid:
         $ref: '../datatypes/datatypes.yaml#/definitions/UUID'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/datatypes'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/datatypes'
       resourceId:
         type: string
         xml:
@@ -43,7 +43,7 @@ definitions:
       - tag
       - uuid
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
   ConceptIdentifier:
     allOf:
       - $ref: '#/definitions/ResourceIdentifier'
@@ -58,7 +58,7 @@ definitions:
         required:
           - _class
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
   Pointer:
     allOf:
       - $ref: '#/definitions/ResourceIdentifier'
@@ -85,7 +85,7 @@ definitions:
         required:
           - _class
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
   VersionTagType:
     type: string
     enum:
@@ -94,7 +94,7 @@ definitions:
       - TIMESTAMP
       - SEM_VER
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
   IdentifierTagType:
     type: string
     enum:
@@ -102,4 +102,4 @@ definitions:
       - STRING_VALUE
       - UUID_VALUE
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/id'

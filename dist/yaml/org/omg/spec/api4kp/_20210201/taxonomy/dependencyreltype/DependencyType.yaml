@@ -1,0 +1,26 @@
+swagger: "2.0"
+definitions:
+  DependencyType:
+    allOf:
+      - $ref: '../../../../../../../API4KP/api4kp/id/id.yaml#/definitions/ConceptIdentifier'
+      - type: object
+        discriminator: _class
+        properties:
+          _class : string
+        required:
+          - _class
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/DependencyRelType'
+  DependencyType_Valueset:
+    type: string
+    enum:
+      - https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#dependsOn
+      - https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#references
+      - https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#isSupplementedBy
+      - https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#isComplementedBy
+      - https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#effectuates
+      - https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#conformsWith
+      - https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#imports
+      - https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#includesByReference
+    xml:
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/DependencyRelType'

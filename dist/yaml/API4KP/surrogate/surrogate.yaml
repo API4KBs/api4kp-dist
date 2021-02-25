@@ -8,92 +8,92 @@ definitions:
       formalType:
         type: array
         items:
-          $ref: '../../org/omg/spec/api4kp/_20200801/taxonomy/knowledgeassettype/KnowledgeAssetType.series.yaml#/definitions/KnowledgeAssetType'
+          $ref: '../../org/omg/spec/api4kp/_20210201/taxonomy/knowledgeassettype/KnowledgeAssetType.yaml#/definitions/KnowledgeAssetType'
         minItems: 0
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeAssetType'
       formalCategory:
         type: array
         items:
-          $ref: '../../org/omg/spec/api4kp/_20200801/taxonomy/knowledgeassetcategory/KnowledgeAssetCategory.series.yaml#/definitions/KnowledgeAssetCategory'
+          $ref: '../../org/omg/spec/api4kp/_20210201/taxonomy/knowledgeassetcategory/KnowledgeAssetCategory.yaml#/definitions/KnowledgeAssetCategory'
         minItems: 0
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetCategory'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeAssetCategory'
       processingMethod:
         type: array
         items:
-          $ref: '../../org/omg/spec/api4kp/_20200801/taxonomy/knowledgeprocessingtechnique/KnowledgeProcessingTechnique.series.yaml#/definitions/KnowledgeProcessingTechnique'
+          $ref: '../../org/omg/spec/api4kp/_20210201/taxonomy/knowledgeprocessingtechnique/KnowledgeProcessingTechnique.yaml#/definitions/KnowledgeProcessingTechnique'
         minItems: 0
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeProcessingTechnique'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeProcessingTechnique'
       role:
         type: array
         items:
-          $ref: '../../org/omg/spec/api4kp/_20200801/taxonomy/knowledgeassetrole/KnowledgeAssetRole.series.yaml#/definitions/KnowledgeAssetRole'
+          $ref: '#/definitions/KnowledgeAssetRole'
         minItems: 0
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetRole'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeAssetRole'
       assetId:
         $ref: '../api4kp/id/id.yaml#/definitions/ResourceIdentifier'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
       secondaryId:
         type: array
         items:
           $ref: '../api4kp/id/id.yaml#/definitions/ResourceIdentifier'
         minItems: 0
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
       memberOf:
         type: array
         items:
           $ref: '../api4kp/id/id.yaml#/definitions/ResourceIdentifier'
         minItems: 0
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
       annotation:
         type: array
         items:
           $ref: '#/definitions/Annotation'
         minItems: 0
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
       carriers:
         type: array
         items:
           $ref: '#/definitions/KnowledgeArtifact'
         minItems: 0
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
       citations:
         type: array
         items:
           $ref: '#/definitions/Citation'
         minItems: 0
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
       applicableIn:
         $ref: '#/definitions/Applicability'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
       surrogate:
         type: array
         items:
           $ref: '#/definitions/KnowledgeArtifact'
         minItems: 0
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
       links:
         type: array
         items:
           $ref: '#/definitions/Link'
         minItems: 0
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
       lifecycle:
         $ref: '#/definitions/Publication'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
       name:
         type: string
         xml:
@@ -111,7 +111,7 @@ definitions:
       - name
       - assetId
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
   KnowledgeArtifact:
     type: object
     discriminator: _class
@@ -120,44 +120,44 @@ definitions:
       localization:
         type: array
         items:
-          $ref: '../../org/omg/spec/api4kp/_20200801/taxonomy/iso639_2_languagecode/Language.series.yaml#/definitions/Language'
+          $ref: '../../org/omg/spec/api4kp/_20190201/taxonomy/iso639_2_languagecode/Language.yaml#/definitions/Language'
         minItems: 0
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-2-LanguageCode'
+          namespace: 'https://www.omg.org/spec/API4KP/20190201/taxonomy/ISO639-2-LanguageCode'
       artifactId:
         $ref: '../api4kp/id/id.yaml#/definitions/ResourceIdentifier'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
       expressionCategory:
-        $ref: '../../org/omg/spec/api4kp/_20200801/taxonomy/knowledgeartifactcategory/KnowledgeArtifactCategory.series.yaml#/definitions/KnowledgeArtifactCategory'
+        $ref: '../../org/omg/spec/api4kp/_20210201/taxonomy/knowledgeartifactcategory/KnowledgeArtifactCategory.yaml#/definitions/KnowledgeArtifactCategory'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeArtifactCategory'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeArtifactCategory'
       secondaryId:
         type: array
         items:
           $ref: '../api4kp/id/id.yaml#/definitions/ResourceIdentifier'
         minItems: 0
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
       summary:
         $ref: '#/definitions/Summary'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
       links:
         type: array
         items:
           $ref: '#/definitions/Link'
         minItems: 0
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
       representation:
         $ref: '../api4kp/services/services.yaml#/definitions/SyntacticRepresentation'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
       lifecycle:
         $ref: '#/definitions/Publication'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
       alternativeTitle:
         type: string
         xml:
@@ -203,7 +203,7 @@ definitions:
       - artifactId
       - representation
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
   Link:
     type: object
     discriminator: _class
@@ -212,7 +212,7 @@ definitions:
     required:
       - _class
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
   Component:
     allOf:
       - $ref: '#/definitions/Link'
@@ -221,23 +221,23 @@ definitions:
         properties:
           _class : string
           rel:
-            $ref: '../../org/omg/spec/api4kp/_20200801/taxonomy/structuralreltype/StructuralPartType.series.yaml#/definitions/StructuralPartType'
+            $ref: '../../org/omg/spec/api4kp/_20210201/taxonomy/structuralreltype/StructuralPartType.yaml#/definitions/StructuralPartType'
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/StructuralRelType'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/StructuralRelType'
           rol:
             $ref: '../api4kp/id/id.yaml#/definitions/ConceptIdentifier'
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
           href:
             $ref: '../api4kp/id/id.yaml#/definitions/ResourceIdentifier'
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
         required:
           - _class
           - rel
           - href
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
   Derivative:
     allOf:
       - $ref: '#/definitions/Link'
@@ -246,19 +246,19 @@ definitions:
         properties:
           _class : string
           rel:
-            $ref: '../../org/omg/spec/api4kp/_20200801/taxonomy/derivationreltype/DerivationType.series.yaml#/definitions/DerivationType'
+            $ref: '../../org/omg/spec/api4kp/_20210201/taxonomy/derivationreltype/DerivationType.yaml#/definitions/DerivationType'
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/DerivationRelType'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/DerivationRelType'
           href:
             $ref: '../api4kp/id/id.yaml#/definitions/ResourceIdentifier'
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
         required:
           - _class
           - rel
           - href
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
   Dependency:
     allOf:
       - $ref: '#/definitions/Link'
@@ -267,17 +267,17 @@ definitions:
         properties:
           _class : string
           rel:
-            $ref: '../../org/omg/spec/api4kp/_20200801/taxonomy/dependencyreltype/DependencyType.series.yaml#/definitions/DependencyType'
+            $ref: '../../org/omg/spec/api4kp/_20210201/taxonomy/dependencyreltype/DependencyType.yaml#/definitions/DependencyType'
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/DependencyRelType'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/DependencyRelType'
           href:
             $ref: '../api4kp/id/id.yaml#/definitions/ResourceIdentifier'
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
         required:
           - _class
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
   Variant:
     allOf:
       - $ref: '#/definitions/Link'
@@ -286,28 +286,28 @@ definitions:
         properties:
           _class : string
           rel:
-            $ref: '../../org/omg/spec/api4kp/_20200801/taxonomy/variantreltype/VariantType.series.yaml#/definitions/VariantType'
+            $ref: '../../org/omg/spec/api4kp/_20210201/taxonomy/variantreltype/VariantType.yaml#/definitions/VariantType'
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/VariantRelType'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/VariantRelType'
           href:
             $ref: '../api4kp/id/id.yaml#/definitions/ResourceIdentifier'
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
         required:
           - _class
           - rel
           - href
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
   Summary:
     type: object
     discriminator: _class
     properties:
       _class : string
       rel:
-        $ref: '../../org/omg/spec/api4kp/_20200801/taxonomy/summaryreltype/SummarizationType.series.yaml#/definitions/SummarizationType'
+        $ref: '../../org/omg/spec/api4kp/_20210201/taxonomy/summaryreltype/SummarizationType.yaml#/definitions/SummarizationType'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/SummaryRelType'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/SummaryRelType'
       text:
         type: string
         xml:
@@ -317,7 +317,7 @@ definitions:
       - text
       - rel
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
   Version:
     allOf:
       - $ref: '#/definitions/Link'
@@ -326,19 +326,19 @@ definitions:
         properties:
           _class : string
           rel:
-            $ref: '../../org/omg/spec/api4kp/_20200801/taxonomy/relatedversiontype/RelatedVersionType.series.yaml#/definitions/RelatedVersionType'
+            $ref: '../../org/omg/spec/api4kp/_20210201/taxonomy/relatedversiontype/RelatedVersionType.yaml#/definitions/RelatedVersionType'
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/RelatedVersionType'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/RelatedVersionType'
           href:
             $ref: '../api4kp/id/id.yaml#/definitions/ResourceIdentifier'
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
         required:
           - _class
           - rel
           - href
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
   Citation:
     type: object
     discriminator: _class
@@ -347,11 +347,11 @@ definitions:
       rel:
         $ref: '../api4kp/id/id.yaml#/definitions/ConceptIdentifier'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
       bibliographyFormat:
         $ref: '../api4kp/id/id.yaml#/definitions/ConceptIdentifier'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
       bibliography:
         type: string
         xml:
@@ -359,7 +359,7 @@ definitions:
     required:
       - _class
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
   Policy:
     type: object
     discriminator: _class
@@ -368,21 +368,21 @@ definitions:
       identifier:
         $ref: '../api4kp/id/id.yaml#/definitions/ResourceIdentifier'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
     required:
       - _class
       - identifier
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
   Publication:
     type: object
     discriminator: _class
     properties:
       _class : string
       publicationStatus:
-        $ref: '../../org/omg/spec/api4kp/_20200801/taxonomy/publicationstatus/PublicationStatus.series.yaml#/definitions/PublicationStatus'
+        $ref: '../../org/omg/spec/api4kp/_20210201/taxonomy/publicationstatus/PublicationStatus.yaml#/definitions/PublicationStatus'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/PublicationStatus'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/PublicationStatus'
       createdOn:
         type: string
         xml:
@@ -403,7 +403,7 @@ definitions:
       - _class
       - publicationStatus
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
   Annotation:
     type: object
     discriminator: _class
@@ -412,16 +412,16 @@ definitions:
       rel:
         $ref: '../api4kp/id/id.yaml#/definitions/ConceptIdentifier'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
       ref:
         $ref: '../api4kp/id/id.yaml#/definitions/ConceptIdentifier'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
     required:
       - _class
       - ref
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'
   Applicability:
     type: object
     discriminator: _class
@@ -433,7 +433,7 @@ definitions:
           $ref: '../api4kp/id/id.yaml#/definitions/ConceptIdentifier'
         minItems: 1
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
       description:
         type: string
         xml:
@@ -442,4 +442,4 @@ definitions:
       - _class
       - situation
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/surrogate'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/surrogate'

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="KnowledgeAssetCategories"
+           targetNamespace="https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeAssetCategory"
+           elementFormDefault="qualified"
+           xmlns="https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeAssetCategory"
+           xmlns:id="https://www.omg.org/spec/API4KP/20210201/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20210201/id"/>
+
+    <xs:complexType name="KnowledgeAssetCategory">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="KnowledgeAssetCategory_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#Definition"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#ComponentKnowledgeAsset"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeResourceDescription"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#SemioticAsset"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#ImperativeAsset"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#InferenceAsset"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#InformationAsset"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#CompositeKnowledgeAsset"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#MetricAsset"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#ProcessAsset"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

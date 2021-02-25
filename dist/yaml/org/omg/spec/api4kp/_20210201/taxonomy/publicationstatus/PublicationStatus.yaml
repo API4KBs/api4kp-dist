@@ -1,0 +1,22 @@
+swagger: "2.0"
+definitions:
+  PublicationStatus:
+    allOf:
+      - $ref: '../../../../../../../API4KP/api4kp/id/id.yaml#/definitions/ConceptIdentifier'
+      - type: object
+        discriminator: _class
+        properties:
+          _class : string
+        required:
+          - _class
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/PublicationStatus'
+  PublicationStatus_Valueset:
+    type: string
+    enum:
+      - https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#PublishedKnowledgeResource
+      - https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#MainstreamKnowledgeResource
+      - https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#KnowledgeResourceDescription
+      - https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#KnowledgeMetaDescriptor
+    xml:
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/PublicationStatus'

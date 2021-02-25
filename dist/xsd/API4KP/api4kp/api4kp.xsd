@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="https://www.omg.org/spec/API4KP/20200801"
+<xs:schema xmlns="https://www.omg.org/spec/API4KP/20210201"
            xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
-           xmlns:ns1="https://www.omg.org/spec/API4KP/20200801/id"
+           xmlns:ns1="https://www.omg.org/spec/API4KP/20210201/id"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
-           targetNamespace="https://www.omg.org/spec/API4KP/20200801">
-   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/id"
+           targetNamespace="https://www.omg.org/spec/API4KP/20210201">
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20210201/id"
               schemaLocation="id/id.xsd"/>
    <xs:element name="aPI4KPManifest" type="API4KPManifest"/>
    <xs:complexType xmi:id="_o0t3ILUWEeiKIMorV_uf5w" name="API4KPManifest">

@@ -13,4 +13,4 @@ definitions:
       - _class
       - version
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201'

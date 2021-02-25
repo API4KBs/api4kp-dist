@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+  <uri name="https://www.omg.org/spec/API4KP/20210201/api4kp/"
+    uri="API4KP/v20210201/api4kp.rdf"/>
+  <uri name="https://www.omg.org/spec/API4KP/api4kp/"
+    uri="API4KP/v20210201/api4kp.rdf"/>
+
+  <uri name="https://www.omg.org/spec/API4KP/20210201/api4kp-ops/"
+    uri="API4KP/v20210201/api4kp-ops.rdf"/>
+  <uri name="https://www.omg.org/spec/API4KP/api4kp-ops/"
+    uri="API4KP/v20210201/api4kp-ops.rdf"/>
+
+  <uri name="https://www.omg.org/spec/API4KP/20210201/api4kp-krr/"
+    uri="API4KP/v20210201/api4kp-krr.rdf"/>
+  <uri name="https://www.omg.org/spec/API4KP/api4kp-krr/"
+    uri="API4KP/v20210201/api4kp-krr.rdf"/>
+
+  <uri name="https://www.omg.org/spec/API4KP/20210201/api4kp-kp/"
+    uri="API4KP/v20210201/api4kp-kp.rdf"/>
+  <uri name="https://www.omg.org/spec/API4KP/api4kp-kp/"
+    uri="API4KP/v20210201/api4kp-kp.rdf"/>
+
+  <uri name="https://www.omg.org/spec/API4KP/20210201/api4kp-lang/"
+    uri="API4KP/v20210201/api4kp-lang.rdf"/>
+  <uri name="https://www.omg.org/spec/API4KP/api4kp-lang/"
+    uri="API4KP/v20210201/api4kp-lang.rdf"/>
+
+  <uri name="https://www.omg.org/spec/API4KP/20210201/api4kp-rel/"
+    uri="API4KP/v20210201/api4kp-rel.rdf"/>
+  <uri name="https://www.omg.org/spec/API4KP/api4kp-rel/"
+    uri="API4KP/v20210201/api4kp-rel.rdf"/>
+
+  <uri name="https://www.omg.org/spec/API4KP/20210201/api4kp-series/"
+    uri="API4KP/v20210201/api4kp-series.rdf"/>
+  <uri name="https://www.omg.org/spec/API4KP/api4kp-series/"
+    uri="API4KP/v20210201/api4kp-series.rdf"/>
+
+  <uri name="https://www.omg.org/spec/API4KP/20210201/api4kp-kao/"
+    uri="API4KP/v20210201/api4kp-kao.rdf"/>
+  <uri name="https://www.omg.org/spec/API4KP/api4kp-kao/"
+    uri="API4KP/v20210201/api4kp-kao.rdf"/>
+
+  <uri name="https://www.omg.org/spec/API4KP/20210201/api4kp-registry/"
+    uri="API4KP/v20210201/informative/api4kp-registry.rdf"/>
+  <uri name="https://www.omg.org/spec/API4KP/api4kp-registry/"
+    uri="API4KP/v20210201/informative/api4kp-registry.rdf"/>
+
+  <uri name="https://www.omg.org/spec/API4KP/20210201/api4kp-kmdo/"
+    uri="API4KP/v20210201/informative/api4kp-kmdo.rdf"/>
+  <uri name="https://www.omg.org/spec/API4KP/api4kp-kmdo/"
+    uri="API4KP/v20210201/informative/api4kp-kmdo.rdf"/>
+
+  <uri name="https://www.omg.org/spec/API4KP/20210201/api4kp-ckao/"
+    uri="API4KP/v20210201/informative/api4kp-ckao.owl.rdf"/>
+  <uri name="https://www.omg.org/spec/API4KP/api4kp-ckao/"
+    uri="API4KP/v20210201/informative/api4kp-ckao.owl.rdf"/>
+
+  <uri id="PRO"
+    uri="pro.rdf"
+    name="http://purl.org/spar/pro"/>
+
+  <uri id="LangCodes-ISO639-2"
+    uri="lcc2.rdf"
+    name="https://www.omg.org/spec/LCC/Languages/ISO639-2-LanguageCodes/"/>
+
+  <uri id="DCMIType"
+    uri="dctype.rdf"
+    name="http://purl.org/dc/dcmitype/"/>
+
+  <uri id="SKOS"
+    name="http://www.w3.org/2004/02/skos/core"
+    uri="core.owl"/>
+
+</catalog>

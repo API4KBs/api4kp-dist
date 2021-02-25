@@ -10,14 +10,14 @@ definitions:
           id:
             $ref: '../../id/id.yaml#/definitions/ResourceIdentifier'
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
           alias:
             type: array
             items:
               $ref: '../../id/id.yaml#/definitions/ResourceIdentifier'
             minItems: 0
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
           name:
             type: string
             xml:
@@ -38,7 +38,7 @@ definitions:
           - _class
           - id
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services/repository'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services/repository'
   KnowledgeAssetCatalog:
     allOf:
       - $ref: '../services.yaml#/definitions/KnowledgePlatformComponent'
@@ -49,21 +49,21 @@ definitions:
           supportedAssetTypes:
             type: array
             items:
-              $ref: '../../../../org/omg/spec/api4kp/_20200801/taxonomy/knowledgeassettype/KnowledgeAssetType.series.yaml#/definitions/KnowledgeAssetType'
+              $ref: '../../../../org/omg/spec/api4kp/_20210201/taxonomy/knowledgeassettype/KnowledgeAssetType.yaml#/definitions/KnowledgeAssetType'
             minItems: 0
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/KnowledgeAssetType'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeAssetType'
           id:
             $ref: '../../id/id.yaml#/definitions/ResourceIdentifier'
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
           surrogateModels:
             type: array
             items:
               $ref: '../services.yaml#/definitions/SyntacticRepresentation'
             minItems: 1
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
           name:
             type: string
             xml:
@@ -80,4 +80,4 @@ definitions:
           - _class
           - surrogateModels
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services/repository'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services/repository'

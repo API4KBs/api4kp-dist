@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="https://www.omg.org/spec/API4KP/20200801/services/inference"
+<xs:schema xmlns="https://www.omg.org/spec/API4KP/20210201/services/inference"
            xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
-           xmlns:ns1="https://www.omg.org/spec/API4KP/20200801/services"
+           xmlns:ns1="https://www.omg.org/spec/API4KP/20210201/services"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
-           targetNamespace="https://www.omg.org/spec/API4KP/20200801/services/inference">
-   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/services"
+           targetNamespace="https://www.omg.org/spec/API4KP/20210201/services/inference">
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20210201/services"
               schemaLocation="../services.xsd"/>
    <xs:element name="inferenceOperator" type="InferenceOperator"/>
    <xs:complexType xmi:id="_gMewYBzeEeuewf_rIPg7Mw" name="InferenceOperator">

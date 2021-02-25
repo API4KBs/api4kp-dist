@@ -8,7 +8,7 @@ definitions:
     required:
       - _class
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/datatypes'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/datatypes'
   Map:
     type: object
     discriminator: _class
@@ -19,7 +19,7 @@ definitions:
     additionalProperties:
       type: object
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/datatypes'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/datatypes'
   Bindings:
     allOf:
       - $ref: '#/definitions/Map'
@@ -30,8 +30,8 @@ definitions:
         required:
           - _class
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/datatypes'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/datatypes'
   UUID:
     type: string
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/datatypes'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/datatypes'

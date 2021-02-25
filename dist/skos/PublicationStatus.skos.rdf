@@ -1,0 +1,81 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:tgt="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:AnnotationVocabulary1="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns="https://www.omg.org/spec/API4KP/api4kp-kmdo/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:DOL-terms="http://www.omg.org/spec/DOL/DOL-terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:AnnotationVocabulary="https://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus">
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://www.omg.org/spec/API4KP/20210201/taxonomy/PublicationStatus"/>
+  </owl:Ontology>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#KnowledgeMetaDescriptor">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label xml:lang="en">knowledge meta-description</rdfs:label>
+    <skos:prefLabel xml:lang="en">knowledge meta-description</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kmdo/KnowledgeMetaDescriptor</rdfs:isDefinedBy>
+    <skos:notation>87a9dce4-33ee-329c-83cf-d12227b5bbf0</skos:notation>
+    <skos:inScheme>
+      <skos:ConceptScheme rdf:about="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#PublicationStatuses">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>PublicationStatuses</rdfs:label>
+        <skos:prefLabel>PublicationStatuses</skos:prefLabel>
+        <skos:hasTopConcept>
+          <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#PublicationStatus">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#PublicationStatuses"/>
+            <rdfs:label>PublicationStatus</rdfs:label>
+            <skos:prefLabel>PublicationStatus</skos:prefLabel>
+          </skos:Concept>
+        </skos:hasTopConcept>
+      </skos:ConceptScheme>
+    </skos:inScheme>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#KnowledgeResourceDescription">
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#PublicationStatus"/>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp/KnowledgeResourceDescription</rdfs:isDefinedBy>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#PublicationStatuses"/>
+        <skos:prefLabel xml:lang="en">knowledge resource description</skos:prefLabel>
+        <rdfs:label xml:lang="en">knowledge resource description</rdfs:label>
+        <skos:broader>
+          <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#MainstreamKnowledgeResource">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdfs:label xml:lang="en">mainstream knowledge resource</rdfs:label>
+            <skos:prefLabel xml:lang="en">mainstream knowledge resource</skos:prefLabel>
+            <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kmdo/MainstreamKnowledgeResource</rdfs:isDefinedBy>
+            <skos:notation>d7d2f5fd-3e1a-3860-9558-129f66d60c00</skos:notation>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#PublicationStatuses"/>
+            <skos:broader>
+              <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#PublishedKnowledgeResource">
+                <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                <rdfs:label xml:lang="en">published knowledge resource</rdfs:label>
+                <skos:prefLabel xml:lang="en">published knowledge resource</skos:prefLabel>
+                <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kmdo/PublishedKnowledgeResource</rdfs:isDefinedBy>
+                <skos:notation>c14415f4-c071-3b52-b964-a2054322adee</skos:notation>
+                <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#PublicationStatuses"/>
+                <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#PublicationStatus"/>
+                <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#PublicationStatus"/>
+              </owl:NamedIndividual>
+            </skos:broader>
+            <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#PublicationStatus"/>
+          </skos:Concept>
+        </skos:broader>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#PublicationStatus"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:notation>4d358520-91f4-395f-a040-34b9e0ed24cb</skos:notation>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#PublicationStatus"/>
+  </owl:NamedIndividual>
+</rdf:RDF>

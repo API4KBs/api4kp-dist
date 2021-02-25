@@ -1,0 +1,52 @@
+<!--
+
+    Copyright © 2018 Mayo Clinic (RSTKNOWLEDGEMGMT@mayo.edu)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+  <public publicId="https://www.omg.org/spec/API4KP/20210201/surrogate"
+    uri="API4KP/surrogate/surrogate.xsd"/>
+  <system systemId="https://www.omg.org/spec/API4KP/20210201/surrogate"
+    uri="API4KP/surrogate/surrogate.xsd"/>
+  <uri name="https://www.omg.org/spec/API4KP/20210201/surrogate"
+    uri="API4KP/surrogate/surrogate.xsd"/>
+
+
+  <!--<public publicId="http://kmdp.mayo.edu/metadata/surrogate/provenance"
+    uri="metadata/surrogate/provenance/provenance.xsd"/>
+  <system systemId="http://kmdp.mayo.edu/metadata/surrogate/provenance"
+    uri="metadata/surrogate/provenance/provenance.xsd"/>
+  <uri name="http://kmdp.mayo.edu/metadata/surrogate/provenance"
+    uri="metadata/surrogate/provenance/provenance.xsd"/>-->
+
+  <public publicId="https://www.omg.org/spec/API4KP/20210201/identifiers"
+    uri="API4KP/api4kp/identifiers/identifiers.xsd"/>
+  <system systemId="https://www.omg.org/spec/API4KP/20210201/identifiers"
+    uri="API4KP/api4kp/identifiers/identifiers.xsd"/>
+  <uri name="https://www.omg.org/spec/API4KP/20210201/identifiers"
+    uri="API4KP/api4kp/identifiers/identifiers.xsd"/>
+
+  <public publicId="https://www.omg.org/spec/API4KP/20210201/identifiers/versions"
+    uri="API4KP/api4kp/identifiers/tags/tags.xsd"/>
+  <system systemId="https://www.omg.org/spec/API4KP/20210201/identifiers/versions"
+    uri="API4KP/api4kp/identifiers/tags/tags.xsd"/>
+  <uri name="https://www.omg.org/spec/API4KP/20210201/identifiers/versions"
+    uri="API4KP/api4kp/identifiers/tags/tags.xsd"/>
+
+
+  <nextCatalog catalog="terms-catalog.xml"/>
+  <nextCatalog catalog="api4kp-catalog.xml"/>
+</catalog>

@@ -1,0 +1,24 @@
+swagger: "2.0"
+definitions:
+  ParsingLevel:
+    allOf:
+      - $ref: '../../../../../../../API4KP/api4kp/id/id.yaml#/definitions/ConceptIdentifier'
+      - type: object
+        discriminator: _class
+        properties:
+          _class : string
+        required:
+          - _class
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/ParsingLevel'
+  ParsingLevel_Valueset:
+    type: string
+    enum:
+      - https://www.omg.org/spec/API4KP/taxonomy/ParsingLevel#KnowledgeExpression
+      - https://www.omg.org/spec/API4KP/taxonomy/ParsingLevel#EncodedKnowledgeExpression
+      - https://www.omg.org/spec/API4KP/taxonomy/ParsingLevel#SerializedKnowledgeExpression
+      - https://www.omg.org/spec/API4KP/taxonomy/ParsingLevel#ConcreteKnowledgeExpression
+      - https://www.omg.org/spec/API4KP/taxonomy/ParsingLevel#AbstractKnowledgeExpression
+      - https://www.omg.org/spec/API4KP/taxonomy/ParsingLevel#Expression
+    xml:
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/ParsingLevel'

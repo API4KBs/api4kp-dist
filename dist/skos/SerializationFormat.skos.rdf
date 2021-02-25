@@ -1,0 +1,88 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:api4kp="https://www.omg.org/spec/API4KP/api4kp/"
+    xmlns="https://www.omg.org/spec/API4KP/api4kp-registry/"
+    xmlns:AnnotationVocabulary1="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:DOL-terms="http://www.omg.org/spec/DOL/DOL-terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:AnnotationVocabulary="https://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:tgt="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat">
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://www.omg.org/spec/API4KP/20210201/taxonomy/SerializationFormat"/>
+  </owl:Ontology>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#20171201">
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#SerializationFormat">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:inScheme>
+          <skos:ConceptScheme rdf:about="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#SerializationFormats">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdfs:label>SerializationFormats</rdfs:label>
+            <skos:prefLabel>SerializationFormats</skos:prefLabel>
+            <skos:hasTopConcept rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#SerializationFormat"/>
+          </skos:ConceptScheme>
+        </skos:inScheme>
+        <rdfs:label>SerializationFormat</rdfs:label>
+        <skos:prefLabel>SerializationFormat</skos:prefLabel>
+      </skos:Concept>
+    </skos:broader>
+    <rdfs:label>JSON</rdfs:label>
+    <skos:prefLabel>JSON</skos:prefLabel>
+    <rdfs:isDefinedBy>http://json.org/20171201</rdfs:isDefinedBy>
+    <skos:notation>466deec7-6ecd-35fc-a6d3-8571f6324d54</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#SerializationFormats"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#SerializationFormat"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#1.2">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#SerializationFormat"/>
+    <rdfs:label>YAML 1.2</rdfs:label>
+    <skos:prefLabel>YAML 1.2</skos:prefLabel>
+    <rdfs:isDefinedBy>http://yaml.org/spec/1.2</rdfs:isDefinedBy>
+    <skos:notation>6eedc03a-68a6-3933-8763-e674f2d7c42f</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#SerializationFormats"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#SerializationFormat"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#SerializationFormat"/>
+    <rdfs:label>RDF 1.1</rdfs:label>
+    <skos:prefLabel>RDF 1.1</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.w3.org/RDF/</rdfs:isDefinedBy>
+    <skos:notation>29107dcc-e33a-30f4-b5b4-34d442c1a307</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#SerializationFormats"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#SerializationFormat"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#xml11">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#SerializationFormat"/>
+    <rdfs:label>XML 1.1</rdfs:label>
+    <skos:prefLabel>XML 1.1</skos:prefLabel>
+    <rdfs:isDefinedBy>http://www.w3.org/TR/xml11</rdfs:isDefinedBy>
+    <skos:notation>0f635d0e-0f38-34ff-b8b5-81c132e6c7a7</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#SerializationFormats"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#SerializationFormat"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#7">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#SerializationFormat"/>
+    <rdfs:label>TXT</rdfs:label>
+    <skos:prefLabel>TXT</skos:prefLabel>
+    <rdfs:isDefinedBy>https://tools.ietf.org/html/rfc1341/7</rdfs:isDefinedBy>
+    <skos:notation>1cb251ec-0d56-3de6-a929-b520c4aed8d1</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#SerializationFormats"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat#SerializationFormat"/>
+  </skos:Concept>
+</rdf:RDF>

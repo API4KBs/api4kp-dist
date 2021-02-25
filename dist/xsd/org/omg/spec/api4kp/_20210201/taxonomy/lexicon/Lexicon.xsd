@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Lexica"
+           targetNamespace="https://www.omg.org/spec/API4KP/20210201/taxonomy/Lexicon"
+           elementFormDefault="qualified"
+           xmlns="https://www.omg.org/spec/API4KP/20210201/taxonomy/Lexicon"
+           xmlns:id="https://www.omg.org/spec/API4KP/20210201/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20210201/id"/>
+
+    <xs:complexType name="Lexicon">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="Lexicon_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/Lexicon#"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/Lexicon#namespace"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/Lexicon#core"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/Lexicon#XMLSchema-instance"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/Lexicon#PCV"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/Lexicon#2018-02-16"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/Lexicon#20180731"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

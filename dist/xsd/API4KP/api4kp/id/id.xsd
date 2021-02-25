@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="https://www.omg.org/spec/API4KP/20200801/id"
+<xs:schema xmlns="https://www.omg.org/spec/API4KP/20210201/id"
            xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
-           xmlns:ns1="https://www.omg.org/spec/API4KP/20200801/datatypes"
+           xmlns:ns1="https://www.omg.org/spec/API4KP/20210201/datatypes"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
-           targetNamespace="https://www.omg.org/spec/API4KP/20200801/id">
-   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/datatypes"
+           targetNamespace="https://www.omg.org/spec/API4KP/20210201/id">
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20210201/datatypes"
               schemaLocation="../datatypes/datatypes.xsd"/>
    <xs:element name="resourceIdentifier" type="ResourceIdentifier"/>
    <xs:complexType xmi:id="_OjBf0FIOEeqm8uiQ2nAYTw" name="ResourceIdentifier">
@@ -14,7 +14,7 @@
    </xs:complexType>
    <xs:group name="ResourceIdentifier.content">
       <xs:sequence>
-         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/datatypes"
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20210201/datatypes"
                      name="uuid"
                      minOccurs="1"
                      maxOccurs="1"
@@ -33,7 +33,7 @@
    <xs:element name="conceptIdentifier" type="ConceptIdentifier"/>
    <xs:complexType xmi:id="_Tj4VIFIPEeqm8uiQ2nAYTw" name="ConceptIdentifier">
       <xs:complexContent>
-         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20210201/id"
                        base="tns:ResourceIdentifier">
             <xs:group ref="ConceptIdentifier.content"/>
             <xs:attributeGroup ref="ConceptIdentifier.attrs"/>
@@ -49,7 +49,7 @@
    <xs:element name="pointer" type="Pointer"/>
    <xs:complexType xmi:id="_FxUHsFIQEeqm8uiQ2nAYTw" name="Pointer">
       <xs:complexContent>
-         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20210201/id"
                        base="tns:ResourceIdentifier">
             <xs:group ref="Pointer.content"/>
             <xs:attributeGroup ref="Pointer.attrs"/>

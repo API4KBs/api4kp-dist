@@ -1,0 +1,31 @@
+swagger: "2.0"
+definitions:
+  KnowledgeRepresentationLanguageProfile:
+    allOf:
+      - $ref: '../../../../../../../API4KP/api4kp/id/id.yaml#/definitions/ConceptIdentifier'
+      - type: object
+        discriminator: _class
+        properties:
+          _class : string
+        required:
+          - _class
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeRepresentationLanguageProfile'
+  KnowledgeRepresentationLanguageProfile_Valueset:
+    type: string
+    enum:
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageProfile#resource
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageProfile#Full
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageProfile#EL
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageProfile#RL
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageProfile#DL
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageProfile#QL
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageProfile#services
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageProfile#queries
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageProfile#annos
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageProfile#essentials
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageProfile#datatypes
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageProfile#schemas
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageProfile#identifiers
+    xml:
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeRepresentationLanguageProfile'

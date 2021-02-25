@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="KnowledgeRepresentationLanguageRoles"
+           targetNamespace="https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeRepresentationLanguageRole"
+           elementFormDefault="qualified"
+           xmlns="https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeRepresentationLanguageRole"
+           xmlns:id="https://www.omg.org/spec/API4KP/20210201/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20210201/id"/>
+
+    <xs:complexType name="KnowledgeRepresentationLanguageRole">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="KnowledgeRepresentationLanguageRole_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageRole#SchemaLanguage"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageRole#RuleLanguage"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageRole#AnnotationLanguage"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageRole#ProgrammingLanguage"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageRole#QueryLanguage"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageRole#OntologyLanguage"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageRole#ExpressionLanguage"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

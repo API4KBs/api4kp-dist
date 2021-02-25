@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DependencyTypes"
+           targetNamespace="https://www.omg.org/spec/API4KP/20210201/taxonomy/DependencyRelType"
+           elementFormDefault="qualified"
+           xmlns="https://www.omg.org/spec/API4KP/20210201/taxonomy/DependencyRelType"
+           xmlns:id="https://www.omg.org/spec/API4KP/20210201/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20210201/id"/>
+
+    <xs:complexType name="DependencyType">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="DependencyType_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#dependsOn"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#references"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#isSupplementedBy"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#isComplementedBy"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#effectuates"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#conformsWith"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#imports"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType#includesByReference"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

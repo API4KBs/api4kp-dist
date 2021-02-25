@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="https://www.omg.org/spec/API4KP/20200801/services/transrepresentation"
+<xs:schema xmlns="https://www.omg.org/spec/API4KP/20210201/services/transrepresentation"
            xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
-           xmlns:ns1="https://www.omg.org/spec/API4KP/20200801/id"
-           xmlns:ns2="https://www.omg.org/spec/API4KP/20200801/services"
+           xmlns:ns1="https://www.omg.org/spec/API4KP/20210201/id"
+           xmlns:ns2="https://www.omg.org/spec/API4KP/20210201/services"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
-           targetNamespace="https://www.omg.org/spec/API4KP/20200801/services/transrepresentation">
-   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/id"
+           targetNamespace="https://www.omg.org/spec/API4KP/20210201/services/transrepresentation">
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20210201/id"
               schemaLocation="../../id/id.xsd"/>
-   <xs:import namespace="https://www.omg.org/spec/API4KP/20200801/services"
+   <xs:import namespace="https://www.omg.org/spec/API4KP/20210201/services"
               schemaLocation="../services.xsd"/>
    <xs:element name="transrepresentator" type="Transrepresentator"/>
    <xs:complexType xmi:id="_cqd9MFkTEeiseY4eaZPeLw" name="Transrepresentator">
       <xs:complexContent>
-         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services"
                        base="tns:KnowledgePlatformComponent">
             <xs:group ref="Transrepresentator.content"/>
             <xs:attributeGroup ref="Transrepresentator.attrs"/>
@@ -22,7 +22,7 @@
    </xs:complexType>
    <xs:group name="Transrepresentator.content">
       <xs:sequence>
-         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services/transrepresentation"
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services/transrepresentation"
                      name="txions"
                      type="tns:Transrepresentation"
                      minOccurs="0"
@@ -33,7 +33,7 @@
    <xs:element name="transrepresentationMethod" type="TransrepresentationMethod"/>
    <xs:complexType xmi:id="_Wj58sFkVEeiseY4eaZPeLw" name="TransrepresentationMethod">
       <xs:complexContent>
-         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services"
                        base="tns:KnowledgeProcessingMethod">
             <xs:group ref="TransrepresentationMethod.content"/>
             <xs:attributeGroup ref="TransrepresentationMethod.attrs"/>
@@ -47,7 +47,7 @@
    <xs:element name="transrepresentation" type="Transrepresentation"/>
    <xs:complexType xmi:id="_JH_MUFkkEei7wf-vECnVrw" name="Transrepresentation">
       <xs:complexContent>
-         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services"
                        base="tns:KnowledgeProcessingTask">
             <xs:group ref="Transrepresentation.content"/>
             <xs:attributeGroup ref="Transrepresentation.attrs"/>
@@ -56,27 +56,27 @@
    </xs:complexType>
    <xs:group name="Transrepresentation.content">
       <xs:sequence>
-         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/id"
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20210201/id"
                      name="type"
                      minOccurs="0"
                      maxOccurs="unbounded"
                      type="tns:ResourceIdentifier"/>
-         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services/transrepresentation"
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services/transrepresentation"
                      name="method"
                      type="tns:TransrepresentationMethod"
                      minOccurs="0"
                      maxOccurs="unbounded"/>
-         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services"
                      name="consumes"
                      type="tns:SyntacticRepresentation"
                      minOccurs="1"
                      maxOccurs="unbounded"/>
-         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services"
                      name="produces"
                      type="tns:SyntacticRepresentation"
                      minOccurs="1"
                      maxOccurs="unbounded"/>
-         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services/transrepresentation"
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services/transrepresentation"
                      name="exec"
                      type="tns:TransrepresentationOperator"
                      minOccurs="0"
@@ -87,7 +87,7 @@
    <xs:element name="transrepresentationOperator" type="TransrepresentationOperator"/>
    <xs:complexType xmi:id="_JSs6oFk8Eei7wf-vECnVrw" name="TransrepresentationOperator">
       <xs:complexContent>
-         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services"
                        base="tns:KnowledgeProcessingOperator">
             <xs:group ref="TransrepresentationOperator.content"/>
             <xs:attributeGroup ref="TransrepresentationOperator.attrs"/>
@@ -96,12 +96,12 @@
    </xs:complexType>
    <xs:group name="TransrepresentationOperator.content">
       <xs:sequence>
-         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services"
                      name="from"
                      type="tns:SyntacticRepresentation"
                      minOccurs="1"
                      maxOccurs="unbounded"/>
-         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services"
                      name="into"
                      type="tns:SyntacticRepresentation"
                      minOccurs="1"
@@ -112,7 +112,7 @@
    <xs:element name="deserializer" type="Deserializer"/>
    <xs:complexType xmi:id="_8xTLwH7dEeqTcZyxH9woBA" name="Deserializer">
       <xs:complexContent>
-         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services"
                        base="tns:KnowledgePlatformComponent">
             <xs:group ref="Deserializer.content"/>
             <xs:attributeGroup ref="Deserializer.attrs"/>
@@ -126,7 +126,7 @@
    <xs:element name="deserializationOperator" type="DeserializationOperator"/>
    <xs:complexType xmi:id="_90MzMH7dEeqTcZyxH9woBA" name="DeserializationOperator">
       <xs:complexContent>
-         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services"
                        base="tns:KnowledgeProcessingOperator">
             <xs:group ref="DeserializationOperator.content"/>
             <xs:attributeGroup ref="DeserializationOperator.attrs"/>
@@ -135,12 +135,12 @@
    </xs:complexType>
    <xs:group name="DeserializationOperator.content">
       <xs:sequence>
-         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services"
                      name="from"
                      type="tns:SyntacticRepresentation"
                      minOccurs="1"
                      maxOccurs="unbounded"/>
-         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services"
                      name="into"
                      type="tns:SyntacticRepresentation"
                      minOccurs="1"
@@ -151,7 +151,7 @@
    <xs:element name="validator" type="Validator"/>
    <xs:complexType xmi:id="_Gr2wYH7eEeqTcZyxH9woBA" name="Validator">
       <xs:complexContent>
-         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services"
                        base="tns:KnowledgePlatformComponent">
             <xs:group ref="Validator.content"/>
             <xs:attributeGroup ref="Validator.attrs"/>
@@ -165,7 +165,7 @@
    <xs:element name="detector" type="Detector"/>
    <xs:complexType xmi:id="_H-5FkH7eEeqTcZyxH9woBA" name="Detector">
       <xs:complexContent>
-         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services"
                        base="tns:KnowledgePlatformComponent">
             <xs:group ref="Detector.content"/>
             <xs:attributeGroup ref="Detector.attrs"/>
@@ -179,7 +179,7 @@
    <xs:element name="validationOperator" type="ValidationOperator"/>
    <xs:complexType xmi:id="_PKcGQH7eEeqTcZyxH9woBA" name="ValidationOperator">
       <xs:complexContent>
-         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services"
                        base="tns:KnowledgeProcessingOperator">
             <xs:group ref="ValidationOperator.content"/>
             <xs:attributeGroup ref="ValidationOperator.attrs"/>
@@ -188,7 +188,7 @@
    </xs:complexType>
    <xs:group name="ValidationOperator.content">
       <xs:sequence>
-         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services"
                      name="from"
                      type="tns:SyntacticRepresentation"
                      minOccurs="1"
@@ -199,7 +199,7 @@
    <xs:element name="detectionOperator" type="DetectionOperator"/>
    <xs:complexType xmi:id="_QwrrUH7eEeqTcZyxH9woBA" name="DetectionOperator">
       <xs:complexContent>
-         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+         <xs:extension xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services"
                        base="tns:KnowledgeProcessingOperator">
             <xs:group ref="DetectionOperator.content"/>
             <xs:attributeGroup ref="DetectionOperator.attrs"/>
@@ -208,7 +208,7 @@
    </xs:complexType>
    <xs:group name="DetectionOperator.content">
       <xs:sequence>
-         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20200801/services"
+         <xs:element xmlns:tns="https://www.omg.org/spec/API4KP/20210201/services"
                      name="into"
                      type="tns:SyntacticRepresentation"
                      minOccurs="1"

@@ -1,0 +1,110 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:tgt="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#"
+    xmlns:AnnotationVocabulary1="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:DOL-terms="http://www.omg.org/spec/DOL/DOL-terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:AnnotationVocabulary="https://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns="https://www.omg.org/spec/API4KP/api4kp-rel/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType">
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://www.omg.org/spec/API4KP/20210201/taxonomy/SummaryRelType"/>
+  </owl:Ontology>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#compendiates">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>compendiates</rdfs:label>
+    <skos:prefLabel>compendiates</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/compendiates</rdfs:isDefinedBy>
+    <skos:notation>add56651-4928-36bd-8412-a7d8b63a8efd</skos:notation>
+    <skos:inScheme>
+      <skos:ConceptScheme rdf:about="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#SummarizationTypes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>SummarizationTypes</rdfs:label>
+        <skos:prefLabel>SummarizationTypes</skos:prefLabel>
+        <skos:hasTopConcept>
+          <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#SummarizationType">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#SummarizationTypes"/>
+            <rdfs:label>SummarizationType</rdfs:label>
+            <skos:prefLabel>SummarizationType</skos:prefLabel>
+          </skos:Concept>
+        </skos:hasTopConcept>
+      </skos:ConceptScheme>
+    </skos:inScheme>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#summarizes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>summarizes</rdfs:label>
+        <skos:prefLabel>summarizes</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/summarizes</rdfs:isDefinedBy>
+        <skos:notation>bc459884-29e6-3600-9755-85ade55e3353</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#SummarizationTypes"/>
+        <skos:broader>
+          <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#abbreviates">
+            <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#SummarizationType"/>
+            <rdfs:label>abbreviates</rdfs:label>
+            <skos:prefLabel>abbreviates</skos:prefLabel>
+            <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp/abbreviates</rdfs:isDefinedBy>
+            <skos:notation>d25f089b-f469-3e97-878c-2ef2901423fe</skos:notation>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#SummarizationTypes"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#SummarizationType"/>
+          </owl:NamedIndividual>
+        </skos:broader>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#SummarizationType"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#SummarizationType"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#isDigestOf">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>is digest of</rdfs:label>
+    <skos:prefLabel>is digest of</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isDigestOf</rdfs:isDefinedBy>
+    <skos:notation>03bb3e79-bc6b-37b9-93e9-ee3aad8ee0e3</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#SummarizationTypes"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#summarizes"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#SummarizationType"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#isLosslessCompressionOf">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>is lossless compression of</rdfs:label>
+    <skos:prefLabel>is lossless compression of</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isLosslessCompressionOf</rdfs:isDefinedBy>
+    <skos:notation>4dc8286b-7c16-354d-a658-49b538e193c6</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#SummarizationTypes"/>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#isCompressionOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>is compression of</rdfs:label>
+        <skos:prefLabel>is compression of</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isCompressionOf</rdfs:isDefinedBy>
+        <skos:notation>5d6875d2-2ffa-3288-95ed-7247168874bb</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#SummarizationTypes"/>
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#abbreviates"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#SummarizationType"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#SummarizationType"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#abridges">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>abridges</rdfs:label>
+    <skos:prefLabel>abridges</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/abridges</rdfs:isDefinedBy>
+    <skos:notation>d8bf9851-a25f-36b8-82a8-83be2cf64852</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#SummarizationTypes"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#abbreviates"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#SummarizationType"/>
+  </owl:NamedIndividual>
+</rdf:RDF>

@@ -1,0 +1,79 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:AnnotationVocabulary1="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:tgt="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:DOL-terms="http://www.omg.org/spec/DOL/DOL-terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:AnnotationVocabulary="https://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns="https://www.omg.org/spec/API4KP/api4kp-series/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType">
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://www.omg.org/spec/API4KP/20210201/taxonomy/RelatedVersionType"/>
+  </owl:Ontology>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#hasPreviousVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>has previous version</rdfs:label>
+    <skos:prefLabel>has previous version</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-series/hasPreviousVersion</rdfs:isDefinedBy>
+    <skos:notation>77470c4f-55c0-3835-acaa-f5b37ee78751</skos:notation>
+    <skos:inScheme>
+      <skos:ConceptScheme rdf:about="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#RelatedVersionTypes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>RelatedVersionTypes</rdfs:label>
+        <skos:prefLabel>RelatedVersionTypes</skos:prefLabel>
+        <skos:hasTopConcept>
+          <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#RelatedVersionType">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#RelatedVersionTypes"/>
+            <rdfs:label>RelatedVersionType</rdfs:label>
+            <skos:prefLabel>RelatedVersionType</skos:prefLabel>
+          </skos:Concept>
+        </skos:hasTopConcept>
+      </skos:ConceptScheme>
+    </skos:inScheme>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#hasPredecessorVersion">
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#RelatedVersionType"/>
+        <rdfs:label>has predecessor version</rdfs:label>
+        <skos:prefLabel>has predecessor version</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-series/hasPredecessorVersion</rdfs:isDefinedBy>
+        <skos:notation>eb428f8f-63a4-395a-9bc4-fd23508e5305</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#RelatedVersionTypes"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#RelatedVersionType"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#RelatedVersionType"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#hasNextVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>has next version</rdfs:label>
+    <skos:prefLabel>has next version</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-series/hasNextVersion</rdfs:isDefinedBy>
+    <skos:notation>ac19f791-a124-3640-a89e-0ddaa7b9cc05</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#RelatedVersionTypes"/>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#hasSuccesorVersion">
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#RelatedVersionType"/>
+        <rdfs:label>has successor version</rdfs:label>
+        <skos:prefLabel>has successor version</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-series/hasSuccesorVersion</rdfs:isDefinedBy>
+        <skos:notation>a50e6a93-e1db-33e1-a025-88eebd6a0a0e</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#RelatedVersionTypes"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#RelatedVersionType"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#RelatedVersionType"/>
+  </owl:NamedIndividual>
+</rdf:RDF>

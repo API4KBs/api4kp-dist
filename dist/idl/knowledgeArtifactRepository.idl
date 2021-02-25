@@ -2,7 +2,7 @@ module org {
 module omg {
 module spec {
 module api4kp {
-module _20200801 {
+module _20210201 {
 module id {
 struct ResourceIdentifier {
     string uuid;
@@ -26,8 +26,8 @@ typedef sequence<Pointer> PointerList;
 module services {
 module repository {
 struct KnowledgeArtifactRepository {
-    ::org::omg::spec::api4kp::_20200801::id::ResourceIdentifier id;
-    sequence<::org::omg::spec::api4kp::_20200801::id::ResourceIdentifier> alias;
+    ::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier id;
+    sequence<::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier> alias;
     string name;
     long size;
     string href;
@@ -36,6 +36,8 @@ struct KnowledgeArtifactRepository {
 typedef sequence<KnowledgeArtifactRepository> KnowledgeArtifactRepositoryList;
 }; // repository
 }; // services
+}; // _20210201
+module _20200801 {
 module api {
 module repository {
 module artifact {
@@ -44,18 +46,18 @@ interface KnowledgeArtifactRepository {
   void disableKnowledgeArtifactRepository (
       in string repositoryid 
   );
-  ::org::omg::spec::api4kp::_20200801::services::repository::KnowledgeArtifactRepository getKnowledgeArtifactRepository (
+  ::org::omg::spec::api4kp::_20210201::services::repository::KnowledgeArtifactRepository getKnowledgeArtifactRepository (
       in string repositoryid 
   );
-  ::org::omg::spec::api4kp::_20200801::services::repository::KnowledgeArtifactRepository initKnowledgeArtifactRepository (
+  ::org::omg::spec::api4kp::_20210201::services::repository::KnowledgeArtifactRepository initKnowledgeArtifactRepository (
   );
   void isKnowledgeArtifactRepository (
       in string repositoryid 
   );
-  ::org::omg::spec::api4kp::_20200801::services::repository::KnowledgeArtifactRepositoryList listKnowledgeArtifactRepositories (
+  ::org::omg::spec::api4kp::_20210201::services::repository::KnowledgeArtifactRepositoryList listKnowledgeArtifactRepositories (
   );
-  ::org::omg::spec::api4kp::_20200801::services::repository::KnowledgeArtifactRepository setKnowledgeArtifactRepository (
-      in ::org::omg::spec::api4kp::_20200801::services::repository::KnowledgeArtifactRepository repositorydescr , 
+  ::org::omg::spec::api4kp::_20210201::services::repository::KnowledgeArtifactRepository setKnowledgeArtifactRepository (
+      in ::org::omg::spec::api4kp::_20210201::services::repository::KnowledgeArtifactRepository repositorydescr , 
       in string repositoryid 
   );
 };
@@ -78,7 +80,7 @@ interface KnowledgeArtifactSeries {
       in string repositoryid , 
       in string artifactid 
   );
-  ::org::omg::spec::api4kp::_20200801::id::PointerList getKnowledgeArtifactSeries (
+  ::org::omg::spec::api4kp::_20210201::id::PointerList getKnowledgeArtifactSeries (
       in boolean deleted , 
       in long offset , 
       in string repositoryid , 
@@ -101,7 +103,7 @@ interface KnowledgeArtifactSeries {
       in string repositoryid , 
       in string artifactid 
   );
-  ::org::omg::spec::api4kp::_20200801::id::PointerList listKnowledgeArtifacts (
+  ::org::omg::spec::api4kp::_20210201::id::PointerList listKnowledgeArtifacts (
       in boolean deleted , 
       in long offset , 
       in string repositoryid , 

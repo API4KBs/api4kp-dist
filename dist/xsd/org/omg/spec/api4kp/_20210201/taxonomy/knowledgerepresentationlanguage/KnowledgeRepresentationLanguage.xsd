@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="KnowledgeRepresentationLanguages"
+           targetNamespace="https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeRepresentationLanguage"
+           elementFormDefault="qualified"
+           xmlns="https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeRepresentationLanguage"
+           xmlns:id="https://www.omg.org/spec/API4KP/20210201/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20210201/id"/>
+
+    <xs:complexType name="KnowledgeRepresentationLanguage">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="KnowledgeRepresentationLanguage_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v8"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#resource"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#R4v4"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#2020Mayv150"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v1"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#DL"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#66249v1"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v11"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#schemas"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#8_10v8.10.x"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#metadatav2"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#ELMv1"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#8.10v8.10.x"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#owlv20121211"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#STU4v141"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#identifiers"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#STU3v130"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#FEELv11"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#RL"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v12"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#QL"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#queries"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#datatypes"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v25"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#EL"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#Full"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v52"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v2"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#1.0v1"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#surrogatev1"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#2-0v2"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#annos"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#1.0v10"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#FEELv12"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v3"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#STU3v3"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#services"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#1.3v13"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#essentials"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#DSTU2v2"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#vJun2018"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

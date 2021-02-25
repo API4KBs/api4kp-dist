@@ -1,0 +1,23 @@
+swagger: "2.0"
+definitions:
+  DerivationType:
+    allOf:
+      - $ref: '../../../../../../../API4KP/api4kp/id/id.yaml#/definitions/ConceptIdentifier'
+      - type: object
+        discriminator: _class
+        properties:
+          _class : string
+        required:
+          - _class
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/DerivationRelType'
+  DerivationType_Valueset:
+    type: string
+    enum:
+      - https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#isDerivedFrom
+      - https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#isFlatteningOf
+      - https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#isRevisionOf
+      - https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#isAdaptationOf
+      - https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#isTranscreationOf
+    xml:
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/DerivationRelType'

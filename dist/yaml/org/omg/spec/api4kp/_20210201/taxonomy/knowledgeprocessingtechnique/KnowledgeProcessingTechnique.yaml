@@ -1,0 +1,25 @@
+swagger: "2.0"
+definitions:
+  KnowledgeProcessingTechnique:
+    allOf:
+      - $ref: '../../../../../../../API4KP/api4kp/id/id.yaml#/definitions/ConceptIdentifier'
+      - type: object
+        discriminator: _class
+        properties:
+          _class : string
+        required:
+          - _class
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeProcessingTechnique'
+  KnowledgeProcessingTechnique_Valueset:
+    type: string
+    enum:
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingTechnique#NaturalTechnique
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingTechnique#QueryTechnique
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingTechnique#InteractiveTechnique
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingTechnique#ComputationalTechnique
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingTechnique#NaturalLanguageProcessingTechnique
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingTechnique#QualitativeTechnique
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingTechnique#QuantitativeTechnique
+    xml:
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeProcessingTechnique'

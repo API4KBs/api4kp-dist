@@ -13,11 +13,11 @@ definitions:
               $ref: '#/definitions/Transrepresentation'
             minItems: 0
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/services/transrepresentation'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/services/transrepresentation'
         required:
           - _class
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services/transrepresentation'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services/transrepresentation'
   TransrepresentationMethod:
     allOf:
       - $ref: '../services.yaml#/definitions/KnowledgeProcessingMethod'
@@ -28,7 +28,7 @@ definitions:
         required:
           - _class
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services/transrepresentation'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services/transrepresentation'
   Transrepresentation:
     allOf:
       - $ref: '../services.yaml#/definitions/KnowledgeProcessingTask'
@@ -42,41 +42,41 @@ definitions:
               $ref: '../../id/id.yaml#/definitions/ResourceIdentifier'
             minItems: 0
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
           method:
             type: array
             items:
               $ref: '#/definitions/TransrepresentationMethod'
             minItems: 0
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/services/transrepresentation'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/services/transrepresentation'
           consumes:
             type: array
             items:
               $ref: '../services.yaml#/definitions/SyntacticRepresentation'
             minItems: 1
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
           produces:
             type: array
             items:
               $ref: '../services.yaml#/definitions/SyntacticRepresentation'
             minItems: 1
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
           exec:
             type: array
             items:
               $ref: '#/definitions/TransrepresentationOperator'
             minItems: 0
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/services/transrepresentation'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/services/transrepresentation'
         required:
           - _class
           - consumes
           - produces
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services/transrepresentation'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services/transrepresentation'
   TransrepresentationOperator:
     allOf:
       - $ref: '../services.yaml#/definitions/KnowledgeProcessingOperator'
@@ -90,20 +90,20 @@ definitions:
               $ref: '../services.yaml#/definitions/SyntacticRepresentation'
             minItems: 1
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
           into:
             type: array
             items:
               $ref: '../services.yaml#/definitions/SyntacticRepresentation'
             minItems: 1
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
         required:
           - _class
           - from
           - into
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services/transrepresentation'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services/transrepresentation'
   Deserializer:
     allOf:
       - $ref: '../services.yaml#/definitions/KnowledgePlatformComponent'
@@ -114,7 +114,7 @@ definitions:
         required:
           - _class
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services/transrepresentation'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services/transrepresentation'
   DeserializationOperator:
     allOf:
       - $ref: '../services.yaml#/definitions/KnowledgeProcessingOperator'
@@ -128,20 +128,20 @@ definitions:
               $ref: '../services.yaml#/definitions/SyntacticRepresentation'
             minItems: 1
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
           into:
             type: array
             items:
               $ref: '../services.yaml#/definitions/SyntacticRepresentation'
             minItems: 1
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
         required:
           - _class
           - from
           - into
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services/transrepresentation'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services/transrepresentation'
   Validator:
     allOf:
       - $ref: '../services.yaml#/definitions/KnowledgePlatformComponent'
@@ -152,7 +152,7 @@ definitions:
         required:
           - _class
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services/transrepresentation'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services/transrepresentation'
   Detector:
     allOf:
       - $ref: '../services.yaml#/definitions/KnowledgePlatformComponent'
@@ -163,7 +163,7 @@ definitions:
         required:
           - _class
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services/transrepresentation'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services/transrepresentation'
   ValidationOperator:
     allOf:
       - $ref: '../services.yaml#/definitions/KnowledgeProcessingOperator'
@@ -177,12 +177,12 @@ definitions:
               $ref: '../services.yaml#/definitions/SyntacticRepresentation'
             minItems: 1
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
         required:
           - _class
           - from
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services/transrepresentation'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services/transrepresentation'
   DetectionOperator:
     allOf:
       - $ref: '../services.yaml#/definitions/KnowledgeProcessingOperator'
@@ -196,9 +196,9 @@ definitions:
               $ref: '../services.yaml#/definitions/SyntacticRepresentation'
             minItems: 1
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
         required:
           - _class
           - into
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services/transrepresentation'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services/transrepresentation'

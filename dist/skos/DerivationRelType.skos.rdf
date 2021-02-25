@@ -1,0 +1,89 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:AnnotationVocabulary1="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:DOL-terms="http://www.omg.org/spec/DOL/DOL-terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:AnnotationVocabulary="https://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns="https://www.omg.org/spec/API4KP/api4kp-rel/"
+    xmlns:tgt="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType">
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://www.omg.org/spec/API4KP/20210201/taxonomy/DerivationRelType"/>
+  </owl:Ontology>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#isFlatteningOf">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>is flattening of</rdfs:label>
+    <skos:prefLabel>is flattening of</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isFlatteningOf</rdfs:isDefinedBy>
+    <skos:notation>4f124d54-b3cf-3dc8-9e9d-fd05b45e10d0</skos:notation>
+    <skos:inScheme>
+      <skos:ConceptScheme rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#DerivationTypes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>DerivationTypes</rdfs:label>
+        <skos:prefLabel>DerivationTypes</skos:prefLabel>
+        <skos:hasTopConcept>
+          <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#DerivationType">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#DerivationTypes"/>
+            <rdfs:label>DerivationType</rdfs:label>
+            <skos:prefLabel>DerivationType</skos:prefLabel>
+          </skos:Concept>
+        </skos:hasTopConcept>
+      </skos:ConceptScheme>
+    </skos:inScheme>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#isDerivedFrom">
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#DerivationType"/>
+        <rdfs:label>is derived from</rdfs:label>
+        <skos:prefLabel>is derived from</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp/isDerivedFrom</rdfs:isDefinedBy>
+        <skos:notation>b0586387-30d9-3107-9205-782c0dd05300</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#DerivationTypes"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#DerivationType"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#DerivationType"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#isTranscreationOf">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>is transcreation of</rdfs:label>
+    <skos:prefLabel>is transcreation of</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isTranscreationOf</rdfs:isDefinedBy>
+    <skos:notation>ff629252-f3d9-33f3-93c4-771f449bce09</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#DerivationTypes"/>
+    <skos:broader>
+      <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#isAdaptationOf">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label>is adaptation of</rdfs:label>
+        <skos:prefLabel>is adaptation of</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isAdaptationOf</rdfs:isDefinedBy>
+        <skos:notation>694c9fe7-5eb5-3db6-b3d4-36a435f8a1e4</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#DerivationTypes"/>
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#isDerivedFrom"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#DerivationType"/>
+      </owl:NamedIndividual>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#DerivationType"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#isRevisionOf">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>is revision of</rdfs:label>
+    <skos:prefLabel>is revision of</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-rel/isRevisionOf</rdfs:isDefinedBy>
+    <skos:notation>e4de3836-1f60-3fb2-99d8-26f2504ade47</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#DerivationTypes"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#isDerivedFrom"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType#DerivationType"/>
+  </owl:NamedIndividual>
+</rdf:RDF>

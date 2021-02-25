@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="KnowledgeProcessingOperations"
+           targetNamespace="https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeProcessingOperations"
+           elementFormDefault="qualified"
+           xmlns="https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeProcessingOperations"
+           xmlns:id="https://www.omg.org/spec/API4KP/20210201/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20210201/id"/>
+
+    <xs:complexType name="KnowledgeProcessingOperation">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="KnowledgeProcessingOperation_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeAssetRegistrationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LogicBasedReasoningTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#InferenceTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#QueryAnswerTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ProofGenerationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#EntailmentCheckTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SubsumptionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SatisfiabilityCheckTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ConsistencyCheckTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ClassificationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeCarrierRetrievalTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeSurrogateRetrievalTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#RetrieveArtifactFromRepositoryLocationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeReshapingTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SelectionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#CherryPickingTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#WeavingTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SimplificationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SummarizationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#RedactionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#FusionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#UnionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SeparationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ExtractionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#PartitionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#InjectionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ExtensionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#RemovalTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ReductionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#FilteringTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#CarvingTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SemanticKnowledgeManagementTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDiscoveryTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#DependencyResolutionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDescriptionExtractionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#HorizontalKnowledgeProcessingTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ParaphraseTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#TranscriptionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#AbridgmentTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#TranslationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SemanticTranslationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ReplicationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#DescriptionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#StoreArtifactAtRepositoryLocationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#TranscreationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#VerticalKnowledgeProcessingTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LiftingTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#DecodingTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ReadTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SyntacticParsingTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#InterpretationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LoweringTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ExpressionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#EncodingTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SerializationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#WriteTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ParsingTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SyntacticAnalysisTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceCompositionalTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceRearrangementTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceConstructionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceAggregationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceAssemblyTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeBaseBuildingTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceCompositionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceFlatteningTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDeconstructionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDisaggregationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDisassemblyTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeBaseCreationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDecompositionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeArtifactRegistrationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ClearRepositoryLocationTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeAnalyticTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LogicDetectionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ComplexityDetectionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#DiffingTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LanguageInformationDetectionTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#WellFormednessCheckTask"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SignatureDetectionTask"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

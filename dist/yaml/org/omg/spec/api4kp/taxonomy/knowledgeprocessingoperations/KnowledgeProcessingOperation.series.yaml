@@ -1,0 +1,13 @@
+swagger: "2.0"
+definitions:
+  KnowledgeProcessingOperation:
+    allOf:
+      - $ref: '../../../../../../API4KP/api4kp/id/id.yaml#/definitions/ConceptIdentifier'
+      - type: object
+        discriminator: _class
+        properties:
+          _class : string
+        required:
+          - _class
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations'

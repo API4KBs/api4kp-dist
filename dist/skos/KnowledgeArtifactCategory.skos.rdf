@@ -1,0 +1,47 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns="https://www.omg.org/spec/API4KP/api4kp/"
+    xmlns:AnnotationVocabulary1="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:tgt="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeArtifactCategory#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:DOL-terms="http://www.omg.org/spec/DOL/DOL-terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:AnnotationVocabulary="https://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeArtifactCategory">
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeArtifactCategory"/>
+  </owl:Ontology>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeArtifactCategory#ComputableKnowledgeArtifact">
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeArtifactCategory#KnowledgeArtifactCategory">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:inScheme>
+          <skos:ConceptScheme rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeArtifactCategory#KnowledgeArtifactCategories">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdfs:label>KnowledgeArtifactCategories</rdfs:label>
+            <skos:prefLabel>KnowledgeArtifactCategories</skos:prefLabel>
+            <skos:hasTopConcept rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeArtifactCategory#KnowledgeArtifactCategory"/>
+          </skos:ConceptScheme>
+        </skos:inScheme>
+        <rdfs:label>KnowledgeArtifactCategory</rdfs:label>
+        <skos:prefLabel>KnowledgeArtifactCategory</skos:prefLabel>
+      </skos:Concept>
+    </skos:broader>
+    <rdfs:label>computable knowledge artifact</rdfs:label>
+    <skos:prefLabel>computable knowledge artifact</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp/ComputableKnowledgeArtifact</rdfs:isDefinedBy>
+    <skos:notation>b3093c73-f688-3b06-a395-fdf1dbb899b6</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeArtifactCategory#KnowledgeArtifactCategories"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeArtifactCategory#KnowledgeArtifactCategory"/>
+  </skos:Concept>
+</rdf:RDF>

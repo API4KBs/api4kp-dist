@@ -1,0 +1,858 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:AnnotationVocabulary1="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="https://www.omg.org/spec/API4KP/api4kp-ops/"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:DOL-terms="http://www.omg.org/spec/DOL/DOL-terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:AnnotationVocabulary="https://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:tgt="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations">
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeProcessingOperations"/>
+  </owl:Ontology>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#WellFormednessCheckTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>well-formedness check task</rdfs:label>
+    <skos:prefLabel>well-formedness check task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/WellFormednessCheckTask</rdfs:isDefinedBy>
+    <skos:notation>180be9d5-8843-3d57-9014-6a9f147ed1bd</skos:notation>
+    <skos:inScheme>
+      <skos:ConceptScheme rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>KnowledgeProcessingOperations</rdfs:label>
+        <skos:prefLabel>KnowledgeProcessingOperations</skos:prefLabel>
+        <skos:hasTopConcept>
+          <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+            <rdfs:label>KnowledgeProcessingOperation</rdfs:label>
+            <skos:prefLabel>KnowledgeProcessingOperation</skos:prefLabel>
+          </skos:Concept>
+        </skos:hasTopConcept>
+      </skos:ConceptScheme>
+    </skos:inScheme>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeAnalyticTask">
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+        <rdfs:label>knowledge analytic task</rdfs:label>
+        <skos:prefLabel>knowledge analytic task</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeAnalyticTask</rdfs:isDefinedBy>
+        <skos:notation>6d0cadd1-a254-3154-b54d-2678719020af</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#RedactionTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>redaction task</rdfs:label>
+    <skos:prefLabel>redaction task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/RedactionTask</rdfs:isDefinedBy>
+    <skos:notation>c08cfda8-6856-3b22-90d1-1f1aa42d0816</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SimplificationTask">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>simplification task</rdfs:label>
+        <skos:prefLabel>simplification task</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/SimplificationTask</rdfs:isDefinedBy>
+        <skos:notation>7d0b4c92-9108-3d62-8b3a-ad9753355eb6</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+        <skos:broader>
+          <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeReshapingTask">
+            <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+            <rdfs:label>knowledge reshaping task</rdfs:label>
+            <skos:prefLabel>knowledge reshaping task</skos:prefLabel>
+            <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeReshapingTask</rdfs:isDefinedBy>
+            <skos:notation>349c27da-60d3-3955-b8e5-1de2959ce258</skos:notation>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+          </owl:NamedIndividual>
+        </skos:broader>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceAggregationTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>knowledge resource aggregation task</rdfs:label>
+    <skos:prefLabel>knowledge resource aggregation task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeResourceAggregationTask</rdfs:isDefinedBy>
+    <skos:notation>87feae16-2db5-38d0-98ce-31f2da14501a</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader>
+      <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceConstructionTask">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label>knowledge resource construction task</rdfs:label>
+        <skos:prefLabel>knowledge resource construction task</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeResourceConstructionTask</rdfs:isDefinedBy>
+        <skos:notation>5b82a948-a445-3eb8-8a09-16224afa4f7b</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+        <skos:broader>
+          <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceCompositionalTask">
+            <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+            <rdfs:label>knowledge resource compositional task</rdfs:label>
+            <skos:prefLabel>knowledge resource compositional task</skos:prefLabel>
+            <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeResourceCompositionalTask</rdfs:isDefinedBy>
+            <skos:notation>7cfd1ddb-a6ef-331b-aa99-cd8f834b5785</skos:notation>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+          </owl:NamedIndividual>
+        </skos:broader>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+      </owl:NamedIndividual>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeAssetRegistrationTask">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+    <rdfs:label>knowledge asset registration task</rdfs:label>
+    <skos:prefLabel>knowledge asset registration task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeAssetRegistrationTask</rdfs:isDefinedBy>
+    <skos:notation>b43e9f0c-54b4-351f-a8ff-6fe678a2561b</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SubsumptionTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>subsumption task</rdfs:label>
+    <skos:prefLabel>subsumption task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/SubsumptionTask</rdfs:isDefinedBy>
+    <skos:notation>513d2f6b-ef46-3383-94ac-b15081c14b80</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LogicBasedReasoningTask">
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+        <rdfs:label>logic-based reasoning task</rdfs:label>
+        <skos:prefLabel>logic-based reasoning task</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/LogicBasedReasoningTask</rdfs:isDefinedBy>
+        <skos:notation>6366dbb0-acff-39e1-a024-cc0c0640c023</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#TranscreationTask">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+    <rdfs:label>transcreation task</rdfs:label>
+    <skos:prefLabel>transcreation task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/TranscreationTask</rdfs:isDefinedBy>
+    <skos:notation>d07aa2d2-4c8f-37c1-b1c6-75cf3e177236</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#WriteTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>write task</rdfs:label>
+    <skos:prefLabel>write task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/WriteTask</rdfs:isDefinedBy>
+    <skos:notation>5ded53ab-42e8-3054-b36c-12b90ee41b1a</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LoweringTask">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>lowering task</rdfs:label>
+        <skos:prefLabel>lowering task</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/LoweringTask</rdfs:isDefinedBy>
+        <skos:notation>062deafd-6724-395a-a41d-8a0b9bf89b12</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+        <skos:broader>
+          <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#VerticalKnowledgeProcessingTask">
+            <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+            <rdfs:label>vertical knowledge processing task</rdfs:label>
+            <skos:prefLabel>vertical knowledge processing task</skos:prefLabel>
+            <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/VerticalKnowledgeProcessingTask</rdfs:isDefinedBy>
+            <skos:notation>362b4e85-1742-37cf-85f4-4cb665a31c7d</skos:notation>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+          </skos:Concept>
+        </skos:broader>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ComplexityDetectionTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>complexity detection task</rdfs:label>
+    <skos:prefLabel>complexity detection task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/ComplexityDetectionTask</rdfs:isDefinedBy>
+    <skos:notation>531a7d3e-4f38-3bdf-b6c6-ea1620ffc9b1</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeAnalyticTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ClearRepositoryLocationTask">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+    <rdfs:label>clear repository location task</rdfs:label>
+    <skos:prefLabel>clear repository location task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/ClearRepositoryLocationTask</rdfs:isDefinedBy>
+    <skos:notation>3725f02f-2bd9-31b4-b9d3-703420e11412</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#WeavingTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>weaving task</rdfs:label>
+    <skos:prefLabel>weaving task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/WeavingTask</rdfs:isDefinedBy>
+    <skos:notation>03b742df-bb7d-3544-b0e5-d3e38e1884e8</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeReshapingTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDisassemblyTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>knowledge resource disassembly task</rdfs:label>
+    <skos:prefLabel>knowledge resource disassembly task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeResourceDisassemblyTask</rdfs:isDefinedBy>
+    <skos:notation>a01e05fc-912b-35c6-b570-a094a88a3473</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceCompositionalTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#DecodingTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>decoding task</rdfs:label>
+    <skos:prefLabel>decoding task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/DecodingTask</rdfs:isDefinedBy>
+    <skos:notation>b0f289e8-18bb-363b-bde0-2b7eb8ee8860</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LiftingTask">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>lifting task</rdfs:label>
+        <skos:prefLabel>lifting task</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/LiftingTask</rdfs:isDefinedBy>
+        <skos:notation>c6eab0bd-8714-36bf-900e-45a56a549396</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#VerticalKnowledgeProcessingTask"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeSurrogateRetrievalTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>knowledge surrogate retrieval task</rdfs:label>
+    <skos:prefLabel>knowledge surrogate retrieval task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeSurrogateRetrievalTask</rdfs:isDefinedBy>
+    <skos:notation>e03f6727-d501-33dd-ab84-44783e3d5182</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader>
+      <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeCarrierRetrievalTask">
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+        <rdfs:label>knowledge carrier retrieval task</rdfs:label>
+        <skos:prefLabel>knowledge carrier retrieval task</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeCarrierRetrievalTask</rdfs:isDefinedBy>
+        <skos:notation>adc0c704-b4d1-3218-86ad-39cb009cb4cc</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+      </owl:NamedIndividual>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDisaggregationTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>knowledge resource disaggregation task</rdfs:label>
+    <skos:prefLabel>knowledge resource disaggregation task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeResourceDisaggregationTask</rdfs:isDefinedBy>
+    <skos:notation>29032213-840d-390e-be4f-0f2fe72016f3</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDeconstructionTask">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>knowledge resource deconstruction task</rdfs:label>
+        <skos:prefLabel>knowledge resource deconstruction task</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeResourceDeconstructionTask</rdfs:isDefinedBy>
+        <skos:notation>a950af06-1295-3e2c-b05a-1f91529c8b3d</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceCompositionalTask"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LanguageInformationDetectionTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>language information detection task</rdfs:label>
+    <skos:prefLabel>language information detection task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/LanguageInformationDetectionTask</rdfs:isDefinedBy>
+    <skos:notation>2c9c8c17-925b-3566-b535-dd481dc000ff</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeAnalyticTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#EntailmentCheckTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>entailment check test</rdfs:label>
+    <skos:prefLabel>entailment check test</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/EntailmentCheckTask</rdfs:isDefinedBy>
+    <skos:notation>960249cd-cd9d-33c5-84b4-9ea48bd3c1a9</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LogicBasedReasoningTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#InferenceTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>inference task</rdfs:label>
+    <skos:prefLabel>inference task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/InferenceTask</rdfs:isDefinedBy>
+    <skos:notation>d3c5d0a2-cc0b-3b91-b625-7335e4dd6d89</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LogicBasedReasoningTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDescriptionExtractionTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>knowledge resource description extraction task</rdfs:label>
+    <skos:prefLabel>knowledge resource description extraction task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeResourceDescriptionExtractionTask</rdfs:isDefinedBy>
+    <skos:notation>1fa70d36-a160-3356-89e8-cfcf7ea80695</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SemanticKnowledgeManagementTask">
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+        <rdfs:label>semantic knowledge management task</rdfs:label>
+        <skos:prefLabel>semantic knowledge management task</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/SemanticKnowledgeManagementTask</rdfs:isDefinedBy>
+        <skos:notation>129119da-5063-37d3-884c-6f76b43a6eaa</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeArtifactRegistrationTask">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+    <rdfs:label>knowledge artifact registration task</rdfs:label>
+    <skos:prefLabel>knowledge artifact registration task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeArtifactRegistrationTask</rdfs:isDefinedBy>
+    <skos:notation>9dac2ccf-cbf7-3930-a5c0-c681512c348f</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SummarizationTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>summarization task</rdfs:label>
+    <skos:prefLabel>summarization task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/SummarizationTask</rdfs:isDefinedBy>
+    <skos:notation>d4df954e-eb63-3e73-8a5d-b7929c502360</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SimplificationTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SerializationTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>serialization task</rdfs:label>
+    <skos:prefLabel>serialization task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/SerializationTask</rdfs:isDefinedBy>
+    <skos:notation>e7e0cd08-0c7b-394b-8129-d3cd8ac0c7e7</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LoweringTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#DependencyResolutionTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>dependency resolution task</rdfs:label>
+    <skos:prefLabel>dependency resolution task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/DependencyResolutionTask</rdfs:isDefinedBy>
+    <skos:notation>3d9a4653-5c38-39b3-a6c6-4fe72c67a496</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDiscoveryTask">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>knowledge resource discovery task</rdfs:label>
+        <skos:prefLabel>knowledge resource discovery task</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeResourceDiscoveryTask</rdfs:isDefinedBy>
+        <skos:notation>fe76d2a1-f1a5-32b4-b509-a41471fc951b</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SemanticKnowledgeManagementTask"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ExtractionTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>extraction task</rdfs:label>
+    <skos:prefLabel>extraction task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/ExtractionTask</rdfs:isDefinedBy>
+    <skos:notation>e8624eac-7104-3679-9736-53f2e3cee894</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SeparationTask">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>separation task</rdfs:label>
+        <skos:prefLabel>separation task</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/SeparationTask</rdfs:isDefinedBy>
+        <skos:notation>c6827063-611d-3d5f-a1ce-c4a0b7ddaf5b</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeReshapingTask"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#EncodingTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>encoding task</rdfs:label>
+    <skos:prefLabel>encoding task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/EncodingTask</rdfs:isDefinedBy>
+    <skos:notation>58219335-f3dd-3be1-909e-374b04976a58</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LoweringTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#QueryAnswerTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>query answering task</rdfs:label>
+    <skos:prefLabel>query answering task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/QueryAnswerTask</rdfs:isDefinedBy>
+    <skos:notation>c44dc3e3-396c-39e7-8526-f5ba0866dd5b</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LogicBasedReasoningTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceRearrangementTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>knowledge resource rearrangement task</rdfs:label>
+    <skos:prefLabel>knowledge resource rearrangement task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeResourceRearrangementTask</rdfs:isDefinedBy>
+    <skos:notation>f402b88e-3574-38ae-8b72-22e82a691a81</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceCompositionalTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ProofGenerationTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>proof generation task</rdfs:label>
+    <skos:prefLabel>proof generation task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/ProofGenerationTask</rdfs:isDefinedBy>
+    <skos:notation>66e3a943-23b4-31f5-9a20-778c9e7bf2fb</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LogicBasedReasoningTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ParsingTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>parsing task</rdfs:label>
+    <skos:prefLabel>parsing task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/ParsingTask</rdfs:isDefinedBy>
+    <skos:notation>8717fac4-e6aa-391e-89d3-8298ec725737</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LiftingTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ReductionTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>reduction task</rdfs:label>
+    <skos:prefLabel>reduction task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/ReductionTask</rdfs:isDefinedBy>
+    <skos:notation>6a736666-1d8a-35f0-988c-71acf3bc1905</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SimplificationTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SignatureDetectionTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>signature detection task</rdfs:label>
+    <skos:prefLabel>signature detection task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/SignatureDetectionTask</rdfs:isDefinedBy>
+    <skos:notation>cf0bd640-89d3-3276-9c1f-f6619b78b8c7</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeAnalyticTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#AbridgmentTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>abdrigment task</rdfs:label>
+    <skos:prefLabel>abdrigment task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/AbridgmentTask</rdfs:isDefinedBy>
+    <skos:notation>13aa30aa-d52e-36f1-8c34-f19bc337f73c</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ParaphraseTask">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>paraphrase task</rdfs:label>
+        <skos:prefLabel>paraphrase task</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/ParaphraseTask</rdfs:isDefinedBy>
+        <skos:notation>88542a0a-965d-37da-b7e0-8d2dd2ad6088</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+        <skos:broader>
+          <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#HorizontalKnowledgeProcessingTask">
+            <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+            <rdfs:label>horizontal knowledge processing task</rdfs:label>
+            <skos:prefLabel>horizontal knowledge processing task</skos:prefLabel>
+            <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/HorizontalKnowledgeProcessingTask</rdfs:isDefinedBy>
+            <skos:notation>53e87d62-8d35-3395-b5d9-420a9661edb7</skos:notation>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+          </skos:Concept>
+        </skos:broader>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeBaseCreationTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>knowledge base creation task</rdfs:label>
+    <skos:prefLabel>knowledge base creation task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeBaseCreationTask</rdfs:isDefinedBy>
+    <skos:notation>4629378f-a1c0-31f1-a52a-5447fb97bd36</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceAssemblyTask">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>knowledge resource assembly task</rdfs:label>
+        <skos:prefLabel>knowledge resource assembly task</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeResourceAssemblyTask</rdfs:isDefinedBy>
+        <skos:notation>e889c8a5-8028-3195-841b-2185b78c3fc9</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceCompositionalTask"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ExtensionTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>extension task</rdfs:label>
+    <skos:prefLabel>extension task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/ExtensionTask</rdfs:isDefinedBy>
+    <skos:notation>e589e4b4-e305-32af-b8ec-1db7c1d69651</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#InjectionTask">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>injection task</rdfs:label>
+        <skos:prefLabel>injection task</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/InjectionTask</rdfs:isDefinedBy>
+        <skos:notation>8392be4f-b6ac-358c-8430-fb448576828b</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+        <skos:broader>
+          <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#FusionTask">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <rdfs:label>fusion task</rdfs:label>
+            <skos:prefLabel>fusion task</skos:prefLabel>
+            <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/FusionTask</rdfs:isDefinedBy>
+            <skos:notation>cc486e7e-68e3-304c-a300-dff4068220ac</skos:notation>
+            <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+            <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeReshapingTask"/>
+            <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+          </owl:NamedIndividual>
+        </skos:broader>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#CherryPickingTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>cherry-picking task</rdfs:label>
+    <skos:prefLabel>cherry-picking task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/CherryPickingTask</rdfs:isDefinedBy>
+    <skos:notation>f88d3c94-e7ef-36cc-b5b3-499dec60c088</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SelectionTask">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>selection task</rdfs:label>
+        <skos:prefLabel>selection task</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/SelectionTask</rdfs:isDefinedBy>
+        <skos:notation>a5628370-845c-350f-b0e7-6cab66aac127</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeReshapingTask"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#UnionTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>union task</rdfs:label>
+    <skos:prefLabel>union task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/UnionTask</rdfs:isDefinedBy>
+    <skos:notation>7337f2f2-3ca9-3070-aa55-baf92afb9d88</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#FusionTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ReplicationTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>replication task</rdfs:label>
+    <skos:prefLabel>replication task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/ReplicationTask</rdfs:isDefinedBy>
+    <skos:notation>7fa37dc0-640e-3353-8316-cb59036b4b38</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#HorizontalKnowledgeProcessingTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#InterpretationTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>interpretation task</rdfs:label>
+    <skos:prefLabel>interpretation task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/InterpretationTask</rdfs:isDefinedBy>
+    <skos:notation>8baa8d9f-643b-3aaf-b769-809b8995b054</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LiftingTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SyntacticAnalysisTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>syntactic analysis task</rdfs:label>
+    <skos:prefLabel>syntactic analysis task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/SyntacticAnalysisTask</rdfs:isDefinedBy>
+    <skos:notation>16a6f204-4ea3-3563-a6ac-647a4bb5d234</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LiftingTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LogicDetectionTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>logic detection task</rdfs:label>
+    <skos:prefLabel>logic detection task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/LogicDetectionTask</rdfs:isDefinedBy>
+    <skos:notation>aaaeaac1-b927-39fb-a8f2-eb30dc616636</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeAnalyticTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SemanticTranslationTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>semantic translation task</rdfs:label>
+    <skos:prefLabel>semantic translation task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/SemanticTranslationTask</rdfs:isDefinedBy>
+    <skos:notation>ee0dc2a2-38fa-313f-9641-a2741213346f</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#TranslationTask">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdfs:label>syntactic translation task</rdfs:label>
+        <skos:prefLabel>syntactic translation task</skos:prefLabel>
+        <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/TranslationTask</rdfs:isDefinedBy>
+        <skos:notation>abeb0612-ea6e-36f1-892f-d7faaea0f911</skos:notation>
+        <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+        <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#HorizontalKnowledgeProcessingTask"/>
+        <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+      </skos:Concept>
+    </skos:broader>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#FilteringTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>censoring task</rdfs:label>
+    <skos:prefLabel>censoring task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/FilteringTask</rdfs:isDefinedBy>
+    <skos:notation>d64811b4-20b7-341c-9f79-b74ae835aa7b</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SimplificationTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#StoreArtifactAtRepositoryLocationTask">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+    <rdfs:label>store artifact at location task</rdfs:label>
+    <skos:prefLabel>store artifact at location task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/StoreArtifactAtRepositoryLocationTask</rdfs:isDefinedBy>
+    <skos:notation>47e78762-284b-3322-a002-756f0bc084b0</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#PartitionTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>partition task</rdfs:label>
+    <skos:prefLabel>partition task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/PartitionTask</rdfs:isDefinedBy>
+    <skos:notation>1e2cc6dc-dcf6-3558-9048-482074991748</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SeparationTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ReadTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>read task</rdfs:label>
+    <skos:prefLabel>read task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/ReadTask</rdfs:isDefinedBy>
+    <skos:notation>4eea2884-8e5b-3537-93f3-1926712bcece</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LiftingTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#CarvingTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>carving task</rdfs:label>
+    <skos:prefLabel>carving task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/CarvingTask</rdfs:isDefinedBy>
+    <skos:notation>d76a9299-4e72-36c1-a261-2265afe11582</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SelectionTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#DescriptionTask">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+    <rdfs:label>description task</rdfs:label>
+    <skos:prefLabel>description task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/DescriptionTask</rdfs:isDefinedBy>
+    <skos:notation>44bb7a57-1290-3699-80c9-a35e2ac99156</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ClassificationTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>classification task</rdfs:label>
+    <skos:prefLabel>classification task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/ClassificationTask</rdfs:isDefinedBy>
+    <skos:notation>1a37141f-d9a8-333f-81c8-c948b5418f06</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LogicBasedReasoningTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#TranscriptionTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>syntactic transcription task</rdfs:label>
+    <skos:prefLabel>syntactic transcription task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/TranscriptionTask</rdfs:isDefinedBy>
+    <skos:notation>df766945-c056-322a-8b73-7a0ef15de206</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#HorizontalKnowledgeProcessingTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SatisfiabilityCheckTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>satisfiability check task</rdfs:label>
+    <skos:prefLabel>satisfiability check task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/SatisfiabilityCheckTask</rdfs:isDefinedBy>
+    <skos:notation>821efb14-fbc0-324d-847c-4a1a8cbb7d23</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LogicBasedReasoningTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeBaseBuildingTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>knowledge base building task</rdfs:label>
+    <skos:prefLabel>knowledge base building task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeBaseBuildingTask</rdfs:isDefinedBy>
+    <skos:notation>c6e34990-85d9-31b2-8a33-f46e0e9f8b33</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceAssemblyTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceFlatteningTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>knowledge resource flattening task</rdfs:label>
+    <skos:prefLabel>knowledge resource flattening task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeResourceFlatteningTask</rdfs:isDefinedBy>
+    <skos:notation>7d382867-0f40-36fe-9e68-18c3c1c953e2</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceCompositionalTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceCompositionTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>knowledge resource composition task</rdfs:label>
+    <skos:prefLabel>knowledge resource composition task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeResourceCompositionTask</rdfs:isDefinedBy>
+    <skos:notation>9e409e61-4bc6-3f1a-8895-d13c77c4611e</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceConstructionTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SyntacticParsingTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>syntactic parsing task</rdfs:label>
+    <skos:prefLabel>syntactic parsing task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/SyntacticParsingTask</rdfs:isDefinedBy>
+    <skos:notation>545110c3-e708-34da-aa15-26b3f2194e86</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LiftingTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#DiffingTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>diffing task</rdfs:label>
+    <skos:prefLabel>diffing task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/DiffingTask</rdfs:isDefinedBy>
+    <skos:notation>9c738a06-9a1d-33ed-8c9c-4ae08cf585b8</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeAnalyticTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ConsistencyCheckTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>consistency checking task</rdfs:label>
+    <skos:prefLabel>consistency checking task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/ConsistencyCheckTask</rdfs:isDefinedBy>
+    <skos:notation>b6724bb4-9d9d-332d-8394-a8ace4de6d6d</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LogicBasedReasoningTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#RemovalTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>removal task</rdfs:label>
+    <skos:prefLabel>removal task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/RemovalTask</rdfs:isDefinedBy>
+    <skos:notation>f4bd80e4-984a-3e6a-9e31-93c4fabcb8d7</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SeparationTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#RetrieveArtifactFromRepositoryLocationTask">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+    <rdfs:label>retrieve artifact from location task</rdfs:label>
+    <skos:prefLabel>retrieve artifact from location task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/RetrieveArtifactFromRepositoryLocationTask</rdfs:isDefinedBy>
+    <skos:notation>310db201-d2d5-3097-95f5-fcccbee2e8ae</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </skos:Concept>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ExpressionTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>expression task</rdfs:label>
+    <skos:prefLabel>expression task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/ExpressionTask</rdfs:isDefinedBy>
+    <skos:notation>82ddb4f6-5c95-37a8-9275-e9688b4537f7</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LoweringTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDecompositionTask">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>knowledge resource decomposition task</rdfs:label>
+    <skos:prefLabel>knowledge resource decomposition task</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeResourceDecompositionTask</rdfs:isDefinedBy>
+    <skos:notation>85e2a1ed-5763-3340-900c-39494f1d60f8</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperations"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDeconstructionTask"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeProcessingOperation"/>
+  </owl:NamedIndividual>
+</rdf:RDF>

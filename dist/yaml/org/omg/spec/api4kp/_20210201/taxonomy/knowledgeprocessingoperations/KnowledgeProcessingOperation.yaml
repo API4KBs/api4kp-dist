@@ -1,0 +1,98 @@
+swagger: "2.0"
+definitions:
+  KnowledgeProcessingOperation:
+    allOf:
+      - $ref: '../../../../../../../API4KP/api4kp/id/id.yaml#/definitions/ConceptIdentifier'
+      - type: object
+        discriminator: _class
+        properties:
+          _class : string
+        required:
+          - _class
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeProcessingOperations'
+  KnowledgeProcessingOperation_Valueset:
+    type: string
+    enum:
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeAssetRegistrationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LogicBasedReasoningTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#InferenceTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#QueryAnswerTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ProofGenerationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#EntailmentCheckTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SubsumptionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SatisfiabilityCheckTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ConsistencyCheckTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ClassificationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeCarrierRetrievalTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeSurrogateRetrievalTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#RetrieveArtifactFromRepositoryLocationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeReshapingTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SelectionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#CherryPickingTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#WeavingTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SimplificationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SummarizationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#RedactionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#FusionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#UnionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SeparationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ExtractionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#PartitionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#InjectionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ExtensionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#RemovalTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ReductionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#FilteringTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#CarvingTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SemanticKnowledgeManagementTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDiscoveryTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#DependencyResolutionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDescriptionExtractionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#HorizontalKnowledgeProcessingTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ParaphraseTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#TranscriptionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#AbridgmentTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#TranslationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SemanticTranslationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ReplicationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#DescriptionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#StoreArtifactAtRepositoryLocationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#TranscreationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#VerticalKnowledgeProcessingTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LiftingTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#DecodingTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ReadTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SyntacticParsingTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#InterpretationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LoweringTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ExpressionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#EncodingTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SerializationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#WriteTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ParsingTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SyntacticAnalysisTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceCompositionalTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceRearrangementTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceConstructionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceAggregationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceAssemblyTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeBaseBuildingTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceCompositionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceFlatteningTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDeconstructionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDisaggregationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDisassemblyTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeBaseCreationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeResourceDecompositionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeArtifactRegistrationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ClearRepositoryLocationTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#KnowledgeAnalyticTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LogicDetectionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#ComplexityDetectionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#DiffingTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#LanguageInformationDetectionTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#WellFormednessCheckTask
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations#SignatureDetectionTask
+    xml:
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeProcessingOperations'

@@ -34,7 +34,7 @@ public class InventoryGenerator {
   static final String XMIS_DOCUMENT_NUMBER = "ad/2021-02-04";
   static final String OPENAPIS_DOCUMENT_NUMBER = "ad/2021-02-05";
   static final String OWL_DOCUMENT_NUMBER = "ad/2021-02-06";
-  static final String IDL_DOCUMENT_NUMBER = "ad/2021-02-06";
+  static final String IDL_DOCUMENT_NUMBER = "ad/2021-02-07";
   static final String XSD_DOCUMENT_NUMBER = "ad/2021-02-08";
   static final String YML_DOCUMENT_NUMBER = "ad/2021-02-09";
   static final String SKOS_DOCUMENT_NUMBER = "ad/2021-02-010";
@@ -111,6 +111,7 @@ public class InventoryGenerator {
 
     visitTreePath(
         basePath.resolve("uml"),
+        f -> f.getFileName().toString().endsWith(".xmi"),
         InventoryGenerator::getUMLDependencies,
         file -> db.withMachineFile("API4KP UML models for the APIs (.xmi)",
             DOCS_DOCUMENT_NUMBER,
@@ -140,8 +141,8 @@ public class InventoryGenerator {
         + "and non-versioned URLs to facilitate ‘follow-your-nose’ style loading in ontology tools.");
 
     visitTreePath(
-        basePath.resolve("ontologies"),
-//        file -> isNormativeOntology(file),
+        basePath.resolve("ontologies").resolve("API4KP"),
+        file -> isOntology(file),
         InventoryGenerator::getOWLDependencies,
         file -> db.withMachineFile("API4KP RDF/XML-serialized OWL ontologies (.rdf)",
             OWL_DOCUMENT_NUMBER,
@@ -259,6 +260,10 @@ public class InventoryGenerator {
     save(basePath, db.get());
   }
 
+  private static boolean isOntology(Path file) {
+    return file.getFileName().toString().endsWith(".rdf");
+  }
+
   public static boolean isNormative(Path file) {
     return ! file.toString().contains("informative");
   }
@@ -287,6 +292,7 @@ public class InventoryGenerator {
       case "api4kp.xmi" : return emptyList();
       case "api4kp_uml_profiles.xmi" : return Collections.singletonList("api4kp.xmi");
       case "vocabs.xmi" : return Arrays.asList("api4kp_uml_profiles.xmi", "api4kp.xmi");
+      case "API4KP-VOMModelFiles-20210201.zip" : return emptyList();
       default:
         throw new IllegalStateException("Unrecognized UML file " + file);
     }

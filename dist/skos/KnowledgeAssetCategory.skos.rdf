@@ -1,0 +1,137 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:afn="http://jena.apache.org/ARQ/function#"
+    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+    xmlns:lcc-lr="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
+    xmlns:AnnotationVocabulary1="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns:tgt="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:olex="http://www.w3.org/ns/lemon/ontolex#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:DOL-terms="http://www.omg.org/spec/DOL/DOL-terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:AnnotationVocabulary="https://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+    xmlns="https://www.omg.org/spec/API4KP/api4kp-kao/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:f="http://kmdp.mayo.edu/sparql/function#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory">
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:versionIRI rdf:resource="https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeAssetCategory"/>
+  </owl:Ontology>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#MetricAsset">
+    <skos:broader>
+      <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <skos:inScheme>
+          <skos:ConceptScheme rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategories">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdfs:label>KnowledgeAssetCategories</rdfs:label>
+            <skos:prefLabel>KnowledgeAssetCategories</skos:prefLabel>
+            <skos:hasTopConcept rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+          </skos:ConceptScheme>
+        </skos:inScheme>
+        <rdfs:label>KnowledgeAssetCategory</rdfs:label>
+        <skos:prefLabel>KnowledgeAssetCategory</skos:prefLabel>
+      </skos:Concept>
+    </skos:broader>
+    <rdfs:label>metric asset</rdfs:label>
+    <skos:prefLabel>metric asset</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kao/MetricAsset</rdfs:isDefinedBy>
+    <skos:notation>2d705e5a-22d4-3368-98a6-e5ea7d52fd05</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategories"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#SemioticAsset">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+    <rdfs:label>semiotic asset</rdfs:label>
+    <skos:prefLabel>semiotic asset</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kao/SemioticAsset</rdfs:isDefinedBy>
+    <skos:notation>9af6d2b4-1f50-3d4e-9ff5-e7f6650e2e3b</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategories"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#ComponentKnowledgeAsset">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+    <rdfs:label>component knowledge asset</rdfs:label>
+    <skos:prefLabel>component knowledge asset</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kao/ComponentKnowledgeAsset</rdfs:isDefinedBy>
+    <skos:notation>48783b85-1b63-3335-a298-a21d08767744</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategories"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#InformationAsset">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+    <rdfs:label>information asset</rdfs:label>
+    <skos:prefLabel>information asset</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kao/InformationAsset</rdfs:isDefinedBy>
+    <skos:notation>3f55a496-5ff3-3989-bf0a-15a61da8b09c</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategories"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#Definition">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+    <rdfs:label>definition</rdfs:label>
+    <skos:prefLabel>definition</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp/Definition</rdfs:isDefinedBy>
+    <skos:notation>0b890b19-26b9-3387-a738-82e6ccae7fdc</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategories"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#CompositeKnowledgeAsset">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+    <skos:prefLabel>composite knowledge asset</skos:prefLabel>
+    <skos:notation>5b7aac40-21d6-3190-ab54-bd22ef4d8497</skos:notation>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+    <rdfs:label>composite knowledge asset</rdfs:label>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kao/CompositeKnowledgeAsset</rdfs:isDefinedBy>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategories"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeResourceDescription">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+    <rdfs:label xml:lang="en">knowledge resource description</rdfs:label>
+    <skos:prefLabel xml:lang="en">knowledge resource description</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp/KnowledgeResourceDescription</rdfs:isDefinedBy>
+    <skos:notation>4d358520-91f4-395f-a040-34b9e0ed24cb</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategories"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#ProcessAsset">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+    <rdfs:label>process asset</rdfs:label>
+    <skos:prefLabel>process asset</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kao/ProcessAsset</rdfs:isDefinedBy>
+    <skos:notation>f9e2a69d-0f6e-3a2b-94c4-beaf6fdadaea</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategories"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#InferenceAsset">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+    <rdfs:label xml:lang="en">inference asset</rdfs:label>
+    <skos:prefLabel xml:lang="en">inference asset</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kao/InferenceAsset</rdfs:isDefinedBy>
+    <skos:notation>26492a7f-86df-3182-987d-1b4a75eb4e3f</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategories"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#ImperativeAsset">
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+    <rdfs:label>imperative asset</rdfs:label>
+    <skos:prefLabel>imperative asset</skos:prefLabel>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/API4KP/api4kp-kao/ImperativeAsset</rdfs:isDefinedBy>
+    <skos:notation>59f0714a-4ad6-34bd-886f-ea7629e94102</skos:notation>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategories"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeAssetCategory"/>
+  </skos:Concept>
+</rdf:RDF>

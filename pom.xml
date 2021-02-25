@@ -33,7 +33,13 @@
 
     <api4kp.release.date>20210201</api4kp.release.date>
     <dist.dir>${project.basedir}/dist</dist.dir>
-    <dist.build.dir>${project.build.outputDirectory}/dist-tmp</dist.build.dir>
+    <dist.build.dir>${project.build.directory}/dist-tmp</dist.build.dir>
+
+    <uml-directory>${dist.build.dir}/uml/v${api4kp.release.date}</uml-directory>
+    <uml-model>api4kp.uml</uml-model>
+    <uml-included-packages>*</uml-included-packages>
+
+    <skos.dir>${dist.build.dir}/skos</skos.dir>
 
     <kmdp.impl.version>9.0.10-SNAPSHOT</kmdp.impl.version>
     <kmdp.servers.version>4.9.10-SNAPSHOT</kmdp.servers.version>
@@ -140,13 +146,13 @@
                   <version>${kmdp.impl.version}</version>
                   <type>jar</type>
                   <outputDirectory>${dist.build.dir}</outputDirectory>
-                  <includes>**/*.uml</includes>
+                  <includes>**/v${api4kp.release.date}/*.uml</includes>
                 </artifactItem>
               </artifactItems>
             </configuration>
           </execution>
           <execution>
-            <id>gather-core-xsds</id>
+            <id>gather-vom</id>
             <phase>initialize</phase>
             <goals>
               <goal>unpack</goal>
@@ -154,95 +160,608 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>edu.mayo.kmdp</groupId>
-                  <artifactId>kmdp-service-descr</artifactId>
+                  <groupId>org.omg.spec</groupId>
+                  <artifactId>API4KP</artifactId>
                   <version>${kmdp.impl.version}</version>
                   <type>jar</type>
                   <outputDirectory>${dist.build.dir}</outputDirectory>
-                  <includes>**/API4KP/**/*.xsd</includes>
-                </artifactItem>
-              </artifactItems>
-            </configuration>
-          </execution>
-          <execution>
-            <id>gather-core-yamls</id>
-            <phase>initialize</phase>
-            <goals>
-              <goal>unpack</goal>
-            </goals>
-            <configuration>
-              <artifactItems>
-                <artifactItem>
-                  <groupId>edu.mayo.kmdp</groupId>
-                  <artifactId>kmdp-service-descr</artifactId>
-                  <version>${kmdp.impl.version}</version>
-                  <type>jar</type>
-                  <outputDirectory>${dist.build.dir}</outputDirectory>
-                  <includes>**/API4KP/**/*.yaml</includes>
+                  <includes>**/v${api4kp.release.date}/*.zip</includes>
                 </artifactItem>
               </artifactItems>
             </configuration>
           </execution>
 
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>xml-maven-plugin</artifactId>
+        <executions>
           <execution>
-            <id>gather-skos</id>
-            <phase>initialize</phase>
+            <id>generate-xsd-from-uml-2</id>
+            <phase>process-resources</phase>
             <goals>
-              <goal>unpack</goal>
+              <goal>transform</goal>
             </goals>
             <configuration>
-              <artifactItems>
-                <artifactItem>
-                  <groupId>edu.mayo.kmdp</groupId>
-                  <artifactId>kmdp-terminology-content</artifactId>
-                  <version>${kmdp.impl.version}</version>
-                  <type>jar</type>
-                  <outputDirectory>${dist.build.dir}</outputDirectory>
-                  <includes>**/*.skos.rdf</includes>
-                </artifactItem>
-              </artifactItems>
+              <transformationSets>
+                <transformationSet>
+                  <dir>${uml-directory}</dir>
+                  <includes>${uml-model}</includes>
+                  <stylesheet>${project.basedir}/src/main/resources/xslt/xmi-to-xsd.xsl</stylesheet>
+                  <fileMappers>
+                    <fileMapper
+                      implementation="org.codehaus.plexus.components.io.filemappers.FileExtensionMapper">
+                      <targetExtension>.log.txt</targetExtension>
+                    </fileMapper>
+                  </fileMappers>
+                  <outputDir>${project.build.directory}/logs</outputDir>
+                  <parameters>
+                    <parameter>
+                      <name>targetFolder</name>
+                      <value>${dist.build.dir}/xsd/</value>
+                    </parameter>
+                    <parameter>
+                      <name>includedPackages</name>
+                      <value>${uml-included-packages}</value>
+                    </parameter>
+                  </parameters>
+                </transformationSet>
+              </transformationSets>
+              <forceCreation>true</forceCreation>
             </configuration>
           </execution>
           <execution>
-            <id>gather-skos-xsd</id>
-            <phase>initialize</phase>
+            <id>generate-yaml</id>
+            <phase>process-resources</phase>
             <goals>
-              <goal>unpack</goal>
+              <goal>transform</goal>
             </goals>
             <configuration>
-              <artifactItems>
-                <artifactItem>
-                  <groupId>edu.mayo.kmdp</groupId>
-                  <artifactId>kmdp-terminology-content</artifactId>
-                  <version>${kmdp.impl.version}</version>
-                  <type>jar</type>
-                  <outputDirectory>${dist.build.dir}</outputDirectory>
-                  <includes>**/org/omg/spec/api4kp/_20*/taxonomy/*/_20*/*.xsd</includes>
-                </artifactItem>
-              </artifactItems>
+              <transformationSets>
+                <transformationSet>
+                  <dir>${dist.build.dir}/xsd/</dir>
+                  <includes>**/*.xsd</includes>
+                  <excludes>**/*.openapi.xsd</excludes>
+                  <stylesheet>file:${project.basedir}/src/main/resources/xslt/xsd-to-yamls.xsl</stylesheet>
+                  <fileMappers>
+                    <fileMapper
+                      implementation="org.codehaus.plexus.components.io.filemappers.FileExtensionMapper">
+                      <targetExtension>.yaml</targetExtension>
+                    </fileMapper>
+                  </fileMappers>
+                  <outputDir>${dist.build.dir}/yaml</outputDir>
+                  <parameters>
+                    <parameter>
+                      <name>CATALOGS</name>
+                      <value>
+                        file:/${dist.build.dir}${file.separator}xsd${file.separator}terms-catalog.xml,file:/${dist.build.dir}${file.separator}xsd${file.separator}api4kp-catalog.xml
+                      </value>
+                    </parameter>
+                  </parameters>
+                </transformationSet>
+              </transformationSets>
+            </configuration>
+          </execution>
+        </executions>
+
+        <dependencies>
+          <dependency>
+            <groupId>net.sf.saxon</groupId>
+            <artifactId>Saxon-HE</artifactId>
+            <version>${saxon.version}</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+
+      <plugin>
+        <groupId>edu.mayo.kmdp</groupId>
+        <artifactId>terms-owl-to-skos-plugin</artifactId>
+        <version>${project.version}</version>
+        <configuration>
+          <outputDirectory>${skos.dir}</outputDirectory>
+          <catalogURLs>
+            <catalogURL>file:///${dist.build.dir}/ontologies/catalog.xml</catalogURL>
+          </catalogURLs>
+          <profile>OMG</profile>
+        </configuration>
+        <executions>
+
+          <execution>
+            <id>lang2-codes-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURL>https://www.omg.org/spec/LCC/Languages/ISO639-2-LanguageCodes/</owlSourceURL>
+
+              <owlNamespace>https://www.omg.org/spec/LCC/Languages/ISO639-2-LanguageCodes/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/LivingLanguage</targetURI>
+              <entityType>INST</entityType>
+
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode</skosNamespace>
+              <schemeName>Languages</schemeName>
+              <topConceptName>Language</topConceptName>
+
+              <skosOutputFiles>
+                <skosOutputFile>ISO639_2_LanguageCode.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>ops-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp-ops/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp-ops/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/API4KP/api4kp-ops/KnowledgeProcessingTask</targetURI>
+              <minDepth>2</minDepth>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingOperations</skosNamespace>
+              <schemeName>KnowledgeProcessingOperations</schemeName>
+              <topConceptName>KnowledgeProcessingOperation</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>KnowledgeProcessingOperation.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
             </configuration>
           </execution>
           <execution>
-            <id>gather-skos-yaml</id>
-            <phase>initialize</phase>
+            <id>karc-skos</id>
+            <phase>generate-sources</phase>
             <goals>
-              <goal>unpack</goal>
+              <goal>owl-to-skos</goal>
             </goals>
             <configuration>
-              <artifactItems>
-                <artifactItem>
-                  <groupId>edu.mayo.kmdp</groupId>
-                  <artifactId>kmdp-terminology-content</artifactId>
-                  <version>${kmdp.impl.version}</version>
-                  <type>jar</type>
-                  <outputDirectory>${dist.build.dir}</outputDirectory>
-                  <includes>**/org/omg/spec/api4kp/_20*/taxonomy/*/_20*/*.yaml</includes>
-                </artifactItem>
-              </artifactItems>
+              <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp/</owlSourceURL>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/API4KP/api4kp/KnowledgeArtifact</targetURI>
+              <minDepth>1</minDepth>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/KnowledgeArtifactCategory</skosNamespace>
+              <schemeName>KnowledgeArtifactCategories</schemeName>
+              <topConceptName>KnowledgeArtifactCategory</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>KnowledgeArtifactCategory.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+          <execution>
+            <id>lang-lang-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp-registry/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp-registry/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/API4KP/api4kp/ConstructedLanguage</targetURI>
+              <entityType>INST</entityType>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage</skosNamespace>
+              <schemeName>KnowledgeRepresentationLanguages</schemeName>
+              <topConceptName>KnowledgeRepresentationLanguage</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>KnowledgeRepresentationLanguage.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+          <execution>
+            <id>lang-profile-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp-registry/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp-registry/</owlNamespace>
+              <targetURI>http://www.omg.org/spec/DOL/DOL-terms/Profile</targetURI>
+              <entityType>INST</entityType>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageProfile</skosNamespace>
+              <schemeName>KnowledgeRepresentationLanguageProfiles</schemeName>
+              <topConceptName>KnowledgeRepresentationLanguageProfile</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>KnowledgeRepresentationLanguageProfile.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+          <execution>
+            <id>lang-format-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp-registry/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp-registry/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/API4KP/api4kp/MetaFormat</targetURI>
+              <entityType>INST</entityType>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/SerializationFormat</skosNamespace>
+              <schemeName>SerializationFormats</schemeName>
+              <topConceptName>SerializationFormat</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>SerializationFormat.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+          <execution>
+            <id>lang-serial-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp-registry/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp-registry/</owlNamespace>
+              <targetURI>http://www.omg.org/spec/DOL/DOL-terms/Serialization</targetURI>
+              <entityType>INST</entityType>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization</skosNamespace>
+              <schemeName>KnowledgeRepresentationLanguageSerializations</schemeName>
+              <topConceptName>KnowledgeRepresentationLanguageSerialization</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>KnowledgeRepresentationLanguageSerialization.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+          <execution>
+            <id>lang-lex-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp-registry/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp-registry/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/API4KP/api4kp/Lexicon</targetURI>
+              <entityType>INST</entityType>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/Lexicon</skosNamespace>
+              <schemeName>Lexica</schemeName>
+              <topConceptName>Lexicon</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>Lexicon.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+          <execution>
+            <id>rel-deriv-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp-rel/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp-rel/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/API4KP/api4kp/isDerivedFrom</targetURI>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/DerivationRelType</skosNamespace>
+              <schemeName>DerivationTypes</schemeName>
+              <topConceptName>DerivationType</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>DerivationRelType.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+          <execution>
+            <id>rel-variant-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp-rel/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp-rel/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/API4KP/api4kp/isVariantOf</targetURI>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/VariantRelType</skosNamespace>
+              <schemeName>VariantTypes</schemeName>
+              <topConceptName>VariantType</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>VariantRelType.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+          <execution>
+            <id>rel-summary-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp-rel/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp-rel/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/API4KP/api4kp/abbreviates</targetURI>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType</skosNamespace>
+              <schemeName>SummarizationTypes</schemeName>
+              <topConceptName>SummarizationType</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>SummaryRelType.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+          <execution>
+            <id>rel-deps-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp-rel/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp-rel/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/API4KP/api4kp/dependsOn</targetURI>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/DependencyRelType</skosNamespace>
+              <schemeName>DependencyTypes</schemeName>
+              <topConceptName>DependencyType</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>DependencyRelType.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+          <execution>
+            <id>rel-series-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp-series/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp-series/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/API4KP/api4kp-series/isInSeriesWith</targetURI>
+              <minDepth>1</minDepth>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType</skosNamespace>
+              <schemeName>RelatedVersionTypes</schemeName>
+              <topConceptName>RelatedVersionType</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>RelatedVersionType.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+          <execution>
+            <id>rel-part-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp-rel/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp-rel/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/API4KP/api4kp/hasProperPart</targetURI>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/StructuralRelType</skosNamespace>
+              <schemeName>StructuralPartTypes</schemeName>
+              <topConceptName>StructuralPartType</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>StructuralRelType.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>kac-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp-kao/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp-kao/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/API4KP/api4kp/KnowledgeAsset</targetURI>
+              <minDepth>1</minDepth>
+              <maxDepth>1</maxDepth>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory</skosNamespace>
+              <schemeName>KnowledgeAssetCategories</schemeName>
+              <topConceptName>KnowledgeAssetCategory</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>KnowledgeAssetCategory.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>kar-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp-kao/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp-kao/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/API4KP/api4kp-kao/ExplicitRoleKnowledgeAsset</targetURI>
+              <minDepth>1</minDepth>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetRole</skosNamespace>
+              <schemeName>KnowledgeAssetRoles</schemeName>
+              <topConceptName>KnowledgeAssetRole</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>KnowledgeAssetRole.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>kat-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp-kao/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp-kao/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/API4KP/api4kp/KnowledgeAsset</targetURI>
+              <entityType>CLASS</entityType>
+              <minDepth>2</minDepth>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetType</skosNamespace>
+              <schemeName>KnowledgeAssetTypes</schemeName>
+              <topConceptName>KnowledgeAssetType</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>KnowledgeAssetType.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+          <execution>
+            <id>kpt-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp-kao/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp-kao/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/API4KP/api4kp-kao/Technique</targetURI>
+              <minDepth>1</minDepth>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/KnowledgeProcessingTechnique</skosNamespace>
+              <schemeName>KnowledgeProcessingTechniques</schemeName>
+              <topConceptName>KnowledgeProcessingTechnique</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>KnowledgeProcessingTechnique.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+          <execution>
+            <id>langrol-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp-lang/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp-lang/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/API4KP/api4kp-lang/DedicatedLanguage</targetURI>
+              <minDepth>1</minDepth>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageRole</skosNamespace>
+              <schemeName>KnowledgeRepresentationLanguageRoles</schemeName>
+              <topConceptName>KnowledgeRepresentationLanguageRole</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>KnowledgeRepresentationLanguageRole.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+          <execution>
+            <id>vertical-skos</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/API4KP/api4kp/KnowledgeExpression</targetURI>
+              <maxDepth>1</maxDepth>
+              <schemeName>ParsingLevels</schemeName>
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/ParsingLevel</skosNamespace>
+              <topConceptName>ParsingLevel</topConceptName>
+              <skosOutputFiles>
+                <skosOutputFile>ParsingLevel.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>prov-pso</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>owl-to-skos</goal>
+            </goals>
+            <configuration>
+              <owlSourceURLs>
+                <owlSourceURL>https://www.omg.org/spec/API4KP/20210201/api4kp-kmdo/</owlSourceURL>
+              </owlSourceURLs>
+              <owlNamespace>https://www.omg.org/spec/API4KP/api4kp-kmdo/</owlNamespace>
+              <targetURI>https://www.omg.org/spec/API4KP/api4kp-kmdo/PublishedKnowledgeResource</targetURI>
+
+              <skosNamespace>https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus</skosNamespace>
+              <schemeName>PublicationStatuses</schemeName>
+              <topConceptName>PublicationStatus</topConceptName>
+
+              <skosOutputFiles>
+                <skosOutputFile>PublicationStatus.skos.rdf</skosOutputFile>
+              </skosOutputFiles>
+            </configuration>
+          </execution>
+
+        </executions>
+      </plugin>
+
+
+      <plugin>
+        <groupId>edu.mayo.kmdp</groupId>
+        <artifactId>terms-generator-plugin</artifactId>
+        <version>${project.version}</version>
+        <configuration>
+          <xsdOutputDirectory>${dist.build.dir}/xsd</xsdOutputDirectory>
+          <java>false</java>
+          <versionPattern>.*\/(.*)/.*/.*$</versionPattern>
+          <sourceCatalogPaths>
+            <sourceCatalogPath>${dist.build.dir}/ontologies/catalog.xml</sourceCatalogPath>
+          </sourceCatalogPaths>
+          <catalogNamespace>https://ontology.mayo.edu/taxonomies</catalogNamespace>
+          <api4kpRelease>${api4kp.release.date}</api4kpRelease>
+        </configuration>
+        <executions>
+          <execution>
+            <id>def-term-gen</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>generate-terms</goal>
+            </goals>
+            <configuration>
+              <owlFiles>
+                <owlFile>${skos.dir}</owlFile>
+              </owlFiles>
+              <exclusions>
+                <exclusion>${skos.dir}/ISO639_2_LanguageCode.skos.rdf</exclusion>
+              </exclusions>
+            </configuration>
+          </execution>
+          <execution>
+            <id>iso-lang-term-gen</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>generate-terms</goal>
+            </goals>
+            <configuration>
+              <owlFiles>
+                <owlFile>${skos.dir}/ISO639_2_LanguageCode.skos.rdf</owlFile>
+              </owlFiles>
+              <tagFormat>urn:Alpha2Code</tagFormat>
             </configuration>
           </execution>
         </executions>
       </plugin>
+
 
       <plugin>
         <groupId>com.github.cjnygard</groupId>
@@ -401,16 +920,16 @@
             <configuration>
               <fileSets>
                 <fileSet>
-                  <sourceFile>${dist.build.dir}/uml/api4kp.uml</sourceFile>
-                  <destinationFile>${dist.build.dir}/uml/api4kp.xmi</destinationFile>
+                  <sourceFile>${dist.build.dir}/uml/v${api4kp.release.date}/api4kp.uml</sourceFile>
+                  <destinationFile>${dist.build.dir}/uml/v${api4kp.release.date}/api4kp.xmi</destinationFile>
                 </fileSet>
                 <fileSet>
-                  <sourceFile>${dist.build.dir}/uml/api4kp_uml_profiles.uml</sourceFile>
-                  <destinationFile>${dist.build.dir}/uml/api4kp_uml_profiles.xmi</destinationFile>
+                  <sourceFile>${dist.build.dir}/uml/v${api4kp.release.date}/api4kp_uml_profiles.uml</sourceFile>
+                  <destinationFile>${dist.build.dir}/uml/v${api4kp.release.date}/api4kp_uml_profiles.xmi</destinationFile>
                 </fileSet>
                 <fileSet>
-                  <sourceFile>${dist.build.dir}/uml/vocabs.uml</sourceFile>
-                  <destinationFile>${dist.build.dir}/uml/vocabs.xmi</destinationFile>
+                  <sourceFile>${dist.build.dir}/uml/v${api4kp.release.date}/vocabs.uml</sourceFile>
+                  <destinationFile>${dist.build.dir}/uml/v${api4kp.release.date}/vocabs.xmi</destinationFile>
                 </fileSet>
               </fileSets>
             </configuration>
@@ -421,6 +940,38 @@
       <plugin>
         <artifactId>maven-resources-plugin</artifactId>
         <executions>
+          <execution>
+            <id>prepare-ontology-catalog</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${dist.build.dir}/ontologies</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/src/main/resources/ontology-catalog</directory>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+          <execution>
+            <id>prepare-xsd-catalog</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${dist.build.dir}/xsd</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/src/main/resources/xsd</directory>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
           <execution>
             <id>dist-files</id>
             <phase>prepare-package</phase>
@@ -437,6 +988,8 @@
                     <exclude>**/*.openapi.xsd</exclude>
                     <exclude>**/.swagger-codegen-ignore</exclude>
                     <exclude>**/VERSION</exclude>
+                    <exclude>**/core.owl</exclude>
+                    <exclude>**/lcc2.rdf</exclude>
                   </excludes>
                 </resource>
               </resources>

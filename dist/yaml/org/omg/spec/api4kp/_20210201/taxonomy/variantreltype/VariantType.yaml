@@ -1,0 +1,26 @@
+swagger: "2.0"
+definitions:
+  VariantType:
+    allOf:
+      - $ref: '../../../../../../../API4KP/api4kp/id/id.yaml#/definitions/ConceptIdentifier'
+      - type: object
+        discriminator: _class
+        properties:
+          _class : string
+        required:
+          - _class
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/VariantRelType'
+  VariantType_Valueset:
+    type: string
+    enum:
+      - https://www.omg.org/spec/API4KP/taxonomy/VariantRelType#isVariantOf
+      - https://www.omg.org/spec/API4KP/taxonomy/VariantRelType#isTranslationOf
+      - https://www.omg.org/spec/API4KP/taxonomy/VariantRelType#isParaphraseOf
+      - https://www.omg.org/spec/API4KP/taxonomy/VariantRelType#isTranscriptionOf
+      - https://www.omg.org/spec/API4KP/taxonomy/VariantRelType#isTranscodificationOf
+      - https://www.omg.org/spec/API4KP/taxonomy/VariantRelType#isIsomorphicVariantOf
+      - https://www.omg.org/spec/API4KP/taxonomy/VariantRelType#isRearrangementOf
+      - https://www.omg.org/spec/API4KP/taxonomy/VariantRelType#isTransliterationOf
+    xml:
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/VariantRelType'

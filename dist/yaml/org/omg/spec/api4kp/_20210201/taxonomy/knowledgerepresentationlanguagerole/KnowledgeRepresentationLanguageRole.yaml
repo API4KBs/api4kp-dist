@@ -1,0 +1,25 @@
+swagger: "2.0"
+definitions:
+  KnowledgeRepresentationLanguageRole:
+    allOf:
+      - $ref: '../../../../../../../API4KP/api4kp/id/id.yaml#/definitions/ConceptIdentifier'
+      - type: object
+        discriminator: _class
+        properties:
+          _class : string
+        required:
+          - _class
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeRepresentationLanguageRole'
+  KnowledgeRepresentationLanguageRole_Valueset:
+    type: string
+    enum:
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageRole#SchemaLanguage
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageRole#RuleLanguage
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageRole#AnnotationLanguage
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageRole#ProgrammingLanguage
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageRole#QueryLanguage
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageRole#OntologyLanguage
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageRole#ExpressionLanguage
+    xml:
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeRepresentationLanguageRole'

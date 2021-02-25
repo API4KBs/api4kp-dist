@@ -8,16 +8,16 @@ definitions:
       instanceId:
         $ref: '../id/id.yaml#/definitions/ResourceIdentifier'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
       kind:
         $ref: '../id/id.yaml#/definitions/ResourceIdentifier'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
     required:
       - _class
       - instanceId
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
   KnowledgeProcessingMethod:
     type: object
     discriminator: _class
@@ -26,12 +26,12 @@ definitions:
       methodId:
         $ref: '../id/id.yaml#/definitions/ResourceIdentifier'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
     required:
       - _class
       - methodId
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
   KnowledgeProcessingTask:
     type: object
     discriminator: _class
@@ -43,11 +43,11 @@ definitions:
           $ref: '#/definitions/ParameterDefinitions'
         minItems: 0
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
     required:
       - _class
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
   KnowledgeProcessingOperator:
     type: object
     discriminator: _class
@@ -56,16 +56,16 @@ definitions:
       operatorId:
         $ref: '../id/id.yaml#/definitions/ResourceIdentifier'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
       acceptedParams:
         $ref: '#/definitions/ParameterDefinitions'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
     required:
       - _class
       - operatorId
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
   ParameterDefinitions:
     type: object
     discriminator: _class
@@ -77,54 +77,54 @@ definitions:
           $ref: '#/definitions/ParameterDefinition'
         minItems: 0
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
     required:
       - _class
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
   SyntacticRepresentation:
     type: object
     discriminator: _class
     properties:
       _class : string
       language:
-        $ref: '../../../org/omg/spec/api4kp/_20200801/taxonomy/krlanguage/KnowledgeRepresentationLanguage.series.yaml#/definitions/KnowledgeRepresentationLanguage'
+        $ref: '../../../org/omg/spec/api4kp/_20210201/taxonomy/knowledgerepresentationlanguage/KnowledgeRepresentationLanguage.yaml#/definitions/KnowledgeRepresentationLanguage'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/KRLanguage'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeRepresentationLanguage'
       profile:
-        $ref: '../../../org/omg/spec/api4kp/_20200801/taxonomy/krprofile/KnowledgeRepresentationLanguageProfile.series.yaml#/definitions/KnowledgeRepresentationLanguageProfile'
+        $ref: '../../../org/omg/spec/api4kp/_20210201/taxonomy/knowledgerepresentationlanguageprofile/KnowledgeRepresentationLanguageProfile.yaml#/definitions/KnowledgeRepresentationLanguageProfile'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/KRProfile'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeRepresentationLanguageProfile'
       format:
-        $ref: '../../../org/omg/spec/api4kp/_20200801/taxonomy/krformat/SerializationFormat.series.yaml#/definitions/SerializationFormat'
+        $ref: '../../../org/omg/spec/api4kp/_20210201/taxonomy/serializationformat/SerializationFormat.yaml#/definitions/SerializationFormat'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/KRFormat'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/SerializationFormat'
       lexicon:
         type: array
         items:
-          $ref: '../../../org/omg/spec/api4kp/_20200801/taxonomy/lexicon/Lexicon.series.yaml#/definitions/Lexicon'
+          $ref: '../../../org/omg/spec/api4kp/_20210201/taxonomy/lexicon/Lexicon.yaml#/definitions/Lexicon'
         minItems: 0
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/Lexicon'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/Lexicon'
       locale:
-        $ref: '../../../org/omg/spec/api4kp/_20200801/taxonomy/iso639_2_languagecode/Language.series.yaml#/definitions/Language'
+        $ref: '../../../org/omg/spec/api4kp/_20190201/taxonomy/iso639_2_languagecode/Language.yaml#/definitions/Language'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/ISO639-2-LanguageCode'
+          namespace: 'https://www.omg.org/spec/API4KP/20190201/taxonomy/ISO639-2-LanguageCode'
       serialization:
-        $ref: '../../../org/omg/spec/api4kp/_20200801/taxonomy/krserialization/KnowledgeRepresentationLanguageSerialization.series.yaml#/definitions/KnowledgeRepresentationLanguageSerialization'
+        $ref: '../../../org/omg/spec/api4kp/_20210201/taxonomy/knowledgerepresentationlanguageserialization/KnowledgeRepresentationLanguageSerialization.yaml#/definitions/KnowledgeRepresentationLanguageSerialization'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/KRSerialization'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeRepresentationLanguageSerialization'
       role:
-        $ref: '../../../org/omg/spec/api4kp/_20200801/taxonomy/languagerole/KnowledgeRepresentationLanguageRole.series.yaml#/definitions/KnowledgeRepresentationLanguageRole'
+        $ref: '../../../org/omg/spec/api4kp/_20210201/taxonomy/knowledgerepresentationlanguagerole/KnowledgeRepresentationLanguageRole.yaml#/definitions/KnowledgeRepresentationLanguageRole'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/LanguageRole'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeRepresentationLanguageRole'
       subLanguage:
         type: array
         items:
           $ref: '#/definitions/SyntacticRepresentation'
         minItems: 0
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
       charset:
         type: string
         xml:
@@ -145,7 +145,7 @@ definitions:
       - _class
       - language
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
   KnowledgeCarrier:
     type: object
     discriminator: _class
@@ -154,19 +154,19 @@ definitions:
       artifactId:
         $ref: '../id/id.yaml#/definitions/ResourceIdentifier'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
       level:
-        $ref: '../../../org/omg/spec/api4kp/_20200801/taxonomy/parsinglevel/ParsingLevel.series.yaml#/definitions/ParsingLevel'
+        $ref: '../../../org/omg/spec/api4kp/_20210201/taxonomy/parsinglevel/ParsingLevel.yaml#/definitions/ParsingLevel'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/taxonomy/ParsingLevel'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/ParsingLevel'
       assetId:
         $ref: '../id/id.yaml#/definitions/ResourceIdentifier'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
       representation:
         $ref: '#/definitions/SyntacticRepresentation'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
       expression:
         type: '#/definitions/anyType'
         xml:
@@ -185,7 +185,7 @@ definitions:
       - representation
       - expression
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
   Job:
     type: object
     discriminator: _class
@@ -194,7 +194,7 @@ definitions:
       status:
         $ref: '#/definitions/JobStatus'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
       id:
         type: string
         xml:
@@ -208,7 +208,7 @@ definitions:
       - id
       - status
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
   Any:
     type: object
     discriminator: _class
@@ -217,7 +217,7 @@ definitions:
     required:
       - _class
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
   ParameterDefinition:
     type: object
     discriminator: _class
@@ -249,7 +249,7 @@ definitions:
       - type
       - required
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
   KnowledgeBase:
     type: object
     discriminator: _class
@@ -258,15 +258,15 @@ definitions:
       kbaseId:
         $ref: '../id/id.yaml#/definitions/Pointer'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
       manifestation:
         $ref: '#/definitions/KnowledgeCarrier'
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
     required:
       - _class
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
   CompositeKnowledgeCarrier:
     allOf:
       - $ref: '#/definitions/KnowledgeCarrier'
@@ -277,27 +277,27 @@ definitions:
           structType:
             $ref: '#/definitions/CompositeStructType'
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
           rootId:
             $ref: '../id/id.yaml#/definitions/ResourceIdentifier'
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/id'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/id'
           component:
             type: array
             items:
               $ref: '#/definitions/KnowledgeCarrier'
             minItems: 1
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
           struct:
             $ref: '#/definitions/KnowledgeCarrier'
             xml:
-              namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+              namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
         required:
           - _class
           - component
         xml:
-          namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
   Error:
     type: object
     discriminator: _class
@@ -311,7 +311,7 @@ definitions:
       - _class
       - message
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
   JobStatus:
     type: string
     enum:
@@ -324,7 +324,7 @@ definitions:
       - ABORTED
       - PAUSED
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/services'
   CompositeStructType:
     type: string
     enum:
@@ -333,4 +333,4 @@ definitions:
       - GRAPH
       - NONE
     xml:
-      namespace: 'https://www.omg.org/spec/API4KP/20200801/services'
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/services'

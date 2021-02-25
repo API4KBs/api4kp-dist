@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SummarizationTypes"
+           targetNamespace="https://www.omg.org/spec/API4KP/20210201/taxonomy/SummaryRelType"
+           elementFormDefault="qualified"
+           xmlns="https://www.omg.org/spec/API4KP/20210201/taxonomy/SummaryRelType"
+           xmlns:id="https://www.omg.org/spec/API4KP/20210201/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20210201/id"/>
+
+    <xs:complexType name="SummarizationType">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="SummarizationType_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#abbreviates"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#summarizes"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#abridges"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#isCompressionOf"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#isLosslessCompressionOf"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#isDigestOf"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/SummaryRelType#compendiates"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -2,7 +2,7 @@ module org {
 module omg {
 module spec {
 module api4kp {
-module _20200801 {
+module _20210201 {
 module id {
 struct KnowledgeRepresentationLanguageSerialization {
     string referentid;
@@ -55,22 +55,16 @@ struct KnowledgeRepresentationLanguage {
 };
 typedef sequence<KnowledgeRepresentationLanguage> KnowledgeRepresentationLanguageList;
 }; // id
-module datatypes {
-struct Bindings {
-    string entries;
-};
-typedef sequence<Bindings> BindingsList;
-}; // datatypes
 module services {
 struct SyntacticRepresentation {
-    ::org::omg::spec::api4kp::_20200801::id::KnowledgeRepresentationLanguage language;
-    ::org::omg::spec::api4kp::_20200801::id::KnowledgeRepresentationLanguageProfile profile;
-    ::org::omg::spec::api4kp::_20200801::id::SerializationFormat format;
-    sequence<::org::omg::spec::api4kp::_20200801::id::Lexicon> lexicon;
-    ::org::omg::spec::api4kp::_20200801::id::Language locale;
-    ::org::omg::spec::api4kp::_20200801::id::KnowledgeRepresentationLanguageSerialization serialization;
-    ::org::omg::spec::api4kp::_20200801::id::KnowledgeRepresentationLanguageRole role;
-    sequence<::org::omg::spec::api4kp::_20200801::services::SyntacticRepresentation> sublanguage;
+    ::org::omg::spec::api4kp::_20210201::id::KnowledgeRepresentationLanguage language;
+    ::org::omg::spec::api4kp::_20210201::id::KnowledgeRepresentationLanguageProfile profile;
+    ::org::omg::spec::api4kp::_20210201::id::SerializationFormat format;
+    sequence<::org::omg::spec::api4kp::_20210201::id::Lexicon> lexicon;
+    ::org::omg::spec::api4kp::_20210201::id::Language locale;
+    ::org::omg::spec::api4kp::_20210201::id::KnowledgeRepresentationLanguageSerialization serialization;
+    ::org::omg::spec::api4kp::_20210201::id::KnowledgeRepresentationLanguageRole role;
+    sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> sublanguage;
     string charset;
     string encoding;
     string logic;
@@ -78,48 +72,56 @@ struct SyntacticRepresentation {
 };
 typedef sequence<SyntacticRepresentation> SyntacticRepresentationList;
 struct KnowledgeCarrier {
-    ::org::omg::spec::api4kp::_20200801::id::ResourceIdentifier artifactid;
-    ::org::omg::spec::api4kp::_20200801::id::ParsingLevel level;
-    ::org::omg::spec::api4kp::_20200801::id::ResourceIdentifier assetid;
-    ::org::omg::spec::api4kp::_20200801::services::SyntacticRepresentation representation;
+    ::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier artifactid;
+    ::org::omg::spec::api4kp::_20210201::id::ParsingLevel level;
+    ::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier assetid;
+    ::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation representation;
     string href;
     string label;
 };
 typedef sequence<KnowledgeCarrier> KnowledgeCarrierList;
 struct KnowledgeBase {
-    ::org::omg::spec::api4kp::_20200801::id::Pointer kbaseid;
-    ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier manifestation;
+    ::org::omg::spec::api4kp::_20210201::id::Pointer kbaseid;
+    ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier manifestation;
 };
 typedef sequence<KnowledgeBase> KnowledgeBaseList;
 }; // services
+}; // _20210201
+module _20200801 {
+module datatypes {
+struct Bindings {
+    string entries;
+};
+typedef sequence<Bindings> BindingsList;
+}; // datatypes
 module api {
 module knowledgebase {
 module v5 {
 interface Compositional {
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier assembleCompositeArtifact (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier _struct , 
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier assembleCompositeArtifact (
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier _struct , 
       in string xparams 
   );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier constructCompositeAsset (
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier constructCompositeAsset (
       in string xparams , 
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier structdefinition 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier structdefinition 
   );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier deconstructCompositeAsset (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier artifact , 
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier deconstructCompositeAsset (
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier artifact , 
       in string xparams 
   );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrierList disassembleCompositeArtifact (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier artifact , 
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrierList disassembleCompositeArtifact (
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier artifact , 
       in string xparams 
   );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier flattenArtifact (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier artifact , 
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier flattenArtifact (
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier artifact , 
       in string xparams , 
       in string rootassetid 
   );
 };
 interface Knowledgebase {
-  ::org::omg::spec::api4kp::_20200801::id::Pointer bind (
+  ::org::omg::spec::api4kp::_20210201::id::Pointer bind (
       in string kbaseid , 
       in ::org::omg::spec::api4kp::_20200801::datatypes::Bindings bindings , 
       in string xparams , 
@@ -129,37 +131,37 @@ interface Knowledgebase {
       in string kbaseid , 
       in string xparams 
   );
-  ::org::omg::spec::api4kp::_20200801::id::Pointer extract (
+  ::org::omg::spec::api4kp::_20210201::id::Pointer extract (
       in string kbaseid , 
       in string xparams , 
       in string versiontag , 
       in string rootassetid 
   );
-  ::org::omg::spec::api4kp::_20200801::id::Pointer flatten (
+  ::org::omg::spec::api4kp::_20210201::id::Pointer flatten (
       in string kbaseid , 
       in string xparams , 
       in string versiontag 
   );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeBase getKnowledgeBase (
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeBase getKnowledgeBase (
       in string kbaseid , 
       in string xparams , 
       in string versiontag 
   );
-  ::org::omg::spec::api4kp::_20200801::id::PointerList getKnowledgeBaseComponents (
+  ::org::omg::spec::api4kp::_20210201::id::PointerList getKnowledgeBaseComponents (
       in string kbaseid , 
       in string xparams , 
       in string versiontag 
   );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier getKnowledgeBaseManifestation (
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier getKnowledgeBaseManifestation (
       in string kbaseid , 
       in string xparams , 
       in string versiontag 
   );
-  ::org::omg::spec::api4kp::_20200801::id::PointerList getKnowledgeBaseSeries (
+  ::org::omg::spec::api4kp::_20210201::id::PointerList getKnowledgeBaseSeries (
       in string kbaseid , 
       in string xparams 
   );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier getKnowledgeBaseStructure (
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier getKnowledgeBaseStructure (
       in string kbaseid , 
       in string xparams , 
       in string versiontag 
@@ -169,166 +171,166 @@ interface Knowledgebase {
       in string xparams , 
       in string versiontag 
   );
-  ::org::omg::spec::api4kp::_20200801::id::Pointer initKnowledgeBase (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier initialcomponent , 
+  ::org::omg::spec::api4kp::_20210201::id::Pointer initKnowledgeBase (
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier initialcomponent , 
       in string xparams 
   );
-  ::org::omg::spec::api4kp::_20200801::id::Pointer introspect (
+  ::org::omg::spec::api4kp::_20210201::id::Pointer introspect (
       in string kbaseid , 
       in string xparams , 
       in string versiontag 
   );
-  ::org::omg::spec::api4kp::_20200801::id::Pointer namedBind (
+  ::org::omg::spec::api4kp::_20210201::id::Pointer namedBind (
       in string kbaseid , 
       in ::org::omg::spec::api4kp::_20200801::datatypes::Bindings bindings , 
       in string xparams , 
       in string versiontag , 
       in string operatorid 
   );
-  ::org::omg::spec::api4kp::_20200801::id::Pointer namedExtract (
+  ::org::omg::spec::api4kp::_20210201::id::Pointer namedExtract (
       in string kbaseid , 
       in string xparams , 
       in string versiontag , 
       in string rootassetid , 
       in string operatorid 
   );
-  ::org::omg::spec::api4kp::_20200801::id::Pointer namedFlatten (
+  ::org::omg::spec::api4kp::_20210201::id::Pointer namedFlatten (
       in string kbaseid , 
       in string xparams , 
       in string versiontag , 
       in string operatorid 
   );
-  ::org::omg::spec::api4kp::_20200801::id::Pointer namedIntrospect (
+  ::org::omg::spec::api4kp::_20210201::id::Pointer namedIntrospect (
       in string kbaseid , 
       in string xparams , 
       in string versiontag , 
       in string operatorid 
   );
-  ::org::omg::spec::api4kp::_20200801::id::Pointer namedSelect (
+  ::org::omg::spec::api4kp::_20210201::id::Pointer namedSelect (
       in string kbaseid , 
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier selectdefinition , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier selectdefinition , 
       in string xparams , 
       in string versiontag , 
       in string operatorid 
   );
-  ::org::omg::spec::api4kp::_20200801::id::Pointer namedTransform (
+  ::org::omg::spec::api4kp::_20210201::id::Pointer namedTransform (
       in string kbaseid , 
       in string xparams , 
       in string versiontag , 
       in string operatorid 
   );
-  ::org::omg::spec::api4kp::_20200801::id::Pointer namedWeave (
+  ::org::omg::spec::api4kp::_20210201::id::Pointer namedWeave (
       in string kbaseid , 
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier aspects , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier aspects , 
       in string xparams , 
       in string versiontag , 
       in string operatorid 
   );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeBase nextKnowledgeBaseVersion (
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeBase nextKnowledgeBaseVersion (
       in string kbaseid , 
       in string xparams , 
       in string versiontag 
   );
-  ::org::omg::spec::api4kp::_20200801::id::Pointer populateKnowledgeBase (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier artifact , 
+  ::org::omg::spec::api4kp::_20210201::id::Pointer populateKnowledgeBase (
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier artifact , 
       in string kbaseid , 
       in string xparams , 
       in string versiontag 
   );
-  ::org::omg::spec::api4kp::_20200801::id::Pointer select (
+  ::org::omg::spec::api4kp::_20210201::id::Pointer select (
       in string kbaseid , 
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier selectdefinition , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier selectdefinition , 
       in string xparams , 
       in string versiontag 
   );
-  ::org::omg::spec::api4kp::_20200801::id::Pointer setKnowledgeBaseStructure (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier _struct , 
-      in string kbaseid , 
-      in string xparams , 
-      in string versiontag 
-  );
-  ::org::omg::spec::api4kp::_20200801::id::Pointer transform (
+  ::org::omg::spec::api4kp::_20210201::id::Pointer setKnowledgeBaseStructure (
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier _struct , 
       in string kbaseid , 
       in string xparams , 
       in string versiontag 
   );
-  ::org::omg::spec::api4kp::_20200801::id::Pointer weave (
+  ::org::omg::spec::api4kp::_20210201::id::Pointer transform (
       in string kbaseid , 
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier aspects , 
+      in string xparams , 
+      in string versiontag 
+  );
+  ::org::omg::spec::api4kp::_20210201::id::Pointer weave (
+      in string kbaseid , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier aspects , 
       in string xparams , 
       in string versiontag 
   );
 };
 interface Transcreate {
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier applyNamedBind (
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyNamedBind (
       in string kbaseid , 
       in ::org::omg::spec::api4kp::_20200801::datatypes::Bindings bindings , 
       in string xparams , 
       in string versiontag , 
       in string operatorid 
   );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier applyNamedBindDirect (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier artifact , 
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyNamedBindDirect (
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier artifact , 
       in string operatorid 
   );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier applyNamedExtract (
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyNamedExtract (
       in string kbaseid , 
       in string xparams , 
       in string versiontag , 
       in string rootassetid , 
       in string operatorid 
   );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier applyNamedExtractDirect (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier artifact , 
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyNamedExtractDirect (
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier artifact , 
       in string xparams , 
       in string rootassetid , 
       in string operatorid 
   );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier applyNamedIntrospect (
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyNamedIntrospect (
       in string kbaseid , 
       in string xparams , 
       in string versiontag , 
       in string operatorid 
   );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier applyNamedIntrospectDirect (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier artifact , 
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyNamedIntrospectDirect (
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier artifact , 
       in string xparams , 
       in string operatorid 
   );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier applyNamedSelect (
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyNamedSelect (
       in string kbaseid , 
       in string xparams , 
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier definition , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier definition , 
       in string versiontag , 
       in string operatorid 
   );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier applyNamedSelectDirect (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier artifact , 
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyNamedSelectDirect (
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier artifact , 
       in string xparams , 
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier definition , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier definition , 
       in string operatorid 
   );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier applyNamedTransform (
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyNamedTransform (
       in string kbaseid , 
-      in string xparams , 
-      in string versiontag , 
-      in string operatorid 
-  );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier applyNamedTransformDirect (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier artifact , 
-      in string xparams , 
-      in string operatorid 
-  );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier applyNamedWeave (
-      in string kbaseid , 
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier aspects , 
       in string xparams , 
       in string versiontag , 
       in string operatorid 
   );
-  ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier applyNamedWeaveDirect (
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier artifact , 
-      in ::org::omg::spec::api4kp::_20200801::services::KnowledgeCarrier aspects , 
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyNamedTransformDirect (
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier artifact , 
+      in string xparams , 
+      in string operatorid 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyNamedWeave (
+      in string kbaseid , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier aspects , 
+      in string xparams , 
+      in string versiontag , 
+      in string operatorid 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyNamedWeaveDirect (
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier artifact , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier aspects , 
       in string xparams , 
       in string operatorid 
   );

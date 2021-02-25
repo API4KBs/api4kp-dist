@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RelatedVersionTypes"
+           targetNamespace="https://www.omg.org/spec/API4KP/20210201/taxonomy/RelatedVersionType"
+           elementFormDefault="qualified"
+           xmlns="https://www.omg.org/spec/API4KP/20210201/taxonomy/RelatedVersionType"
+           xmlns:id="https://www.omg.org/spec/API4KP/20210201/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20210201/id"/>
+
+    <xs:complexType name="RelatedVersionType">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="RelatedVersionType_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#hasPredecessorVersion"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#hasPreviousVersion"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#hasSuccesorVersion"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/RelatedVersionType#hasNextVersion"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

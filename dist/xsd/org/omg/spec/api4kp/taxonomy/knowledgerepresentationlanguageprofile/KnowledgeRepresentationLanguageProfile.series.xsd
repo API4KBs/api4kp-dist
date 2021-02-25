@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="KnowledgeRepresentationLanguageProfiles"
+           targetNamespace="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageProfile"
+           elementFormDefault="qualified"
+           xmlns="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageProfile"
+           xmlns:id="https://www.omg.org/spec/API4KP/20210201/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20210201/id"/>
+
+    <xs:complexType name="KnowledgeRepresentationLanguageProfile">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ParsingLevels"
+           targetNamespace="https://www.omg.org/spec/API4KP/20210201/taxonomy/ParsingLevel"
+           elementFormDefault="qualified"
+           xmlns="https://www.omg.org/spec/API4KP/20210201/taxonomy/ParsingLevel"
+           xmlns:id="https://www.omg.org/spec/API4KP/20210201/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20210201/id"/>
+
+    <xs:complexType name="ParsingLevel">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="ParsingLevel_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ParsingLevel#KnowledgeExpression"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ParsingLevel#EncodedKnowledgeExpression"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ParsingLevel#SerializedKnowledgeExpression"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ParsingLevel#ConcreteKnowledgeExpression"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ParsingLevel#AbstractKnowledgeExpression"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ParsingLevel#Expression"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

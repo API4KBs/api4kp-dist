@@ -1,0 +1,28 @@
+swagger: "2.0"
+definitions:
+  KnowledgeAssetCategory:
+    allOf:
+      - $ref: '../../../../../../../API4KP/api4kp/id/id.yaml#/definitions/ConceptIdentifier'
+      - type: object
+        discriminator: _class
+        properties:
+          _class : string
+        required:
+          - _class
+        xml:
+          namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeAssetCategory'
+  KnowledgeAssetCategory_Valueset:
+    type: string
+    enum:
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#Definition
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#ComponentKnowledgeAsset
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#KnowledgeResourceDescription
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#SemioticAsset
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#ImperativeAsset
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#InferenceAsset
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#InformationAsset
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#CompositeKnowledgeAsset
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#MetricAsset
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeAssetCategory#ProcessAsset
+    xml:
+      namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeAssetCategory'

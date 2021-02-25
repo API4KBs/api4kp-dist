@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PublicationStatuses"
+           targetNamespace="https://www.omg.org/spec/API4KP/20210201/taxonomy/PublicationStatus"
+           elementFormDefault="qualified"
+           xmlns="https://www.omg.org/spec/API4KP/20210201/taxonomy/PublicationStatus"
+           xmlns:id="https://www.omg.org/spec/API4KP/20210201/id"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="https://www.omg.org/spec/API4KP/20210201/id"/>
+
+    <xs:complexType name="PublicationStatus">
+      <xs:complexContent>
+        <xs:extension base="id:ConceptIdentifier">
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="PublicationStatus_Valueset">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#PublishedKnowledgeResource"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#MainstreamKnowledgeResource"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#KnowledgeResourceDescription"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/PublicationStatus#KnowledgeMetaDescriptor"/>
+      </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
