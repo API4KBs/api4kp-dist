@@ -14,26 +14,26 @@ definitions:
   KnowledgeRepresentationLanguageSerialization_Valueset:
     type: string
     enum:
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#r1
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#surrogate
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#rdf
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#rdf.xsd
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#Common
-      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#grammar
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#fhir
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#wsdl20.xsd
-      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#json
-      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#surrogate
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#XMLSchema
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#cgif
-      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#r1
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#yaml
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#dmn.xsd
-      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#sec-Language
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#clif
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#8.10
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#annotations
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#services
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#json
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#owl-xml
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#MODEL
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#grammar
     xml:
       namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/KnowledgeRepresentationLanguageSerialization'

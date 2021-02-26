@@ -16,27 +16,27 @@
 
     <xs:simpleType name="KnowledgeRepresentationLanguageSerialization_Valueset">
       <xs:restriction base="xs:string">
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#r1"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#surrogate"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#rdf"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#rdf.xsd"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#Common"/>
-        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#grammar"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#fhir"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#wsdl20.xsd"/>
-        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#json"/>
-        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#surrogate"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#XMLSchema"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#cgif"/>
-        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#r1"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#yaml"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#dmn.xsd"/>
-        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#sec-Language"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#clif"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#8.10"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#annotations"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#services"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#json"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#owl-xml"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#MODEL"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguageSerialization#grammar"/>
       </xs:restriction>
     </xs:simpleType>
 </xs:schema>

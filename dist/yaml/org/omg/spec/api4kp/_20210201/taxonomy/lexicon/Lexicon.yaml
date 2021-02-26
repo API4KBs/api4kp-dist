@@ -16,10 +16,10 @@ definitions:
     enum:
       - https://www.omg.org/spec/API4KP/taxonomy/Lexicon#namespace
       - https://www.omg.org/spec/API4KP/taxonomy/Lexicon#core
+      - https://www.omg.org/spec/API4KP/taxonomy/Lexicon#
       - https://www.omg.org/spec/API4KP/taxonomy/Lexicon#XMLSchema-instance
       - https://www.omg.org/spec/API4KP/taxonomy/Lexicon#PCV
       - https://www.omg.org/spec/API4KP/taxonomy/Lexicon#2018-02-16
       - https://www.omg.org/spec/API4KP/taxonomy/Lexicon#20180731
-      - https://www.omg.org/spec/API4KP/taxonomy/Lexicon#
     xml:
       namespace: 'https://www.omg.org/spec/API4KP/20210201/taxonomy/Lexicon'

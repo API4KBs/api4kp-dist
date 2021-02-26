@@ -146,11 +146,32 @@
                   <version>${kmdp.impl.version}</version>
                   <type>jar</type>
                   <outputDirectory>${dist.build.dir}</outputDirectory>
-                  <includes>**/v${api4kp.release.date}/*.uml</includes>
+                  <includes>**/v${api4kp.release.date}/*.*</includes>
                 </artifactItem>
               </artifactItems>
             </configuration>
           </execution>
+
+          <execution>
+            <id>gather-ancillary</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.omg.spec</groupId>
+                  <artifactId>API4KP</artifactId>
+                  <version>${kmdp.impl.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${dist.build.dir}</outputDirectory>
+                  <includes>**/ancillary/v${api4kp.release.date}/*.*</includes>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+
           <execution>
             <id>gather-vom</id>
             <phase>initialize</phase>
@@ -972,6 +993,27 @@
               </resources>
             </configuration>
           </execution>
+
+          <execution>
+            <id>move-ancillary</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${dist.build.dir}/ancillary</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${dist.build.dir}/uml</directory>
+                  <filtering>true</filtering>
+                  <includes>
+                    <include>**/*.aird</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
           <execution>
             <id>dist-files</id>
             <phase>prepare-package</phase>
