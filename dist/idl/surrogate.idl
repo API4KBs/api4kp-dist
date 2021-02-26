@@ -1,0 +1,89 @@
+#include "id.idl"
+#include "datatypes.idl"
+#include "services.idl"
+
+module org {
+module omg {
+module spec {
+module api4kp {
+module 20210101 {
+
+module surrogate {
+   struct Link {
+       string value;
+   };
+   typedef sequence<Link> LinkList;
+   struct Publication {
+       ::org::omg::spec::api4kp::_20210201::id::PublicationStatus publicationstatus;
+       string createdon;
+       string lastreviewedon;
+       string issuedon;
+   };
+   typedef sequence<Publication> PublicationList;
+   struct Summary {
+       ::org::omg::spec::api4kp::_20210201::id::SummarizationType rel;
+       string text;
+   };
+   typedef sequence<Summary> SummaryList;
+   struct Citation {
+       ::org::omg::spec::api4kp::_20210201::id::ConceptIdentifier rel;
+       ::org::omg::spec::api4kp::_20210201::id::ConceptIdentifier bibliographyformat;
+       string bibliography;
+   };
+   typedef sequence<Citation> CitationList;
+   struct Annotation {
+       ::org::omg::spec::api4kp::_20210201::id::ConceptIdentifier rel;
+       ::org::omg::spec::api4kp::_20210201::id::ConceptIdentifier ref;
+   };
+   typedef sequence<Annotation> AnnotationList;
+   struct Applicability {
+       sequence<::org::omg::spec::api4kp::_20210201::id::ConceptIdentifier> situation;
+       string description;
+   };
+   typedef sequence<Applicability> ApplicabilityList;
+   struct KnowledgeArtifact {
+       sequence<::org::omg::spec::api4kp::_20210201::id::Language> localization;
+       ::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier artifactid;
+       ::org::omg::spec::api4kp::_20210201::id::KnowledgeArtifactCategory expressioncategory;
+       sequence<::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier> secondaryid;
+       ::org::omg::spec::api4kp::_20210201::surrogate::Summary summary;
+       sequence<::org::omg::spec::api4kp::_20200801::surrogate::Link> links;
+       ::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation representation;
+       ::org::omg::spec::api4kp::_20210201::surrogate::Publication lifecycle;
+       string alternativetitle;
+       string name;
+       string description;
+       string title;
+       string seodescription;
+       string mimetype;
+       string inlinedexpression;
+       string locator;
+   };
+   typedef sequence<KnowledgeArtifact> KnowledgeArtifactList;
+   struct KnowledgeAsset {
+       sequence<::org::omg::spec::api4kp::_20210201::id::KnowledgeAssetType> formaltype;
+       sequence<::org::omg::spec::api4kp::_20210201::id::KnowledgeAssetCategory> formalcategory;
+       sequence<::org::omg::spec::api4kp::_20210201::id::KnowledgeProcessingTechnique> processingmethod;
+       sequence<::org::omg::spec::api4kp::_20210201::id::KnowledgeAssetRole> role;
+       ::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier assetid;
+       sequence<::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier> secondaryid;
+       sequence<::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier> memberof;
+       sequence<::org::omg::spec::api4kp::_20210201::surrogate::Annotation> annotation;
+       sequence<::org::omg::spec::api4kp::_20210201::surrogate::KnowledgeArtifact> carriers;
+       sequence<::org::omg::spec::api4kp::_20210201::surrogate::Citation> citations;
+       ::org::omg::spec::api4kp::_20210201::surrogate::Applicability applicablein;
+       sequence<::org::omg::spec::api4kp::_20210201::surrogate::KnowledgeArtifact> surrogate;
+       sequence<::org::omg::spec::api4kp::_20200801::surrogate::Link> links;
+       ::org::omg::spec::api4kp::_20210201::surrogate::Publication lifecycle;
+       string name;
+       string description;
+       string seodescription;
+   };
+   typedef sequence<KnowledgeAsset> KnowledgeAssetList;
+
+}; // surrogate
+}; // 20210201
+}; // api4kp
+}; // spec
+}; // omg
+}; // org

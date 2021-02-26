@@ -1,0 +1,269 @@
+module org {
+module omg {
+module spec {
+module api4kp {
+module _20200801 {
+module services {
+module transrepresentation {
+struct Detector {
+    string value;
+};
+typedef sequence<Detector> DetectorList;
+struct Deserializer {
+    string value;
+};
+typedef sequence<Deserializer> DeserializerList;
+struct TransrepresentationMethod {
+    string value;
+};
+typedef sequence<TransrepresentationMethod> TransrepresentationMethodList;
+struct Validator {
+    string value;
+};
+typedef sequence<Validator> ValidatorList;
+}; // transrepresentation
+}; // services
+module api {
+module transrepresentation {
+module v5 {
+interface Discovery {
+  ::org::omg::spec::api4kp::_20200801::services::transrepresentation::Deserializer getDeserializationComponent (
+      in string componentid 
+  );
+  ::org::omg::spec::api4kp::_20200801::services::transrepresentation::Detector getDetectComponent (
+      in string componentid 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::transrepresentation::Transrepresentator getTxComponent (
+      in string componentid 
+  );
+  ::org::omg::spec::api4kp::_20200801::services::transrepresentation::Validator getValidationComponent (
+      in string componentid 
+  );
+  ::org::omg::spec::api4kp::_20200801::services::transrepresentation::DeserializerList listDeserializationComponents (
+      in string into , 
+      in string methodtag , 
+      in string from 
+  );
+  ::org::omg::spec::api4kp::_20200801::services::transrepresentation::DetectorList listDetectComponents (
+      in string into , 
+      in string methodtag 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::transrepresentation::TransrepresentatorList listTxComponents (
+      in string into , 
+      in string methodtag , 
+      in string from 
+  );
+  ::org::omg::spec::api4kp::_20200801::services::transrepresentation::ValidatorList listValidationComponents (
+      in string methodtag , 
+      in string from 
+  );
+};
+interface Transxion {
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyNamedTransrepresent (
+      in string xaccept , 
+      in string xparams , 
+      in string operatorid , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier sourceartifact 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyTransrepresent (
+      in string xaccept , 
+      in string xparams , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier sourceartifact 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::transrepresentation::TransrepresentationOperator getTxionOperator (
+      in string operatorid 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::transrepresentation::TransrepresentationOperatorList listTxionOperators (
+      in string into , 
+      in string from 
+  );
+};
+interface Detect {
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyDetect (
+      in string xparams , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier sourceartifact 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyNamedDetect (
+      in string xparams , 
+      in string operatorid , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier sourceartifact 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::transrepresentation::DetectionOperator getDetectionOperator (
+      in string operatorid 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::transrepresentation::DetectionOperatorList listDetectionOperators (
+      in string into 
+  );
+};
+interface Validate {
+  void applyNamedValidate (
+      in string xparams , 
+      in string operatorid , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier sourceartifact 
+  );
+  void applyValidate (
+      in string xparams , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier sourceartifact 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::transrepresentation::ValidationOperator getValidationOperator (
+      in string operatorid 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::transrepresentation::ValidationOperatorList listValidationOperators (
+      in string from 
+  );
+};
+interface Deserialize {
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyLift (
+      in string xaccept , 
+      in ::org::omg::spec::api4kp::_20210201::id::ParsingLevel leveltag , 
+      in string xparams , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier sourceartifact 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyLower (
+      in string xaccept , 
+      in ::org::omg::spec::api4kp::_20210201::id::ParsingLevel leveltag , 
+      in string xparams , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier sourceartifact 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyNamedLift (
+      in string xaccept , 
+      in ::org::omg::spec::api4kp::_20210201::id::ParsingLevel leveltag , 
+      in string xparams , 
+      in string operatorid , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier sourceartifact 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier applyNamedLower (
+      in string xaccept , 
+      in ::org::omg::spec::api4kp::_20210201::id::ParsingLevel leveltag , 
+      in string xparams , 
+      in string operatorid , 
+      in ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier sourceartifact 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::transrepresentation::DeserializationOperator getLiftOperator (
+      in string operatorid 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::transrepresentation::DeserializationOperator getLowerOperator (
+      in string operatorid 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::transrepresentation::DeserializationOperatorList listLiftOperators (
+      in string into , 
+      in string from 
+  );
+  ::org::omg::spec::api4kp::_20210201::services::transrepresentation::DeserializationOperatorList listLowerOperators (
+      in string into , 
+      in string from 
+  );
+};
+}; // v5
+}; // transrepresentation
+}; // api
+}; // _20200801
+module _20210201 {
+module id {
+struct KnowledgeRepresentationLanguageSerialization {
+    string referentid;
+};
+typedef sequence<KnowledgeRepresentationLanguageSerialization> KnowledgeRepresentationLanguageSerializationList;
+struct Lexicon {
+    string referentid;
+};
+typedef sequence<Lexicon> LexiconList;
+struct KnowledgeRepresentationLanguageProfile {
+    string referentid;
+};
+typedef sequence<KnowledgeRepresentationLanguageProfile> KnowledgeRepresentationLanguageProfileList;
+struct KnowledgeRepresentationLanguageRole {
+    string referentid;
+};
+typedef sequence<KnowledgeRepresentationLanguageRole> KnowledgeRepresentationLanguageRoleList;
+struct ResourceIdentifier {
+    string uuid;
+    string resourceid;
+    string versionid;
+    string tag;
+    string versiontag;
+    string name;
+    string namespaceuri;
+    string establishedon;
+};
+typedef sequence<ResourceIdentifier> ResourceIdentifierList;
+struct SerializationFormat {
+    string referentid;
+};
+typedef sequence<SerializationFormat> SerializationFormatList;
+struct Language {
+    string referentid;
+};
+typedef sequence<Language> LanguageList;
+struct ParsingLevel {
+    string referentid;
+};
+typedef sequence<ParsingLevel> ParsingLevelList;
+struct KnowledgeRepresentationLanguage {
+    string referentid;
+};
+typedef sequence<KnowledgeRepresentationLanguage> KnowledgeRepresentationLanguageList;
+}; // id
+module services {
+struct SyntacticRepresentation {
+    ::org::omg::spec::api4kp::_20210201::id::KnowledgeRepresentationLanguage language;
+    ::org::omg::spec::api4kp::_20210201::id::KnowledgeRepresentationLanguageProfile profile;
+    ::org::omg::spec::api4kp::_20210201::id::SerializationFormat format;
+    sequence<::org::omg::spec::api4kp::_20210201::id::Lexicon> lexicon;
+    ::org::omg::spec::api4kp::_20210201::id::Language locale;
+    ::org::omg::spec::api4kp::_20210201::id::KnowledgeRepresentationLanguageSerialization serialization;
+    ::org::omg::spec::api4kp::_20210201::id::KnowledgeRepresentationLanguageRole role;
+    sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> sublanguage;
+    string charset;
+    string encoding;
+    string logic;
+    string complexity;
+};
+typedef sequence<SyntacticRepresentation> SyntacticRepresentationList;
+struct KnowledgeCarrier {
+    ::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier artifactid;
+    ::org::omg::spec::api4kp::_20210201::id::ParsingLevel level;
+    ::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier assetid;
+    ::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation representation;
+    string href;
+    string label;
+};
+typedef sequence<KnowledgeCarrier> KnowledgeCarrierList;
+module transrepresentation {
+struct TransrepresentationOperator {
+    sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> from;
+    sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> into;
+};
+typedef sequence<TransrepresentationOperator> TransrepresentationOperatorList;
+struct DeserializationOperator {
+    sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> from;
+    sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> into;
+};
+typedef sequence<DeserializationOperator> DeserializationOperatorList;
+struct DetectionOperator {
+    sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> into;
+};
+typedef sequence<DetectionOperator> DetectionOperatorList;
+struct ValidationOperator {
+    sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> from;
+};
+typedef sequence<ValidationOperator> ValidationOperatorList;
+struct Transrepresentation {
+    sequence<::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier> type;
+    sequence<::org::omg::spec::api4kp::_20200801::services::transrepresentation::TransrepresentationMethod> method;
+    sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> _consumes;
+    sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> produces;
+    sequence<::org::omg::spec::api4kp::_20210201::services::transrepresentation::TransrepresentationOperator> exec;
+};
+typedef sequence<Transrepresentation> TransrepresentationList;
+struct Transrepresentator {
+    sequence<::org::omg::spec::api4kp::_20210201::services::transrepresentation::Transrepresentation> txions;
+};
+typedef sequence<Transrepresentator> TransrepresentatorList;
+}; // transrepresentation
+}; // services
+}; // _20210201
+}; // api4kp
+}; // spec
+}; // omg
+}; // org

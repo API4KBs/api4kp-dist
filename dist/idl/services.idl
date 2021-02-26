@@ -1,0 +1,105 @@
+module org {
+module omg {
+module spec {
+module api4kp {
+module 20210201 {
+
+module services {
+
+   struct SyntacticRepresentation {
+       ::org::omg::spec::api4kp::_20210201::id::KnowledgeRepresentationLanguage language;
+       ::org::omg::spec::api4kp::_20210201::id::KnowledgeRepresentationLanguageProfile profile;
+       ::org::omg::spec::api4kp::_20210201::id::SerializationFormat format;
+       sequence<::org::omg::spec::api4kp::_20210201::id::Lexicon> lexicon;
+       ::org::omg::spec::api4kp::_20210201::id::Language locale;
+       ::org::omg::spec::api4kp::_20210201::id::KnowledgeRepresentationLanguageSerialization serialization;
+       ::org::omg::spec::api4kp::_20210201::id::KnowledgeRepresentationLanguageRole role;
+       sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> sublanguage;
+       string charset;
+       string encoding;
+       string logic;
+       string complexity;
+   };
+   typedef sequence<SyntacticRepresentation> SyntacticRepresentationList;
+   struct KnowledgeCarrier {
+       ::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier artifactid;
+       ::org::omg::spec::api4kp::_20210201::id::ParsingLevel level;
+       ::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier assetid;
+       ::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation representation;
+       string href;
+       string label;
+   };
+   typedef sequence<KnowledgeCarrier> KnowledgeCarrierList;
+   struct KnowledgeBase {
+       ::org::omg::spec::api4kp::_20210201::id::Pointer kbaseid;
+       ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier manifestation;
+   };
+   typedef sequence<KnowledgeBase> KnowledgeBaseList;
+   struct CompositeKnowledgeCarrier {
+       ::org::omg::spec::api4kp::_20200801::services::CompositeStructType structtype;
+       ::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier rootid;
+       sequence<::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier> _component;
+       ::org::omg::spec::api4kp::_20210201::services::KnowledgeCarrier _struct;
+   };
+   typedef sequence<CompositeKnowledgeCarrier> CompositeKnowledgeCarrierList;
+
+   module repository {
+      struct KnowledgeArtifactRepository {
+          ::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier id;
+          sequence<::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier> alias;
+          string name;
+          long size;
+          string href;
+          boolean defaultrepository;
+      };
+      typedef sequence<KnowledgeArtifactRepository> KnowledgeArtifactRepositoryList;
+      struct KnowledgeAssetCatalog {
+          sequence<::org::omg::spec::api4kp::_20210201::id::KnowledgeAssetType> supportedassettypes;
+          ::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier id;
+          sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> surrogatemodels;
+          string name;
+          string owner;
+          string supportedannotations;
+      };
+      typedef sequence<KnowledgeAssetCatalog> KnowledgeAssetCatalogList;
+   }; // repository
+
+   module transrepresentation {
+      struct TransrepresentationOperator {
+          sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> from;
+          sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> into;
+      };
+      typedef sequence<TransrepresentationOperator> TransrepresentationOperatorList;
+      struct DeserializationOperator {
+          sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> from;
+          sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> into;
+      };
+      typedef sequence<DeserializationOperator> DeserializationOperatorList;
+      struct DetectionOperator {
+          sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> into;
+      };
+      typedef sequence<DetectionOperator> DetectionOperatorList;
+      struct ValidationOperator {
+          sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> from;
+      };
+      typedef sequence<ValidationOperator> ValidationOperatorList;
+      struct Transrepresentation {
+          sequence<::org::omg::spec::api4kp::_20210201::id::ResourceIdentifier> type;
+          sequence<::org::omg::spec::api4kp::_20200801::services::transrepresentation::TransrepresentationMethod> method;
+          sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> _consumes;
+          sequence<::org::omg::spec::api4kp::_20210201::services::SyntacticRepresentation> produces;
+          sequence<::org::omg::spec::api4kp::_20210201::services::transrepresentation::TransrepresentationOperator> exec;
+      };
+      typedef sequence<Transrepresentation> TransrepresentationList;
+      struct Transrepresentator {
+          sequence<::org::omg::spec::api4kp::_20210201::services::transrepresentation::Transrepresentation> txions;
+      };
+      typedef sequence<Transrepresentator> TransrepresentatorList;
+   }; // transrepresentation
+
+}; // services
+}; // 20210201
+}; // api4kp
+}; // spec
+}; // omg
+}; // org

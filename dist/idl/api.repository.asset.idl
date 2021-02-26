@@ -1,0 +1,207 @@
+#include "id.idl"
+#include "datatypes.idl"
+#include "services.idl"
+#include "surrogate.idl"
+
+
+
+module org {
+module omg {
+module spec {
+module api4kp {
+module 20210101 {
+module api {
+module repository {
+module asset {
+   interface KnowledgeAssetCatalog {
+     surrogate::KnowledgeAsset getKnowledgeAsset (
+         in string xaccept , 
+         in string assetid 
+     );
+     services::repository::KnowledgeAssetCatalog getKnowledgeAssetCatalog (
+     );
+     surrogate::KnowledgeAsset getKnowledgeAssetVersion (
+         in string xaccept , 
+         in string assetid , 
+         in string versiontag 
+     );
+     services::KnowledgeCarrier getKnowledgeGraph (
+         in string xaccept 
+     );
+     string initKnowledgeAsset (
+     );
+     id::PointerList listKnowledgeAssetVersions (
+         in long offset , 
+         in string assetid , 
+         in long limit , 
+         in string aftertag , 
+         in string sort , 
+         in string beforetag 
+     );
+     id::PointerList listKnowledgeAssets (
+         in long offset , 
+         in long limit , 
+         in string assettypetag , 
+         in string assetannotationconcept , 
+         in string assetannotationtag 
+     );
+     datatypes::BindingsList queryKnowledgeAssetGraph (
+         in services::KnowledgeCarrier graphquery 
+     );
+     void setKnowledgeAssetVersion (
+         in string assetid , 
+         in string versiontag , 
+         in surrogate::KnowledgeAsset assetsurrogate 
+     );
+   };
+   interface KnowledgeAssetRepository {
+     void addCanonicalKnowledgeAssetSurrogate (
+         in string assetid , 
+         in string versiontag , 
+         in services::KnowledgeCarrier surrogatecarrier 
+     );
+     void addKnowledgeAssetCarrier (
+         in services::KnowledgeCarrier assetcarrier , 
+         in string assetid , 
+         in string versiontag 
+     );
+     void addKnowledgeAssetSurrogate (
+         in string assetid , 
+         in string versiontag , 
+         in services::KnowledgeCarrier surrogatecarrier 
+     );
+     services::CompositeKnowledgeCarrier getAnonymousCompositeKnowledgeAssetCarrier (
+         in string xaccept , 
+         in string assetid , 
+         in string versiontag 
+     );
+     services::KnowledgeCarrier getAnonymousCompositeKnowledgeAssetStructure (
+         in string xaccept , 
+         in string assetid , 
+         in string versiontag 
+     );
+     services::CompositeKnowledgeCarrier getAnonymousCompositeKnowledgeAssetSurrogate (
+         in string xaccept , 
+         in string assetid , 
+         in string versiontag 
+     );
+     services::CompositeKnowledgeCarrier getCompositeKnowledgeAssetCarrier (
+         in string xaccept , 
+         in string assetid , 
+         in boolean flat , 
+         in string versiontag 
+     );
+     services::KnowledgeCarrier getCompositeKnowledgeAssetStructure (
+         in string xaccept , 
+         in string assetid , 
+         in string versiontag 
+     );
+     services::CompositeKnowledgeCarrier getCompositeKnowledgeAssetSurrogate (
+         in string xaccept , 
+         in string assetid , 
+         in boolean flat , 
+         in string versiontag 
+     );
+     services::KnowledgeCarrier getKnowledgeAssetCanonicalCarrier (
+         in string xaccept , 
+         in string assetid 
+     );
+     string getKnowledgeAssetCanonicalCarrierContent (
+         in string xaccept , 
+         in string assetid 
+     );
+     services::KnowledgeCarrier getKnowledgeAssetCanonicalSurrogate (
+         in string xaccept , 
+         in string assetid 
+     );
+     services::KnowledgeCarrier getKnowledgeAssetCarrier (
+         in string xaccept , 
+         in string assetid , 
+         in string artifactid , 
+         in string versiontag 
+     );
+     services::KnowledgeCarrier getKnowledgeAssetCarrierVersion (
+         in string xaccept , 
+         in string assetid , 
+         in string artifactversiontag , 
+         in string artifactid , 
+         in string versiontag 
+     );
+     string getKnowledgeAssetCarrierVersionContent (
+         in string xaccept , 
+         in string assetid , 
+         in string artifactversiontag , 
+         in string artifactid , 
+         in string versiontag 
+     );
+     services::KnowledgeCarrier getKnowledgeAssetSurrogateVersion (
+         in string surrogateid , 
+         in string xaccept , 
+         in string assetid , 
+         in string versiontag , 
+         in string surrogateversiontag 
+     );
+     services::KnowledgeCarrier getKnowledgeAssetVersionCanonicalCarrier (
+         in string xaccept , 
+         in string assetid , 
+         in string versiontag 
+     );
+     string getKnowledgeAssetVersionCanonicalCarrierContent (
+         in string xaccept , 
+         in string assetid , 
+         in string versiontag 
+     );
+     services::KnowledgeCarrier getKnowledgeAssetVersionCanonicalSurrogate (
+         in string xaccept , 
+         in string assetid , 
+         in string versiontag 
+     );
+     id::PointerList listKnowledgeAssetCarrierVersions (
+         in string assetid , 
+         in string artifactid , 
+         in string versiontag 
+     );
+     id::PointerList listKnowledgeAssetCarriers (
+         in long offset , 
+         in string assetid , 
+         in long limit , 
+         in string aftertag , 
+         in string versiontag , 
+         in string sort , 
+         in string beforetag 
+     );
+     id::PointerList listKnowledgeAssetSurrogateVersions (
+         in string surrogateid , 
+         in long offset , 
+         in string assetid , 
+         in long limit , 
+         in string aftertag , 
+         in string versiontag , 
+         in string sort , 
+         in string beforetag 
+     );
+     id::PointerList listKnowledgeAssetSurrogates (
+         in long offset , 
+         in string assetid , 
+         in long limit , 
+         in string aftertag , 
+         in string versiontag , 
+         in string sort , 
+         in string beforetag 
+     );
+     void setKnowledgeAssetCarrierVersion (
+         in string assetid , 
+         in string artifactversiontag , 
+         in string exemplar , 
+         in string artifactid , 
+         in string versiontag 
+     );
+   };
+}; // asset
+}; // repository
+}; // api
+}; // 20210201
+}; // api4kp
+}; // spec
+}; // omg
+}; // org

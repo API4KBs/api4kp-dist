@@ -1,0 +1,100 @@
+module org {
+module omg {
+module spec {
+module api4kp {
+module 20210201 {
+
+module id {
+   struct KnowledgeRepresentationLanguageSerialization {
+       string referentid;
+   };
+   typedef sequence<KnowledgeRepresentationLanguageSerialization> KnowledgeRepresentationLanguageSerializationList;
+   struct Lexicon {
+       string referentid;
+   };
+   typedef sequence<Lexicon> LexiconList;
+   struct Pointer {
+       string description;
+       string href;
+       string type;
+       string mimetype;
+   };
+   typedef sequence<Pointer> PointerList;
+   struct KnowledgeRepresentationLanguageProfile {
+       string referentid;
+   };
+   typedef sequence<KnowledgeRepresentationLanguageProfile> KnowledgeRepresentationLanguageProfileList;
+   struct KnowledgeRepresentationLanguageRole {
+       string referentid;
+   };
+   typedef sequence<KnowledgeRepresentationLanguageRole> KnowledgeRepresentationLanguageRoleList;
+   struct KnowledgeAssetCategory {
+       string referentid;
+   };
+   typedef sequence<KnowledgeAssetCategory> KnowledgeAssetCategoryList;
+   struct ResourceIdentifier {
+       string uuid;
+       string resourceid;
+       string versionid;
+       string tag;
+       string versiontag;
+       string name;
+       string namespaceuri;
+       string establishedon;
+   };
+   typedef sequence<ResourceIdentifier> ResourceIdentifierList;
+   struct SerializationFormat {
+       string referentid;
+   };
+   typedef sequence<SerializationFormat> SerializationFormatList;
+   struct Language {
+       string referentid;
+   };
+   typedef sequence<Language> LanguageList;
+   struct KnowledgeProcessingTechnique {
+       string referentid;
+   };
+   typedef sequence<KnowledgeProcessingTechnique> KnowledgeProcessingTechniqueList;
+   struct ParsingLevel {
+       string referentid;
+   };
+   typedef sequence<ParsingLevel> ParsingLevelList;
+   struct KnowledgeRepresentationLanguage {
+       string referentid;
+   };
+   typedef sequence<KnowledgeRepresentationLanguage> KnowledgeRepresentationLanguageList;
+   struct PublicationStatus {
+       string referentid;
+   };
+   typedef sequence<PublicationStatus> PublicationStatusList;
+   struct SummarizationType {
+       string referentid;
+   };
+   typedef sequence<SummarizationType> SummarizationTypeList;
+   struct KnowledgeRepresentationLanguageSerialization {
+       string referentid;
+   };
+   typedef sequence<KnowledgeRepresentationLanguageSerialization> KnowledgeRepresentationLanguageSerializationList;
+   struct ConceptIdentifier {
+       string referentid;
+   };
+   typedef sequence<ConceptIdentifier> ConceptIdentifierList;
+   struct KnowledgeAssetType {
+       string referentid;
+   };
+   typedef sequence<KnowledgeAssetType> KnowledgeAssetTypeList;
+   struct KnowledgeArtifactCategory {
+       string referentid;
+   };
+   typedef sequence<KnowledgeArtifactCategory> KnowledgeArtifactCategoryList;
+   struct KnowledgeAssetRole {
+       string referentid;
+   };
+   typedef sequence<KnowledgeAssetRole> KnowledgeAssetRoleList;
+
+}; // id
+}; // 20210201
+}; // api4kp
+}; // spec
+}; // omg
+}; // org
