@@ -7,12 +7,12 @@
   <parent>
     <artifactId>kmdp-bom</artifactId>
     <groupId>edu.mayo.kmdp</groupId>
-    <version>11.0.2-SNAPSHOT</version>
+    <version>11.0.3-SNAPSHOT</version>
   </parent>
 
   <artifactId>API4KP-dist</artifactId>
   <groupId>org.omg.spec</groupId>
-  <version>11.0.2-SNAPSHOT</version>
+  <version>11.0.3-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>API4KP :: Distribution</name>
@@ -41,8 +41,8 @@
 
     <skos.dir>${dist.build.dir}/skos</skos.dir>
 
-    <kmdp.impl.version>11.0.2-SNAPSHOT</kmdp.impl.version>
-    <kmdp.servers.version>5.11.2-SNAPSHOT</kmdp.servers.version>
+    <kmdp.impl.version>11.0.3-SNAPSHOT</kmdp.impl.version>
+    <kmdp.servers.version>5.11.3-SNAPSHOT</kmdp.servers.version>
   </properties>
 
   <dependencies>
