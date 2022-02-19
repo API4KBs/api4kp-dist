@@ -114,7 +114,6 @@
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Malagasy"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Mohawk"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Yao"/>
-        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#ScottishGaelic"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Ewondo"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Lingala"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Udmurt"/>
@@ -233,7 +232,6 @@
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Neapolitan"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Cree"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Kongo"/>
-        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Nyanja"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Masai"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Baluchi"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Gwichin"/>
@@ -313,6 +311,7 @@
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Nepali"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Madurese"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Tereno"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Chichewa"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Grebo"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Ekajuk"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Rajasthani"/>
@@ -373,6 +372,7 @@
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Mikmaq"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Tajik"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Adangme"/>
+        <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Gaelic"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#NKo"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Bulgarian"/>
         <xs:enumeration value="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Bislama"/>

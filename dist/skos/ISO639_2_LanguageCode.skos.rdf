@@ -2,7 +2,6 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns="https://www.omg.org/spec/LCC/Languages/ISO639-2-LanguageCodes/"
     xmlns:afn="http://jena.apache.org/ARQ/function#"
-    xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
     xmlns:LanguageRepresentation="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/"
     xmlns:tgt="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -471,6 +470,16 @@
     <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Language"/>
     <rdfs:label>Awadhi</rdfs:label>
   </owl:NamedIndividual>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Gaelic">
+    <skos:notation>d9d944f7-d97b-38e4-94ff-c6c6dc1ca942</skos:notation>
+    <skos:prefLabel>Gaelic</skos:prefLabel>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Language"/>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Language"/>
+    <rdfs:label>Gaelic</rdfs:label>
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Languages"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/ScottishGaelic</rdfs:isDefinedBy>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
   <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Bislama">
     <skos:prefLabel>Bislama</skos:prefLabel>
     <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Bislama</rdfs:isDefinedBy>
@@ -1351,16 +1360,6 @@
     <skos:prefLabel>Sicilian</skos:prefLabel>
     <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-2-LanguageCodes/Sicilian</rdfs:isDefinedBy>
   </skos:Concept>
-  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#ScottishGaelic">
-    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Languages"/>
-    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Language"/>
-    <rdfs:label>Scottish Gaelic</rdfs:label>
-    <skos:prefLabel>Scottish Gaelic</skos:prefLabel>
-    <skos:notation>e9906021-1896-3971-8e81-ac517de52da2</skos:notation>
-    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/ScottishGaelic</rdfs:isDefinedBy>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Language"/>
-  </owl:NamedIndividual>
   <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Rundi">
     <skos:prefLabel>Rundi</skos:prefLabel>
     <skos:notation>899f2e4c-fae6-3e10-9ed8-2951bef7db4d</skos:notation>
@@ -2310,16 +2309,6 @@
     <skos:notation>5dfac4d7-dcee-3cd0-b56a-52e38e44859e</skos:notation>
     <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Language"/>
     <rdfs:label>Efik</rdfs:label>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Nyanja">
-    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Nyanja</rdfs:isDefinedBy>
-    <skos:notation>e9e85816-90f8-38b6-a877-29eccb168b13</skos:notation>
-    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Language"/>
-    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Languages"/>
-    <rdfs:label>Nyanja</rdfs:label>
-    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Language"/>
-    <skos:prefLabel>Nyanja</skos:prefLabel>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:NamedIndividual>
   <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Tatar">
     <skos:prefLabel>Tatar</skos:prefLabel>
@@ -3409,6 +3398,16 @@
     <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-2-LanguageCodes/Yakut</rdfs:isDefinedBy>
     <skos:prefLabel>Yakut</skos:prefLabel>
     <rdfs:label>Yakut</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Chichewa">
+    <skos:inScheme rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Languages"/>
+    <skos:notation>208c17b0-ae22-3c83-a400-b35955ace4b9</skos:notation>
+    <rdfs:label>Chichewa</rdfs:label>
+    <skos:broader rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Language"/>
+    <skos:broaderTransitive rdf:resource="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Language"/>
+    <rdfs:isDefinedBy>https://www.omg.org/spec/LCC/Languages/ISO639-1-LanguageCodes/Nyanja</rdfs:isDefinedBy>
+    <skos:prefLabel>Chichewa</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </skos:Concept>
   <owl:NamedIndividual rdf:about="https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Dhivehi">

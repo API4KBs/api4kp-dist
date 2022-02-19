@@ -7,12 +7,12 @@
   <parent>
     <artifactId>kmdp-bom</artifactId>
     <groupId>edu.mayo.kmdp</groupId>
-    <version>11.0.3-SNAPSHOT</version>
+    <version>11.1.6-SNAPSHOT</version>
   </parent>
 
   <artifactId>API4KP-dist</artifactId>
   <groupId>org.omg.spec</groupId>
-  <version>11.0.3-SNAPSHOT</version>
+  <version>11.1.6-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>API4KP :: Distribution</name>
@@ -41,8 +41,8 @@
 
     <skos.dir>${dist.build.dir}/skos</skos.dir>
 
-    <kmdp.impl.version>11.0.3-SNAPSHOT</kmdp.impl.version>
-    <kmdp.servers.version>5.11.3-SNAPSHOT</kmdp.servers.version>
+    <kmdp.impl.version>11.1.6-SNAPSHOT</kmdp.impl.version>
+    <kmdp.servers.version>5.12.6-SNAPSHOT</kmdp.servers.version>
   </properties>
 
   <dependencies>
@@ -1008,6 +1008,26 @@
                   <filtering>true</filtering>
                   <includes>
                     <include>**/*.aird</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>move-openapi</id>
+            <phase>process-sources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${dist.build.dir}/openapi/v2/org/omg/spec/api4kp/v${api4kp.release.date}</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${dist.build.dir}/openapi/v2/org/omg/spec/api4kp/omg/v${api4kp.release.date}</directory>
+                  <filtering>true</filtering>
+                  <includes>
+                    <include>**/*.yaml</include>
                   </includes>
                 </resource>
               </resources>

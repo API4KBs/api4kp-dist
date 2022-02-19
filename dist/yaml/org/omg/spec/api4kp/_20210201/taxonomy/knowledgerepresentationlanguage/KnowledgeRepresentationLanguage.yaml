@@ -14,11 +14,11 @@ definitions:
   KnowledgeRepresentationLanguage_Valueset:
     type: string
     enum:
-      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v12
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v8
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#resource
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#R4v4
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#2020Mayv150
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v11
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#DL
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#66249v1
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#schemas
@@ -32,26 +32,26 @@ definitions:
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#STU3v130
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#FEELv11
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#RL
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v2
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#QL
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#queries
-      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v11
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#datatypes
-      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v2
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v1
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v25
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#EL
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#Full
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v52
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#1.0v1
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#1.3v13
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#surrogatev1
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#2-0v2
-      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v1
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#annos
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#1.0v10
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#FEELv12
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v3
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#STU3v3
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#services
-      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#1.3v13
+      - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#v12
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#essentials
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#DSTU2v2
       - https://www.omg.org/spec/API4KP/taxonomy/KnowledgeRepresentationLanguage#vJun2018

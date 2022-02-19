@@ -112,7 +112,6 @@ definitions:
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Malagasy
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Mohawk
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Yao
-      - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#ScottishGaelic
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Ewondo
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Lingala
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Udmurt
@@ -231,7 +230,6 @@ definitions:
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Neapolitan
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Cree
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Kongo
-      - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Nyanja
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Masai
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Baluchi
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Gwichin
@@ -311,6 +309,7 @@ definitions:
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Nepali
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Madurese
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Tereno
+      - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Chichewa
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Grebo
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Ekajuk
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Rajasthani
@@ -371,6 +370,7 @@ definitions:
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Mikmaq
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Tajik
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Adangme
+      - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Gaelic
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#NKo
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Bulgarian
       - https://www.omg.org/spec/API4KP/taxonomy/ISO639-2-LanguageCode#Bislama
